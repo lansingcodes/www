@@ -1,0 +1,50 @@
+doctype html
+html lang="en"
+  head
+    
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content="Events for Lansing coders"
+    meta name="author" content="Chris Fritz"
+    
+    title= current_page.data.title || 'The Middleman'
+    
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+    = stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css'
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
+    = stylesheet_link_tag 'vendor'
+    
+    /![if lt IE 9]<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+    link rel="shortcut icon" href="/favicon.ico?v=1"
+
+  body class="#{page_classes}" id="page-top"
+  
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+
+        .navbar-header
+          button.navbar-toggle.collapsed data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.page-scroll href="#page-top" 
+            img alt="Logo" src="images/icon.png" style="display: inline-block; width: 30px; height: 20px; margin-top: -5px;"
+              '
+            span style="display: inline-block;" 
+              | Lansing Codes
+
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.page-scroll href="#calendar"  Calendar
+            li
+              a.page-scroll href="#contact"  Contact
+              
+    = yield
+    
+    = javascript_include_tag 'all'
