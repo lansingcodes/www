@@ -38,9 +38,9 @@ require 'slim'
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 MEETUPS = [
   # 1st Tuesday
@@ -139,25 +139,31 @@ helpers do
 end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  activate :relative_assets
 
-  # Enable cache buster
-  # activate :asset_hash
+end
 
-  # Use relative URLs
-  # activate :relative_assets
+require 'sprockets/coffee-react'
 
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+::Sprockets.register_preprocessor 'application/javascript', ::Sprockets::CoffeeReact
+::Sprockets.register_engine '.cjsx', ::Sprockets::CoffeeReactScript
+
+activate :react
+
+after_configuration do
+  sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
+end
+
+ignore 'README.md'
+after_build do
+  `cp source/README.md build`
 end
