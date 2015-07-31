@@ -17,7 +17,7 @@ module.exports = class UpcomingEvents extends React.Component
       json: undefined
 
   component-will-mount: ->
-    fetch('//api.lansing.codes/v1/events/upcoming/list')
+    fetch('http://api.lansing.codes/v1/events/upcoming/list')
       .then (response) -> response.json!
       .then (json) !~> @set-state json: json
 
