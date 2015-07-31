@@ -1,7 +1,6 @@
 require! {
   'yeoman-environment': yo
   path
-  './build.ls'
 }
 
 module.exports = init = (name, opts) ->

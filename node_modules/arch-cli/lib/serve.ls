@@ -3,10 +3,7 @@ require! {
   path
   child_process
   'is-running'
-  'node-watch': watch
-  './build.ls'
 }
-
 
 server = null
 
@@ -16,8 +13,6 @@ default-opts =
   pidfile: null
   port: 3000
   standalone: false
-  watch: false
-
 
 clean-pidfile = (opts, cb) ->
   pidfile = get-pidfile opts
@@ -29,12 +24,7 @@ get-pidfile = (opts) ->
   return opts.pidfile or (path.resolve "./server-#{opts.port or 3000}.pid")
 
 init = (opts) ->
-  if opts.watch and opts.daemonise
-    return console.error "You can't enable a watcher when running in daemon mode."
   start-server opts
-
-  if opts.watch
-    watch-server opts
 
 start-server = (opts) ->
   arch-path = path.dirname path.resolve './node_modules/arch/package.json'
@@ -72,13 +62,6 @@ restart-server = (opts) ->
   server.on 'exit', ->
     start-server opts
   stop-server opts
-
-watch-server = (opts) ->
-  watch ['app'], (file) ->
-    build!
-    switch (file |> split \. |> last)
-      | \ls => restart-server opts
-      | \js => restart-server opts
 
 module.exports = serve = (opts) ->
   opts = ({} import default-opts) import opts

@@ -6,15 +6,15 @@
     "start": "./node_modules/arch-cli/index.js serve --port $PORT"
   },
   "dependencies": {
-    "arch-cli": "0.1.0-rc.3",
+    "arch-cli": "git+https://github.com/arch-js/arch-cli",
     "isomorphic-fetch": "^2.1.1",
     "prelude-ls": "^1.1.2",
     "radium": "^0.13.4",
     "react": "^0.13.3",
     "react-bootstrap": "^0.24.2",
-    "react-tap-event-plugin": "^0.1.7"
+    "react-tap-event-plugin": "^0.1.7",
+    "arch": "git+https://github.com/arch-js/arch#rc-setup"
   },
   "//": {
-    "arch": "git+https://github.com/redbadger/arch"
   }
 }

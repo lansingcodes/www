@@ -10,7 +10,6 @@ module.exports = ->
     .option '-l, --log <file>', 'Specify a file to log to.'
     .option '-p, --port <port>', 'Specify a server port (sets the ARCH_PORT environment variable)'
     .option '-s, --standalone', "Run in standalone mode, without Arch's server.js."
-    .option '-w, --watch', 'Watch for changes and restart server on change.'
     .action serve
     .on '--help', ->
       console.log 'TODO: This help text'

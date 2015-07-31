@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-require('LiveScript');
+require('livescript');
 require('./index.ls');
