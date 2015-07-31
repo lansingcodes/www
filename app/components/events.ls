@@ -34,7 +34,7 @@ module.exports = class UpcomingEvents extends React.Component
                   margin: '20px auto 0'
                 $tbody do
                   @state.json.data |> map (event) ~>
-                    group = @state.json.includes.groups[event.relationships.group]
+                    group = @state.json.included.groups[event.relationships.group]
                     $tr do
                       $td do
                         style:
