@@ -1,0 +1,89 @@
+module.exports = [
+  # 1st Tuesday
+  {
+    name: 'DevOps'
+    desc: "If you want to actually <em>ship</em>, scale, or collaborate with a team, you'll need to level up your development operations skills."
+    icon: 'fa-server'
+    url: 'http://www.meetup.com/Lansing-DevOps-Meetup/'
+    on: '1st Tuesday'
+  }
+  # 2nd Tuesday
+  {
+    name: 'Ruby'
+    desc: "Designed for developer happiness, this language is especially popular (and powerful) for rapid, server-side web development - without the steep learning curve."
+    icon: 'icon-ruby'
+    url: 'http://www.meetup.com/Lansing-Ruby-Meetup-Group/'
+    on: '2nd Tuesday'
+  }
+  # 2nd Tuesday
+  {
+    name: 'Project Management'
+    desc: "As a project's complexity and team grows, managing the process becomes vital."
+    icon: 'fa-pie-chart'
+    url: 'http://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/'
+    on: '2nd Tuesday'
+  }
+  # 2nd Wednesday
+  {
+    name: 'Web'
+    desc: "A more general meetup on web development with a greater concentration of .NET folks."
+    icon: 'icon-html'
+    url: 'http://www.meetup.com/lansingweb/'
+    on: '2nd Wednesday'
+  }
+  # 3rd Tuesday
+  {
+    name: 'JavaScript'
+    desc: "When coding on the client, there's really only one choice; fortunately, it has one of the most thriving and innovative communities around."
+    icon: 'icon-javascript'
+    url: 'http://www.meetup.com/Lansing-Javascript-Meetup/'
+    on: '3rd Tuesday'
+  }
+  # 3rd Thursday
+  {
+    name: '.NET'
+    desc: "One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft."
+    icon: 'icon-csharp'
+    url: 'http://www.meetup.com/GLUGnet/'
+    on: '3rd Thursday'
+  }
+  # 4th Monday
+  {
+    name: 'Mobile'
+    desc: "For development on iOS or Android, this the place to be."
+    icon: 'icon-mobile-device'
+    url: 'http://www.meetup.com/MoMoLansing/'
+    on: '4th Monday'
+  }
+  # 4th Tuesday
+  {
+    name: 'Java'
+    desc: "One of the most popular languages in the world with an incredibly rich ecosystem."
+    icon: 'icon-java-bold'
+    url: 'https://sites.google.com/site/greaterlansingjug/'
+    on: '4th Tuesday'
+  }
+  # 4th Tuesday
+  {
+    name: 'Agile'
+    desc: "It's easy to spin your wheels pounding at the keyboard, but a focus on <em>process</em> will make you orders of magnitude more effective."
+    icon: 'fa-table'
+    url: "http://www.meetup.com/Mid-Michigan-Agile-Group/"
+    on: '4th Tuesday'
+  }
+  # 4th Thursday
+  {
+    name: 'Interaction Design'
+    desc: "The most significant challenges in product development often lie in the space between the backend and the user."
+    icon: 'fa-users'
+    url: 'http://www.meetup.com/IxDA-Lansing/'
+    on: '4th Thursday'
+  }
+  # Perhaps Expired
+  # {
+  #   name: 'Big Data'
+  #   desc: "There's a <em>lot</em> of great data out there. Now to figure out what to do with it."
+  #   icon: 'icon-hadoop'
+  #   url: 'http://www.meetup.com/Lansing-Hadoop-Users-Group-Meetup/'
+  # }
+]
