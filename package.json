@@ -2,14 +2,18 @@
   "name": "lansing.codes",
   "version": "0.0.0",
   "main": "app/app",
-  "scripts": {},
+  "scripts": {
+    "start": "./node_modules/arch-cli/index.js serve --port $PORT"
+  },
   "dependencies": {
-    "arch": "git+https://github.com/redbadger/arch",
     "isomorphic-fetch": "^2.1.1",
     "prelude-ls": "^1.1.2",
     "radium": "^0.13.4",
     "react": "^0.13.3",
     "react-bootstrap": "^0.24.2",
     "react-tap-event-plugin": "^0.1.7"
+  },
+  "//": {
+    "arch": "git+https://github.com/redbadger/arch"
   }
 }
