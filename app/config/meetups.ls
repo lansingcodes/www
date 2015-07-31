@@ -2,7 +2,7 @@ module.exports = [
   # 1st Tuesday
   {
     name: 'DevOps'
-    desc: "If you want to actually <em>ship</em>, scale, or collaborate with a team, you'll need to level up your development operations skills."
+    desc: "If you want to actually <em>ship</em>, scale, or collaborate with a team, here's where you learn how."
     icon: 'fa-server'
     url: 'http://www.meetup.com/Lansing-DevOps-Meetup/'
     on: '1st Tuesday'
@@ -21,6 +21,14 @@ module.exports = [
     desc: "As a project's complexity and team grows, managing the process becomes vital."
     icon: 'fa-pie-chart'
     url: 'http://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/'
+    on: '2nd Tuesday'
+  }
+  # 2nd Tuesday
+  {
+    name: 'SQL Server'
+    desc: "If you're living in Micrsoft's world, you'll want to keep up with SQL Server and related technologies."
+    icon: 'icon-mssql'
+    url: 'http://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/'
     on: '2nd Tuesday'
   }
   # 2nd Wednesday
