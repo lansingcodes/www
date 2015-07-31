@@ -1,5 +1,4 @@
-node_modules/*
-!node_modules/arch/
+# node_modules/
 dist/
 *.pid
 *.log
