@@ -33,7 +33,6 @@ module.exports = class UpcomingEvents extends React.Component
                   text-align: \left
                   margin: '20px auto 0'
                 $tbody do
-                  console.log @state.json
                   @state.json.data |> map (event) ~>
                     group = @state.json.includes.groups[event.relationships.group]
                     $tr do
