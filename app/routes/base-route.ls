@@ -9,19 +9,19 @@ html = '<!doctype html>
     <title>{title}</title>
     <link rel="shortcut icon" href="/favicon.ico?v=1">
 
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="/dist/css/style.css">
-    <link rel="stylesheet"
+    <link rel="stylesheet" type="text/css"
       href="/dist/css/font-mfizz.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
