@@ -4,7 +4,6 @@ require! <[
   react-bootstrap/lib/CollapsibleNav
   react-bootstrap/lib/Nav
   react-bootstrap/lib/NavItem
-  react-bootstrap/lib/Affix
 ]>
 
 # Components

@@ -32,5 +32,7 @@ styles =
   heading:
 
     base:
-      '@media (min-width: 768px)':
-        font-size: 65
+      font-size: 65
+
+      '@media (max-width: 767px)':
+        font-size: 36
