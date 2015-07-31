@@ -6,6 +6,7 @@
     "start": "./node_modules/arch-cli/index.js serve --port $PORT"
   },
   "dependencies": {
+    "arch-cli": "0.1.0-rc.3",
     "isomorphic-fetch": "^2.1.1",
     "prelude-ls": "^1.1.2",
     "radium": "^0.13.4",
