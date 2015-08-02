@@ -36,15 +36,15 @@ styles =
     base:
       position: \relative
       width: '100%'
-      min-height: \auto
       text-align: \center
       color: '#fff'
       background-image: 'url(/dist/images/header.jpg)'
       background-position: \center
       background-size: \cover
+      min-height: '100%'
 
-      '@media (min-width: 768px)':
-        min-height: '100%'
+      '@media (max-width: 767px)':
+        min-height: \auto
 
   header-content:
 
@@ -76,11 +76,11 @@ styles =
       margin-bottom: 0
       text-transform: \uppercase
       font-weight: 700
-      font-size: 65
+      font-size: 36
 
       '@media (max-width: 767px)':
-        font-size: 36
-
+        font-size: 65
+        
   divider:
 
     base:
