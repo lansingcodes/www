@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/*html,
+html,
 body, #application, #application > div {
   width: 100%;
   height: 100%;
@@ -12,33 +12,33 @@ body, #application, #application > div {
 
 body {
   font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-}*/
+}
 
-/*hr {
+hr {
   max-width: 50px;
   border-color: #407cbf;
   border-width: 3px;
-}*/
+}
 
-/*hr.light {
+hr.light {
   border-color: #fff;
-}*/
+}
 
-/*a {
+a {
   color: #407cbf;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
-}*/
+}
 
-/*a:hover,
+a:hover,
 a:focus {
   color: #3569A6;
-}*/
+}
 
-/*.table a {
+.table a {
   color: white;
-}*/
+}
 
 .table a:hover,
 .table a:focus {
