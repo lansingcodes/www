@@ -35,5 +35,5 @@ styles =
   'a:hover, a:focus':
     color: '#3569A6'
 
-  # '.table a'
-  #   color: 'white'
+  '.table a'
+    color: 'white'
