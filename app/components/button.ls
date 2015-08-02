@@ -8,7 +8,10 @@ module.exports = class Button extends React.Component
     type = @props.type or \default
     size = @props.size or \xl
 
-    $a class-name: "btn btn-#{type} btn-#{size} #{@props.class-name}", href: @props.href,
+    $a do
+      class-name: "btn btn-#{type} btn-#{size} #{@props.class-name}"
+      href: @props.href
+      'data-scroll': @props['data-scroll']
       if @props.icon?
         $(Icon) do
           type: @props.icon

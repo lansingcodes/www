@@ -12,7 +12,8 @@
     "radium": "^0.13.4",
     "react": "^0.13.3",
     "react-bootstrap": "^0.24.2",
-    "react-tap-event-plugin": "^0.1.7"
+    "react-tap-event-plugin": "^0.1.7",
+    "smooth-scroll": "cferdinandi/smooth-scroll"
   },
   "//": {
     "arch": "git+https://github.com/arch-js/arch"
