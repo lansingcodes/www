@@ -49,18 +49,21 @@ styles =
   header-content:
 
     base:
-      position: \relative
+
       width: '100%'
-      padding: '100px 15px'
       text-align: \center
       background-color: 'rgba(0,0,0,0.5)'
       box-shadow: '0 0 200px 100px rgba(0,0,0,0.5)'
+      padding: '0 50px'
+      position: \absolute
+      top: '50%'
+      transform: 'translateY(-50%)'
 
-      '@media (min-width: 768px)':
-        position: \absolute
-        top: '50%'
-        padding: '0 50px'
-        transform: 'translateY(-50%)'
+      '@media (max-width: 767px)':
+        padding: '100px 15px'
+        position: \relative
+        top: \auto
+        transform: \none
 
   header-content-inner:
 
@@ -76,11 +79,11 @@ styles =
       margin-bottom: 0
       text-transform: \uppercase
       font-weight: 700
-      font-size: 36
+      font-size: 65
 
       '@media (max-width: 767px)':
-        font-size: 65
-        
+        font-size: 36
+
   divider:
 
     base:
