@@ -11,7 +11,7 @@ require! {
 module.exports = class Meetups extends React.Component
 
   render: ->
-    $section do
+    $section id: 'meetups',
       $(Grid) do
         $(Row) do
           $(Col) lg: 12, class-name: 'text-center',
