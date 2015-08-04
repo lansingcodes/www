@@ -87,11 +87,12 @@ module.exports = [
     url: 'http://www.meetup.com/IxDA-Lansing/'
     on: '4th Thursday'
   }
-  # Perhaps Expired
-  # {
-  #   name: 'Big Data'
-  #   desc: "There's a <em>lot</em> of great data out there. Now to figure out what to do with it."
-  #   icon: 'icon-hadoop'
-  #   url: 'http://www.meetup.com/Lansing-Hadoop-Users-Group-Meetup/'
-  # }
+  # 4th Thursday
+  {
+    name: 'Big Data'
+    desc: "There's a <em>lot</em> of great data out there. Now to figure out what to do with it."
+    icon: 'icon-hadoop'
+    url: 'http://www.meetup.com/Lansing-Hadoop-Users-Group-Meetup/'
+    on: '4th Thursday'
+  }
 ]
