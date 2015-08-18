@@ -16,7 +16,7 @@ module.exports = class UpcomingEvents extends React.Component
     @state =
       json: undefined
 
-  component-will-mount: ->
+  component-will-mount: !->
     fetch('http://api.lansing.codes/v1/events/upcoming/list')
       .then (response) -> response.json!
       .then (json) !~> @set-state json: json
@@ -34,7 +34,7 @@ module.exports = class UpcomingEvents extends React.Component
                   margin: '20px auto 0'
                 $tbody do
                   @state.json.data |> map (event) ~>
-                    group = @state.json.included.groups[event.relationships.group]
+                    group = @state.json.included[event.relationships.group.type][event.relationships.group.id]
                     $tr do
                       $td do
                         style:
