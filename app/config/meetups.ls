@@ -55,6 +55,14 @@ module.exports = [
     url: 'http://www.meetup.com/GLUGnet/'
     on: '3rd Thursday'
   }
+  # 3rd Tuesday
+  {
+    name: 'R'
+    desc: "Have data, need stats? Use R."
+    icon: 'icon-line-graph'
+    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/'
+    on: '3rd Tuesday'
+  }
   # 4th Monday
   {
     name: 'Mobile'
@@ -85,6 +93,14 @@ module.exports = [
     desc: "The most significant challenges in product development often lie in the space between the backend and the user."
     icon: 'fa-users'
     url: 'http://www.meetup.com/IxDA-Lansing/'
+    on: '4th Thursday'
+  }
+  # 4th Thursday
+  {
+    name: 'Software Testing'
+    desc: "The last line of defense against bugs and poor design."
+    icon: 'icon-script'
+    url: 'http://www.meetup.com/LansingAreaSoftwareTesters/'
     on: '4th Thursday'
   }
   # 4th Thursday
