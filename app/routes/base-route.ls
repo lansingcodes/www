@@ -22,7 +22,7 @@ html = '<!doctype html>
       <meta name="description" content="Events for Lansing coders">
 
       <title>{title}</title>
-      <link rel="shortcut icon" href="/dist/favicon.ico?v=1">
+      <link rel="shortcut icon" href="/dist/favicon.ico?v=2">
 
       <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
