@@ -13,7 +13,7 @@
     "radium": "^0.13.4",
     "react": "^0.13.3",
     "react-bootstrap": "^0.26.4",
-    "react-tap-event-plugin": "^0.1.7",
+    "react-tap-event-plugin": "^0.1.8",
     "smooth-scroll": "cferdinandi/smooth-scroll"
   }
 }
