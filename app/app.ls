@@ -4,7 +4,7 @@ require './globals'
 if window?
   # Removes 300ms delay on tap on mobile devices
   # https://github.com/zilverline/react-tap-event-plugin
-  require('react-tap-event-plugin')!
+  # require('react-tap-event-plugin')!
   # Activates smooth scrolling for data-scroll element
   require('smooth-scroll').init do
     speed: 500
