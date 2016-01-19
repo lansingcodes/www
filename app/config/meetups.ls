@@ -34,7 +34,7 @@ module.exports = [
   # 2nd Wednesday
   {
     name: 'Web'
-    desc: "A more general meetup on web development with a greater concentration of .NET folks."
+    desc: "An agenda-free meetup where you can share your latest project, talk about tools you're using, network, trade advice, or just chat about the web."
     icon: 'icon-html'
     url: 'http://www.meetup.com/lansingweb/'
     on: '2nd Wednesday'
@@ -46,6 +46,14 @@ module.exports = [
     icon: 'icon-javascript'
     url: 'http://www.meetup.com/Lansing-Javascript-Meetup/'
     on: '3rd Tuesday'
+  }
+  # 3rd Wednesday
+  {
+    name: 'Side Projects'
+    desc: "Side projects are important - and often where we learn the most."
+    icon: 'fa-code'
+    url: 'http://www.meetup.com/Labor-of-Love-a-technology-side-project-meetup/'
+    on: '3rd Wednesday'
   }
   # 3rd Thursday
   {
