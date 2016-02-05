@@ -19,7 +19,7 @@ html = '<!doctype html>
       <meta charset="utf-8">
       <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Events for Lansing coders">
+      <meta name="description" content="Resources for Lansing coders">
 
       <title>{title}</title>
       <link rel="shortcut icon" href="/dist/favicon.ico?v=3">
