@@ -79,6 +79,11 @@ p {
 
 .bg-primary {
   background-color: #407cbf;
+  color: white;
+}
+
+.bg-primary a {
+  color: white;
 }
 
 .bg-dark {

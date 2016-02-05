@@ -40,20 +40,29 @@ module.exports = class Navigation extends React.Component
 
       $(CollapsibleNav) event-key: 0,
         $(Nav) navbar: true, right: true,
-          $(NavItem) event-key: 1, href: 'http://lansingcodelab.com', target: '_blank', 'Learn'
-          $(NavItem) event-key: 2, href: 'http://slack.lansing.codes/', target: '_blank', 'Slack'
+          $(NavItem) do
+            event-key: 2
+            href: 'http://slack.lansing.codes/'
+            target: '_blank'
+            'Slack'
           $(NavItem) do
             event-key: 4
             href: '#calendar'
             link-props:
               'data-scroll': true
-            'Calendar'
+            'Upcoming Events'
           $(NavItem) do
             event-key: 3
             href: '#meetups'
             link-props:
               'data-scroll': true
             'Meetups'
+          $(NavItem) do
+            event-key: 1
+            href: '#beginner-resources'
+            link-props:
+              'data-scroll': true
+            'Beginner Resources'
           $(NavItem) do
             event-key: 5
             href: '#contact'
