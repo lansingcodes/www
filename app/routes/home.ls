@@ -11,8 +11,6 @@ require! {
 
 module.exports = class HomeRoute extends BaseRoute
 
-  title: -> 'Home'
-
   render: ->
     $(Layout) do
       $(Welcome)!

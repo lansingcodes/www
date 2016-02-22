@@ -1,3 +1,21 @@
+require! {
+  '../config/beginner-resources'
+  '../config/meetups'
+}
+
+meetup-keywords = meetups
+  |> map (.name.to-lower-case!)
+  |> (.join ',')
+
+beginner-resources-keywords = beginner-resources
+  |> map (.title.to-lower-case!)
+  |> (.join ',')
+
+const dynamic-keywords = [
+  meetup-keywords
+  beginner-resources-keywords
+].join ','
+
 # This is a base route for convenient definition of outer layout and
 # page title. All route components inherit from this class
 module.exports = class BaseRoute extends React.Component
@@ -9,19 +27,44 @@ module.exports = class BaseRoute extends React.Component
       html.replace '{body}', context.body .replace '{title}', context.title
 
   get-title: ->
-    base-title = 'Lansing Codes'
+    base-title = 'Lansing.Codes'
     title = @title! if @title?
     if title then "#{base-title} | #{title}" else base-title
 
-html = '<!doctype html>
+html = """
+  <!doctype html>
   <html lang="en">
     <head>
       <meta charset="utf-8">
       <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Resources for Lansing coders">
 
       <title>{title}</title>
+      <meta property="og:title" content="Lansing.Codes">
+      <meta name="description" content="Resources for coders and community organizers of Lansing, MI.">
+      <meta property="og:description" content="Resources for coders and community organizers of Lansing, MI.">
+
+      <meta name="keywords" content="lansing mi,lansing codes,meetups,events,code,coding,programming,hackathon,learning to code,coding resources,programming resources,learn to code,#{dynamic-keywords}">
+
+      <meta name="geo.region" content="US-MI">
+      <meta name="geo.placename" content="Greater Lansing">
+      <meta name="geo.position" content="42.734552;-84.480615">
+      <meta name="ICBM" content="42.734552, -84.480615">
+
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://www.lansing.codes/">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="Lansing.Codes">
+
+      <meta property="og:image" content="https://lansingcodelab.com/assets/lansing-codes-logo-9e6ac994d59c9a70059b448374a1062c8eb048e502007722dde298eba85be667.svg">
+      <meta property="og:image:type" content="image/svg+xml">
+      <meta property="og:image:width" content="300">
+      <meta property="og:image:height" content="300">
+
+      <meta property="fb:admins" content="2327791">
+      <meta property="fb:admins" content="2335756">
+      <meta property="fb:admins" content="1261535380">
+
       <link rel="shortcut icon" href="/dist/favicon.ico?v=3">
 
       <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -44,4 +87,4 @@ html = '<!doctype html>
       <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     </body>
   </html>
-  '
+"""
