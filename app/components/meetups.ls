@@ -15,7 +15,10 @@ module.exports = class Meetups extends React.Component
       $(Grid) do
         $(Row) do
           $(Col) lg: 12, class-name: 'text-center',
-            $h2 class-name: 'section-heading', 'Featured Meetups'
+            $h2 do
+              class-name: 'section-heading'
+              'Free Meetups'
+
             $p 'regular meetups to help you become a better coder'
             $hr class-name: 'primary'
       $(Grid) do

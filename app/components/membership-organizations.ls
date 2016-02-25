@@ -5,23 +5,22 @@ require! <[
 ]>
 
 require! {
-  '../config/beginner-resources': beginner-resources
+  '../config/membership-organizations': membership-organizations
 }
 
 module.exports = class LearningOpportunities extends React.Component
 
   render: ->
     $section do
-      id: 'beginner-resources'
-      class-name: 'bg-primary'
+      id: 'membership-organizations'
       $(Grid) do
         $(Row) do
           $(Col) lg: 12, class-name: 'text-center',
-            $h2 class-name: 'section-heading', 'Beginner Resources'
-            $p "where to start if you're new to coding"
+            $h2 class-name: 'section-heading', 'Membership Organizations'
+            $p 'professional organizations providing resources and advocacy'
             $hr class-name: 'primary'
         $(Row) do
-          beginner-resources |> map (resource) ->
+          membership-organizations |> map (resource) ->
             $(Col) md: 6,
               $h2 do
                 $a do

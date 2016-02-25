@@ -15,19 +15,19 @@ module.exports = Radium class Welcome extends React.Component
           $h1 do
             key: \welcome-heading
             style: styles.heading.base
-            'Events for Lansing coders'
+            'Events and resources for Lansing coders'
           $hr style: styles.divider.base
           $p do
-            "If you code or aspire to, professionally or as a hobby, welcome."
-            $br!
-            "This is your home. We are your people."
+            $em 'for those who code or aspire to, professionally or as a hobby'
+
+          $br!
 
           $(Button) do
             type: \primary
             icon: \fa-calendar
             href: '#calendar'
             'data-scroll': true
-            "Browse the calendar"
+            "See what's happening now"
 
 styles =
 

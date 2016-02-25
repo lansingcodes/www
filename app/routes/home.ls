@@ -6,6 +6,7 @@ require! {
   '../components/events': Events
   '../components/meetups': Meetups
   '../components/beginner-resources': BeginnerResources
+  '../components/membership-organizations': MembershipOrganizations
   '../components/contact': Contact
 }
 
@@ -17,4 +18,5 @@ module.exports = class HomeRoute extends BaseRoute
       $(Events)!
       $(Meetups)!
       $(BeginnerResources)!
+      $(MembershipOrganizations)!
       $(Contact)!

@@ -50,7 +50,7 @@ module.exports = class Navigation extends React.Component
             href: '#calendar'
             link-props:
               'data-scroll': true
-            'Upcoming Events'
+            'Calendar'
           $(NavItem) do
             event-key: 3
             href: '#meetups'
@@ -63,6 +63,12 @@ module.exports = class Navigation extends React.Component
             link-props:
               'data-scroll': true
             'Beginner Resources'
+          $(NavItem) do
+            event-key: 1
+            href: '#membership-organizations'
+            link-props:
+              'data-scroll': true
+            'Membership Organizations'
           $(NavItem) do
             event-key: 5
             href: '#contact'
