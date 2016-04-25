@@ -95,6 +95,14 @@ module.exports = [
     url: "http://www.meetup.com/Mid-Michigan-Agile-Group/"
     on: '4th Tuesday'
   }
+  # Last Tuesday
+  {
+    name: 'Infrastructure'
+    desc: "Networking, security, switching, routing, firewalls, load balancers, and more!"
+    icon: 'fa-hdd-o'
+    url: 'http://www.meetup.com/Greater-Lansing-Infrastructure-Meetup/'
+    on: 'Last Tuesday'
+  }
   # 4th Thursday
   {
     name: 'Interaction Design'
