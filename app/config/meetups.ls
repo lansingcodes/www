@@ -26,7 +26,7 @@ module.exports = [
   # 2nd Tuesday
   {
     name: 'SQL Server'
-    desc: "If you're living in Micrsoft's world, you'll want to keep up with SQL Server and related technologies."
+    desc: "If you're living in Microsoft's world, you'll want to keep up with SQL Server and related technologies."
     icon: 'icon-mssql'
     url: 'http://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/'
     on: '2nd Tuesday'
@@ -74,7 +74,7 @@ module.exports = [
   # 4th Monday
   {
     name: 'Mobile'
-    desc: "For development on iOS or Android, this the place to be."
+    desc: "For development on iOS or Android, this is the place to be."
     icon: 'icon-mobile-device'
     url: 'http://www.meetup.com/MoMoLansing/'
     on: '4th Monday'
