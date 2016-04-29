@@ -14,18 +14,6 @@
 </script>
 
 <style lang="scss">
-  hr {
-    border-color: #407CBF;
-  }
-
-  .btn-primary {
-    background: #407CBF;
-
-    &:hover {
-      background: darken(#407CBF, 10%);
-    }
-  }
-
   .popover {
     color: #555;
   }

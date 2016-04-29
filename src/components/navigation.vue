@@ -8,7 +8,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Lansing Codes</a>
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/icon-tall-square-fixed-300-transparent.png" alt="Logo">
+          Lansing.Codes
+        </a>
       </div>
       <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-7">
         <ul class="nav navbar-nav">
@@ -32,11 +35,11 @@
               Beginner Resources
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#membership-organizations">
               Membership Organizations
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="#contact">
               Contact
@@ -71,9 +74,23 @@
 </script>
 
 <style lang="scss" scoped>
-  nav.affix {
-    .navbar-brand {
-      color: #407CBF !important;
+  nav {
+    .navbar-brand > img {
+      display: inline-block;
+      width: 30px;
+      margin-top: -8px;
+      margin-right: 7px;
+      transition: margin 0.3s;
+    }
+
+    &.affix {
+      .navbar-brand {
+        color: #407CBF !important;
+
+        > img {
+          margin-top: -5px;
+        }
+      }
     }
   }
 
