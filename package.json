@@ -11,7 +11,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "predeploy": "npm run build",
-    "deploy": "surge --project dist --domain lansing.codes"
+    "deploy": "surge --project dist --domain lansing-codes.surge.sh"
   },
   "dependencies": {
     "babel-runtime": "^5.8.0",

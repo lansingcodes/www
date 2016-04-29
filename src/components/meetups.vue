@@ -38,4 +38,13 @@
   i.fa-4x {
     height: 50px;
   }
+
+  i {
+    &.fa-code { margin-left: -9px; }
+    &.icon-html { margin-right: -10px; }
+    &.icon-javascript { margin-right: -7px; }
+    &.icon-java-bold { margin-right: -17px; }
+    &.icon-mobile-device { margin-left: -5px; }
+    &.icon-ruby { margin-right: -4px; }
+  }
 </style>
