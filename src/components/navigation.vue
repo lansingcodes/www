@@ -32,7 +32,7 @@
           </li>
           <li>
             <a href="#beginner-resources">
-              Beginner Resources
+              Beginning
             </a>
           </li>
           <!-- <li>
@@ -74,24 +74,18 @@
 </script>
 
 <style lang="scss" scoped>
-  nav {
-    .navbar-brand > img {
-      display: inline-block;
-      width: 30px;
-      margin-top: -8px;
-      margin-right: 7px;
-      transition: margin 0.3s;
+  nav.affix {
+    .navbar-brand {
+      color: #407CBF !important;
     }
+  }
 
-    &.affix {
-      .navbar-brand {
-        color: #407CBF !important;
-
-        > img {
-          margin-top: -5px;
-        }
-      }
-    }
+  .navbar-brand > img {
+    display: inline-block;
+    width: 30px;
+    margin-top: -5px;
+    margin-right: 7px;
+    transition: margin 0.3s;
   }
 
   .nav > li > a {
