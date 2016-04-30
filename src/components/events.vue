@@ -5,18 +5,17 @@
     heading="Upcoming Events"
   >
     <calendar v-if="events.length > 0" :events="events"></calendar>
-    <table v-if="events.length > 0" class="table">
-      <tbody>
-        <tr v-for="event in events">
-          <td>in {{ event.attributes.time.relative }}</td>
-          <td class="text-left">
-            <a :href="event.links.self">
-              {{ event.attributes.name }}
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <ul v-if="events.length > 0" class="events-list">
+      <li v-for="event in events">
+        <a :href="event.links.self">
+          <div class="event-title">
+            {{ event.relationships.group.attributes.focus }}:
+            {{ event.attributes.name }}
+          </div>
+          <div class="event-date">in {{ event.attributes.time.relative }}</div>
+        </a>
+      </li>
+    </ul>
     <p v-else class="text-center">Loading...</p>
   </resource-section>
 </template>
@@ -56,15 +55,34 @@
     color: white;
   }
 
-  .table {
-    display: none;
+  .events-list {
+    margin: 0;
+    padding: 0;
 
-    td {
-      border: none;
-      vertical-align: middle;
+    > li {
+      padding: 10px 0;
+      list-style-type: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+
+      .event-date {
+        opacity: 0.8;
+      }
 
       &:first-of-type {
-        color: rgba(255,255,255,0.83);
+        border-top: none;
+      }
+
+      > a {
+        display: block;
+
+        &:hover {
+          background: rgba(255,255,255,0.15);
+          box-shadow: 0 0 0 11px rgba(255,255,255,0.15);
+        }
+
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+        }
       }
     }
   }
