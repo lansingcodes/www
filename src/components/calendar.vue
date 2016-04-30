@@ -144,6 +144,10 @@
               background: $event-hover-bg;
               box-shadow: 0 0 0 10px $event-hover-bg;
             }
+
+            &:hover, &:active, &:focus {
+              text-decoration: none;
+            }
           }
         }
 
