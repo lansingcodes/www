@@ -23,6 +23,7 @@
               data-trigger="hover"
               data-content="{{ event.name }}"
               data-placement="bottom"
+              data-animation="false"
             >
               <a :href="event.url" target="_blank">
                 {{ event.time }}<br>
@@ -137,6 +138,12 @@
 
           > a {
             display: block;
+
+            &:hover {
+              $event-hover-bg: rgba(255,255,255,0.15);
+              background: $event-hover-bg;
+              box-shadow: 0 0 0 10px $event-hover-bg;
+            }
           }
         }
 

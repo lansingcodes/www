@@ -58,9 +58,14 @@
 
   .table {
     display: none;
+
     td {
       border: none;
       vertical-align: middle;
+
+      &:first-of-type {
+        color: rgba(255,255,255,0.83);
+      }
     }
   }
 
