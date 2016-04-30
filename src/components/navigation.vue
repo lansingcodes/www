@@ -32,14 +32,9 @@
           </li>
           <li>
             <a href="#beginner-resources">
-              Beginning
+              Beginners
             </a>
           </li>
-          <!-- <li>
-            <a href="#membership-organizations">
-              Membership Organizations
-            </a>
-          </li> -->
           <li>
             <a href="#contact">
               Contact

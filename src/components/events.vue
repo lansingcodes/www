@@ -56,6 +56,7 @@
   }
 
   .events-list {
+    display: none;
     margin: 0;
     padding: 0;
 
@@ -91,8 +92,8 @@
     .calendar {
       display: none;
     }
-    .table {
-      display: table;
+    .events-list {
+      display: block;
     }
   }
 </style>
