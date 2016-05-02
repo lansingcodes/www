@@ -189,6 +189,6 @@
 
   .icon {
     font-size: 1.3em;
-    line-height: 1.25;
+    line-height: 1.3;
   }
 </style>
