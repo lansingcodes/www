@@ -21,7 +21,7 @@
               v-for="event in eventsOnDay(day)"
               data-toggle="popover"
               data-trigger="hover"
-              data-content="{{ event.name }}"
+              :data-content="event.name"
               data-placement="bottom"
               data-animation="false"
             >
