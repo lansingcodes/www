@@ -26,7 +26,12 @@
               data-animation="false"
             >
               <a :href="event.url" target="_blank">
-                {{ event.time }}<br>
+                <div>
+                  {{ event.time }}
+                  <span class="pull-right">
+                    <icon :type="iconFor(event)" class="icon"></icon>
+                  </span>
+                </div>
                 {{ event.focus }}
               </a>
             </li>
@@ -40,8 +45,13 @@
 <script>
   import moment from 'moment'
   import chunk from 'lodash/chunk'
+  import icon from './icon'
+  import meetups from 'src/config/meetups'
 
   export default {
+    components: {
+      icon
+    },
     props: {
       events: {
         props: {
@@ -99,6 +109,12 @@
       isWeekday (day) {
         const dayOfWeek = day.format('E')
         return dayOfWeek <= 5
+      },
+      iconFor (event) {
+        const matchingMeetup = meetups.filter(meetup => {
+          return meetup.name === event.focus
+        })[0]
+        return matchingMeetup ? matchingMeetup.icon : null
       }
     }
   }
@@ -169,5 +185,10 @@
       width: $one-seventh-width;
       text-align: center;
     }
+  }
+
+  .icon {
+    font-size: 1.3em;
+    line-height: 1.25;
   }
 </style>
