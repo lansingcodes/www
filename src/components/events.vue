@@ -10,7 +10,9 @@
         <a :href="event.links.self">
           <div class="event-title">
             {{ event.relationships.group.attributes.focus }}:
-            {{ event.attributes.name }}
+            <span class="event-name">
+              {{ event.attributes.name }}
+            </span>
           </div>
           <div class="event-date">in {{ event.attributes.time.relative }}</div>
         </a>
@@ -64,6 +66,10 @@
       padding: 10px 0;
       list-style-type: none;
       border-top: 1px solid rgba(255,255,255,0.15);
+
+      .event-name {
+        font-weight: 200;
+      }
 
       .event-date {
         opacity: 0.8;

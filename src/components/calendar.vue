@@ -28,7 +28,7 @@
               <a :href="event.url" target="_blank">
                 <div>
                   {{ event.time }}
-                  <span class="pull-right">
+                  <span v-if="iconFor(event)" class="pull-right">
                     <icon :type="iconFor(event)" class="icon"></icon>
                   </span>
                 </div>
@@ -151,6 +151,13 @@
         li {
           list-style-type: none;
           margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px solid rgba(255,255,255,0.2);
+
+          &:first-of-type {
+            padding-top: 0;
+            border-top: none;
+          }
 
           > a {
             display: block;
@@ -188,7 +195,7 @@
   }
 
   .icon {
-    font-size: 1.3em;
-    line-height: 1.3;
+    font-size: 1.4em;
+    margin-top: 5px;
   }
 </style>
