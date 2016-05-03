@@ -23,6 +23,8 @@
 </template>
 
 <script>
+  import moment from 'moment'
+
   import resourceSection from './resource-section'
   import calendar from './calendar'
 
@@ -36,17 +38,23 @@
       }
     },
     created () {
-      this.$http.get('http://api.lansing.codes/v1/events/upcoming/list')
+      this.$http.get('http://api.lansing.codes/v1/events/upcoming/list?per_group_limit=10')
         .then(response => {
-          this.events = response.data.data.map(event => {
-            return {
-              ...event,
-              relationships: {
-                group: response.data.included[event.relationships.group.type][event.relationships.group.id],
-                venue: response.data.included[event.relationships.venue.type][event.relationships.venue.id]
+          this.events = response.data.data
+            .filter(event => {
+              const eventDate = moment(event.attributes.time.absolute)
+              const lastDateInScope = moment().add(3, 'weeks').endOf('week')
+              return eventDate.isBefore(lastDateInScope)
+            })
+            .map(event => {
+              return {
+                ...event,
+                relationships: {
+                  group: response.data.included[event.relationships.group.type][event.relationships.group.id],
+                  venue: response.data.included[event.relationships.venue.type][event.relationships.venue.id]
+                }
               }
-            }
-          })
+            })
         })
     }
   }
