@@ -1,7 +1,7 @@
 {
-  "name": "testatron",
+  "name": "Lansing.Codes",
   "version": "0.1.0",
-  "description": "A Vue.js project",
+  "description": "Static site with events and resources for Lansing coders",
   "author": "Chris Fritz <chrisvfritz@gmail.com>",
   "private": true,
   "scripts": {
