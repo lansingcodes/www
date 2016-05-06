@@ -55,6 +55,13 @@ export default [
     url: 'http://www.meetup.com/Labor-of-Love-a-technology-side-project-meetup/',
     on: '3rd Wednesday'
   },
+  {
+    name: 'Atlassian',
+    desc: 'Share experiences and best practices regarding Atlassian products.',
+    icon: 'fa-bitbucket',
+    url: 'http://www.meetup.com/Lansing-Atlassian-User-Group/',
+    on: '3rd Wednesday'
+  },
   // 3rd Thursday
   {
     name: '.NET',
