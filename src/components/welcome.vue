@@ -9,7 +9,6 @@
         <p>
           <em>for those who code or aspire to, professionally or as a hobby</em>
         </p>
-        <br>
         <button-link
           type="primary"
           icon="fa-calendar"
