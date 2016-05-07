@@ -1,4 +1,4 @@
-# Lansing.Codes
+# Lansing Codes
 
 Static site with events and resources for Lansing coders
 

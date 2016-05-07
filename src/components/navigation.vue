@@ -10,7 +10,7 @@
         </button>
         <a class="navbar-brand" href="#">
           <img src="../assets/images/icon-tall-square-fixed-300-transparent.png" alt="Logo">
-          Lansing.Codes
+          Lansing Codes
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-7">
