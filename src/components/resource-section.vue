@@ -95,7 +95,7 @@
     i { color: $primary-text; }
   }
 
-  .section-header {
+  section > .container {
     position: relative;
 
     .edit-link {
