@@ -47,6 +47,14 @@ export default [
     url: 'http://www.meetup.com/Lansing-Javascript-Meetup/',
     on: '3rd Tuesday'
   },
+  // 3rd Tuesday
+  {
+    name: 'R',
+    desc: 'Have data, need stats? Use R.',
+    icon: 'icon-line-graph',
+    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
+    on: '3rd Tuesday'
+  },
   // 3rd Wednesday
   {
     name: 'Side Projects',
@@ -55,11 +63,20 @@ export default [
     url: 'http://www.meetup.com/Labor-of-Love-a-technology-side-project-meetup/',
     on: '3rd Wednesday'
   },
+  // 3rd Wednesday
   {
     name: 'Atlassian',
     desc: 'Share experiences and best practices regarding Atlassian products.',
     icon: 'fa-bitbucket',
     url: 'http://www.meetup.com/Lansing-Atlassian-User-Group/',
+    on: '3rd Wednesday'
+  },
+  // 3rd Wednesday
+  {
+    name: 'Coders Club',
+    desc: 'Learn more about computer programming, web development, career choices and entrepreneurship.',
+    icon: 'fa-graduation-cap',
+    url: 'http://www.meetup.com/Coders-Club-at-Coders-Farm/events/230693406/',
     on: '3rd Wednesday'
   },
   // 3rd Thursday
@@ -69,14 +86,6 @@ export default [
     icon: 'icon-csharp',
     url: 'http://www.meetup.com/GLUGnet/',
     on: '3rd Thursday'
-  },
-  // 3rd Tuesday
-  {
-    name: 'R',
-    desc: 'Have data, need stats? Use R.',
-    icon: 'icon-line-graph',
-    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
-    on: '3rd Tuesday'
   },
   // 4th Monday
   {
