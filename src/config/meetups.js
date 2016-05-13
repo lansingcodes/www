@@ -74,7 +74,7 @@ export default [
   // 3rd Wednesday
   {
     name: 'Coders Club',
-    desc: 'Learn more about computer programming, web development, career choices and entrepreneurship.',
+    desc: 'Learn more about computer programming, web development, career choices, and entrepreneurship.',
     icon: 'fa-graduation-cap',
     url: 'http://www.meetup.com/Coders-Club-at-Coders-Farm/events/230693406/',
     on: '3rd Wednesday'
