@@ -3,6 +3,7 @@
     id="membership-organizations"
     heading="Membership Organizations"
     description="professional organizations providing resources and advocacy"
+    edit-path="src/config/membership-organizations.js"
   >
     <grid :columns="2">
       <div slot="item" v-for="organization in membershipOrganizations">

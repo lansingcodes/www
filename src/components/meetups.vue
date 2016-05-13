@@ -3,6 +3,7 @@
     id="meetups"
     heading="Free Meetups"
     description="regular meetups to help you become a better coder"
+    edit-path="src/config/meetups.js"
   >
     <grid :columns="4">
       <div slot="item" v-for="meetup in meetups" class="text-center">

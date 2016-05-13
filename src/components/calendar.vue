@@ -197,5 +197,7 @@
   .icon {
     font-size: 1.4em;
     margin-top: 5px;
+
+    &.fa-graduation-cap { margin-right: -5px; }
   }
 </style>

@@ -1,7 +1,15 @@
 <template>
   <section class="bg-{{ bg }}">
     <div class="container">
-      <div class="text-center">
+      <div class="section-header text-center">
+        <a
+          v-if="editPath"
+          :href="'https://github.com/lansingcodes/www/edit/master/' + editPath"
+          target="_blank"
+          class="edit-link"
+        >
+          <icon type="fa-pencil-square" class="text-success"></icon>
+        </a>
         <h2 class="section-heading">{{ heading }}</h2>
         <p v-if="description">{{ description }}</p>
         <hr>
@@ -14,7 +22,12 @@
 </template>
 
 <script>
+  import icon from './icon'
+
   export default {
+    components: {
+      icon
+    },
     props: {
       bg: {
         type: String,
@@ -31,12 +44,15 @@
       },
       description: {
         type: String
+      },
+      editPath: {
+        type: String
       }
     }
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $default-bg: white;
   $default-text: #444;
   $default-link: #407CBF;
@@ -59,6 +75,7 @@
 
     hr { border-color: $primary-text; }
     a { color: $primary-link; }
+    i { color: $primary-text; }
   }
 
   $dark-bg: #222;
@@ -74,6 +91,31 @@
       color: $dark-link;
 
       &.btn { color: $dark-bg; }
+    }
+    i { color: $primary-text; }
+  }
+
+  .section-header {
+    position: relative;
+
+    .edit-link {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: all 0.2s;
+      font-size: 50px;
+    }
+
+    &:hover .edit-link {
+      opacity: 0.1;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    hr {
+      margin-bottom: 40px;
     }
   }
 </style>
