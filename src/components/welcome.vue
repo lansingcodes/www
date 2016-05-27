@@ -66,30 +66,4 @@
       transform: none;
     }
   }
-
-//
-// header-content-inner:
-//
-//   base:
-//     margin-right: \auto
-//     margin-left: \auto
-//     max-width: 1000
-//
-// heading:
-//
-//   base:
-//     margin-top: 0
-//     margin-bottom: 0
-//     text-transform: \uppercase
-//     font-weight: 700
-//     font-size: 65
-//
-//     '@media (max-width: 767px)':
-//       font-size: 36
-//
-// divider:
-//
-//   base:
-//     margin: '30px auto'
-
 </style>

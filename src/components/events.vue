@@ -9,12 +9,14 @@
       <li v-for="event in events">
         <a :href="event.links.self">
           <div class="event-title">
-            {{ event.relationships.group.attributes.focus }}:
+            <h3 class="h5">{{ event.relationships.group.attributes.focus }}</h3>
             <span class="event-name">
               {{ event.attributes.name }}
             </span>
           </div>
-          <div class="event-date">in {{ event.attributes.time.relative }}</div>
+          <div class="event-date">
+            {{ formatDate(event.attributes.time.absolute) }}
+          </div>
         </a>
       </li>
     </ul>
@@ -23,8 +25,13 @@
 </template>
 
 <script>
+  // VENDOR
   import moment from 'moment'
 
+  // HELPERS
+  import fetchEvents from 'src/helpers/fetch-events'
+
+  // COMPONENTS
   import resourceSection from './resource-section'
   import calendar from './calendar'
 
@@ -38,29 +45,21 @@
       }
     },
     created () {
-      this.$http.get('http://api.lansing.codes/v1/events/upcoming/list?per_group_limit=10')
-        .then(response => {
-          this.events = response.data.data
-            .filter(event => {
-              const eventDate = moment(event.attributes.time.absolute)
-              const lastDateInScope = moment().add(3, 'weeks').endOf('week')
-              return eventDate.isBefore(lastDateInScope)
-            })
-            .map(event => {
-              return {
-                ...event,
-                relationships: {
-                  group: response.data.included[event.relationships.group.type][event.relationships.group.id],
-                  venue: response.data.included[event.relationships.venue.type][event.relationships.venue.id]
-                }
-              }
-            })
-        })
+      fetchEvents().then(events => {
+        this.events = events
+      })
+    },
+    methods: {
+      formatDate (date) {
+        return moment(date).from(new Date())
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
+  $event-list-vertical-padding: 15px;
+
   a {
     color: white;
   }
@@ -71,9 +70,13 @@
     padding: 0;
 
     > li {
-      padding: 10px 0;
+      padding: $event-list-vertical-padding 0;
       list-style-type: none;
       border-top: 1px solid rgba(255,255,255,0.15);
+
+      h3 {
+        margin-top: 0;
+      }
 
       .event-name {
         font-weight: 200;
@@ -92,7 +95,7 @@
 
         &:hover {
           background: rgba(255,255,255,0.15);
-          box-shadow: 0 0 0 11px rgba(255,255,255,0.15);
+          box-shadow: 0 0 0 ($event-list-vertical-padding + 1px) rgba(255,255,255,0.15);
         }
 
         &:hover, &:active, &:focus {
