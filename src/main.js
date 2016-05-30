@@ -1,17 +1,24 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import app from './app'
+import VueRouter from 'vue-router'
+import configureRoutes from './routes.js'
 import dynamicKeywords from './config/dynamic-keywords'
 
 Vue.use(VueResource)
+Vue.use(VueRouter)
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'html',
-  components: { app },
+const router = new VueRouter({
+  history: true,
+  saveScrollPosition: true,
+  linkActiveClass: 'active'
+})
+
+configureRoutes(router)
+
+router.start({
   data () {
     return {
       dynamicKeywords
     }
   }
-})
+}, 'html')

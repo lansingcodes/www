@@ -21,22 +21,22 @@
             </a>
           </li>
           <li>
-            <a href="#calendar">
+            <a href="/#calendar">
               Calendar
             </a>
           </li>
           <li>
-            <a href="#meetups">
+            <a href="/#meetups">
               Meetups
             </a>
           </li>
           <li>
-            <a href="#beginner-resources">
+            <a href="/#beginner-resources">
               Beginners
             </a>
           </li>
           <li>
-            <a href="#contact">
+            <a href="/#contact">
               Contact
             </a>
           </li>

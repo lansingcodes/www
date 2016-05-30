@@ -1,6 +1,6 @@
+import { addWeeks, endOfWeek, isBefore } from 'date-fns'
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import moment from 'moment'
 
 Vue.use(VueResource)
 
@@ -9,9 +9,9 @@ export default () => {
   .then(response => {
     return response.data.data
       .filter(event => {
-        const eventDate = moment(event.attributes.time.absolute)
-        const lastDateInScope = moment().add(3, 'weeks').endOf('week')
-        return eventDate.isBefore(lastDateInScope)
+        const eventDate = new Date(event.attributes.time.absolute)
+        const lastDateInScope = endOfWeek(addWeeks(Date.now(), 3))
+        return isBefore(eventDate, lastDateInScope)
       })
       .map(event => {
         return {

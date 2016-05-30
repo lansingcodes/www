@@ -71,7 +71,7 @@ module.exports = merge(baseWebpackConfig, {
 
     new PrerenderSpaPlugin(
       path.join(__dirname, '../dist'),
-      [ '/' ]
+      [ '/', '/future' ]
     )
   ]
 })

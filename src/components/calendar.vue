@@ -15,7 +15,7 @@
         }"
       >
         <div v-if="isDuringActivePeriod(day)">
-          <div>{{ day.format('DD') }}</div>
+          <div>{{ formatDate(day, 'DD') }}</div>
           <ul>
             <li
               v-for="event in eventsOnDay(day)"
@@ -43,7 +43,11 @@
 </template>
 
 <script>
-  import moment from 'moment'
+  import {
+    startOfWeek, endOfWeek, isBefore,
+    isAfter, addDays, isSameDay,
+    format as formatDate
+  } from 'date-fns'
   import chunk from 'lodash/chunk'
   import icon from './icon'
   import meetups from 'src/config/meetups'
@@ -61,15 +65,15 @@
       }
     },
     data () {
-      const startDate = moment().startOf('week')
-      const endDate = moment(
+      const startDate = startOfWeek(Date.now())
+      const endDate = endOfWeek(
         this.events[this.events.length - 1].attributes.time.absolute
-      ).endOf('week')
+      )
       let dates = []
       for (
         let days = 0, currentDate = startDate;
-        currentDate.isBefore(endDate);
-        days++, currentDate = moment(startDate).add(days, 'day')
+        isBefore(currentDate, endDate);
+        days++, currentDate = addDays(startDate, days)
       ) {
         dates.push(currentDate)
       }
@@ -77,7 +81,9 @@
         startDate,
         endDate,
         calendar: chunk(dates, 7),
-        weekdayLabels: moment.weekdaysShort()
+        weekdayLabels: [
+          'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
+        ]
       }
     },
     ready () {
@@ -87,27 +93,33 @@
     methods: {
       eventsOnDay (day) {
         return this.events.filter(event => {
-          return moment(event.attributes.time.absolute).isSame(day, 'day')
+          return isSameDay(new Date(event.attributes.time.absolute), day)
         }).map(event => {
-          const eventTime = moment(event.attributes.time.absolute)
+          const eventTime = new Date(event.attributes.time.absolute)
           return {
             name: event.attributes.name,
-            time: eventTime.format('m') === '0'
-              ? eventTime.format('ha') : eventTime.format('h:mma'),
+            time: formatDate(eventTime, 'm') === '0'
+              ? formatDate(eventTime, 'ha') : formatDate(eventTime, 'h:mma'),
             focus: event.relationships.group.attributes.focus,
             url: event.links.self
           }
         })
       },
       isDuringActivePeriod (day) {
-        const dateOfLastEvent = this.events[this.events.length - 1].attributes.time.absolute
-        return day.isSameOrAfter(moment(), 'day') && day.isSameOrBefore(dateOfLastEvent, 'day')
+        const now = Date.now()
+        const dateOfLastEvent = new Date(
+          this.events[this.events.length - 1].attributes.time.absolute
+        )
+        return (
+          (isSameDay(day, now) || isAfter(day, now)) &&
+          (isSameDay(day, dateOfLastEvent) || isBefore(day, dateOfLastEvent))
+        )
       },
       isToday (day) {
-        return moment().isSame(day, 'day')
+        return isSameDay(day, Date.now())
       },
       isWeekday (day) {
-        const dayOfWeek = day.format('E')
+        const dayOfWeek = formatDate(day, 'E')
         return dayOfWeek <= 5
       },
       iconFor (event) {
@@ -115,7 +127,8 @@
           return meetup.name === event.focus
         })[0]
         return matchingMeetup ? matchingMeetup.icon : null
-      }
+      },
+      formatDate
     }
   }
 </script>

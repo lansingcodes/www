@@ -9,13 +9,15 @@
         <p>
           <em>for those who code or aspire to, professionally or as a hobby</em>
         </p>
-        <button-link
-          type="primary"
-          icon="fa-calendar"
-          href="#calendar"
-        >
-          See what's happening now
-        </button-link>
+        <slot name="call-to-action">
+          <button-link
+            type="primary"
+            icon="fa-calendar"
+            href="#calendar"
+          >
+            See what's happening now
+          </button-link>
+        </slot>
       </div>
     </div>
   </header>

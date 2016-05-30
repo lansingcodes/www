@@ -26,7 +26,7 @@
 
 <script>
   // VENDOR
-  import moment from 'moment'
+  import { distanceInWordsToNow } from 'date-fns'
 
   // HELPERS
   import fetchEvents from 'src/helpers/fetch-events'
@@ -51,7 +51,8 @@
     },
     methods: {
       formatDate (date) {
-        return moment(date).from(new Date())
+        const timeDisplacement = distanceInWordsToNow(date)
+        return Date.now() < date ? 'in ' + timeDisplacement : timeDisplacement + ' ago'
       }
     }
   }
