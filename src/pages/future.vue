@@ -54,6 +54,7 @@
   import buttonLink from '../components/button-link'
 
   export default {
+    replace: false,
     components: {
       layout, resourceSection, welcome, buttonLink
     }

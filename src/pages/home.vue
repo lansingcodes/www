@@ -19,6 +19,7 @@
   import contact from '../components/contact'
 
   export default {
+    replace: false,
     components: {
       layout, welcome, events, meetups, beginnerResources,
       membershipOrganizations, contact
