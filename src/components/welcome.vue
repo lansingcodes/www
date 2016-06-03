@@ -1,13 +1,17 @@
 <template>
-  <header>
+  <header :style="headerStyles">
     <div class="header-content">
       <div class="header-content-inner">
         <h1 class="heading">
-          Events and resources for Lansing coders
+          <slot name="heading">
+            Events and resources for Lansing coders
+          </slot>
         </h1>
         <hr class="divider">
         <p>
-          <em>for those who code or aspire to, professionally or as a hobby</em>
+          <slot name="tagline">
+            for those who code or aspire to, professionally or as a hobby
+          </slot>
         </p>
         <slot name="call-to-action">
           <button-link
@@ -29,6 +33,21 @@
   export default {
     components: {
       buttonLink
+    },
+    props: {
+      backgroundImage: {
+        type: String,
+        default: null
+      }
+    },
+    computed: {
+      headerStyles () {
+        const styles = {}
+        if (this.backgroundImage) {
+          styles.backgroundImage = `url(${this.backgroundImage})`
+        }
+        return styles
+      }
     }
   }
 </script>
