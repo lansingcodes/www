@@ -87,6 +87,13 @@ export default [
     url: 'http://www.meetup.com/GLUGnet/',
     on: '3rd Thursday'
   },
+  {
+    name: 'Code Retreat',
+    desc: 'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
+    icon: 'fa-people',
+    url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
+    on: '3rd Saturday'
+  },
   // 4th Monday
   {
     name: 'Mobile',
@@ -123,7 +130,7 @@ export default [
   {
     name: 'Interaction Design',
     desc: 'The most significant challenges in product development often lie in the space between the backend and the user.',
-    icon: 'fa-users',
+    icon: 'fa-map-signs',
     url: 'http://www.meetup.com/IxDA-Lansing/',
     on: '4th Thursday'
   },
