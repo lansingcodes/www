@@ -90,7 +90,7 @@ export default [
   {
     name: 'Code Retreat',
     desc: 'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
-    icon: 'fa-people',
+    icon: 'fa-users',
     url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
     on: '3rd Saturday'
   },

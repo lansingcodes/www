@@ -5,7 +5,7 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 export default () => {
-  return Vue.http.get('http://api.lansing.codes/v1/events/upcoming/list?per_group_limit=10')
+  return Vue.http.get('https://api.lansing.codes/v1/events/upcoming/list?per_group_limit=10')
   .then(response => {
     return response.data.data
       .filter(event => {
