@@ -9,7 +9,9 @@
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e"
+    "test": "npm run unit && npm run e2e",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy --path dist --site-id lansingcodes-www"
   },
   "dependencies": {
     "date-fns": "^1.3.0",
