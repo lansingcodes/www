@@ -18,7 +18,9 @@ export default () => {
           ...event,
           relationships: {
             group: response.data.included[event.relationships.group.type][event.relationships.group.id],
-            venue: response.data.included[event.relationships.venue.type][event.relationships.venue.id]
+            venue: event.relationships.venue
+              ? response.data.included[event.relationships.venue.type][event.relationships.venue.id]
+              : {}
           }
         }
       })
