@@ -39,6 +39,14 @@ export default [
     url: 'http://www.meetup.com/lansingweb/',
     on: '2nd Wednesday'
   },
+  // 2nd Thursday
+  {
+    name: 'Atlassian',
+    desc: 'Share experiences and best practices regarding Atlassian products.',
+    icon: 'fa-bitbucket',
+    url: 'http://www.meetup.com/Lansing-Atlassian-User-Group/',
+    on: '2nd Thursday'
+  },
   // 3rd Tuesday
   {
     name: 'JavaScript',
@@ -65,14 +73,6 @@ export default [
   },
   // 3rd Wednesday
   {
-    name: 'Atlassian',
-    desc: 'Share experiences and best practices regarding Atlassian products.',
-    icon: 'fa-bitbucket',
-    url: 'http://www.meetup.com/Lansing-Atlassian-User-Group/',
-    on: '3rd Wednesday'
-  },
-  // 3rd Wednesday
-  {
     name: 'Coders Club',
     desc: 'Learn more about computer programming, web development, career choices, and entrepreneurship.',
     icon: 'fa-graduation-cap',
@@ -87,20 +87,13 @@ export default [
     url: 'http://www.meetup.com/GLUGnet/',
     on: '3rd Thursday'
   },
+  // 3rd Saturday
   {
     name: 'Code Retreat',
     desc: 'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
     icon: 'fa-users',
     url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
     on: '3rd Saturday'
-  },
-  // 4th Monday
-  {
-    name: 'Mobile',
-    desc: 'For development on iOS or Android, this is the place to be.',
-    icon: 'icon-mobile-device',
-    url: 'http://www.meetup.com/MoMoLansing/',
-    on: '4th Monday'
   },
   // 4th Tuesday
   {
@@ -117,14 +110,6 @@ export default [
     icon: 'fa-table',
     url: 'http://www.meetup.com/Mid-Michigan-Agile-Group/',
     on: '4th Tuesday'
-  },
-  // Last Tuesday
-  {
-    name: 'Infrastructure',
-    desc: 'Networking, security, switching, routing, firewalls, load balancers, and more!',
-    icon: 'fa-hdd-o',
-    url: 'http://www.meetup.com/Greater-Lansing-Infrastructure-Meetup/',
-    on: 'Last Tuesday'
   },
   // 4th Thursday
   {
@@ -149,5 +134,13 @@ export default [
     icon: 'icon-hadoop',
     url: 'http://www.meetup.com/Lansing-Hadoop-Users-Group-Meetup/',
     on: '4th Thursday'
+  },
+  // Last Tuesday
+  {
+    name: 'Infrastructure',
+    desc: 'Networking, security, switching, routing, firewalls, load balancers, and more!',
+    icon: 'fa-hdd-o',
+    url: 'http://www.meetup.com/Greater-Lansing-Infrastructure-Meetup/',
+    on: 'Last Tuesday'
   }
 ]
