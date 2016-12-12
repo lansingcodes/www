@@ -63,22 +63,6 @@ export default [
     url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
     on: '3rd Tuesday'
   },
-  // 3rd Wednesday
-  {
-    name: 'Side Projects',
-    desc: 'Side projects are important - and often where we learn the most.',
-    icon: 'fa-code',
-    url: 'http://www.meetup.com/Labor-of-Love-a-technology-side-project-meetup/',
-    on: '3rd Wednesday'
-  },
-  // 3rd Wednesday
-  {
-    name: 'Coders Club',
-    desc: 'Learn more about computer programming, web development, career choices, and entrepreneurship.',
-    icon: 'fa-graduation-cap',
-    url: 'http://www.meetup.com/Coders-Club-at-Coders-Farm/events/230693406/',
-    on: '3rd Wednesday'
-  },
   // 3rd Thursday
   {
     name: '.NET',
@@ -113,26 +97,10 @@ export default [
   },
   // 4th Thursday
   {
-    name: 'Interaction Design',
-    desc: 'The most significant challenges in product development often lie in the space between the backend and the user.',
-    icon: 'fa-map-signs',
-    url: 'http://www.meetup.com/IxDA-Lansing/',
-    on: '4th Thursday'
-  },
-  // 4th Thursday
-  {
     name: 'Software Testing',
     desc: 'The last line of defense against bugs and poor design.',
     icon: 'icon-script',
     url: 'http://www.meetup.com/LansingAreaSoftwareTesters/',
-    on: '4th Thursday'
-  },
-  // 4th Thursday
-  {
-    name: 'Big Data',
-    desc: 'There\'s a <em>lot</em> of great data out there. Now to figure out what to do with it.',
-    icon: 'icon-hadoop',
-    url: 'http://www.meetup.com/Lansing-Hadoop-Users-Group-Meetup/',
     on: '4th Thursday'
   },
   // Last Tuesday
