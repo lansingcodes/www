@@ -8,7 +8,11 @@
     <grid :columns="4">
       <div slot="item" v-for="meetup in meetups" class="text-center">
         <a :href="meetup.url" target="_blank">
-          <i class="fa fa-4x {{ meetup.icon }}"></i>
+          <i
+            v-if="hasFontAwesomeIcon(meetup)"
+            class="fa fa-4x {{ meetup.icon }}">
+          </i>
+          <i v-else class="fa fa-4x icon-just-text">{{ meetup.icon }}</i>
           <h3>{{ meetup.name }}</h3>
         </a>
         <h4 class="text-muted">{{ meetup.on }}</h4>
@@ -31,6 +35,11 @@
       return {
         meetups
       }
+    },
+    methods: {
+      hasFontAwesomeIcon (meetup) {
+        return meetup.icon.indexOf('-') !== -1
+      }
     }
   }
 </script>
@@ -47,5 +56,11 @@
     &.icon-java-bold { margin-right: -17px; }
     &.icon-mobile-device { margin-left: -5px; }
     &.icon-ruby { margin-right: -4px; }
+    &[class|="icon"] { margin-top: 10px; }
+  }
+
+  .icon-just-text {
+    line-height: 50px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   }
 </style>

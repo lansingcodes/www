@@ -31,6 +31,14 @@ export default [
     url: 'http://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
     on: '2nd Tuesday'
   },
+  // 2nd Tuesday
+  {
+    name: 'ColdFusion',
+    desc: 'This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.',
+    icon: 'Cf',
+    url: 'http://www.mmcfug.org/',
+    on: '2nd Tuesday'
+  },
   // 2nd Wednesday
   {
     name: 'Web',
