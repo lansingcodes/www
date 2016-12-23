@@ -71,18 +71,7 @@ module.exports = merge(baseWebpackConfig, {
 
     new PrerenderSpaPlugin(
       path.join(__dirname, '../dist'),
-      [ '/' ],
-      {
-        postProcessHtml: function (context) {
-          var titles = {
-            '/': 'Home',
-            '/about': 'About'
-          }
-          return context.html.replace(/<title>[^<]*<\/title>/i,
-            '<title>' + titles[context.path] + '</title>'
-          )
-        }
-      }
+      [ '/', '/future' ]
     )
   ]
 })
