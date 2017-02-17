@@ -22,5 +22,3 @@ router.start({
     }
   }
 }, 'html')
-
-console.error(new Error('oiearsnt yquwftk you kyoau ktqwyofu tyquw tyquwsk tyuqkw styuk qws;yt kqy;wusk ty;quwks ty;uqkws tyu;kqs;yutkq;ywuskt'))
