@@ -9,10 +9,10 @@ export default [
   },
   // 2nd Tuesday
   {
-    name: 'Ruby',
-    desc: 'Designed for developer happiness, this language is especially popular (and powerful) for rapid, server-side web development - without the steep learning curve.',
-    icon: 'icon-ruby',
-    url: 'http://www.meetup.com/Lansing-Ruby-Meetup-Group/',
+    name: 'Demo Night',
+    desc: 'Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!',
+    icon: 'fa-moon-o',
+    url: 'http://www.meetup.com/lansing-tech-demos/',
     on: '2nd Tuesday'
   },
   // 2nd Tuesday
