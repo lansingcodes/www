@@ -7,6 +7,14 @@ export default [
     url: 'http://www.meetup.com/Lansing-DevOps-Meetup/',
     on: '1st Tuesday'
   },
+  // 1st Thursday
+  {
+    name: 'CocoaHeads',
+    desc: 'For those interested in developing for the Apple ecosystem: Swift, Objective-C, iOS, Apple Watch, macOS, tvOS, and related topics.',
+    icon: 'fa-apple',
+    url: 'https://www.meetup.com/Lansing-CocoaHeads/',
+    on: '1st Thursday'
+  },
   // 2nd Tuesday
   {
     name: 'Demo Night',
