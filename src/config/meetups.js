@@ -15,6 +15,14 @@ export default [
     url: 'https://www.meetup.com/Lansing-CocoaHeads/',
     on: '1st Thursday'
   },
+  // 2nd Monday
+  {
+    name: 'R',
+    desc: 'Have data, need stats? Use R.',
+    icon: 'icon-line-graph',
+    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
+    on: '2nd Monday'
+  },
   // 2nd Tuesday
   {
     name: 'Demo Night',
@@ -69,14 +77,6 @@ export default [
     desc: 'When coding on the client, there\'s really only one choice; fortunately, it has one of the most thriving and innovative communities around.',
     icon: 'icon-javascript',
     url: 'http://www.meetup.com/Lansing-Javascript-Meetup/',
-    on: '3rd Tuesday'
-  },
-  // 3rd Tuesday
-  {
-    name: 'R',
-    desc: 'Have data, need stats? Use R.',
-    icon: 'icon-line-graph',
-    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
     on: '3rd Tuesday'
   },
   // 3rd Thursday
