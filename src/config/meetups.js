@@ -73,6 +73,14 @@ export default [
   },
   // 3rd Tuesday
   {
+    name: 'Free Code Camp',
+    desc: 'Want to get started on learning development? Join us for the Lansing Free Code Camp meeting to start your development journey or just ask questions.',
+    icon: 'fa-free-code-camp',
+    url: 'https://www.facebook.com/groups/free.code.camp.lansing/',
+    on: '3rd Tuesday'
+  },
+  // 3rd Tuesday
+  {
     name: 'JavaScript',
     desc: 'When coding on the client, there\'s really only one choice; fortunately, it has one of the most thriving and innovative communities around.',
     icon: 'icon-javascript',
