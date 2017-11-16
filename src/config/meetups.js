@@ -23,6 +23,14 @@ export default [
     url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
     on: '2nd Monday'
   },
+  // 2nd Monday
+  {
+    name: 'UX Design',
+    desc: 'This is a group for UX design practitioners and those interested in learning about design.',
+    icon: 'fa-user-circle',
+    url: 'https://www.meetup.com/Lansing-Experience-Design-Meetup/',
+    on: '2nd Monday'
+  },
   // 2nd Tuesday
   {
     name: 'Demo Night',
