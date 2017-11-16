@@ -63,6 +63,14 @@ export default [
     url: 'http://www.meetup.com/lansingweb/',
     on: '2nd Wednesday'
   },
+  // 2nd Wednesday, every other month
+  {
+    name: 'Marketing Hackers',
+    desc: 'A community dedicated to marketers and techies who want to become power users in marketing apps and services.',
+    icon: 'fa-bullseye',
+    url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
+    on: '2nd Wednesday, Bimonthly'
+  },
   // 2nd Thursday
   {
     name: 'Atlassian',
