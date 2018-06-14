@@ -15,6 +15,14 @@ export default [
     url: 'https://www.meetup.com/Lansing-CocoaHeads/',
     on: '1st Thursday'
   },
+  // 1st Thursday
+  {
+    name: 'WordPress',
+    desc: 'The most popular website management software on the web. This group caters to developers, designers, publishers, and DIYers.',
+    icon: 'fa-wordpress',
+    url: 'https://www.meetup.com/Lansing-WordPress-Meetup/',
+    on: '1st Thursday'
+  },
   // 2nd Monday
   {
     name: 'R',
