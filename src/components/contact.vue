@@ -6,7 +6,7 @@
     class="text-center"
   >
     <button-link
-      href="mailto:chrisvfritz@gmail.com"
+      href="mailto:humanitycodes@gmail.com"
       icon="fa-envelope"
       class="wow tada"
     >
