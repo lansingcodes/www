@@ -79,14 +79,6 @@ export default [
     url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
     on: '2nd Wednesday, Bimonthly'
   },
-  // 2nd Thursday
-  {
-    name: 'Atlassian',
-    desc: 'Share experiences and best practices regarding Atlassian products.',
-    icon: 'fa-bitbucket',
-    url: 'http://www.meetup.com/Lansing-Atlassian-User-Group/',
-    on: '2nd Thursday'
-  },
   // 3rd Tuesday
   {
     name: 'Free Code Camp',
