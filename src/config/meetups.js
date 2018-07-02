@@ -87,6 +87,14 @@ export default [
     url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
     on: '2nd Wednesday, Bimonthly'
   },
+  // 2nd Thursday
+  {
+    name: 'Java',
+    desc: 'One of the most popular languages in the world with an incredibly rich ecosystem.',
+    icon: 'icon-java-bold',
+    url: 'https://sites.google.com/site/greaterlansingjug/',
+    on: '2nd Thursday'
+  },
   // 3rd Tuesday
   {
     name: 'Free Code Camp',
@@ -118,14 +126,6 @@ export default [
     icon: 'fa-users',
     url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
     on: '3rd Saturday'
-  },
-  // 4th Tuesday
-  {
-    name: 'Java',
-    desc: 'One of the most popular languages in the world with an incredibly rich ecosystem.',
-    icon: 'icon-java-bold',
-    url: 'https://sites.google.com/site/greaterlansingjug/',
-    on: '4th Tuesday'
   },
   // 4th Tuesday
   {
