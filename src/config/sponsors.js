@@ -1,13 +1,13 @@
 export default [
   {
     name: 'TEKsystems',
-    desc: 'Whether it’s transforming your business, building an all-star team or finding the right fit for your professional ambitions, we’re in it with you. Let’s innovate and reinvent. Let’s own change, together.',
+    desc: 'Whether it’s transforming your business, building an all-star team or finding the right fit for your professional ambitions, we’re in it with you.',
     logo: 'teksystems.png',
     url: 'https://www.teksystems.com/'
   },
   {
     name: 'RMC Agency',
-    desc: 'ARMC Michigan based, full-service Information Technology (IT) Consulting and Placement agency. The company offers highly experienced recruiting and account management professionals with the ability to service the diverse needs of Michigan companies seeking to employ top technical talent within the region - specializing in Applications, Infrastructure, and Communications expertise.',
+    desc: 'A Michigan based, full-service Information Technology (IT) Consulting and Placement agency.',
     logo: 'RMC.png',
     url: 'http://www.rmcagency.com/'
   },
@@ -37,7 +37,7 @@ export default [
   },
   {
     name: 'BrightDigit',
-    desc: 'The BrightDigit team brings over 15 years of experience in technology. Together they have a passion for mobile technology, public speaking, and education. Leo Dion, the founder of BrightDigit, is a sought-after speaker at professional groups about the benefits and capabilities of mobile technology.',
+    desc: 'The BrightDigit team brings over 15 years of experience in technology. Together they have a passion for mobile technology, public speaking, and education.',
     logo: 'bright_digit.png',
     url: 'https://brightdigit.com/'
   },
