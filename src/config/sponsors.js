@@ -2,7 +2,7 @@ export default [
   {
     name: 'TEKsystems',
     desc: 'Whether it’s transforming your business, building an all-star team or finding the right fit for your professional ambitions, we’re in it with you. Let’s innovate and reinvent. Let’s own change, together.',
-    logo: 'tek_systems.png',
+    logo: 'teksystems.png',
     url: 'https://www.teksystems.com/'
   },
   {
