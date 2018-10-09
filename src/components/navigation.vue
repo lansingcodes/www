@@ -35,11 +35,31 @@
               Beginners
             </a>
           </li>
+
           <li>
-            <a href="/#contact">
-              Contact
+            <a href="mailto:lansingcodes@gmail.com" title="Email">
+              <i class="fa fa-1x fa-envelope"></i>
             </a>
           </li>
+
+          <li>
+            <a href="https://github.com/lansingcodes/" title="Github">
+              <i class="fa fa-1x fa-github"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/LansingCodes/" title="Facebook">
+              <i class="fa fa-1x fa-facebook"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/lansingcodes" title="Twitter">
+              <i class="fa fa-1x fa-twitter"></i>
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
