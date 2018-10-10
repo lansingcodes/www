@@ -55,8 +55,8 @@ export default [
   },
   {
     name: 'Hyperverses',
-    desc: '???',
-    logo: 'lansing-codes.png',
+    desc: 'Hyperverses helps small and medium-sized businesses find the best buyers for their products and services with persuasive technology.'
+    logo: 'hyperverses.png',
     url: 'https://hyperverses.com/lansing-codes/'
   }
 ]
