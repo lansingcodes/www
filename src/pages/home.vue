@@ -3,8 +3,8 @@
     <welcome></welcome>
     <events></events>
     <meetups></meetups>
-    <sponsors></sponsors>
     <beginner-resources></beginner-resources>
+    <sponsors></sponsors>
     <membership-organizations></membership-organizations>
     <contact></contact>
   </layout>
