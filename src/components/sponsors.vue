@@ -8,7 +8,11 @@
     <grid :columns="4">
       <div slot="item" v-for="sponsor in sponsors" class="text-center">
         <a :href="sponsor.url" target="_blank">
-          <img v-bind:src="getLogoImg(sponsor.logo)" alt="{{ sponsor.name }} Logo" class="sponsor-logo">
+          <i
+            v-if="hasFontAwesomeIcon(sponsor)"
+            class="fa fa-4x {{ sponsor.logo }}">
+          </i>
+          <i v-else class="fa fa-4x icon-just-text">{{ sponsor.name }}</i>
           <h3>{{ sponsor.name }}</h3>
         </a>
         <p class="text-muted">{{ sponsor.desc }}</p>
@@ -32,18 +36,28 @@
       }
     },
     methods: {
-      getLogoImg (logo) {
-        return require('../assets/images/sponsors/' + logo)
+      hasFontAwesomeIcon (sponsor) {
+        return sponsor.icon.indexOf('-') !== -1
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .sponsor-logo {
-    max-width: 180px;
-    max-width: 180px;
+  i.fa-4x {
+    height: 50px;
   }
+
+  i {
+    &.fa-code { margin-left: -9px; }
+    &.icon-html { margin-right: -10px; }
+    &.icon-javascript { margin-right: -7px; }
+    &.icon-java-bold { margin-right: -17px; }
+    &.icon-mobile-device { margin-left: -5px; }
+    &.icon-ruby { margin-right: -4px; }
+    &[class|="icon"] { margin-top: 10px; }
+  }
+
   .icon-just-text {
     line-height: 50px;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
