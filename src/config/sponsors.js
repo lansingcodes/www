@@ -1,56 +1,146 @@
 export default [
+  // 1st Tuesday
   {
-    name: 'TEKsystems',
-    desc: 'Whether it’s transforming your business, building an all-star team or finding the right fit for your professional ambitions, we’re in it with you. Let’s innovate and reinvent. Let’s own change, together.',
-    logo: 'fa-server',
-    url: 'https://www.teksystems.com/'
+    name: 'DevOps',
+    desc: 'If you want to actually <em>ship</em>, scale, or collaborate with a team, here\'s where you learn how.',
+    icon: 'fa-server',
+    url: 'http://www.meetup.com/Lansing-DevOps-Meetup/',
+    on: '1st Tuesday'
   },
+  // 1st Thursday
   {
-    name: 'RMC Agency',
-    desc: 'ARMC Michigan based, full-service Information Technology (IT) Consulting and Placement agency. The company offers highly experienced recruiting and account management professionals with the ability to service the diverse needs of Michigan companies seeking to employ top technical talent within the region - specializing in Applications, Infrastructure, and Communications expertise.',
-    logo: 'fa-apple',
-    url: 'http://www.rmcagency.com/'
+    name: 'CocoaHeads',
+    desc: 'For those interested in developing for the Apple ecosystem: Swift, Objective-C, iOS, Apple Watch, macOS, tvOS, and related topics.',
+    icon: 'fa-apple',
+    url: 'https://www.meetup.com/Lansing-CocoaHeads/',
+    on: '1st Thursday'
   },
+  // 1st Thursday
   {
-    name: 'SBDC Lansing',
-    desc: 'The Michigan Small Business Development Center offers expert assistance at no cost to entrepreneurs looking to start or grow a business.',
-    logo: 'fa-wordpress',
-    url: 'https://sbdcmichigan.org/'
+    name: 'WordPress',
+    desc: 'The most popular website management software on the web. This group caters to developers, designers, publishers, and DIYers.',
+    icon: 'fa-wordpress',
+    url: 'https://www.meetup.com/Lansing-WordPress-Meetup/',
+    on: '1st Thursday'
   },
+  // 2nd Monday
   {
-    name: 'A2 Hosting',
-    desc: 'We have a blazing fast web hosting solution perfect for you! Whether you have a low traffic, brand new blog or a popular business site, we\'ve got you covered! ',
-    logo: 'logo-line-graph',
-    url: 'https://www.a2hosting.com/'
+    name: 'R',
+    desc: 'Have data, need stats? Use R.',
+    icon: 'icon-line-graph',
+    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
+    on: '2nd Monday'
   },
+  // 2nd Monday
   {
-    name: 'LEAP',
+    name: 'UX Design',
     desc: 'This is a group for UX design practitioners and those interested in learning about design.',
-    logo: 'fa-user-circle',
-    url: 'http://www.purelansing.com/'
+    icon: 'fa-user-circle',
+    url: 'https://www.meetup.com/Lansing-Experience-Design-Meetup/',
+    on: '2nd Monday'
   },
+  // 2nd Tuesday
   {
-    name: 'Humanity Codes',
-    desc: '???',
-    logo: 'fa-moon-o',
-    url: 'https://www.lansing.codes/'
+    name: 'Demo Night',
+    desc: 'Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!',
+    icon: 'fa-moon-o',
+    url: 'http://www.meetup.com/lansing-tech-demos/',
+    on: '2nd Tuesday'
   },
+  // 2nd Tuesday
   {
-    name: 'BrightDigit',
-    desc: 'The BrightDigit team brings over 15 years of experience in technology. Together they have a passion for mobile technology, public speaking, and education. Leo Dion, the founder of BrightDigit, is a sought-after speaker at professional groups about the benefits and capabilities of mobile technology.',
-    logo: 'fa-pie-chart',
-    url: 'https://brightdigit.com/'
+    name: 'Project Management',
+    desc: 'As a project\'s complexity and team grows, managing the process becomes vital.',
+    icon: 'fa-pie-chart',
+    url: 'http://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/',
+    on: '2nd Tuesday'
   },
+  // 2nd Tuesday
   {
-    name: 'TechSmith',
-    desc: 'Founded in 1987, TechSmith pioneered the revolutionary idea of capturing screen content for better communication. Today, TechSmith is the world’s #1 source for visual communication software.',
-    logo: 'logo-mssql',
-    url: 'https://www.techsmith.com/'
+    name: 'SQL Server',
+    desc: 'If you\'re living in Microsoft\'s world, you\'ll want to keep up with SQL Server and related technologies.',
+    icon: 'icon-mssql',
+    url: 'http://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
+    on: '2nd Tuesday'
   },
+  // 2nd Tuesday
   {
-    name: 'Kunz, Leigh, and Associates',
-    desc: 'Kunz, Leigh and Associates (KL&A) is a software development and professional services company currently serving the private and public sectors in Michigan and Ohio.',
-    logo: 'Cf',
-    url: 'https://kunzleigh.com/'
+    name: 'ColdFusion',
+    desc: 'This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.',
+    icon: 'Cf',
+    url: 'http://www.mmcfug.org/',
+    on: '2nd Tuesday'
+  },
+  // 2nd Wednesday
+  {
+    name: 'Web',
+    desc: 'An agenda-free meetup where you can share your latest project, talk about tools you\'re using, network, trade advice, or just chat about the web.',
+    icon: 'icon-html',
+    url: 'http://www.meetup.com/lansingweb/',
+    on: '2nd Wednesday'
+  },
+  // 2nd Wednesday, every other month
+  {
+    name: 'Marketing Hackers',
+    desc: 'A community dedicated to marketers and techies who want to become power users in marketing apps and services.',
+    icon: 'fa-bullseye',
+    url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
+    on: '2nd Wednesday, Bimonthly'
+  },
+  // 2nd Thursday
+  {
+    name: 'Java',
+    desc: 'One of the most popular languages in the world with an incredibly rich ecosystem.',
+    icon: 'icon-java-bold',
+    url: 'https://sites.google.com/site/greaterlansingjug/',
+    on: '2nd Thursday'
+  },
+  // 3rd Tuesday
+  {
+    name: 'Free Code Camp',
+    desc: 'Want to get started on learning development? Join us for the Lansing Free Code Camp meeting to start your development journey or just ask questions.',
+    icon: 'fa-free-code-camp',
+    url: 'https://www.facebook.com/groups/free.code.camp.lansing/',
+    on: '3rd Tuesday'
+  },
+  // 3rd Tuesday
+  {
+    name: 'JavaScript',
+    desc: 'When coding on the client, there\'s really only one choice; fortunately, it has one of the most thriving and innovative communities around.',
+    icon: 'icon-javascript',
+    url: 'http://www.meetup.com/Lansing-Javascript-Meetup/',
+    on: '3rd Tuesday'
+  },
+  // 3rd Thursday
+  {
+    name: '.NET',
+    desc: 'One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.',
+    icon: 'icon-csharp',
+    url: 'http://www.meetup.com/GLUGnet/',
+    on: '3rd Thursday'
+  },
+  // 3rd Saturday
+  {
+    name: 'Code Retreat',
+    desc: 'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
+    icon: 'fa-users',
+    url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
+    on: '3rd Saturday'
+  },
+  // 4th Tuesday
+  {
+    name: 'Agile',
+    desc: 'It\'s easy to spin your wheels pounding at the keyboard, but a focus on <em>process</em> will make you orders of magnitude more effective.',
+    icon: 'fa-table',
+    url: 'http://www.meetup.com/Mid-Michigan-Agile-Group/',
+    on: '4th Tuesday'
+  },
+  // 4th Thursday
+  {
+    name: 'Software Testing',
+    desc: 'The last line of defense against bugs and poor design.',
+    icon: 'icon-script',
+    url: 'http://www.meetup.com/LansingAreaSoftwareTesters/',
+    on: '4th Thursday'
   }
 ]

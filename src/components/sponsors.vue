@@ -10,9 +10,9 @@
         <a :href="sponsor.url" target="_blank">
           <i
             v-if="hasFontAwesomeIcon(sponsor)"
-            class="fa fa-4x {{ sponsor.logo }}">
+            class="fa fa-4x {{ sponsor.icon }}">
           </i>
-          <i v-else class="fa fa-4x icon-just-text">{{ sponsor.name }}</i>
+          <i v-else class="fa fa-4x icon-just-text">{{ sponsor.icon }}</i>
           <h3>{{ sponsor.name }}</h3>
         </a>
         <p class="text-muted">{{ sponsor.desc }}</p>
