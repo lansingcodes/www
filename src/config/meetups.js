@@ -111,6 +111,14 @@ export default [
     url: 'http://www.meetup.com/Lansing-Javascript-Meetup/',
     on: '3rd Tuesday'
   },
+  // 3rd Tuesday
+  {
+    name: 'Lansing Makers',
+    desc: 'Diverse people and experiences coming together in a safe environment to meld technology, art, and culture in new and exciting ways.',
+    icon: 'fa-cogs',
+    url: 'https://www.meetup.com/Lansing-Area-Maker-Meetup/',
+    on: '3rd Tuesday'
+  },
   // 3rd Thursday
   {
     name: '.NET',
