@@ -1,8 +1,8 @@
 <template>
   <resource-section
     id="sponsors"
-    heading="Lansing Codes Sponsors"
-    description="sponsors to help you become a better coder"
+    heading="Free sponsors"
+    description="regular sponsors to help you become a better coder"
     edit-path="src/config/sponsors.js"
   >
     <grid :columns="4">
@@ -15,7 +15,8 @@
           <i v-else class="fa fa-4x icon-just-text">{{ sponsor.icon }}</i>
           <h3>{{ sponsor.name }}</h3>
         </a>
-        <p class="text-muted">{{ sponsor.desc }}</p>
+        <h4 class="text-muted">{{ sponsor.on }}</h4>
+        <p class="text-muted">{{{ sponsor.desc }}}</p>
       </div>
     </grid>
   </resource-section>
