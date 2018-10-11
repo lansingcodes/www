@@ -32,7 +32,7 @@ export default [
   {
     name: 'Humanity Codes',
     desc: '???',
-    logo: 'lansing-codes.png',
+    logo: 'leap.png',
     url: 'https://www.lansing.codes/'
   },
   {
@@ -49,7 +49,7 @@ export default [
   },
   {
     name: 'Kunz, Leigh, and Associates',
-    desc: 'Kunz, Leigh and Associates is a software development and professional services company currently serving the private and public sectors in Michigan and Ohio.',
+    desc: 'Kunz, Leigh and Associates (KL&A) is a software development and professional services company currently serving the private and public sectors in Michigan and Ohio.',
     logo: 'KLA.png',
     url: 'https://kunzleigh.com/'
   }
