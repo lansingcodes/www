@@ -1,8 +1,8 @@
 <template>
   <resource-section
     id="sponsors"
-    heading="Our Sponsors"
-    description="our gracious sponsors make all of this possible!"
+    heading="Lansing Codes Sponsors"
+    description="sponsors to help you become a better coder"
     edit-path="src/config/sponsors.js"
   >
     <grid :columns="4">

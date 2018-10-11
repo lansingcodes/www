@@ -31,7 +31,7 @@ export default [
   },
   {
     name: 'Humanity Codes',
-    desc: 'Humanity Codes uses code and education to bring together Lansing\'s talented and diverse tech community.',
+    desc: '???',
     logo: 'lansing-codes.png',
     url: 'https://www.lansing.codes/'
   },
