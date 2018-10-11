@@ -37,7 +37,7 @@
     },
     methods: {
       getLogoImg (logo) {
-        return require('../assets/images/sponsors/' + logo)
+        return '/static/images/sponsors/' + logo
       }
     }
   }
