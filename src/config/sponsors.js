@@ -52,11 +52,5 @@ export default [
     desc: 'Kunz, Leigh and Associates is a software development and professional services company currently serving the private and public sectors in Michigan and Ohio.',
     logo: 'KLA.png',
     url: 'https://kunzleigh.com/'
-  },
-  {
-    name: 'Hyperverses',
-    desc: '???',
-    logo: 'lansing-codes.png',
-    url: 'https://hyperverses.com/lansing-codes/'
   }
 ]
