@@ -1,7 +1,6 @@
 <template>
   <resource-section
     id="membership-organizations"
-    bg="primary"
     heading="Membership Organizations"
     description="professional organizations providing resources and advocacy"
     edit-path="src/config/membership-organizations.js"
