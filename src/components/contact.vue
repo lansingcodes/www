@@ -5,13 +5,37 @@
     heading="Know an event or resource we're missing?"
     class="text-center"
   >
-    <button-link
-      href="mailto:humanitycodes@gmail.com"
-      icon="fa-envelope"
-      class="wow tada"
+    <a
+      href="mailto:lansingcodes@gmail.com"
+      title="Email"
     >
-      Contact us
-    </button-link>
+      <i class="fa fa-4x fa-envelope wow tada"></i>
+    </a>
+
+    <a
+      href="https://github.com/lansingcodes/"
+      title="Github"
+      target="_blank"
+    >
+      <i class="fa fa-4x fa-github"></i>
+    </a>
+
+    <a
+      href="https://www.facebook.com/LansingCodes/"
+      title="Facebook"
+      target="_blank"
+    >
+      <i class="fa fa-4x fa-facebook"></i>
+    </a>
+
+    <a
+      href="https://twitter.com/lansingcodes"
+      title="Twitter"
+      target="_blank"
+    >
+      <i class="fa fa-4x fa-twitter"></i>
+    </a>
+
   </resource-section>
 </template>
 
@@ -25,3 +49,10 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  i.fa-4x {
+    height: 50px;
+    margin-right: 25px;
+  }
+</style>
