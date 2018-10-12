@@ -88,9 +88,13 @@ published to [www.lansing.codes](https://www.lansing.codes).
 
 For both the staging and production sites, Netlify runs the command
 `npm run build` to build the site and deploys the contents of the `/dist`
-directory. Staging is also configured to deploy _all_ branches, so creating a
+directory.
+
+Staging is also configured to deploy _all_ branches, so creating a
 pull request should create a temporary site where the changes can be previewed
-before merging to `master`.
+before merging to `master`. Click on the _Details_ link next to the site check
+labeled "netlify/lansingcodes-staging/deploy-preview" to see a live preview of
+your changes.
 
 The primary Humanity Codes account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
