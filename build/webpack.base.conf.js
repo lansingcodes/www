@@ -1,6 +1,5 @@
 var path = require('path')
 var config = require('../config')
-var cssLoaders = require('./css-loaders')
 var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
@@ -13,65 +12,58 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.vue'],
-    fallback: [path.join(__dirname, '../node_modules')],
+    extensions: ['.js', '.vue'],
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components')
     }
   },
-  resolveLoader: {
-    fallback: [path.join(__dirname, '../node_modules')]
-  },
+//  resolveLoader: {
+//    fallback: [path.join(__dirname, '../node_modules')]
+//  },
   module: {
-    preLoaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /\.vue$/,
-        loader: 'eslint',
+        loader: 'eslint-loader',
         include: projectRoot,
         exclude: /node_modules/
       },
       {
+        enforce: 'pre',
         test: /\.js$/,
-        loader: 'eslint',
+        loader: 'eslint-loader',
         include: projectRoot,
         exclude: /node_modules/
-      }
-    ],
-    loaders: [
+      },
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: projectRoot,
         exclude: /node_modules/
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loder'
       },
       {
         test: /\.html$/,
-        loader: 'vue-html'
+        loader: 'vue-html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: path.join(config.build.assetsSubDirectory, '[name].[hash:7].[ext]').replace(/\\/g, '/')
         }
       }
     ]
-  },
-  vue: {
-    loaders: cssLoaders()
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   }
 }
