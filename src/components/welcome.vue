@@ -1,5 +1,5 @@
 <template>
-  <header :style="headerStyles">
+  <div :style="headerStyles" class="header">
     <div class="header-content">
       <div class="header-content-inner">
         <h1 class="heading">
@@ -24,7 +24,7 @@
         </slot>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -53,7 +53,7 @@
 </script>
 
 <style lang="scss" scoped>
-  header {
+  .header {
     position: relative;
     width: 100%;
     text-align: center;
