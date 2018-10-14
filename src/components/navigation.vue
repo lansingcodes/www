@@ -91,7 +91,7 @@
 <style lang="scss" scoped>
   nav.affix {
     .navbar-brand {
-      color: #407CBF !important;
+      color: #3E79BB !important;
     }
   }
 
@@ -105,7 +105,7 @@
 
   .nav > li > a {
     &:focus, &:hover {
-      color: #407CBF !important;
+      color: #3E79BB !important;
     }
   }
 </style>
