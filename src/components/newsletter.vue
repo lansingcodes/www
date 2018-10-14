@@ -7,20 +7,20 @@
     <form>
       <div class="flex">
         <div class="form-group col-33">
-            <label for="exampleInputName2">First Name:</label>
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Jane" v-model="firstName">
         </div>
         <div class="form-group col-33">
-            <label for="exampleInputName2">Last Name:</label>
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Doe" v-model="lastName">
         </div>
         <div class="form-group col-33">
-            <label for="exampleInputEmail2">Email:</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" v-model="email">
         </div>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-signup">Signup</button>
+        <button type="button" class="btn btn-primary btn-lg btn-signup" @click="subscribe()">Signup</button>
       </div>
     </form>
   </resource-section>
@@ -28,10 +28,38 @@
 
 <script>
   import resourceSection from './resource-section'
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+
+  Vue.use(VueResource)
 
   export default {
     components: {
       resourceSection
+    },
+    data () {
+      return {
+        firstName: '',
+        lastName: '',
+        email: ''
+      }
+    },
+    methods: {
+      subscribe () {
+        const requestBody = {
+          'email_address': this.email,
+          'status': 'subscribed',
+          'merge_fields': {
+            'FNAME': this.firstName,
+            'LNAME': this.lastName
+          }
+        }
+        console.log(requestBody)
+        Vue.http.post('https://us19.api.mailchimp.com/3.0/lists/f13ffe3703/members/', requestBody)
+        .then(response => {
+          console.log(response)
+        })
+      }
     }
   }
 </script>
@@ -62,6 +90,6 @@
     }
 
     .btn-signup {
-        padding: 6px 30px;
+        padding: 12px 50px;
     }
 </style>
