@@ -89,7 +89,8 @@
 </script>
 
 <style lang="scss" scoped>
-  nav.affix {
+  .navbar {
+    background-color: #FFF;
     .navbar-brand {
       color: #407CBF !important;
     }
@@ -101,11 +102,14 @@
     margin-top: -5px;
     margin-right: 7px;
     transition: margin 0.3s;
+    color: #407CBF;
   }
 
   .nav > li > a {
+    color: #407CBF!important;
+
     &:focus, &:hover {
-      color: #407CBF !important;
+      color: darken(#407CBF,10%) !important;
     }
   }
 </style>
