@@ -55,7 +55,7 @@
 <style lang="scss" scoped>
   $default-bg: white;
   $default-text: #444;
-  $default-link: #407CBF;
+  $default-link: #3E79BB;
 
   section.bg-default {
     background: $default-bg;
@@ -65,7 +65,7 @@
     a { color: $default-link; }
   }
 
-  $primary-bg: #407CBF;
+  $primary-bg: #3E79BB;
   $primary-text: white;
   $primary-link: $primary-text;
 
