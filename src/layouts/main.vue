@@ -1,7 +1,5 @@
 <template>
-  <div class="skipNav">
-    <a href="#mainContent" class="skip-main">Skip Navigation</a>
-  </div>
+  <a class="sr-only sr-only-focusable" href="#mainContent">Skip to main content</a>
   <navigation></navigation>
   <div role="main" class="main" id="mainContent" tabindex="-1">
     <slot></slot>
@@ -46,27 +44,5 @@
   .main {
     height: 100%;
     width:100%;
-  }
-
-  a.skip-main {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    z-index:-999;
-  }
-
-  a.skip-main:focus, a.skip-main:active {
-    left: 10px;
-    top: 10px;
-    height: auto;
-    width: auto;
-    padding: 10px;
-    text-align:center;
-    font-size:1.2em;
-    z-index:1100;
-    background: #FFF;
   }
 </style>
