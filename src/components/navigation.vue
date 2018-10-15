@@ -92,7 +92,7 @@
   .navbar {
     background-color: #FFF;
     .navbar-brand {
-      color: #3E79BB !important;
+      color: #407cbf !important;
     }
   }
 
@@ -109,7 +109,7 @@
     color: #407CBF!important;
 
     &:focus, &:hover {
-      color: #3E79BB !important;
+      color: darken(#407cbf,10%) !important;
     }
   }
 </style>
