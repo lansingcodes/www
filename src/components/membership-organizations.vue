@@ -9,7 +9,7 @@
     <grid :columns="2">
       <div slot="item" v-for="organization in membershipOrganizations">
         <h2>
-          <a :href="organization.url">{{ organization.title }}</a>
+          <a :href="organization.url" class="text-white">{{ organization.title }}</a>
         </h2>
         {{{ organization.desc }}}
       </div>

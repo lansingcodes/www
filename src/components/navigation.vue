@@ -1,67 +1,60 @@
 <template>
-  <nav class="navbar navbar-default navbar-fixed-top" :class="{ affix: !isAtTop }">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-7" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-          <img src="../assets/images/icon-tall-square-fixed-300-transparent.png" alt="Logo">
-          Lansing Codes
-        </a>
-      </div>
-      <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-7">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="http://slack.lansing.codes/" target="_blank">
-              Slack
-            </a>
-          </li>
-          <li>
-            <a href="/#calendar">
-              Calendar
-            </a>
-          </li>
-          <li>
-            <a href="/#meetups">
-              Meetups
-            </a>
-          </li>
-          <li>
-            <a href="/#beginner-resources">
-              Beginners
-            </a>
-          </li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images/icon-tall-square-fixed-300-transparent.png" alt="Logo">
+      Lansing Codes
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li>
-            <a href="mailto:lansingcodes@gmail.com" title="Email" aria-label="email">
-              <i class="fa fa-1x fa-envelope"></i>
-            </a>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="http://slack.lansing.codes/" class="nav-link" target="_blank">
+            Slack
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/#calendar" class="nav-link">
+            Calendar
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/#meetups" class="nav-link">
+            Meetups
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/#beginner-resources" class="nav-link">
+            Beginners
+          </a>
+        </li>
 
-          <li>
-            <a href="https://github.com/lansingcodes/" title="Github" target="_blank" aria-label="github">
-              <i class="fa fa-1x fa-github"></i>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a href="mailto:lansingcodes@gmail.com" title="Email" class="nav-link" aria-label="email">
+            <i class="fa fa-1x fa-envelope"></i>
+          </a>
+        </li>
 
-          <li>
-            <a href="https://www.facebook.com/LansingCodes/" title="Facebook" target="_blank" aria-label="facebook">
-              <i class="fa fa-1x fa-facebook"></i>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a href="https://github.com/lansingcodes/" title="Github" target="_blank" class="nav-link" aria-label="github">
+            <i class="fa fa-1x fa-github"></i>
+          </a>
+        </li>
 
-          <li>
-            <a href="https://twitter.com/lansingcodes" title="Twitter" target="_blank" aria-label="twitter">
-              <i class="fa fa-1x fa-twitter"></i>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com/LansingCodes/" title="Facebook" target="_blank" class="nav-link" aria-label="facebook">
+            <i class="fa fa-1x fa-facebook"></i>
+          </a>
+        </li>
 
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a href="https://twitter.com/lansingcodes" title="Twitter" target="_blank" class="nav-link" aria-label="twitter">
+            <i class="fa fa-1x fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>

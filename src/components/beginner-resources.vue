@@ -9,7 +9,7 @@
     <grid :columns="2">
       <div slot="item" v-for="resource in beginnerResources">
         <h2>
-          <a :href="resource.url">{{ resource.title }}</a>
+          <a :href="resource.url" class="text-white">{{ resource.title }}</a>
         </h2>
         {{{ resource.desc }}}
       </div>
@@ -33,3 +33,7 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

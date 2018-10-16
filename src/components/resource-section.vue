@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-{{ bg }}">
+  <section class="bg-{{ bg }} py-5">
     <div class="container">
       <div class="section-header text-center">
         <a
@@ -54,69 +54,63 @@
 </script>
 
 <style lang="scss" scoped>
-  $default-bg: white;
+  @import '../scss/_mixins.scss';
+  @import '../scss/_functions.scss';
+  @import '../scss/_variables.scss';
+
+  $default-bg: $white;
   $default-text: #444;
-  $default-link: #407cbf;
+  $default-link: $primary;
 
-  section.bg-default {
-    background: $default-bg;
-    color: $default-text;
+  section {
+    &.bg-default {
+      background: $white;
+      color: $default-text;
 
-    hr { border-color: $default-text; }
-    a { color: $default-link; }
-  }
-
-  $primary-bg: #407cbf;
-  $primary-text: white;
-  $primary-link: $primary-text;
-
-  section.bg-primary {
-    background: $primary-bg;
-    color: $primary-text;
-
-    hr { border-color: $primary-text; }
-    a { color: $primary-link; }
-    i { color: $primary-text; }
-  }
-
-  $dark-bg: #222;
-  $dark-text: white;
-  $dark-link: $dark-text;
-
-  section.bg-dark {
-    background: $dark-bg;
-    color: $dark-text;
-
-    hr { border-color: $dark-text; }
-    a {
-      color: $dark-link;
-
-      &.btn { color: $dark-bg; }
-    }
-    i { color: $primary-text; }
-  }
-
-  section > .container {
-    position: relative;
-
-    .edit-link {
-      position: absolute;
-      right: 0;
-      opacity: 0;
-      transition: all 0.2s;
-      font-size: 50px;
+      hr { border-color: $default-text; }
+      a { color: $default-text; }
     }
 
-    &:hover .edit-link {
-      opacity: 0.1;
+    &.bg-primary {
+      background: $primary;
+      color: $white;
 
-      &:hover {
-        opacity: 1;
+      hr { border-color: $white; }
+      a { color: $white!important; }
+      i { color: $white; }
+    }
+
+    &.bg-dark {
+      background: $gray-900;
+      color: $white;
+
+      hr { border-color: $white; }
+      a {
+        color: $white;
+
+        &.btn { color: $gray-900; }
       }
+      i { color: $white; }
     }
 
-    hr {
-      margin-bottom: 40px;
+    > .container {
+      position: relative;
+
+      .edit-link {
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        transition: all 0.2s;
+        font-size: 50px;
+      }
+
+      &:hover .edit-link {
+        opacity: 0.1;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 </style>
