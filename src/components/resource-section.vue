@@ -7,6 +7,7 @@
           :href="'https://github.com/lansingcodes/www/edit/master/' + editPath"
           target="_blank"
           class="edit-link"
+          :aria-label="'edit ' + heading"
         >
           <icon type="fa-pencil-square" class="text-success"></icon>
         </a>
