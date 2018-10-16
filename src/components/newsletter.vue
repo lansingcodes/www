@@ -4,34 +4,26 @@
     heading="Newsletter Signup"
     description="Stay informed on all things Lansing Codes"
   >
-    <form>
-      <div class="flex">
-        <div class="form-group col-33">
-            <label for="firstName">First Name:</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Jane" v-model="firstName">
-        </div>
-        <div class="form-group col-33">
-            <label for="lastName">Last Name:</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Doe" v-model="lastName">
-        </div>
-        <div class="form-group col-33">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" v-model="email">
-        </div>
+    <form @submit.prevent="subscribe" novalidate v-if="!isSubscribed">
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" placeholder="Email address" name="EMAIL" id="EMAIL" aria-label="email address" v-model="email">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+        </span>
       </div>
-      <div class="text-center">
-        <button type="button" class="btn btn-primary btn-lg btn-signup" @click="subscribe()">Signup</button>
-      </div>
+      <p class="help-block text-center">{{message}}</p>
     </form>
+    <div v-if="isSubscribed">
+      {{message}}
+    </div>
   </resource-section>
 </template>
 
 <script>
   import resourceSection from './resource-section'
   import Vue from 'vue'
-  import VueResource from 'vue-resource'
-
-  Vue.use(VueResource)
+  import VueJsonp from 'vue-jsonp'
+  Vue.use(VueJsonp)
 
   export default {
     components: {
@@ -39,25 +31,31 @@
     },
     data () {
       return {
-        firstName: '',
-        lastName: '',
-        email: ''
+        email: '',
+        isSubscribed: false,
+        message: ''
       }
     },
     methods: {
       subscribe () {
-        const requestBody = {
-          'email_address': this.email,
-          'status': 'subscribed',
-          'merge_fields': {
-            'FNAME': this.firstName,
-            'LNAME': this.lastName
-          }
-        }
-        console.log(requestBody)
-        Vue.http.post('https://us19.api.mailchimp.com/3.0/lists/f13ffe3703/members/', requestBody)
-        .then(response => {
+        // TODO: this is using the giving jar as a sample - the lansing codes url does not seem to work
+        const url = 'https://technicalrex.us12.list-manage.com/subscribe/post-json?u=67f2ae7d79b9efc45260a1cb7&amp;id=91badb37b2&c?'
+//        const url = 'https://codes.us19.list-manage.com/subscribe/post-json?u=284c94c0d64272db7f56f4c6d&amp;id=f13ffe370&c=?'
+
+        this.$jsonp(url, { EMAIL: this.email, callbackQuery: 'c' }).then(response => {
           console.log(response)
+          if (response.result === 'error') {
+            this.isSubscribed = false
+            const _message = response.msg.split('-')
+            this.message = (_message.length > 1) ? _message[1].trim() : 'Oh no! Something went wrong'
+          } else {
+            // success handler
+            this.isSubscribed = true
+            this.message = response.msg
+          }
+        }).catch(() => {
+          this.isSubscribed = false
+          this.message = 'Oh no!  Something went wrong.'
         })
       }
     }
@@ -65,31 +63,10 @@
 </script>
 
 <style lang="scss" scoped>
-    .col-33 {
-        width: 100%;
-        padding: 5px;
+  .input-group {
+    input.form-control {
+      border-top-left-radius: 300px;
+      border-bottom-left-radius: 300px;
     }
-
-    .flex {
-        max-width: 1000px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        padding-bottom: 30px;
-        margin: auto;
-
-        @media (min-width: 992px) { 
-            flex-direction: row;
-         }
-    }
-
-    .form-group {
-        label {
-            padding-right: 10px;
-        }
-    }
-
-    .btn-signup {
-        padding: 12px 50px;
-    }
+  }
 </style>
