@@ -55,31 +55,41 @@
 <style lang="scss" scoped>
   .header {
     position: relative;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     color: #fff;
-    background-image: url(../assets/images/header.jpg);
-    background-position: center;
+    background-image: url('/static/images/capitol.jpg');
+    background-position: top;
     background-size: cover;
-    min-height: 100%;
   }
 
   .header-content {
     width: 100%;
-    text-align: center;
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: 0 0 200px 100px rgba(0,0,0,0.5);
-    padding: 0 50px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .header-content-inner {
+    color: #407cbf;
+    box-shadow: none;
+    background: transparent;
+    p {
+      color: #000!important;
+    }
   }
 
   @media (max-width: 767px) {
     header {
       min-height: auto;
     }
-
+ 
     .header-content {
       padding: 100px 15px;
       position: relative;
