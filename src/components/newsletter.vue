@@ -38,7 +38,6 @@
     },
     methods: {
       subscribe () {
-        // TODO: this is using the giving jar as a sample - the lansing codes url does not seem to work
         const url = 'https://codes.us19.list-manage.com/subscribe/post-json?u=284c94c0d64272db7f56f4c6d&amp;id=f13ffe3703&c?'
 
         this.$jsonp(url, { EMAIL: this.email, callbackQuery: 'c' }).then(response => {
