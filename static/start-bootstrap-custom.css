@@ -374,6 +374,10 @@ header .header-content .header-content-inner p {
   color: #407cbf;
 }
 
+.text-muted {
+  color: #757575;
+}
+
 .no-gutter > [class*=col-] {
   padding-right: 0;
   padding-left: 0;

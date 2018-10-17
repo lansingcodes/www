@@ -35,11 +35,31 @@
               Beginners
             </a>
           </li>
+
           <li>
-            <a href="/#contact">
-              Contact
+            <a href="mailto:lansingcodes@gmail.com" title="Email" aria-label="email">
+              <i class="fa fa-1x fa-envelope"></i>
             </a>
           </li>
+
+          <li>
+            <a href="https://github.com/lansingcodes/" title="Github" target="_blank" aria-label="github">
+              <i class="fa fa-1x fa-github"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/LansingCodes/" title="Facebook" target="_blank" aria-label="facebook">
+              <i class="fa fa-1x fa-facebook"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/lansingcodes" title="Twitter" target="_blank" aria-label="twitter">
+              <i class="fa fa-1x fa-twitter"></i>
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -69,9 +89,10 @@
 </script>
 
 <style lang="scss" scoped>
-  nav.affix {
+  .navbar {
+    background-color: #FFF;
     .navbar-brand {
-      color: #407CBF !important;
+      color: #407cbf !important;
     }
   }
 
@@ -81,11 +102,14 @@
     margin-top: -5px;
     margin-right: 7px;
     transition: margin 0.3s;
+    color: #407CBF;
   }
 
   .nav > li > a {
+    color: #407CBF!important;
+
     &:focus, &:hover {
-      color: #407CBF !important;
+      color: darken(#407cbf,10%) !important;
     }
   }
 </style>
