@@ -3,17 +3,14 @@ export default [
     title: 'Coders Farm',
     url: 'https://codersfarm.com/training/',
     desc: `
-      <p>If you're a hard worker, ready to change careers, apply to <a href="https://codersfarm.com/training/">Coders Farm</a>. Spots are very limited, but should you be accepted, you'll receive free training in web development <em>and</em> a part-time job until placed in a full-time position with another company.</p>
+      <p tabindex="0">If you're a hard worker, ready to change careers, apply to <a href="https://codersfarm.com/training/">Coders Farm</a>. Spots are very limited, but should you be accepted, you'll receive free training in web development <em>and</em> a part-time job until placed in a full-time position with another company.</p>
     `
   },
   {
     title: 'Code Lab 517',
     url: 'https://www.codelab517.com/',
     desc: `
-      <p tabindex="0">Three weeks. Learn to code. Do you have an idea for a website or application, but don't know how to build it?
-      Are you a designer who wants to add development to your skillset?
-      Would you like to get more knowledgeable when talking to your company's developers?
-      </p>
+      <p tabindex="0">Use professional tools and processes to learn HTML, CSS, JavaScript, and more. Get help from local mentors. No prior experience required. Visit the website to find out when the next lab will be and to apply.</p>
     `
   },
   {
