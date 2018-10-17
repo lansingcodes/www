@@ -6,6 +6,7 @@
     <beginner-resources></beginner-resources>
     <sponsors></sponsors>
     <membership-organizations></membership-organizations>
+    <newsletter></newsletter>
     <contact></contact>
   </layout>
 </template>
@@ -19,12 +20,13 @@
   import beginnerResources from '../components/beginner-resources'
   import membershipOrganizations from '../components/membership-organizations'
   import contact from '../components/contact'
+  import newsletter from '../components/newsletter'
 
   export default {
     replace: false,
     components: {
       layout, welcome, events, meetups, sponsors, beginnerResources,
-      membershipOrganizations, contact
+      membershipOrganizations, contact, newsletter
     }
   }
 </script>

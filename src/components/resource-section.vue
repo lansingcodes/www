@@ -7,6 +7,7 @@
           :href="'https://github.com/lansingcodes/www/edit/master/' + editPath"
           target="_blank"
           class="edit-link"
+          :aria-label="'edit ' + heading"
         >
           <icon type="fa-pencil-square" class="text-success"></icon>
         </a>
@@ -55,7 +56,7 @@
 <style lang="scss" scoped>
   $default-bg: white;
   $default-text: #444;
-  $default-link: #3E79BB;
+  $default-link: #407cbf;
 
   section.bg-default {
     background: $default-bg;
@@ -65,7 +66,7 @@
     a { color: $default-link; }
   }
 
-  $primary-bg: #3E79BB;
+  $primary-bg: #407cbf;
   $primary-text: white;
   $primary-link: $primary-text;
 
