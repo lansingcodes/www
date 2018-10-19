@@ -6,7 +6,7 @@
     description="where to start if you're new to coding"
     edit-path="src/config/beginner-resources.js"
   >
-    <grid :columns="3">
+    <grid :columns="2">
       <div slot="item" v-for="resource in beginnerResources">
         <h2>
           <a :href="resource.url">{{ resource.title }}</a>
