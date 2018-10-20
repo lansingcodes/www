@@ -19,7 +19,7 @@
       </div>
     </grid>
    
-        <div class="become-a-sponser">
+        <div class="become-a-sponsor">
           <button-link
             class="fa-lg"
             type="primary"
@@ -27,7 +27,7 @@
             href="https://lansingcodes.typeform.com/to/ltKNRy"
             target="_blank"
           >
-            Become a Sponser
+            Become a Sponsor
           </button-link>
         </div>
  
@@ -67,7 +67,7 @@
       max-width: 180px;
     }
   }
-  .become-a-sponser {
+  .become-a-sponsor {
     text-align: center;
     margin-top: 50px;
   }
