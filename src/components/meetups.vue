@@ -45,11 +45,15 @@
 </script>
 
 <style lang="scss" scoped>
-  i.fa-4x {
-    height: 50px;
-  }
-
   i {
+    &.fa {
+      margin-bottom: 25px;
+    }
+
+    &.fa-4x {
+      height: 50px;
+    }
+
     &.fa-code { margin-left: -9px; }
     &.icon-html { margin-right: -10px; }
     &.icon-javascript { margin-right: -7px; }
