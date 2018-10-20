@@ -8,10 +8,10 @@
     <grid :columns="4">
       <div slot="item" v-for="sponsor in sponsors" class="text-center">
         <a :href="sponsor.url" target="_blank">
-          <div class="sponsor-logo-wrapper">
+          <div class="spnsr-logo-wrapper">
             <img v-bind:src="getLogoImg(sponsor.logo)"
                  alt="{{ sponsor.name }} Logo"
-                 class="sponsor-logo img-responsive center-block">
+                 class="spnsr-logo img-responsive center-block">
           </div>
           <h3>{{ sponsor.name }}</h3>
         </a>
@@ -44,11 +44,11 @@
 </script>
 
 <style lang="scss" scoped>
-  .sponsor-logo-wrapper {
+  .spnsr-logo-wrapper {
     height: 180px;
     display: flex;
     align-items: center;
-    .sponsor-logo {
+    .spnsr-logo {
       max-height: 100%;
       max-width: 180px;
     }
