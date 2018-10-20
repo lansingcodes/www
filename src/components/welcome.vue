@@ -55,7 +55,6 @@
 <style lang="scss" scoped>
   .header {
     position: relative;
-    width: 100vw;
     height: 100vh;
     min-height: 100vh;
     text-align: center;
@@ -69,7 +68,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.75);
-    
+
     display: flex;
     justify-content: center;
     align-content: center;
@@ -89,7 +88,7 @@
     header {
       min-height: auto;
     }
- 
+
     .header-content {
       padding: 100px 15px;
       position: relative;
