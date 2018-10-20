@@ -18,6 +18,19 @@
         <p class="text-muted">{{ sponsor.desc }}</p>
       </div>
     </grid>
+   
+        <div class="become-a-sponser">
+          <button-link
+            class="fa-lg"
+            type="primary"
+            icon="fa-handshake-o"
+            href="https://lansingcodes.typeform.com/to/ltKNRy"
+            target="_blank"
+          >
+            Become a Sponser
+          </button-link>
+        </div>
+ 
   </resource-section>
 </template>
 
@@ -25,10 +38,11 @@
   import sponsors from 'src/config/sponsors'
   import resourceSection from './resource-section'
   import grid from './grid'
+  import buttonLink from './button-link'
 
   export default {
     components: {
-      resourceSection, grid
+      resourceSection, grid, buttonLink
     },
     data () {
       return {
@@ -53,5 +67,10 @@
       max-width: 180px;
     }
   }
+  .become-a-sponser {
+    text-align: center;
+    margin-top: 50px;
+  }
+
 
 </style>
