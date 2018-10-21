@@ -1,6 +1,8 @@
 <template>
-  <header :style="headerStyles" class="d-flex justify-content-center align-content-center align-items-center">
-    <div class="">
+  <header
+    class="d-flex justify-content-center align-content-center align-items-center"
+  >
+    <div class="header-content">
       <div class="header-content-inner">
         <h1 class="heading">
           <slot name="heading">
@@ -34,21 +36,6 @@
   export default {
     components: {
       buttonLink
-    },
-    props: {
-      backgroundImage: {
-        type: String,
-        default: null
-      }
-    },
-    computed: {
-      headerStyles () {
-        const styles = {}
-        if (this.backgroundImage) {
-          styles.backgroundImage = `url(${this.backgroundImage})`
-        }
-        return styles
-      }
     }
   }
 </script>
@@ -65,17 +52,28 @@
     text-align: center;
     color: #fff;
     background-image: url('/static/images/capitol.jpg');
-    background-position: top;
+    background-position: 50% 32px;
     background-size: cover;
-    min-height: 100%;
-    height: 100vh;
+
+    .header-content {
+      align-items: center;
+      background-color: hsla(0,0%,100%,.75);
+      color: #407cbf;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+
+      .header-content-inner {
+        box-shadow: none;
+        background: transparent;
+      }
+    }
 
     p {
-      margin-bottom: 50px;
       font-weight: 300;
-      color: rgba(255,255,255,.7);
-      margin-right: auto;
-      margin-left: auto;
+      color: #444;
+      margin: 0 auto 50px;
       max-width: 80%;
       font-size: 18px;
     }
