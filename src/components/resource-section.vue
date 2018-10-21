@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-{{ bg }} py-5">
+  <section class="bg-{{ bg }}">
     <div class="container">
       <div class="section-header text-center">
         <a
@@ -63,6 +63,9 @@
   $default-link: $primary;
 
   section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
     &.bg-default {
       background: $white;
       color: $default-text;

@@ -2,7 +2,7 @@
   <resource-section
     id="contact"
     bg="dark"
-    heading="Stay in touch!"
+    heading="Socialize with us!"
     class="text-center"
   >
     <a
