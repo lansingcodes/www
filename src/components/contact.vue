@@ -2,7 +2,7 @@
   <resource-section
     id="contact"
     bg="dark"
-    heading="Know an event or resource we're missing?"
+    heading="Stay in touch!"
     class="text-center"
   >
     <a
@@ -55,6 +55,10 @@
 </script>
 
 <style lang="scss" scoped>
+  a:hover {
+    text-decoration: none;
+  }
+
   i.fa-4x {
     height: 50px;
     margin-right: 25px;
