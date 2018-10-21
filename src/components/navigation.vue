@@ -1,7 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <a class="navbar-brand" href="#">
-      <img src="../assets/images/icon-tall-square-fixed-300-transparent.png" alt="Logo">
+      <img
+        src="../assets/images/icon-tall-square-fixed-300-transparent.png"
+        alt="Logo"
+      >
       Lansing Codes
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,19 +86,24 @@
 
 <style lang="scss" scoped>
   .navbar {
-    background-color: #FFF;
-    .navbar-brand {
-      color: #407cbf !important;
-    }
-  }
+    background-color: #fff;
+    color: #407cbf !important;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 
-  .navbar-brand > img {
-    display: inline-block;
-    width: 30px;
-    margin-top: -5px;
-    margin-right: 7px;
-    transition: margin 0.3s;
-    color: #407CBF;
+    .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      > img {
+        display: inline-block;
+        width: 40px;
+        margin-top: -5px;
+        margin-right: 7px;
+        color: #407CBF;
+      }
+    }
   }
 
   .nav > li > a {
