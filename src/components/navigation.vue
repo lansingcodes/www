@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">
       <img
         src="../assets/images/icon-tall-square-fixed-300-transparent.png"
-        alt="Logo"
+        alt="Lansing.Codes Logo"
       >
       Lansing Codes
     </a>
