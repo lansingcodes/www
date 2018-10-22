@@ -54,9 +54,9 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../scss/_mixins.scss';
-  @import '../scss/_functions.scss';
-  @import '../scss/_variables.scss';
+  @import 'node_modules/bootstrap/scss/mixins';
+  @import 'node_modules/bootstrap/scss/functions';
+  @import 'node_modules/bootstrap/scss/variables';
 
   $default-bg: $white;
   $default-text: #444;

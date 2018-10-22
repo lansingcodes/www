@@ -17,7 +17,8 @@
 </script>
 
 <style lang="scss">
-  @import '../scss/bootstrap.scss';
+  @import "../scss/custom-bootstrap-theme";
+  @import "node_modules/bootstrap/scss/bootstrap";
 
   hr {
     max-width: 50px;
@@ -43,6 +44,10 @@
 
   body, h1, h2, h3, h4, h5, h6, .btn {
     font-family: 'Lora', Lato, Arial, sans-serif;
+  }
+
+  .btn {
+    text-transform: uppercase;
   }
 
   .popover {

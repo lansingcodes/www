@@ -88,7 +88,7 @@
     },
     ready () {
       /* eslint-disable */
-      $('.calendar [data-toggle="popover"]').popover()
+      jquery('.calendar [data-toggle="popover"]').popover()
     },
     methods: {
       eventsOnDay (day) {

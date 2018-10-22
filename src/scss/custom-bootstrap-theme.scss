@@ -1,0 +1,33 @@
+$gray-700: #495057 !default;
+$gray-900: #222 !default;
+$blue: #3E79BB !default;
+
+$colors: (
+  "gray-dark": $gray-900
+);
+
+$primary: $blue !default;
+$secondary: $gray-700 !default;
+$dark: $gray-900 !default;
+
+$body-font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+$header-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+
+$font-family-base: $body-font-family !default;
+
+$font-size-base: 1rem !default;
+$h2-font-size: $font-size-base * 1.875 !default;
+
+$btn-padding-y-lg: 15px !default;
+$btn-padding-x-lg: 30px !default;
+
+$font-weight-bold: 700 !default;
+$btn-font-weight: $font-weight-bold !default;
+
+$btn-border-radius: 300px;
+$btn-border-radius-lg: 300px;
+$btn-border-radius-sm: 300px;
+
+$navbar-light-color: $primary !default;
+$navbar-light-hover-color: darken($primary, 10%);
+$navbar-light-active-color: darken($primary, 10%);

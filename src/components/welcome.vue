@@ -22,7 +22,7 @@
             href="#calendar"
             size="lg"
           >
-            See what's happening now
+            See what's happening
           </button-link>
         </slot>
       </div>
