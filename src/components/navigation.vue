@@ -135,7 +135,7 @@
       padding-left: 8px;
 
       .fa {
-        font-size: $font-size-base;
+        font-size: $font-size-base * 1.2;
       }
     }
 
