@@ -45,6 +45,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "src/scss/custom-bootstrap-theme";
+
   i {
     &.fa {
       margin-bottom: 25px;
@@ -65,6 +67,6 @@
 
   .icon-just-text {
     line-height: 50px;
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: $header-font-family;
   }
 </style>

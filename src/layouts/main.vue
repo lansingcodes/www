@@ -17,7 +17,7 @@
 </script>
 
 <style lang="scss">
-  @import "../scss/custom-bootstrap-theme";
+  @import "src/scss/custom-bootstrap-theme";
   @import "node_modules/bootstrap/scss/bootstrap";
 
   hr {

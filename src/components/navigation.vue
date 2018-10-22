@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">
       <img
         src="../assets/images/icon-tall-square-fixed-300-transparent.png"
-        alt="Lansing.Codes Logo"
+        alt="Lansing Codes Logo"
       >
       Lansing Codes
     </a>
@@ -93,10 +93,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "src/scss/custom-bootstrap-theme";
+
   .navbar {
     background-color: #fff;
-    color: #407cbf !important;
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: $primary-light !important;
+    font-family: $header-font-family;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -109,16 +111,16 @@
         width: 40px;
         margin-top: -5px;
         margin-right: 7px;
-        color: #407CBF;
+        color: $primary-light;
       }
     }
   }
 
-  .nav > li > a {
-    color: #407CBF!important;
+  a {
+    color: $primary-light !important;
 
     &:focus, &:hover {
-      color: darken(#407cbf,10%) !important;
+      color: darken($primary-light, 10%) !important;
     }
   }
 </style>

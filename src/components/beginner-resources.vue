@@ -8,9 +8,9 @@
   >
     <grid :columns="2">
       <div slot="item" v-for="resource in beginnerResources">
-        <h2>
+        <h3>
           <a :href="resource.url" class="text-white">{{ resource.title }}</a>
-        </h2>
+        </h3>
         {{{ resource.desc }}}
       </div>
     </grid>

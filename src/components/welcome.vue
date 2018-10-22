@@ -41,6 +41,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "src/scss/custom-bootstrap-theme";
+
   hr {
     margin-bottom: 20px;
   }
@@ -58,7 +60,7 @@
     .header-content {
       align-items: center;
       background-color: hsla(0,0%,100%,.75);
-      color: #407cbf;
+      color: $primary-light;
       display: flex;
       height: 100%;
       justify-content: center;
