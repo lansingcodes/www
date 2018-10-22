@@ -97,6 +97,7 @@
 
   .navbar {
     background-color: #fff;
+    border-bottom: 1px solid #eee;
     color: $primary-light !important;
     font-family: $header-font-family;
     font-weight: 700;
