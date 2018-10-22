@@ -26,7 +26,11 @@
     >
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-right">
         <li class="nav-item">
-          <a href="http://slack.lansing.codes/" class="nav-link" target="_blank">
+          <a
+            href="http://slack.lansing.codes/"
+            class="nav-link"
+            target="_blank"
+          >
             Slack
           </a>
         </li>
@@ -45,27 +49,40 @@
             Beginners
           </a>
         </li>
-
         <li class="nav-item">
-          <a href="mailto:lansingcodes@gmail.com" title="Email" class="nav-link" aria-label="email">
+          <a
+            href="mailto:lansingcodes@gmail.com"
+            title="Email"
+            class="nav-link nav-icon"
+            aria-label="email"
+          >
             <i class="fa fa-envelope"></i>
           </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="https://github.com/lansingcodes/" title="Github" target="_blank" class="nav-link" aria-label="github">
+          <a
+            href="https://github.com/lansingcodes/"
+            title="Github"
+            target="_blank"
+            class="nav-link nav-icon"
+            aria-label="github"
+          >
             <i class="fa fa-github"></i>
           </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="https://www.facebook.com/LansingCodes/" title="Facebook" target="_blank" class="nav-link" aria-label="facebook">
+          <a
+            href="https://www.facebook.com/LansingCodes/"
+            title="Facebook"
+            target="_blank"
+            class="nav-link nav-icon"
+            aria-label="facebook"
+          >
             <i class="fa fa-facebook"></i>
           </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="https://twitter.com/lansingcodes" title="Twitter" target="_blank" class="nav-link" aria-label="twitter">
+          <a
+            href="https://twitter.com/lansingcodes"
+            title="Twitter"
+            target="_blank"
+            class="nav-link nav-icon"
+            aria-label="twitter"
+          >
             <i class="fa fa-twitter"></i>
           </a>
         </li>
@@ -111,6 +128,11 @@
 
     .nav-item {
       font-size: $font-size-sm;
+    }
+
+    .nav-icon {
+      display: inline-block;
+      padding-left: 8px;
 
       .fa {
         font-size: $font-size-base;
