@@ -24,7 +24,7 @@
       :class="{ show: !collapsed }"
       id="navbarSupportedContent"
     >
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-right">
         <li class="nav-item">
           <a href="http://slack.lansing.codes/" class="nav-link" target="_blank">
             Slack
@@ -109,20 +109,22 @@
       }
     }
 
-    .navbar-nav {
-      text-align: right;
+    .nav-item {
+      font-size: $font-size-sm;
 
-      .nav-item {
-        font-size: $font-size-sm;
-
-        .fa {
-          font-size: $font-size-base;
-        }
+      .fa {
+        font-size: $font-size-base;
       }
     }
 
     .collapse:not(.show) {
       display: inherit;
+    }
+
+    @media (min-width: 992px) {
+      .collapse:not(.show) {
+        max-height: 99em;
+      }
     }
   }
 
