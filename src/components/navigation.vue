@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <a class="navbar-brand" href="#">
       <img
         src="../assets/images/icon-tall-square-fixed-300-transparent.png"
@@ -9,11 +9,11 @@
     </a>
     <button
       class="navbar-toggler"
+      :class="{ collapsed: collapsed }"
+      @click.stop.prevent="collapsed = !collapsed"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
-      aria-expanded="false"
+      :aria-expanded="(!collapsed).toString()"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
@@ -21,8 +21,8 @@
 
     <div
       class="collapse navbar-collapse"
+      :class="{ show: !collapsed }"
       id="navbarSupportedContent"
-      v-el:navbar-supported-content
     >
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
@@ -75,11 +75,11 @@
 </template>
 
 <script>
-  import $ from 'jquery'
-
   export default {
-    ready () {
-      $(this.$els.navbarSupportedContent).collapse().hide()
+    data () {
+      return {
+        collapsed: true
+      }
     }
   }
 </script>
@@ -109,12 +109,20 @@
       }
     }
 
-    .nav-item {
-      font-size: $font-size-sm;
+    .navbar-nav {
+      text-align: right;
 
-      .fa {
-        font-size: $font-size-base;
+      .nav-item {
+        font-size: $font-size-sm;
+
+        .fa {
+          font-size: $font-size-base;
+        }
       }
+    }
+
+    .collapse:not(.show) {
+      display: inherit;
     }
   }
 
