@@ -20,7 +20,6 @@
             type="primary"
             icon="fa-calendar"
             href="#calendar"
-            size="lg"
           >
             See what's happening
           </button-link>

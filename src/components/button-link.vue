@@ -1,9 +1,9 @@
 <template>
   <a
-    class="btn btn-{{type}} btn-{{size}}"
+    class="btn btn-{{type}}"
     :href="href"
   >
-    <icon v-if="icon" :type="icon" class="icon"></icon>
+    <icon v-if="icon" :type="icon" class="mr-2"></icon>
     <slot>CONTENT</slot>
   </a>
 </template>
@@ -31,16 +31,6 @@
           return acceptableTypes.some(type => type === value)
         }
       },
-      size: {
-        type: String,
-        default: 'xl',
-        validator (value) {
-          const acceptableSizes = [
-            'xs', 'sm', 'md', 'lg', 'xl'
-          ]
-          return acceptableSizes.some(size => size === value)
-        }
-      },
       icon: {
         type: String
       }
@@ -49,7 +39,11 @@
 </script>
 
 <style lang="scss" scoped>
-  .icon {
-    margin-right: 7px;
+  @media (min-width: 576px) {
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
   }
 </style>

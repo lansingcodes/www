@@ -21,7 +21,7 @@
 
     <div class="become-a-sponsor">
       <button-link
-        class="fa-lg btn-lg"
+        class="fa-lg"
         type="primary"
         icon="fa-handshake-o"
         href="https://lansingcodes.typeform.com/to/ltKNRy"

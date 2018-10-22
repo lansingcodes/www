@@ -139,6 +139,28 @@
       }
     }
 
+    .navbar-toggler-icon {
+      width: 1rem;
+    }
+
+    @media (min-width: 576px) {
+      .navbar-toggler-icon {
+        width: 1.5rem;
+      }
+    }
+
+    .collapse {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+
+      &.show {
+        max-height: 99em;
+        transition: max-height .5s ease-in-out;
+      }
+    }
+
     .collapse:not(.show) {
       display: inherit;
     }
