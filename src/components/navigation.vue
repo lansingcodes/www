@@ -19,7 +19,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      v-el:navbar-supported-content
+    >
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a href="http://slack.lansing.codes/" class="nav-link" target="_blank">
@@ -44,25 +48,25 @@
 
         <li class="nav-item">
           <a href="mailto:lansingcodes@gmail.com" title="Email" class="nav-link" aria-label="email">
-            <i class="fa fa-1x fa-envelope"></i>
+            <i class="fa fa-envelope"></i>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="https://github.com/lansingcodes/" title="Github" target="_blank" class="nav-link" aria-label="github">
-            <i class="fa fa-1x fa-github"></i>
+            <i class="fa fa-github"></i>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="https://www.facebook.com/LansingCodes/" title="Facebook" target="_blank" class="nav-link" aria-label="facebook">
-            <i class="fa fa-1x fa-facebook"></i>
+            <i class="fa fa-facebook"></i>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="https://twitter.com/lansingcodes" title="Twitter" target="_blank" class="nav-link" aria-label="twitter">
-            <i class="fa fa-1x fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
           </a>
         </li>
       </ul>
@@ -71,29 +75,18 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+
   export default {
-    data () {
-      return {
-        isAtTop: true
-      }
-    },
-    created () {
-      this.updateIsAtTop()
-      window.addEventListener('scroll', this.updateIsAtTop)
-    },
-    beforeDestroy () {
-      window.removeEventListener('scroll', this.updateIsAtTop)
-    },
-    methods: {
-      updateIsAtTop () {
-        this.isAtTop = document.body.scrollTop < 30
-      }
+    ready () {
+      $(this.$els.navbarSupportedContent).collapse().hide()
     }
   }
 </script>
 
 <style lang="scss" scoped>
   @import "src/scss/custom-bootstrap-theme";
+  @import "node_modules/bootstrap/scss/bootstrap";
 
   .navbar {
     background-color: #fff;
@@ -113,6 +106,14 @@
         margin-top: -5px;
         margin-right: 7px;
         color: $primary-light;
+      }
+    }
+
+    .nav-item {
+      font-size: $font-size-sm;
+
+      .fa {
+        font-size: $font-size-base;
       }
     }
   }
