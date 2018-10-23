@@ -58,6 +58,8 @@
           >
             <i class="fa fa-envelope"></i>
           </a>
+        </li>
+        <li class="nav-item">
           <a
             href="https://github.com/lansingcodes/"
             title="Github"
@@ -67,6 +69,8 @@
           >
             <i class="fa fa-github"></i>
           </a>
+        </li>
+        <li class="nav-item">
           <a
             href="https://www.facebook.com/LansingCodes/"
             title="Facebook"
@@ -76,6 +80,8 @@
           >
             <i class="fa fa-facebook"></i>
           </a>
+        </li>
+        <li class="nav-item">
           <a
             href="https://twitter.com/lansingcodes"
             title="Twitter"
@@ -127,7 +133,7 @@
     }
 
     .nav-item {
-      font-size: $font-size-sm;
+      font-size: $font-size-base;
     }
 
     .nav-icon {
@@ -135,6 +141,16 @@
       padding-left: 8px;
 
       .fa {
+        font-size: $font-size-base * 1.5;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .nav-item {
+        font-size: $font-size-sm;
+      }
+
+      .nav-icon .fa {
         font-size: $font-size-base * 1.2;
       }
     }
