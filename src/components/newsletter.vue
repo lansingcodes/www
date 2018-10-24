@@ -2,19 +2,34 @@
   <resource-section
     id="newsletter"
     heading="Newsletter Signup"
-    description="Stay informed on all things Lansing Codes"
+    description="stay informed on all things Lansing Codes"
   >
     <form @submit.prevent="subscribe" novalidate v-if="!isSubscribed">
       <div class="input-group">
-        <input type="text" class="form-control input-lg" placeholder="Email address" name="EMAIL" id="EMAIL" aria-label="email address" v-model="email">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
-        </span>
+        <input
+          type="text"
+          class="form-control input-lg"
+          placeholder="Email address"
+          name="EMAIL"
+          id="EMAIL"
+          aria-label="Email address"
+          v-model="email"
+        >
+        <div class="input-group-append">
+          <button
+            class="btn btn-primary"
+            type="submit"
+          >
+            Subscribe
+          </button>
+        </div>
       </div>
-      <p class="help-block text-center">{{message}}</p>
+      <p class="form-text text-center text-danger">
+        {{{ message }}}
+      </p>
     </form>
-    <div v-if="isSubscribed">
-      {{message}}
+    <div v-if="isSubscribed" class="text-center font-weight-bold">
+      {{{ message }}}
     </div>
   </resource-section>
 </template>
@@ -40,12 +55,15 @@
       subscribe () {
         const url = 'https://codes.us19.list-manage.com/subscribe/post-json?u=284c94c0d64272db7f56f4c6d&amp;id=f13ffe3703&c?'
 
-        this.$jsonp(url, { EMAIL: this.email, callbackQuery: 'c' }).then(response => {
-          console.log(response)
+        this.$jsonp(url, { EMAIL: this.email, callbackQuery: 'c' })
+        .then(response => {
           if (response.result === 'error') {
             this.isSubscribed = false
-            const _message = response.msg.split('-')
-            this.message = (_message.length > 1) ? _message[1].trim() : 'Oh no! Something went wrong'
+            if (/^[\d ]+-/.test(response.msg)) {
+              this.message = response.msg.slice(response.msg.indexOf('-') + 1)
+            } else {
+              this.message = response.msg || 'Oh no! Something went wrong.'
+            }
           } else {
             // success handler
             this.isSubscribed = true
@@ -53,7 +71,7 @@
           }
         }).catch(() => {
           this.isSubscribed = false
-          this.message = 'Oh no!  Something went wrong.'
+          this.message = 'Oh no! Something went wrong.'
         })
       }
     }
@@ -62,9 +80,17 @@
 
 <style lang="scss" scoped>
   .input-group {
+    margin: 0 auto;
+
     input.form-control {
       border-top-left-radius: 300px;
       border-bottom-left-radius: 300px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .input-group {
+      max-width: 50%;
     }
   }
 </style>

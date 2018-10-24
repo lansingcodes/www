@@ -13,6 +13,11 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#eval-source-map',
   plugins: [
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
+    new webpack.ProvidePlugin({
+      // Used by calendar component and Bootstrap
+      'jquery': 'jquery',
+      'popper.js': 'popper.js'
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),

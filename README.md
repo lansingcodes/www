@@ -17,7 +17,7 @@ This project requires node and npm.
 
 ``` bash
 # install dependencies
-npm run install
+npm install
 
 # serve with hot reload at localhost:8080
 npm run dev

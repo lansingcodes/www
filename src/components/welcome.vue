@@ -1,5 +1,7 @@
 <template>
-  <div :style="headerStyles" class="header">
+  <header
+    class="d-flex justify-content-center align-content-center align-items-center"
+  >
     <div class="header-content">
       <div class="header-content-inner">
         <h1 class="heading">
@@ -19,12 +21,12 @@
             icon="fa-calendar"
             href="#calendar"
           >
-            See what's happening now
+            See what's happening
           </button-link>
         </slot>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -33,67 +35,54 @@
   export default {
     components: {
       buttonLink
-    },
-    props: {
-      backgroundImage: {
-        type: String,
-        default: null
-      }
-    },
-    computed: {
-      headerStyles () {
-        const styles = {}
-        if (this.backgroundImage) {
-          styles.backgroundImage = `url(${this.backgroundImage})`
-        }
-        return styles
-      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .header {
+  @import "src/scss/custom-bootstrap-theme";
+
+  hr {
+    margin-bottom: 20px;
+  }
+
+  header {
     position: relative;
     height: 100vh;
     min-height: 100vh;
     text-align: center;
     color: #fff;
     background-image: url('/static/images/capitol.jpg');
-    background-position: top;
+    background-position: 50% 32px;
     background-size: cover;
-  }
 
-  .header-content {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
+    .header-content {
+      align-items: center;
+      background-color: hsla(0,0%,100%,.75);
+      color: $primary-light;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
+      .header-content-inner {
+        box-shadow: none;
+        background: transparent;
+      }
+    }
 
-  .header-content-inner {
-    color: #407cbf;
-    box-shadow: none;
-    background: transparent;
     p {
-      color: #000!important;
+      font-weight: 300;
+      color: #444;
+      margin: 0 auto 50px;
+      max-width: 80%;
+      font-size: 18px;
     }
   }
 
   @media (max-width: 767px) {
     header {
       min-height: auto;
-    }
-
-    .header-content {
-      padding: 100px 15px;
-      position: relative;
-      top: auto;
-      transform: none;
     }
   }
 </style>

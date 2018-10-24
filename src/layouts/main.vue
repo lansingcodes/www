@@ -17,8 +17,27 @@
 </script>
 
 <style lang="scss">
+  @import "src/scss/custom-bootstrap-theme";
+  @import "node_modules/bootstrap/scss/bootstrap";
+
+  hr {
+    max-width: 50px;
+    background-color: $primary;
+    border-width: 3px;
+    margin-bottom: 40px;
+  }
+
+  // Override bootstrap collapse
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+
   body, h1, h2, h3, h4, h5, h6, .btn {
     font-family: 'Lora', Lato, Arial, sans-serif;
+  }
+
+  .btn {
+    text-transform: uppercase;
   }
 
   .popover {

@@ -11,26 +11,25 @@
           <div class="spnsr-logo-wrapper">
             <img v-bind:src="getLogoImg(sponsor.logo)"
                  alt="{{ sponsor.name }} Logo"
-                 class="spnsr-logo img-responsive center-block">
+                 class="spnsr-logo img-responsive mx-auto">
           </div>
           <h3>{{ sponsor.name }}</h3>
         </a>
         <p class="text-muted">{{ sponsor.desc }}</p>
       </div>
     </grid>
-   
-        <div class="become-a-sponsor">
-          <button-link
-            class="fa-lg"
-            type="primary"
-            icon="fa-handshake-o"
-            href="https://lansingcodes.typeform.com/to/ltKNRy"
-            target="_blank"
-          >
-            Become a Sponsor
-          </button-link>
-        </div>
- 
+
+    <div class="become-a-sponsor">
+      <button-link
+        class="fa-lg"
+        type="primary"
+        icon="fa-handshake-o"
+        href="https://lansingcodes.typeform.com/to/ltKNRy"
+        target="_blank"
+      >
+        Become a Sponsor
+      </button-link>
+    </div>
   </resource-section>
 </template>
 
@@ -71,6 +70,4 @@
     text-align: center;
     margin-top: 50px;
   }
-
-
 </style>

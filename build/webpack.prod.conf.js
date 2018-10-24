@@ -28,6 +28,11 @@ module.exports = merge(baseWebpackConfig, {
         NODE_ENV: '"production"'
       }
     }),
+    new webpack.ProvidePlugin({
+      // Used by calendar component and Bootstrap
+      'jquery': 'jquery',
+      'popper.js': 'popper.js'
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
