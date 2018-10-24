@@ -189,10 +189,10 @@
   }
 
   a {
-    color: $primary-light !important;
+    color: $primary !important;
 
     &:focus, &:hover {
-      color: darken($primary-light, 10%) !important;
+      color: darken($primary, 10%) !important;
     }
   }
 </style>
