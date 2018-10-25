@@ -50,26 +50,6 @@ Python version 2 must be available on your build machine as `python2`.
 
 The build tools will depend on you OS. See [node-gyp build process](https://github.com/nodejs/node-gyp) for specifics.
 
-##### Workaround if you can't get node-sass to build.
-As a temporary workaround, you can install the latest node-sass locally to get a version for your platform. Then, remove node-sass as a development dependency in the www `package.json` file. This may cause a version mis-match with `sass-loader`.
-
-1. Remove `node-sass` from `package.json` `devDependencies`
-   ``` JSON
-    "karma-webpack": "^1.7.0",
-    "lolex": "^1.4.0",
-    "mocha": "^2.4.5",
-    "nightwatch": "^0.9.21",
-    "node-sass": "^4.9.4",   <---------- remove
-    "ora": "^0.2.0",
-    "prerender-spa-plugin": "^1.2.0",
-    "puppeteer": "^1.9.0",
-   ```
-2. `npm install --save-prod node-sass`
-
-Then try building the project with `npm install` or `npm run build`.
-
-:exclamation: Remember: Don't commit this package.json workaround to the repo.
-
 ## Deployments
 
 After a pull request is reviewed and merged to `master`, a Netlify deployment
