@@ -1,7 +1,6 @@
 <template>
   <resource-section
     id="newsletter"
-    bg="primary"
     heading="Try Our Monthly Newsletter"
     description="stay informed on all things Lansing Codes"
   >
@@ -19,7 +18,7 @@
         >
         <div class="input-group-append">
           <button
-            class="btn btn-light"
+            class="btn btn-primary"
             type="submit"
           >
             Subscribe
