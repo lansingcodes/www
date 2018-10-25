@@ -1,11 +1,11 @@
 <template>
   <layout>
     <welcome></welcome>
+    <newsletter></newsletter>
     <events></events>
     <meetups></meetups>
     <beginner-resources></beginner-resources>
     <sponsors></sponsors>
-    <newsletter></newsletter>
     <contact></contact>
   </layout>
 </template>
