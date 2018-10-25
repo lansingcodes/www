@@ -4,7 +4,7 @@ export default [
     name: 'DevOps',
     desc: 'If you want to actually <em>ship</em>, scale, or collaborate with a team, here\'s where you learn how.',
     icon: 'fa-server',
-    url: 'http://www.meetup.com/Lansing-DevOps-Meetup/',
+    url: 'https://www.meetup.com/Lansing-DevOps-Meetup/',
     on: '1st Tuesday'
   },
   // 1st Thursday
@@ -28,7 +28,7 @@ export default [
     name: 'R',
     desc: 'Have data, need stats? Use R.',
     icon: 'icon-line-graph',
-    url: 'http://www.meetup.com/Lansing-Area-R-Users-Group/',
+    url: 'https://www.meetup.com/Lansing-Area-R-Users-Group/',
     on: '2nd Monday'
   },
   // 2nd Monday
@@ -44,7 +44,7 @@ export default [
     name: 'Demo Night',
     desc: 'Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!',
     icon: 'fa-moon-o',
-    url: 'http://www.meetup.com/lansing-tech-demos/',
+    url: 'https://www.meetup.com/lansing-tech-demos/',
     on: '2nd Tuesday'
   },
   // 2nd Tuesday
@@ -52,7 +52,7 @@ export default [
     name: 'Project Management',
     desc: 'As a project\'s complexity and team grows, managing the process becomes vital.',
     icon: 'fa-pie-chart',
-    url: 'http://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/',
+    url: 'https://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/',
     on: '2nd Tuesday'
   },
   // 2nd Tuesday
@@ -60,7 +60,7 @@ export default [
     name: 'SQL Server',
     desc: 'If you\'re living in Microsoft\'s world, you\'ll want to keep up with SQL Server and related technologies.',
     icon: 'icon-mssql',
-    url: 'http://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
+    url: 'https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
     on: '2nd Tuesday'
   },
   // 2nd Tuesday
@@ -76,7 +76,7 @@ export default [
     name: 'Web',
     desc: 'An agenda-free meetup where you can share your latest project, talk about tools you\'re using, network, trade advice, or just chat about the web.',
     icon: 'icon-html',
-    url: 'http://www.meetup.com/lansingweb/',
+    url: 'https://www.meetup.com/lansingweb/',
     on: '2nd Wednesday'
   },
   // 2nd Wednesday, every other month
@@ -108,7 +108,7 @@ export default [
     name: 'JavaScript',
     desc: 'When coding on the client, there\'s really only one choice; fortunately, it has one of the most thriving and innovative communities around.',
     icon: 'icon-javascript',
-    url: 'http://www.meetup.com/Lansing-Javascript-Meetup/',
+    url: 'https://www.meetup.com/Lansing-Javascript-Meetup/',
     on: '3rd Tuesday'
   },
   // 3rd Tuesday
@@ -124,7 +124,7 @@ export default [
     name: '.NET',
     desc: 'One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.',
     icon: 'icon-csharp',
-    url: 'http://www.meetup.com/GLUGnet/',
+    url: 'https://www.meetup.com/GLUGnet/',
     on: '3rd Thursday'
   },
   // 3rd Saturday
@@ -132,7 +132,7 @@ export default [
     name: 'Code Retreat',
     desc: 'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
     icon: 'fa-users',
-    url: 'http://www.meetup.com/Mid-Michigan-Code-Retreat/',
+    url: 'https://www.meetup.com/Mid-Michigan-Code-Retreat/',
     on: '3rd Saturday'
   },
   // 4th Tuesday
@@ -140,7 +140,7 @@ export default [
     name: 'Agile',
     desc: 'It\'s easy to spin your wheels pounding at the keyboard, but a focus on <em>process</em> will make you orders of magnitude more effective.',
     icon: 'fa-table',
-    url: 'http://www.meetup.com/Mid-Michigan-Agile-Group/',
+    url: 'https://www.meetup.com/Mid-Michigan-Agile-Group/',
     on: '4th Tuesday'
   },
   // 4th Thursday
@@ -148,7 +148,7 @@ export default [
     name: 'Software Testing',
     desc: 'The last line of defense against bugs and poor design.',
     icon: 'icon-script',
-    url: 'http://www.meetup.com/LansingAreaSoftwareTesters/',
+    url: 'https://www.meetup.com/LansingAreaSoftwareTesters/',
     on: '4th Thursday'
   }
 ]
