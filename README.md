@@ -55,14 +55,14 @@ As a temporary workaround, you can install the latest node-sass locally to get a
 
 1. Remove `node-sass` from `package.json` `devDependencies`
    ``` JSON
-     "karma-webpack": "^1.7.0",
-     "lolex": "^1.4.0",
-     "mocha": "^2.4.5",
-     "nightwatch": "^0.9.21",
-     "node-sass": "^3.7.0",   <---------- remove
-     "ora": "^0.2.0",
-     "phantomjs-prebuilt": "^2.1.3",
-     "prerender-spa-plugin": "^1.2.0",
+    "karma-webpack": "^1.7.0",
+    "lolex": "^1.4.0",
+    "mocha": "^2.4.5",
+    "nightwatch": "^0.9.21",
+    "node-sass": "^4.9.4",   <---------- remove
+    "ora": "^0.2.0",
+    "prerender-spa-plugin": "^1.2.0",
+    "puppeteer": "^1.9.0",
    ```
 2. `npm install --save-prod node-sass`
 
