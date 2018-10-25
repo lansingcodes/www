@@ -6,6 +6,7 @@
   >
     <form @submit.prevent="subscribe" novalidate v-if="!isSubscribed">
       <div class="input-group">
+        <label for="EMAIL" class="sr-only">email</label>
         <input
           type="text"
           class="form-control input-lg"

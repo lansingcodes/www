@@ -39,7 +39,7 @@ export default [
     name: 'RMC Agency',
     desc: 'A Michigan based, full-service Information Technology (IT) Consulting and Placement agency.',
     logo: 'RMC.png',
-    url: 'http://www.rmcagency.com/'
+    url: 'https://www.rmcagency.com/'
   },
   {
     name: 'SBDC Lansing',

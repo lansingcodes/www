@@ -27,7 +27,7 @@
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-right">
         <li class="nav-item">
           <a
-            href="http://slack.lansing.codes/"
+            href="https://slack.lansing.codes/"
             class="nav-link"
             target="_blank"
           >
