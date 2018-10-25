@@ -1,11 +1,13 @@
 <template>
   <resource-section
     id="newsletter"
+    bg="primary"
     heading="Try Our Monthly Newsletter"
     description="stay informed on all things Lansing Codes"
   >
     <form @submit.prevent="subscribe" novalidate v-if="!isSubscribed">
       <div class="input-group">
+        <label for="EMAIL" class="sr-only">email</label>
         <input
           type="text"
           class="form-control input-lg"
@@ -17,7 +19,7 @@
         >
         <div class="input-group-append">
           <button
-            class="btn btn-primary"
+            class="btn btn-light"
             type="submit"
           >
             Subscribe
