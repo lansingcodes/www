@@ -35,21 +35,6 @@ npm run e2e
 npm run test
 ```
 
-### Build Issues
-
-#### node-sass
-One of the development dependencies, node-sass, has an involved build process because it has native components. Node-sass allows Node to compile [SASS style sheets](https://sass-lang.com) into traditional CSS.
-
-If there is not an appropriate set of node-sass/node-gyp binaries for your platform for the configured node-sass/node-gyp version in package.json, the build process will attempt to compile an appropriate version. This doesn't always go well.
-
-Compiling node-sass (specifically to compile a [node-gyp](https://github.com/nodejs/node-gyp) dependency within node-sass) requires having two main tools. More information is available on the [node-gyp build process](https://github.com/nodejs/node-gyp).
-* python (Version 2)
-* Build tools for C for your platform.
-
-Python version 2 must be available on your build machine as `python2`.
-
-The build tools will depend on you OS. See [node-gyp build process](https://github.com/nodejs/node-gyp) for specifics.
-
 ## Deployments
 
 After a pull request is reviewed and merged to `master`, a Netlify deployment
