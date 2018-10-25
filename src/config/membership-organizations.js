@@ -9,7 +9,7 @@ export default [
   },
   {
     title: 'Project Management Institute',
-    url: 'http://pmi-mcac.org/index.php',
+    url: 'https://pmi-mcac.org/index.php',
     desc: `
       <p>Project Management Institute (PMI), with more than 150,000 members in over 150 countries, is the world's foremost advocate for the project management profession. A vital and forward-thinking organization, PMI is comprised of 236 chartered chapters, 34 new potential chapters, 33 Specific Interests Groups (SIGs) and two colleges. PMI sets industry standards, conducts research and provides education, certification and professional exchange opportunities designed to strengthen and further establish the profession. PMI advances the careers of practitioners, while enhancing overall business and government performance, through documentation of return on investment.</p>
     `
