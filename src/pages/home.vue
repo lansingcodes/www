@@ -5,7 +5,6 @@
     <meetups></meetups>
     <beginner-resources></beginner-resources>
     <sponsors></sponsors>
-    <membership-organizations></membership-organizations>
     <newsletter></newsletter>
     <contact></contact>
   </layout>
@@ -18,7 +17,6 @@
   import meetups from '../components/meetups'
   import sponsors from '../components/sponsors'
   import beginnerResources from '../components/beginner-resources'
-  import membershipOrganizations from '../components/membership-organizations'
   import contact from '../components/contact'
   import newsletter from '../components/newsletter'
 
@@ -26,7 +24,7 @@
     replace: false,
     components: {
       layout, welcome, events, meetups, sponsors, beginnerResources,
-      membershipOrganizations, contact, newsletter
+      contact, newsletter
     }
   }
 </script>

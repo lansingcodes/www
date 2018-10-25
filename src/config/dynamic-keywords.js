@@ -1,6 +1,5 @@
 import meetups from './meetups'
 import beginnerResources from './beginner-resources'
-import membershipOrganizations from './membership-organizations'
 
 const keywordifyByAttribute = (list, attribute) => {
   return list
@@ -10,6 +9,5 @@ const keywordifyByAttribute = (list, attribute) => {
 
 export default [
   keywordifyByAttribute(meetups, 'name'),
-  keywordifyByAttribute(beginnerResources, 'title'),
-  keywordifyByAttribute(membershipOrganizations, 'title')
+  keywordifyByAttribute(beginnerResources, 'title')
 ].join(',')

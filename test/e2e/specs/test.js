@@ -6,7 +6,6 @@ module.exports = {
       .assert.elementPresent('#calendar')
       .assert.elementPresent('#meetups')
       .assert.elementPresent('#beginner-resources')
-      .assert.elementPresent('#membership-organizations')
       .assert.elementPresent('#contact')
       .end()
   }
