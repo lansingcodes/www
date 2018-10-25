@@ -1,7 +1,7 @@
 <template>
   <resource-section
     id="newsletter"
-    heading="Newsletter Signup"
+    heading="Try Our Monthly Newsletter"
     description="stay informed on all things Lansing Codes"
   >
     <form @submit.prevent="subscribe" novalidate v-if="!isSubscribed">
