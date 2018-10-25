@@ -40,6 +40,7 @@ library.add(faFacebook, faTwitter)
   the name of the icon without 'fa'.
 
   No need to import the font-awesome-icon component; it's globally imported!
+  See https://github.com/FortAwesome/vue-fontawesome for more tips.
 ***************************************************************************/
 
 // Import and globally register a component called font-awesome-icon
