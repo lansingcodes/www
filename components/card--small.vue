@@ -27,7 +27,8 @@
       </p>
     </div>
   </section>
-  <!-- TODO: https://inclusive-components.design/cards/ -->
+  <!-- TODO: make at least the image clickable, if not the whole card.
+    https://inclusive-components.design/cards/ -->
 </template>
 
 <script>
