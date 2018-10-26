@@ -77,14 +77,17 @@
 
       h3 {
         margin-top: 0;
+        font-size: 1.5rem;
       }
 
       .event-name {
         font-weight: 200;
+        font-size: 1.25rem;
       }
 
       .event-date {
         opacity: 0.8;
+        font-size: 1.25rem;
       }
 
       &:first-of-type {
