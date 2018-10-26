@@ -1,14 +1,84 @@
 <template>
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <section class="w-64 overflow-hidden bg-white text-center font-serif p-4">
     <img
-      class="w-full"
-      src="https://tailwindcss.com/img/card-top.jpg"
-      alt="Sunset in the mountains">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+      v-if="hasImage"
+      :src="imgSrc"
+      :alt="imgAlt"
+      class="w-full mb-4"
+    >
+    <font-awesome-icon
+      v-if="hasIcon"
+      :icon="[iconSet, iconName]"
+      class="text-5xl text-blue fill-current mb-4"
+    />
+    <div>
+      <h3 class="font-normal text-2xl mb-2">
+        <a
+          :href="link"
+          class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
+        >{{ heading }}</a>
+      </h3>
+      <p
+        v-if="hasSubheading"
+        class="text-lg text-grey-darker mb-3"
+      >{{ subheading }}</p>
       <p class="text-grey-darker text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        {{ description }}
       </p>
     </div>
-  </div>
+  </section>
+  <!-- TODO: make at least the image clickable, if not the whole card.
+    https://inclusive-components.design/cards/ -->
 </template>
+
+<script>
+export default {
+  props: {
+    hasImage: {
+      type: Boolean,
+      default: false
+    },
+    hasIcon: {
+      type: Boolean,
+      default: true
+    },
+    hasSubheading: {
+      type: Boolean,
+      default: true
+    },
+    link: {
+      type: String,
+      default: 'javascript:void(0)'
+    },
+    heading: {
+      type: String,
+      default: 'Tech Demo Night'
+    },
+    subheading: {
+      type: String,
+      default: '2nd Tuesday'
+    },
+    description: {
+      type: String,
+      default:
+        'Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!'
+    },
+    iconSet: {
+      type: String,
+      default: 'fas'
+    },
+    iconName: {
+      type: String,
+      default: 'code'
+    },
+    imgSrc: {
+      type: String,
+      default: 'https://tailwindcss.com/img/card-top.jpg'
+    },
+    imgAlt: {
+      type: String,
+      default: 'Sponsor logo'
+    }
+  }
+}
+</script>
