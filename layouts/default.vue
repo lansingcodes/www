@@ -3,7 +3,9 @@
     <a
       class="sr-only"
       href="#mainContent">Skip to main content</a>
-    <navigation/>
+    <header>
+      <navigation/>
+    </header>
     <main
       id="mainContent"
       role="main"
@@ -11,14 +13,17 @@
     >
       <nuxt/>
     </main>
+    <site-footer/>
   </div>
 </template>
 
 <script>
-import navigation from '~/components/navigation'
+import Navigation from '~/components/navigation'
+import SiteFooter from '~/components/footer'
 export default {
   components: {
-    navigation
+    Navigation,
+    SiteFooter
   }
 }
 </script>
