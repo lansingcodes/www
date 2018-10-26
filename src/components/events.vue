@@ -26,7 +26,7 @@
 
 <script>
   // VENDOR
-  import { distanceInWordsToNow } from 'date-fns'
+  import moment from 'moment'
 
   // HELPERS
   import fetchEvents from 'src/helpers/fetch-events'
@@ -51,8 +51,8 @@
     },
     methods: {
       formatDate (date) {
-        const timeDisplacement = distanceInWordsToNow(date)
-        return Date.now() < date ? 'in ' + timeDisplacement : timeDisplacement + ' ago'
+        const parsedDate = moment.unix(date)
+        return `${parsedDate.format('dddd, MMMM Do')} at ${parsedDate.format('h:mm a')}`
       }
     }
   }
