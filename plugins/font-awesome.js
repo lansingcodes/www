@@ -18,18 +18,56 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // free SOLID icon set (fas)
 // @https://fontawesome.com/icons?d=gallery&s=solid&m=free
 import {
+  faBullseye,
+  faChartLine,
+  faChartPie,
   faCode,
   faCoffee,
-  faHourglassHalf
+  faCogs,
+  faHourglassHalf,
+  faMoon,
+  faServer,
+  faTable,
+  faUserCircle,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCode, faCoffee, faHourglassHalf)
+library.add(
+  faBullseye,
+  faChartLine,
+  faChartPie,
+  faCode,
+  faCoffee,
+  faCogs,
+  faHourglassHalf,
+  faMoon,
+  faServer,
+  faTable,
+  faUserCircle,
+  faUsers
+)
 
 // free BRANDS icon set (fab)
 // https://fontawesome.com/icons?d=gallery&s=brands&m=free
-import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebook,
+  faFreeCodeCamp,
+  faHtml5,
+  faJava,
+  faJsSquare,
+  faTwitter,
+  faWordpressSimple
+} from '@fortawesome/free-brands-svg-icons'
 
-library.add(faFacebook, faTwitter)
+library.add(
+  faFacebook,
+  faFreeCodeCamp,
+  faHtml5,
+  faJava,
+  faJsSquare,
+  faTwitter,
+  faWordpressSimple
+)
 
 /**************************************************************************
   👉  To use font awesome icons in components, once they are registered here:
