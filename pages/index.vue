@@ -22,6 +22,10 @@ export default {
     meetups,
     resources,
     sponsors
+  },
+  async fetch({ store, params }) {
+    // Load async data needed by the page here
+    return store.dispatch('events/loadUpcoming')
   }
 }
 </script>

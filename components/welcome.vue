@@ -16,26 +16,58 @@
       <section class="w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4">
         <h2 class="uppercase text-center text-3xl mb-4">Next Event</h2>
         <hr class="border-4 border-white my-6 w-1/6 ">
-        <div class="text-left font-normal">
-          <h3 class="font-normal mb-2">Designing websites with Nuxt and Tailwind</h3>
-          <p class="text-xs mb-4">October 26, 2018, 7:00 PM</p>
-          <p class="mb-4">Sponsor: Lansing.Codes</p>
+        <div
+          v-if="nextEvent"
+          class="text-left font-normal"
+        >
+          <h3 class="font-normal mb-2">{{ nextEvent.attributes.name }}</h3>
+          <p class="text-xs mb-4 mt-0">
+            {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
+          </p>
+          <p
+            v-if="nextEvent.relationships.venue && nextEvent.relationships.venue.attributes.name"
+            class="mb-4"
+          >
+            Where: {{ nextEvent.relationships.venue.attributes.name }}
+          </p>
           <p class="mb-6">
-            Annoy the old grumpy cat, start a fight and then retreat to wash when i lose
-            if human is on laptop sit on the keyboard for sit in a box for hours for eat the
-            rubberband. Curl into a furry donut ignore the human until she needs to get up,
-            then climb on her lap and sprawl.
+            <span v-html="nextEvent.attributes.description"/>
           </p>
         </div>
-        <div>
-          <button class="bg-white hover:bg-grey-lightest text-blue font-bold uppercase text-center py-4 px-8 min-w-24 rounded-full">
-            Show More
-          </button>
+        <div class="text-center">
+          <a
+            :href="nextEvent.links.self"
+            class="inline-block bg-white no-underline hover:bg-grey-lightest text-blue font-bold uppercase text-center py-4 mt-2 px-8 min-w-24 rounded-full"
+            target="_blank"
+          >
+            Learn More
+          </a>
         </div>
       </section>
     </div>
   </div>
 </template>
+
+<script>
+import { format } from 'date-fns'
+
+export default {
+  computed: {
+    nextEvent() {
+      return this.$store.state.events.upcoming.reduce((previous, current) => {
+        const previousTime = previous.attributes.time.absolute
+        const currentTime = current.attributes.time.absolute
+        return previousTime < currentTime ? previous : current
+      })
+    }
+  },
+  methods: {
+    formatReadableDate(date) {
+      return format(date, 'dddd, MMMM D [at] h:mm a')
+    }
+  }
+}
+</script>
 
 <style scoped>
 .lc-background-image {
