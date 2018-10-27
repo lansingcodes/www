@@ -1,10 +1,9 @@
 <template>
   <section class="flex flex-wrap justify-around md:justify-between px-4 md:px-12">
-    <div class="w-64 p-2 self-center justify-center text-center">
-      <h2 class="uppercase text-grey-darker text-3xl mb-2">Free Meetups</h2>
-      <p>regular events to help you become a better coder</p>
-      <hr class="border-4 border-grey-darker my-6 w-1/6 ">
-    </div>
+    <section-heading
+      heading="Free Meetups"
+      subheading="learn and network with peers"
+      class="w-64"/>
     <card
       v-for="meetup in meetups"
       :key="meetup.heading"
@@ -22,11 +21,13 @@
 </template>
 
 <script>
+import sectionHeading from '~/components/section-heading'
 import card from '~/components/card--small'
 import meetups from '~/config/meetups'
 export default {
   components: {
-    card
+    card,
+    sectionHeading
   },
   data() {
     return {
