@@ -29,6 +29,10 @@ export default {
 </script>
 
 <style>
+p {
+  @apply .my-4;
+}
+
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
