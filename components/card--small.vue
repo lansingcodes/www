@@ -1,5 +1,5 @@
 <template>
-  <section class="w-64 overflow-hidden bg-white text-center font-serif p-4">
+  <section class="sm:w-64 overflow-hidden bg-white text-center font-serif p-4">
     <img
       v-if="hasImage"
       :src="imgSrc"
@@ -9,12 +9,12 @@
     <font-awesome-icon
       v-if="hasIcon"
       :icon="[iconSet, iconName]"
-      class="text-5xl text-blue fill-current mb-4"
+      class="text-5xl text-blue fill-current h-24"
     />
     <div>
       <h3 class="font-normal text-2xl mb-2">
         <a
-          :href="link"
+          :href="url"
           class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
         >{{ heading }}</a>
       </h3>
@@ -22,9 +22,9 @@
         v-if="hasSubheading"
         class="text-lg text-grey-darker mb-3"
       >{{ subheading }}</p>
-      <p class="text-grey-darker text-base">
-        {{ description }}
-      </p>
+      <p
+        class="text-grey-darker text-base"
+        v-html="description"/>
     </div>
   </section>
   <!-- TODO: make at least the image clickable, if not the whole card.
@@ -40,13 +40,13 @@ export default {
     },
     hasIcon: {
       type: Boolean,
-      default: true
+      default: false
     },
     hasSubheading: {
       type: Boolean,
-      default: true
+      default: false
     },
-    link: {
+    url: {
       type: String,
       default: 'javascript:void(0)'
     },
