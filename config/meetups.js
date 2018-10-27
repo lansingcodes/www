@@ -64,7 +64,7 @@ export default [
     description:
       "If you're living in Microsoft's world, you'll want to keep up with SQL Server and related technologies.",
     iconSet: 'fas',
-    iconName: 'icon-mssql',
+    iconName: 'code',
     url: 'https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
     subheading: '2nd Tuesday'
   },
@@ -74,7 +74,7 @@ export default [
     description:
       'This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.',
     iconSet: 'fas',
-    iconName: 'Cf',
+    iconName: 'code',
     url: 'http://www.mmcfug.org/',
     subheading: '2nd Tuesday'
   },
@@ -124,7 +124,7 @@ export default [
     description:
       "When coding on the client, there's really only one choice; fortunately, it has one of the most thriving and innovative communities around.",
     iconSet: 'fab',
-    iconName: 'javascript',
+    iconName: 'js-square',
     url: 'https://www.meetup.com/Lansing-Javascript-Meetup/',
     subheading: '3rd Tuesday'
   },
@@ -144,7 +144,7 @@ export default [
     description:
       'One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.',
     iconSet: 'fas',
-    iconName: 'icon-csharp',
+    iconName: 'code',
     url: 'https://www.meetup.com/GLUGnet/',
     subheading: '3rd Thursday'
   },
@@ -173,7 +173,7 @@ export default [
     heading: 'Software Testing',
     description: 'The last line of defense against bugs and poor design.',
     iconSet: 'fas',
-    ionName: 'icon-script',
+    ionName: 'code',
     url: 'https://www.meetup.com/LansingAreaSoftwareTesters/',
     subheading: '4th Thursday'
   }

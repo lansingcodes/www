@@ -1,5 +1,5 @@
 <template>
-  <section class="w-64 overflow-hidden bg-white text-center font-serif p-4">
+  <section class="sm:w-64 overflow-hidden bg-white text-center font-serif p-4">
     <img
       v-if="hasImage"
       :src="imgSrc"
@@ -9,7 +9,7 @@
     <font-awesome-icon
       v-if="hasIcon"
       :icon="[iconSet, iconName]"
-      class="text-5xl text-blue fill-current mb-4 h-16"
+      class="text-5xl text-blue fill-current h-24"
     />
     <div>
       <h3 class="font-normal text-2xl mb-2">

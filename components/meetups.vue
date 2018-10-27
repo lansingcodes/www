@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-wrap justify-between px-4 md:px-12">
+  <section class="flex flex-wrap justify-around md:justify-between px-4 md:px-12">
     <div class="w-64 p-2 self-center justify-center text-center">
       <h2 class="uppercase text-grey-darker text-3xl mb-2">Free Meetups</h2>
       <p>regular events to help you become a better coder</p>
@@ -35,3 +35,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* makes the last row line up with the grid */
+section:after {
+  content: '';
+  flex: auto;
+}
+</style>
