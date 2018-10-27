@@ -1,5 +1,17 @@
 <template>
   <section>
-    <h2>Beginner Resources</h2>
+    <section-heading
+      heading="Beginner Resources"
+      subheading="where to start if you're new to coding"
+    />
   </section>
 </template>
+
+<script>
+import sectionHeading from '~/components/section-heading'
+export default {
+  components: {
+    sectionHeading
+  }
+}
+</script>
