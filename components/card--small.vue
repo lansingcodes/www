@@ -1,11 +1,15 @@
 <template>
   <section class="sm:w-64 overflow-hidden bg-white text-center font-serif p-4">
-    <img
+    <figure
       v-if="hasImage"
-      :src="imgSrc"
-      :alt="imgAlt"
-      class="w-full mb-4"
+      class="flex justify-center h-24 mb-4"
     >
+      <img
+        :src="imgSrc"
+        :alt="imgAlt"
+        class="flex-initial max-h-full self-center"
+      >
+    </figure>
     <font-awesome-icon
       v-if="hasIcon"
       :icon="[iconSet, iconName]"
