@@ -26,7 +26,7 @@
 
 <script>
   // VENDOR
-  import moment from 'moment'
+  import { format } from 'date-fns'
 
   // HELPERS
   import fetchEvents from 'src/helpers/fetch-events'
@@ -51,8 +51,7 @@
     },
     methods: {
       formatDate (date) {
-        const parsedDate = moment.unix(date)
-        return `${parsedDate.format('dddd, MMMM Do')} at ${parsedDate.format('h:mm a')}`
+        return format(date, 'dddd, MMMM Do [at] h:mm a')
       }
     }
   }
