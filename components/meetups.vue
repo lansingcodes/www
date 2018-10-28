@@ -15,7 +15,7 @@
       :icon-name="meetup.iconName"
       has-icon
       has-subheading
-      class="mb-8"
+      class="mb-4"
     />
   </section>
 </template>
