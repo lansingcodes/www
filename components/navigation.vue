@@ -12,7 +12,7 @@
     </div>
 
     <!-- Menu Toggle -->
-    <div class="block md:hidden">
+    <div class="block lg:hidden">
       <button
         class="flex items-center px-3 py-2 border-2 rounded text-blue-darker border-blue-darker hover:text-blue-darkest hover:border-blue-darkest"
         type="button"
@@ -29,15 +29,16 @@
 
     <!-- Menu Items -->
     <div
+      id="navBarSupportedContent"
       :class="open ? 'block': 'hidden'"
-      class="w-full block flex-grow md:flex md:items-center md:justify-end md:w-auto"
+      class="w-full block flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto"
     >
-      <div class="text-base md:flex-grow text-right">
+      <div class="text-base lg:flex-grow text-right">
         <a
           v-for="link in links"
           :key="link.name"
           :href="link.href"
-          class="block mt-4 md:inline-block md:mt-0 text-blue-dark hover:text-blue-darker no-underline uppercase md:mr-4">
+          class="block mt-4 lg:inline-block lg:mt-0 text-blue-dark hover:text-blue-darker no-underline uppercase lg:mr-4">
           {{ link.name }}
         </a>
       </div>
