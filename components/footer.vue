@@ -4,17 +4,22 @@
     class="bg-black py-12 flex flex-wrap justify-center"
   >
     <section-heading
+      id="contactUs"
       white
       heading="Contact Us"
       subheading="know an event or resource we're missing? have questions? reach out!"
       class="w-full"
     />
-    <nav class="flex justify-center">
+    <nav
+      class="flex justify-center"
+      aria-labelledby="contactUs"
+    >
       <a
         v-for="link in links"
         :key="link.name"
         :href="link.href"
         :title="link.name"
+        :aria-label="link.name"
         class="inline-block mx-2"
       >
         <font-awesome-icon
