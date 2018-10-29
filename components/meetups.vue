@@ -18,7 +18,7 @@
       :icon-name="meetup.iconName"
       has-icon
       has-subheading
-      class="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6"
+      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-2 md:mb-4"
     />
   </section>
 </template>
