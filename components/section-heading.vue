@@ -22,12 +22,14 @@ export default {
     subheading: {
       type: String,
       default: 'briefly describe this section'
-    }
-  },
-  data() {
-    return {
-      grey: true,
-      white: false
+    },
+    grey: {
+      type: Boolean,
+      default: true
+    },
+    white: {
+      type: Boolean,
+      default: false
     }
   }
 }
