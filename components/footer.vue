@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="contact">
     <section-heading
       heading="Contact Us"
       subheading="know an event or resource we're missing? have questions? reach out!"

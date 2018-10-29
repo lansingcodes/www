@@ -2,10 +2,13 @@
   <div class="lc-background-image">
     <div class="flex flex-wrap justify-center pt-8">
       <section class="flex-none w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-white text-center p-8 sm:mb-24">
-        <h2 class="uppercase text-blue text-3xl mb-4">Lansing Codes</h2>
-        <p>Events and resources for Lansing coders</p>
-        <hr class="border-4 border-blue my-6 w-1/6 ">
-        <p class="mb-4">for those who code or aspire to, professionally or as a hobby</p>
+        <section-heading
+          h1
+          blue
+          heading="Lansing Codes"
+          subheading="Events and resources for Lansing coders"
+        />
+        <p class="mt-0 mb-4">For those who code or aspire to, professionally or as a hobby</p>
         <img
           class="h-32 w-32"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
@@ -14,24 +17,28 @@
       </section>
 
       <section class="w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4">
-        <h2 class="uppercase text-center text-3xl mb-4">Next Event</h2>
-        <hr class="border-4 border-white my-6 w-1/6 ">
+        <section-heading
+          white
+          heading="Next Event"
+        />
         <div
           v-if="nextEvent"
           class="text-left font-normal"
         >
           <h3 class="font-normal mb-2">{{ nextEvent.attributes.name }}</h3>
-          <p class="text-xs mb-4 mt-0">
-            {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
-          </p>
-          <p
-            v-if="nextEvent.relationships.venue && nextEvent.relationships.venue.attributes.name"
-            class="mb-4"
-          >
-            Where: {{ nextEvent.relationships.venue.attributes.name }}
+          <p class="flex flex-wrap justify-between text-xs mb-2 mt-0">
+            <span class="mb-2 mr-2">
+              {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
+            </span>
+            <span
+              v-if="nextEvent.relationships.venue && nextEvent.relationships.venue.attributes.name"
+              class="mb-2"
+            >
+              {{ nextEvent.relationships.venue.attributes.name }}
+            </span>
           </p>
           <p class="mb-6">
-            <span v-html="nextEvent.attributes.description"/>
+            <span v-html="nextEventDescription"/>
           </p>
         </div>
         <div class="text-center">
@@ -50,8 +57,13 @@
 
 <script>
 import { format } from 'date-fns'
+import sectionHeading from '~/components/section-heading'
+import truncate from '~/utils/truncate'
 
 export default {
+  components: {
+    sectionHeading
+  },
   computed: {
     nextEvent() {
       return this.$store.state.events.upcoming.reduce((previous, current) => {
@@ -59,6 +71,9 @@ export default {
         const currentTime = current.attributes.time.absolute
         return previousTime < currentTime ? previous : current
       })
+    },
+    nextEventDescription() {
+      return truncate(this.nextEvent.attributes.description, 200)
     }
   },
   methods: {

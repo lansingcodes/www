@@ -58,7 +58,7 @@ export default {
         },
         {
           name: 'Calendar',
-          href: '/#calendar'
+          href: '/#events'
         },
         {
           name: 'Meetups',
@@ -66,7 +66,15 @@ export default {
         },
         {
           name: 'Beginners',
-          href: '/#beginner-resources'
+          href: '/#resources'
+        },
+        {
+          name: 'Sponsors',
+          href: '/#sponsors'
+        },
+        {
+          name: 'Contact',
+          href: '/#contact'
         }
       ]
     }

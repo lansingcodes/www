@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="events">
     <section-heading
       heading="Upcoming Events"
       subheading="Events and resources for Lansing coders"

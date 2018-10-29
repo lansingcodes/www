@@ -1,9 +1,12 @@
 <template>
-  <section class="flex flex-wrap justify-around md:justify-between px-4 md:px-12">
+  <section
+    id="meetups"
+    class="flex flex-wrap justify-start px-4 md:px-12"
+  >
     <section-heading
       heading="Free Meetups"
       subheading="learn and network with peers"
-      class="w-64"/>
+      class="w-full"/>
     <card
       v-for="meetup in meetups"
       :key="meetup.heading"
@@ -15,7 +18,7 @@
       :icon-name="meetup.iconName"
       has-icon
       has-subheading
-      class="mb-4"
+      class="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6"
     />
   </section>
 </template>
@@ -36,11 +39,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-/* makes the last row line up with the grid */
-section:after {
-  content: '';
-  flex: auto;
-}
-</style>

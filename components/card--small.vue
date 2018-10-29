@@ -1,5 +1,5 @@
 <template>
-  <section class="sm:w-64 overflow-hidden bg-white text-center font-serif p-4">
+  <section class="overflow-hidden bg-white text-center font-serif p-4">
     <figure
       v-if="hasImage"
       class="flex justify-center h-24 mb-4"
@@ -7,7 +7,7 @@
       <img
         :src="imgSrc"
         :alt="imgAlt"
-        class="flex-initial max-h-full self-center"
+        class="flex-initial max-h-full px-2 self-center"
       >
     </figure>
     <font-awesome-icon
