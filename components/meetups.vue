@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-wrap justify-start px-4 md:px-12">
+  <section
+    id="meetups"
+    class="flex flex-wrap justify-start px-4 md:px-12"
+  >
     <section-heading
       heading="Free Meetups"
       subheading="learn and network with peers"

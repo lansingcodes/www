@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-wrap justify-start px-4 md:px-12">
+  <section
+    id="sponsors"
+    class="flex flex-wrap justify-start px-4 md:px-12"
+  >
     <section-heading
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"

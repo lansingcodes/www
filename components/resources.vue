@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="resources">
     <section-heading
       heading="Beginner Resources"
       subheading="where to start if you're new to coding"

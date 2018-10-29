@@ -8,7 +8,7 @@
           heading="Lansing Codes"
           subheading="Events and resources for Lansing coders"
         />
-        <p class="mb-4">for those who code or aspire to, professionally or as a hobby</p>
+        <p class="mt-0 mb-4">For those who code or aspire to, professionally or as a hobby</p>
         <img
           class="h-32 w-32"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
@@ -26,14 +26,16 @@
           class="text-left font-normal"
         >
           <h3 class="font-normal mb-2">{{ nextEvent.attributes.name }}</h3>
-          <p class="text-xs mb-4 mt-0">
-            {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
-          </p>
-          <p
-            v-if="nextEvent.relationships.venue && nextEvent.relationships.venue.attributes.name"
-            class="mb-4"
-          >
-            Where: {{ nextEvent.relationships.venue.attributes.name }}
+          <p class="flex flex-wrap justify-between text-xs mb-2 mt-0">
+            <span class="mb-2 mr-2">
+              {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
+            </span>
+            <span
+              v-if="nextEvent.relationships.venue && nextEvent.relationships.venue.attributes.name"
+              class="mb-2"
+            >
+              {{ nextEvent.relationships.venue.attributes.name }}
+            </span>
           </p>
           <p class="mb-6">
             <span v-html="nextEventDescription"/>
