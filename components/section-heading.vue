@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 self-center justify-center text-center">
+  <div class="p-2 justify-center text-center">
     <h1
       v-if="h1"
       :class="{ 'text-grey-darker' : grey, 'text-white': white, 'text-blue': blue }"
