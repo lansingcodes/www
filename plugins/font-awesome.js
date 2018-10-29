@@ -24,6 +24,7 @@ import {
   faCode,
   faCoffee,
   faCogs,
+  faEnvelope,
   faHourglassHalf,
   faMoon,
   faServer,
@@ -39,6 +40,7 @@ library.add(
   faCode,
   faCoffee,
   faCogs,
+  faEnvelope,
   faHourglassHalf,
   faMoon,
   faServer,
@@ -52,9 +54,11 @@ library.add(
 import {
   faFacebook,
   faFreeCodeCamp,
+  faGithub,
   faHtml5,
   faJava,
   faJsSquare,
+  faSlackHash,
   faTwitter,
   faWordpressSimple
 } from '@fortawesome/free-brands-svg-icons'
@@ -62,9 +66,11 @@ import {
 library.add(
   faFacebook,
   faFreeCodeCamp,
+  faGithub,
   faHtml5,
   faJava,
   faJsSquare,
+  faSlackHash,
   faTwitter,
   faWordpressSimple
 )
