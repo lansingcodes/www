@@ -2,9 +2,11 @@
   <div class="lc-background-image">
     <div class="flex flex-wrap justify-center pt-8">
       <section class="flex-none w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-white text-center p-8 sm:mb-24">
-        <h2 class="uppercase text-blue text-3xl mb-4">Lansing Codes</h2>
-        <p>Events and resources for Lansing coders</p>
-        <hr class="border-4 border-blue my-6 w-1/6 ">
+        <section-heading
+          blue
+          heading="Lansing Codes"
+          subheading="Events and resources for Lansing coders"
+        />
         <p class="mb-4">for those who code or aspire to, professionally or as a hobby</p>
         <img
           class="h-32 w-32"
@@ -14,8 +16,10 @@
       </section>
 
       <section class="w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4">
-        <h2 class="uppercase text-center text-3xl mb-4">Next Event</h2>
-        <hr class="border-4 border-white my-6 w-1/6 ">
+        <section-heading
+          white
+          heading="Next Event"
+        />
         <div
           v-if="nextEvent"
           class="text-left font-normal"
@@ -50,8 +54,12 @@
 
 <script>
 import { format } from 'date-fns'
+import sectionHeading from '~/components/section-heading'
 
 export default {
+  components: {
+    sectionHeading
+  },
   computed: {
     nextEvent() {
       return this.$store.state.events.upcoming.reduce((previous, current) => {
