@@ -3,6 +3,7 @@
     <div class="flex flex-wrap justify-center pt-8">
       <section class="flex-none w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-white text-center p-8 sm:mb-24">
         <section-heading
+          h1
           blue
           heading="Lansing Codes"
           subheading="Events and resources for Lansing coders"

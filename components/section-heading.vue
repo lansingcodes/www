@@ -1,6 +1,13 @@
 <template>
   <div class="p-2 self-center justify-center text-center">
+    <h1
+      v-if="h1"
+      :class="{ 'text-grey-darker' : grey, 'text-white': white, 'text-blue': blue }"
+      class="uppercase text-3xl mb-2">
+      {{ heading }}
+    </h1>
     <h2
+      v-else
       :class="{ 'text-grey-darker' : grey, 'text-white': white, 'text-blue': blue }"
       class="uppercase text-3xl mb-2">
       {{ heading }}
@@ -20,13 +27,9 @@
 <script>
 export default {
   props: {
-    heading: {
-      type: String,
-      default: 'Section title'
-    },
-    subheading: {
-      type: String,
-      default: ''
+    h1: {
+      type: Boolean,
+      default: false
     },
     grey: {
       type: Boolean,
@@ -39,6 +42,14 @@ export default {
     blue: {
       type: Boolean,
       default: false
+    },
+    heading: {
+      type: String,
+      default: 'Section title'
+    },
+    subheading: {
+      type: String,
+      default: ''
     }
   }
 }
