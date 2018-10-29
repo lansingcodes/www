@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* makes the last row line up with the grid */
 /* this doesn't work in three column layout with one item in last row. maybe use 33% width then? */
 section:after {

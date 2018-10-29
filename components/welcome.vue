@@ -36,7 +36,7 @@
             Where: {{ nextEvent.relationships.venue.attributes.name }}
           </p>
           <p class="mb-6">
-            <span v-html="nextEvent.attributes.description"/>
+            <span v-html="nextEventDescription"/>
           </p>
         </div>
         <div class="text-center">
@@ -56,6 +56,7 @@
 <script>
 import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
+import truncate from '~/utils/truncate'
 
 export default {
   components: {
@@ -68,6 +69,9 @@ export default {
         const currentTime = current.attributes.time.absolute
         return previousTime < currentTime ? previous : current
       })
+    },
+    nextEventDescription() {
+      return truncate(this.nextEvent.attributes.description, 200)
     }
   },
   methods: {
