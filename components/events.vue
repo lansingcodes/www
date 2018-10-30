@@ -1,29 +1,48 @@
 <template>
-  <section id="events">
+  <section
+    id="events"
+    class="flex flex-wrap justify-start px-4 md:px-12"
+  >
     <section-heading
       heading="Upcoming Events"
       subheading="Events and resources for Lansing coders"
+      class="w-full"
     />
-    <article class="overflow-hidden bg-white shadow font-sans-serif">
-      <p class="font-bold mb-2 hidden md:block">29th</p>
-      <header class="bg-blue-darker text-white p-4">
-        <h3 class="flex font-normal mb-2">
-          <font-awesome-icon
-            :icon="['fas', 'code']"
-            class="text-lg self-center mr-4"
-            title="meetup name"
-            aria-label="meetup name"
-          />
-          Name of the event, which might be pretty long
-        </h3>
-        <p class="text-small w-full">October 29 - 7:00pm</p>
-      </header>
-      <div :class="open ? 'block p-4': 'hidden'">
-        <p class="font-bold mb-1">TechSmith Corporation</p>
-        <address class="text-grey-dark roman">2405 Woodlake Drive, Okemos, MI</address>
 
-        <p>Sponsor: Recruitment Management Consultants, LLC</p>
-        <p>This presentation will include a deep dive into advanced techniques that can be applied...</p>
+    <article
+      v-for="event in events"
+      :key="event.attributes.name"
+      class="overflow-hidden bg-white shadow font-sans-serif w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
+    >
+      <header class="flex bg-blue-darker text-white p-4">
+        <font-awesome-icon
+          :icon="['fas', 'code']"
+          class="text-lg self-center mr-4"
+          title="meetup name"
+          aria-label="meetup name"
+        />
+        <h3 class="font-normal mb-2">
+          <a
+            :href="event.links.self"
+            class="block text-white no-underline hover:text-blue-lighter mb-2"
+          >
+            {{ event.attributes.name }}
+          </a>
+          <span class="text-small block">
+            {{ formatReadableDate(event.attributes.time.absolute) }}
+          </span>
+        </h3>
+
+      </header>
+      <div
+        :class="open ? 'block p-4': 'hidden'"
+        class="max-h-screen overflow-y-scroll"
+      >
+        <div v-if="event.relationships.venue">
+          <p class="font-bold mb-1">{{ event.relationships.venue.attributes.name }}</p>
+          <address class="text-grey-dark roman">{{ event.relationships.venue.attributes.address }}</address>
+        </div>
+        <div v-html="event.attributes.description"/>
       </div>
       <footer>
         <button
@@ -40,11 +59,15 @@
         </button>
       </footer>
     </article>
+
   </section>
 </template>
 
 <script>
+import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
+import truncate from '~/utils/truncate'
+
 export default {
   components: {
     sectionHeading
@@ -54,9 +77,17 @@ export default {
       open: false
     }
   },
+  computed: {
+    events() {
+      return this.$store.state.events.upcoming
+    }
+  },
   methods: {
     toggle() {
       this.open = !this.open
+    },
+    formatReadableDate(date) {
+      return format(date, 'dddd, MMMM D [at] h:mm a')
     }
   }
 }
