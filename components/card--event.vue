@@ -1,5 +1,8 @@
 <template>
-  <article class="overflow-hidden bg-white shadow font-sans-serif">
+  <article
+    :class="open ? 'absolute max-w-xs' : ''"
+    class="max-w-xs overflow-hidden bg-white shadow font-sans-serif"
+  >
     <header class="flex bg-blue-darker text-white p-4">
       <font-awesome-icon
         v-if="icon"
@@ -24,7 +27,7 @@
 
     <div
       :class="open ? 'block p-4': 'hidden'"
-      class="max-h-screen overflow-y-scroll"
+      class="max-h-30 overflow-y-scroll"
     >
       <div
         v-if="venue"
@@ -46,7 +49,11 @@
         <svg
           class="fill-current h-3 w-3"
           viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"><title>Show/Hide</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Show/Hide</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
       </button>
     </footer>
   </article>
@@ -97,3 +104,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.max-h-30 {
+  max-height: 30vh;
+}
+</style>

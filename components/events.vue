@@ -11,7 +11,7 @@
     <div
       v-for="event in events"
       :key="event.name"
-      class="px-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-2 max-w-sm md:mb-8"
+      class="px-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-2 mb-4 md:mb-8"
     >
       <eventCard
         :event-name="event.attributes.name"
@@ -19,7 +19,6 @@
         :event-date="formatDate(event.attributes.time.absolute)"
         :event-description="event.attributes.description"
         :venue="event.relationships.venue.attributes"
-
       />
     </div>
   </section>
