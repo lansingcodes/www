@@ -6,7 +6,8 @@
     <section-heading
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"
-      class="w-full"/>
+      class="w-full"
+    />
     <card
       v-for="sponsor in sponsors"
       :key="sponsor.name"
