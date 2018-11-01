@@ -1,33 +1,54 @@
 <template>
   <article
-    :class="open ? 'absolute max-w-xs' : ''"
-    class="max-w-xs overflow-hidden bg-white shadow font-sans-serif"
+    :class="open ? 'relative' : ''"
+    class="max-w-xs bg-white shadow font-sans-serif"
   >
-    <header class="flex bg-blue-darker text-white p-4">
+    <!-- Header (always visible) -->
+    <header class="overflow-hidden flex relative bg-blue-darker text-white p-4">
       <font-awesome-icon
         v-if="icon"
         :icon="['fas', 'code']"
+        :title="eventName"
+        :aria-label="eventName"
         class="text-lg self-center mr-4"
-        title="meetup name"
-        aria-label="meetup name"
       />
       <h3 class="font-normal mb-2">
         <a
           :href="eventLink"
-          class="block text-white no-underline hover:text-blue-lighter mb-2"
+          class="block text-white no-underline
+            hover:text-blue-lighter focus:text-blue-lighter
+            mb-2"
         >
           {{ eventName }}
+          <!-- <sup><font-awesome-icon
+            icon="external-link-alt"
+            class="text-xs ml-1"
+          /></sup> -->
         </a>
         <span class="text-sm block">
           {{ eventDate }}
         </span>
       </h3>
-
+      <div class="triangle bg-white absolute">
+        <button
+          class="katie-button text-blue font-bold hover:text-blue-darker focus:text-blue-darker"
+          type="button"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          @click="toggle"
+        >
+          <font-awesome-icon
+            :icon="open ? 'minus' : 'plus'"
+          />
+        </button>
+      </div>
     </header>
 
+    <!-- Additional details -->
     <div
-      :class="open ? 'block p-4': 'hidden'"
-      class="max-h-30 overflow-y-scroll"
+      :class="open ? 'absolute p-4 block z-50': 'hidden'"
+      :tabindex="open ? '0' : ''"
+      class="max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full"
     >
       <div
         v-if="venue"
@@ -38,24 +59,7 @@
       </div>
       <div v-html="eventDescription"/>
     </div>
-    <footer>
-      <button
-        class="w-full text-blue-darker border-blue-darker hover:text-blue-darkest hover:bg-blue-lightest py-2"
-        type="button"
-        aria-controls="navbarSupportedContent"
-        aria-label="Toggle navigation"
-        @click="toggle"
-      >
-        <svg
-          class="fill-current h-3 w-3"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Show/Hide</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-        </svg>
-      </button>
-    </footer>
+
   </article>
 </template>
 
@@ -90,23 +94,45 @@ export default {
           address: 'Venue address'
         }
       }
+    },
+    expandedEventName: {
+      type: String,
+      default: null
     }
   },
-  data() {
-    return {
-      open: false
+  computed: {
+    open() {
+      return this.eventName === this.expandedEventName
     }
   },
   methods: {
     toggle() {
-      this.open = !this.open
+      if (this.open) {
+        this.$emit('card-event-collapse', this.eventName)
+      } else {
+        this.$emit('card-event-expand', this.eventName)
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.max-h-30 {
-  max-height: 30vh;
+.max-h-50 {
+  max-height: 50vh;
+}
+.triangle {
+  width: 160px;
+  height: 80px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: -75px;
+  bottom: -25px;
+}
+.katie-button {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  transform: rotate(45deg);
 }
 </style>
