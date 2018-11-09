@@ -4,7 +4,7 @@
     class="max-w-xs bg-white shadow font-sans-serif"
   >
     <!-- Header (always visible) -->
-    <header class="overflow-hidden flex relative bg-blue-darker text-white p-4">
+    <header class="overflow-hidden h-full flex relative bg-blue-darker text-white p-4">
       <font-awesome-icon
         v-if="icon"
         :icon="['fas', 'code']"
