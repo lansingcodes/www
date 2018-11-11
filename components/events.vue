@@ -1,7 +1,7 @@
 <template>
   <section
     id="events"
-    class="relative flex flex-wrap align-start justify-center sm:justify-start bg-blue-dark"
+    class="relative flex flex-wrap align-start justify-center sm:justify-start bg-blue pt-8"
   >
     <section-heading
       white

@@ -31,7 +31,7 @@
       </h3>
       <div class="triangle bg-white absolute">
         <button
-          class="katie-button text-blue font-bold hover:text-blue-darker focus:text-blue-darker"
+          class="katie-button text-blue font-bold hover:text-blue-darkest focus:text-blue-darkest focus:outline-none"
           type="button"
           aria-controls="navbarSupportedContent"
           aria-label="Toggle navigation"
