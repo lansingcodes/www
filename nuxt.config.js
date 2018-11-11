@@ -60,6 +60,26 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+
+      const vueRule = config.module.rules.find(
+        rule => rule.loader === 'vue-loader'
+      )
+      vueRule.options.compilerOptions = {
+        ...vueRule.options.compilerOptions,
+        modules: [
+          ...((vueRule.options.compilerOptions &&
+            vueRule.options.compilerOptions.modules) ||
+            []),
+          { postTransformNode: staticClassHotfix }
+        ]
+      }
+
+      function staticClassHotfix(el) {
+        el.staticClass = el.staticClass && el.staticClass.replace(/\\\w\b/g, '')
+        if (Array.isArray(el.children)) {
+          el.children.map(staticClassHotfix)
+        }
+      }
     }
   }
 }
