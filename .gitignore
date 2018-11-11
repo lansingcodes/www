@@ -82,3 +82,6 @@ dist
 
 # IDE
 .idea
+
+# Ignore when people install with NPM
+package-lock.json

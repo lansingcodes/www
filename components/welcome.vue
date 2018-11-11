@@ -37,9 +37,10 @@
               {{ nextEvent.relationships.venue.attributes.name }}
             </span>
           </p>
-          <p class="mb-6">
-            <span v-html="nextEventDescription"/>
-          </p>
+          <div
+            class="mb-6"
+            v-html="nextEventDescription"
+          />
         </div>
         <div class="text-center">
           <a

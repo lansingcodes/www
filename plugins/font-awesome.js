@@ -18,6 +18,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // free SOLID icon set (fas)
 // @https://fontawesome.com/icons?d=gallery&s=solid&m=free
 import {
+  faBars,
   faBullseye,
   faChartLine,
   faChartPie,
@@ -25,8 +26,11 @@ import {
   faCoffee,
   faCogs,
   faEnvelope,
+  faExternalLinkAlt,
   faHourglassHalf,
+  faMinus,
   faMoon,
+  faPlus,
   faServer,
   faTable,
   faUserCircle,
@@ -34,6 +38,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+  faBars,
   faBullseye,
   faChartLine,
   faChartPie,
@@ -41,8 +46,11 @@ library.add(
   faCoffee,
   faCogs,
   faEnvelope,
+  faExternalLinkAlt,
   faHourglassHalf,
+  faMinus,
   faMoon,
+  faPlus,
   faServer,
   faTable,
   faUserCircle,

@@ -1,15 +1,13 @@
 <template>
   <div>
     <a
-      class="sr-only"
+      class="sr-only focus:block"
       href="#mainContent">Skip to main content</a>
     <header>
       <navigation/>
     </header>
     <main
       id="mainContent"
-      role="main"
-      tabindex="-1"
     >
       <nuxt/>
     </main>
