@@ -25,15 +25,15 @@
   // Event Triggers
   // ===
 
-  "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": false,
   "eslint.run": "onSave",
   "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true },
-    { "language": "vue", "autoFix": true },
-    { "language": "vue-html", "autoFix": true },
-    { "language": "html", "autoFix": true }
+    { "language": "javascript", "autoFix": false },
+    { "language": "javascriptreact", "autoFix": false },
+    { "language": "vue", "autoFix": false },
+    { "language": "vue-html", "autoFix": false },
+    { "language": "html", "autoFix": false }
   ],
 
   // ===
