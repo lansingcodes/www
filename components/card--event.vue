@@ -15,19 +15,15 @@
       <h3 class="font-normal mb-2">
         <a
           :href="eventLink"
-          class="block text-white no-underline
-            hover:text-blue-lighter focus:text-blue-lighter
-            mb-2"
+          class="block text-white no-underline hover:text-blue-lighter focus:text-blue-lighter mb-2"
         >
           {{ eventName }}
           <!-- <sup><font-awesome-icon
             icon="external-link-alt"
             class="text-xs ml-1"
-          /></sup> -->
+          /></sup>-->
         </a>
-        <span class="text-sm block">
-          {{ eventDate }}
-        </span>
+        <span class="text-sm block">{{ eventDate }}</span>
       </h3>
       <div class="triangle bg-white absolute">
         <button
@@ -37,9 +33,7 @@
           aria-label="Toggle navigation"
           @click="toggle"
         >
-          <font-awesome-icon
-            :icon="open ? 'minus' : 'plus'"
-          />
+          <font-awesome-icon :icon="open ? 'minus' : 'plus'"/>
         </button>
       </div>
     </header>
@@ -59,7 +53,6 @@
       </div>
       <div v-html="eventDescription"/>
     </div>
-
   </article>
 </template>
 
@@ -95,22 +88,22 @@ export default {
         }
       }
     },
-    expandedEventName: {
+    expandedEventId: {
       type: String,
       default: null
     }
   },
   computed: {
     open() {
-      return this.eventName === this.expandedEventName
+      return this.eventName === this.expandedEventId
     }
   },
   methods: {
     toggle() {
       if (this.open) {
-        this.$emit('card-event-collapse', this.eventName)
+        this.$emit('card-event-collapse', this.event.attributes.id)
       } else {
-        this.$emit('card-event-expand', this.eventName)
+        this.$emit('card-event-expand', this.event.attributes.id)
       }
     }
   }
