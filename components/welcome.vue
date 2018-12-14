@@ -89,6 +89,6 @@ export default {
 .lc-background-image {
   background-position: center top;
   background-repeat: no-repeat;
-  background-image: url('/capitol.jpg');
+  background-image: url('../assets/images/capitol.jpg');
 }
 </style>

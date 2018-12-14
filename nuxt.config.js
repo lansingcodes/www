@@ -51,14 +51,17 @@ module.exports = {
       { property: 'og:site_name', content: 'Lansing Codes' },
       {
         property: 'og:image',
-        content: 'https://www.lansing.codes/capitol.jpg'
+        content: 'https://www.lansing.codes/resources-for-lansing-coders.jpg'
       },
       { property: 'og:image:type', content: 'image/jpeg' },
-      { property: 'og:image:width', content: '2048' },
-      { property: 'og:image:height', content: '1367' },
+      { property: 'og:image:width', content: '2850' },
+      { property: 'og:image:height', content: '1420' },
       { property: 'fb:admins', content: '2327791' },
       { property: 'fb:admins', content: '2335756' },
-      { property: 'fb:admins', content: '1261535380' }
+      { property: 'fb:admins', content: '1261535380' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@lansingcodes' },
+      { name: 'twitter:creator', content: '@lansingcodes' }
     ],
     link: [
       { rel: 'apple-touch-icon', type: 'image/png', href: '/favicon.ico?v=1' },
