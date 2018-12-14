@@ -14,7 +14,51 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Resources for coders and community organizers of Lansing, MI.'
+      },
+      {
+        property: 'og:description',
+        content: 'Resources for coders and community organizers of Lansing, MI.'
+      },
+      { property: 'og:title', content: 'Lansing Codes' },
+      {
+        name: 'keywords',
+        content: [
+          'lansing mi',
+          'lansing codes',
+          'meetups',
+          'events',
+          'code',
+          'coding',
+          'programming',
+          'hackathon',
+          'learning to code',
+          'coding resources',
+          'programming resources',
+          'learn to code'
+        ].join(',')
+      },
+      { name: 'geo.region', content: 'US-MI' },
+      { name: 'geo.placename', content: 'Greater Lansing' },
+      { name: 'geo.position', content: '42.734552;-84.480615' },
+      { name: 'ICBM', content: '42.734552, -84.480615' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://www.lansing.codes/' },
+      { property: 'og:locale', content: 'en_US' },
+      { property: 'og:site_name', content: 'Lansing Codes' },
+      {
+        property: 'og:image',
+        content: 'https://www.lansing.codes/capitol.jpg'
+      },
+      { property: 'og:image:type', content: 'image/jpeg' },
+      { property: 'og:image:width', content: '2048' },
+      { property: 'og:image:height', content: '1367' },
+      { property: 'fb:admins', content: '2327791' },
+      { property: 'fb:admins', content: '2335756' },
+      { property: 'fb:admins', content: '1261535380' }
     ],
     link: [
       { rel: 'apple-touch-icon', type: 'image/png', href: '/favicon.ico?v=1' },
