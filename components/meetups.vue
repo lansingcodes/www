@@ -1,7 +1,7 @@
 <template>
   <section
     id="meetups"
-    class="flex flex-wrap justify-start px-4 md:px-12"
+    class="container mx-auto flex flex-wrap justify-start px-4 md:px-12"
   >
     <section-heading
       heading="Free Meetups"
@@ -18,7 +18,7 @@
       :icon-name="meetup.iconName"
       has-icon
       has-subheading
-      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-2 md:mb-4"
+      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
     />
   </section>
 </template>
