@@ -1,9 +1,10 @@
 <template>
   <section
     id="sponsors"
-    class="flex flex-wrap justify-start px-4 md:px-12"
+    class="container mx-auto flex flex-wrap justify-center px-4 md:px-12"
   >
     <section-heading
+      blue
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"
       class="w-full"
@@ -16,7 +17,7 @@
       :description="sponsor.desc"
       :img-src="imgSrcForSponsor(sponsor)"
       :img-alt="sponsor.name + ' logo'"
-      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-2 md:mb-4"
+      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
     />
   </section>
 </template>
