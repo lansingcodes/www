@@ -4,9 +4,10 @@
     class="container mx-auto flex flex-wrap justify-start px-4 md:px-12"
   >
     <section-heading
+      blue
       heading="Free Meetups"
-      subheading="learn and network with peers"
-      class="w-full"/>
+      subheading="regular meetups to help you become a better coder"
+      class="w-full lg:w-1/2 self-center"/>
     <card
       v-for="meetup in meetups"
       :key="meetup.heading"

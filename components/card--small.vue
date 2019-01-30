@@ -1,5 +1,5 @@
 <template>
-  <section class="overflow-hidden bg-white text-center font-serif p-4">
+  <section class="text-center font-serif p-4">
     <figure
       v-if="hasImage"
       class="flex justify-center h-24 mb-4"
