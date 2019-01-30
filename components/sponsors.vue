@@ -16,7 +16,6 @@
       :description="sponsor.desc"
       :img-src="imgSrcForSponsor(sponsor)"
       :img-alt="sponsor.name + ' logo'"
-      has-image
       class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-2 md:mb-4"
     />
   </section>
