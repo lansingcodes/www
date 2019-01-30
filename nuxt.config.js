@@ -66,7 +66,12 @@ module.exports = {
     link: [
       { rel: 'apple-touch-icon', type: 'image/png', href: '/favicon.ico?v=1' },
       { rel: 'image_src', type: 'image/png', href: '/favicon.ico?v=1' },
-      { rel: 'icon', type: 'image/png', href: '/favicon.ico?v=1' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.ico?v=1' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'
+      }
     ]
   },
 

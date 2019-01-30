@@ -10,8 +10,17 @@
         class="flex-initial max-h-full px-2 self-center"
       >
     </figure>
+    <span
+      v-if="iconText"
+      class="font-bold font-sans inline-block text-5xl text-blue h-24 pt-5"
+    >{{ iconText }}</span>
+    <span
+      v-else-if="hasIcon && iconSet === 'mfizz'"
+      :class="iconName"
+      class="text-6xl text-blue fill-current h-24 fa fa-3x pt-6"
+    />
     <font-awesome-icon
-      v-if="hasIcon"
+      v-else-if="hasIcon"
       :icon="[iconSet, iconName]"
       class="text-5xl text-blue fill-current h-24"
     />
@@ -74,6 +83,10 @@ export default {
     iconName: {
       type: String,
       default: 'code'
+    },
+    iconText: {
+      type: String,
+      default: null
     },
     imgSrc: {
       type: String,

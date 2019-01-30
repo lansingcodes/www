@@ -24,7 +24,7 @@ export default [
     heading: 'R',
     description: 'Have data, need stats? Use R.',
     iconSet: 'fas',
-    ionName: 'chart-line',
+    iconName: 'chart-line',
     url: 'https://www.meetup.com/Lansing-Area-R-Users-Group/',
     subheading: '2nd Monday'
   },
@@ -63,8 +63,8 @@ export default [
     heading: 'SQL Server',
     description:
       "If you're living in Microsoft's world, you'll want to keep up with SQL Server and related technologies.",
-    iconSet: 'fas',
-    iconName: 'code',
+    iconSet: 'mfizz',
+    iconName: 'icon-mssql',
     url: 'https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
     subheading: '2nd Tuesday'
   },
@@ -73,8 +73,7 @@ export default [
     heading: 'ColdFusion',
     description:
       'This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.',
-    iconSet: 'fas',
-    iconName: 'code',
+    iconText: 'Cf',
     url: 'http://www.mmcfug.org/',
     subheading: '2nd Tuesday'
   },
@@ -143,8 +142,8 @@ export default [
     heading: '.NET',
     description:
       'One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.',
-    iconSet: 'fas',
-    iconName: 'code',
+    iconSet: 'mfizz',
+    iconName: 'icon-csharp',
     url: 'https://www.meetup.com/GLUGnet/',
     subheading: '3rd Thursday'
   },
@@ -172,8 +171,8 @@ export default [
   {
     heading: 'Software Testing',
     description: 'The last line of defense against bugs and poor design.',
-    iconSet: 'fas',
-    ionName: 'code',
+    iconSet: 'mfizz',
+    iconName: 'icon-script',
     url: 'https://www.meetup.com/LansingAreaSoftwareTesters/',
     subheading: '4th Thursday'
   }
