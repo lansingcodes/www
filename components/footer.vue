@@ -7,11 +7,11 @@
       id="contactUs"
       white
       heading="Contact Us"
-      subheading="know an event or resource we're missing? have questions? reach out!"
+      subheading="know an event or resource we're missing? let us know or follow us"
       class="w-full"
     />
     <nav
-      class="flex justify-center"
+      class="flex justify-center my-8"
       aria-labelledby="contactUs"
     >
       <a
@@ -20,7 +20,7 @@
         :href="link.href"
         :title="link.name"
         :aria-label="link.name"
-        class="inline-block mx-2"
+        class="inline-block mx-2 md:mx-4"
       >
         <font-awesome-icon
           :icon="[link.iconSet, link.icon]"
@@ -44,19 +44,19 @@ export default {
           name: 'Slack',
           href: 'https://slack.lansing.codes/',
           iconSet: 'fab',
-          icon: 'slack-hash'
+          icon: 'slack'
+        },
+        {
+          name: 'GitHub',
+          href: 'https://github.com/lansingcodes/',
+          iconSet: 'fab',
+          icon: 'github'
         },
         {
           name: 'Email',
           href: 'mailto:lansingcodes@gmail.com',
           iconSet: 'fas',
           icon: 'envelope'
-        },
-        {
-          name: 'Github',
-          href: 'https://github.com/lansingcodes/',
-          iconSet: 'fab',
-          icon: 'github'
         },
         {
           name: 'Facebook',

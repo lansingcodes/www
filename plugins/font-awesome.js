@@ -66,7 +66,7 @@ import {
   faHtml5,
   faJava,
   faJsSquare,
-  faSlackHash,
+  faSlack,
   faTwitter,
   faWordpressSimple
 } from '@fortawesome/free-brands-svg-icons'
@@ -78,7 +78,7 @@ library.add(
   faHtml5,
   faJava,
   faJsSquare,
-  faSlackHash,
+  faSlack,
   faTwitter,
   faWordpressSimple
 )
