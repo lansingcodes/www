@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="576px" viewBox="0 0 1439 576" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>resources_bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="87.7806485%" y1="50%" x2="19.8291944%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2979BF" offset="0%"></stop>
+            <stop stop-color="#005198" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LansingCodes-Copy" transform="translate(0.000000, -3510.000000)" fill="url(#linearGradient-1)">
+            <g id="Resources" transform="translate(-1.000000, 3510.000000)">
+                <polygon id="resources_bg" points="1440 0 840.830686 1.99784219e-15 663.58248 126.946685 496.345239 126.946685 0 126.946685 0 459.760863 664.148985 459.760863 842.65604 575.838807 1440 575.838807"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

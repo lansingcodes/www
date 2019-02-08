@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="359px" viewBox="0 0 1440 359" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>stayinformed_bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="16.0154677%" y1="33.9605483%" x2="87.7806485%" y2="33.9605483%" id="linearGradient-1">
+            <stop stop-color="#2979BF" offset="0%"></stop>
+            <stop stop-color="#005198" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-15.2305035%" y1="52.0025548%" x2="74.1313317%" y2="60.8087502%" id="linearGradient-2">
+            <stop stop-color="#2979BF" offset="0%"></stop>
+            <stop stop-color="#2878BE" offset="47.9332263%"></stop>
+            <stop stop-color="#005198" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LansingCodes-Copy" transform="translate(0.000000, -5481.000000)">
+            <g id="stayinformed_bg" transform="translate(-155.000000, 5253.000000)">
+                <polygon id="Path-2" fill="url(#linearGradient-1)" points="1599 229 649.990569 229 155 338.430186 167.226099 582.671215 1202.37965 582.671215 1599 582.671215"></polygon>
+                <polygon id="Triangle" fill="url(#linearGradient-2)" transform="translate(1392.135910, 361.707471) rotate(-60.000000) translate(-1392.135910, -361.707471) " points="1380.90917 75.3472501 1609.14551 470.664191 1301.87364 648.067691 1175.1263 428.534867"></polygon>
+                <polygon id="Triangle" fill="url(#linearGradient-2)" transform="translate(393.123224, 363.745645) rotate(60.000000) translate(-393.123224, -363.745645) " points="421.284122 45.9782488 628.661481 401.967954 467.26605 681.51304 157.584967 502.718584"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
