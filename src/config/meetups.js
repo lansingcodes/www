@@ -9,14 +9,6 @@ export default [
   },
   // 1st Thursday
   {
-    name: 'CocoaHeads',
-    desc: 'For those interested in developing for the Apple ecosystem: Swift, Objective-C, iOS, Apple Watch, macOS, tvOS, and related topics.',
-    icon: 'fa-apple',
-    url: 'https://www.meetup.com/Lansing-CocoaHeads/',
-    on: '1st Thursday'
-  },
-  // 1st Thursday
-  {
     name: 'WordPress',
     desc: 'The most popular website management software on the web. This group caters to developers, designers, publishers, and DIYers.',
     icon: 'fa-wordpress',
