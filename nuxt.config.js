@@ -1,5 +1,8 @@
 const pkg = require('./package')
 
+const join = require('path').join
+const tailwindJS = join(__dirname, 'tailwind.js')
+
 module.exports = {
   mode: 'universal',
 
@@ -99,6 +102,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    postcss: {
+      plugins: [require('tailwindcss')(tailwindJS), require('autoprefixer')]
+    },
+
     /*
     ** You can extend webpack config here
     */

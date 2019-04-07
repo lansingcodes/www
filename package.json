@@ -23,7 +23,7 @@
     "date-fns": "^1.29.0",
     "i": "^0.3.6",
     "npm": "^6.4.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.6.1",
     "vue-jsonp": "^0.1.8"
   },
   "devDependencies": {
