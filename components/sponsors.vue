@@ -7,8 +7,15 @@
       blue
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"
-      class="w-full"
+      class="md:mb-16 self-end w-full md:w-1/3"
     />
+    <div class="hidden md:block md:mb-16 md:w-2/3">
+      <img
+        src="../assets/images/sponsors-feature.jpg"
+        alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
+        class="ml-8 mb-8 block shadow-lg"
+      >
+    </div>
     <card
       v-for="sponsor in sponsors"
       :key="sponsor.name"
@@ -26,6 +33,7 @@
 import sectionHeading from '~/components/section-heading'
 import card from '~/components/card--small'
 import sponsors from '~/config/sponsors'
+
 export default {
   components: {
     card,
@@ -43,8 +51,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-/* makes the last row line up with the grid */
-/* this doesn't work in three column layout with one item in last row. maybe use 33% width then? */
-</style>
