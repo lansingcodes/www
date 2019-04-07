@@ -24,14 +24,14 @@
           v-model="email"
           name="EMAIL"
           type="text"
-          class="border-grey-dark rounded-full p-4 w-3/4 md:max-w-sm text-sm"
+          class="outline-none focus:shadow-outline border-grey-dark rounded-full p-4 w-3/4 md:max-w-sm text-sm"
           placeholder="Email address"
           aria-label="Email address"
         >
         <button
           class="
-            bg-white border border-blue rounded-full text-blue p-4 -ml-16
-            uppercase font-bold text-sm
+            outline-none focus:outline-none focus:shadow-outline bg-white border border-blue rounded-full
+            text-blue p-4 -ml-16 uppercase font-bold text-sm
           "
           type="submit"
         >Subscribe</button>
