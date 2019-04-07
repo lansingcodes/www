@@ -91,6 +91,10 @@ export default {
           href: '/#sponsors'
         },
         {
+          name: 'Newsletter',
+          href: '/#newsletter'
+        },
+        {
           name: 'Contact',
           href: '/#contact'
         }

@@ -1,8 +1,8 @@
 <template>
   <section
+    id="newsletter"
     class="bg-blue py-12"
   >
-    <a id="newsletter"/>
     <section-heading
       white
       heading="Stay Informed"
