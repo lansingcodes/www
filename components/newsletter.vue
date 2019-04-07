@@ -1,7 +1,7 @@
 <template>
   <section
     id="newsletter"
-    class="bg-blue py-12"
+    class="bg-blue py-20"
   >
     <section-heading
       white

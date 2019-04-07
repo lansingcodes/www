@@ -3,7 +3,7 @@
     id="resources"
     class="
       flex flex-wrap justify-center w-full bg-blue py-16
-      md:py-32
+      md:py-32 md:mb-32
     "
   >
     <div class="w-full">
@@ -22,6 +22,7 @@
       <h3 class="text-2xl font-sans font-normal text-blue mb-2">
         <a
           :href="resource.url"
+          target="_blank"
           class="no-underline text-white hover:underline hover:text-white"
         >
           {{ resource.title }}

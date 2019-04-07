@@ -1,7 +1,7 @@
 <template>
   <section
     id="meetups"
-    class="container mx-auto flex flex-wrap justify-start px-4 md:px-12"
+    class="container mx-auto flex flex-wrap justify-start px-4 md:px-12 mb-16"
   >
     <section-heading
       blue
@@ -27,6 +27,7 @@
 import sectionHeading from '~/components/section-heading'
 import card from '~/components/card--small'
 import meetups from '~/config/meetups'
+
 export default {
   components: {
     card,

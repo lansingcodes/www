@@ -81,13 +81,13 @@ export default [
   {
     heading: 'Web',
     description:
-      "An agenda-free meetup where you can share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
+      "Share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
     iconSet: 'fab',
     iconName: 'html5',
     url: 'https://www.meetup.com/lansingweb/',
     subheading: '2nd Wednesday'
   },
-  // 2nd Wednesday, every other month
+  // 2nd Wednesday
   {
     heading: 'Marketing Hackers',
     description:
@@ -95,7 +95,7 @@ export default [
     iconSet: 'fas',
     iconName: 'bullseye',
     url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
-    subheading: '2nd Wednesday, Bimonthly'
+    subheading: '2nd Wednesday'
   },
   // 2nd Thursday
   {
@@ -109,9 +109,9 @@ export default [
   },
   // 3rd Tuesday
   {
-    heading: 'Free Code Camp',
+    heading: 'freeCodeCamp',
     description:
-      'Want to get started on learning development? Join us for the Lansing Free Code Camp meeting to start your development journey or just ask questions.',
+      'Want to get started on learning development? Join us for the Lansing freeCodeCamp meeting to start your development journey or just ask questions.',
     iconSet: 'fab',
     iconName: 'free-code-camp',
     url: 'https://www.facebook.com/groups/free.code.camp.lansing/',
@@ -121,7 +121,7 @@ export default [
   {
     heading: 'JavaScript',
     description:
-      "When coding on the client, there's really only one choice; fortunately, it has one of the most thriving and innovative communities around.",
+      "When coding for the browser, there's usually only one choice; fortunately, it has one of the most thriving and innovative communities around.",
     iconSet: 'fab',
     iconName: 'js-square',
     url: 'https://www.meetup.com/Lansing-Javascript-Meetup/',
@@ -151,7 +151,7 @@ export default [
   {
     heading: 'Code Retreat',
     description:
-      'Try, Practice, Learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
+      'Try, practice, learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.',
     iconSet: 'fas',
     iconName: 'users',
     url: 'https://www.meetup.com/Mid-Michigan-Code-Retreat/',

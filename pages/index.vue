@@ -1,10 +1,10 @@
 <template>
   <div>
-    <welcome class="mb-16 md:mb-32"/>
-    <events class="px-4 mb-16 md:mb-32"/>
-    <meetups class="px-4 mb-16 md:mb-32"/>
-    <resources class="px-4 mb-16 md:mb-32"/>
-    <sponsors class="px-4 mb-16 md:mb-32"/>
+    <welcome class="mb-16"/>
+    <events class="px-4 mb-16"/>
+    <meetups class="px-4 mb-16"/>
+    <resources class="px-4 mb-16"/>
+    <sponsors class="px-4 mb-16"/>
     <newsletter class="px-4"/>
   </div>
 </template>
