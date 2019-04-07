@@ -2,6 +2,7 @@
   <figure class="text-center font-serif p-4">
     <a
       :href="url"
+      target="_blank"
       class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
     >
       <div
