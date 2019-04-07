@@ -83,5 +83,5 @@ dist
 # IDE
 .idea
 
-# Ignore when people install with NPM
-package-lock.json
+# Ignore when people install with Yarn
+yarn.lock
