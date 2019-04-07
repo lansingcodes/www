@@ -51,3 +51,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (min-width: 768px) {
+  section {
+    margin-top: -20rem;
+  }
+}
+</style>
