@@ -5,6 +5,7 @@
     <meetups class="px-4 mb-16 md:mb-32"/>
     <resources class="px-4 mb-16 md:mb-32"/>
     <sponsors class="px-4 mb-16 md:mb-32"/>
+    <newsletter class="px-4"/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import events from '~/components/events'
 import meetups from '~/components/meetups'
 import resources from '~/components/resources'
 import sponsors from '~/components/sponsors'
+import newsletter from '~/components/newsletter'
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     events,
     meetups,
     resources,
-    sponsors
+    sponsors,
+    newsletter
   },
   async fetch({ store, params }) {
     // Load async data needed by the page here

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1440px"
+   height="359px"
+   viewBox="0 0 1440 359"
+   version="1.1"
+   id="svg4136"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="stay-informed.svg">
+  <metadata
+     id="metadata4165">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>stayinformed_bg</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     id="namedview4163"
+     showgrid="false"
+     inkscape:zoom="0.50675986"
+     inkscape:cx="726.37661"
+     inkscape:cy="152.96743"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Page-1" />
+  <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4138">stayinformed_bg</title>
+  <desc
+     id="desc4140">Created with Sketch.</desc>
+  <defs
+     id="defs4142">
+    <linearGradient
+       x1="191.16121"
+       y1="705.41451"
+       x2="704.01933"
+       y2="705.41451"
+       id="linearGradient-1"
+       gradientTransform="scale(2.0206158,0.49489864)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#2979BF"
+         offset="0%"
+         id="stop4145" />
+      <stop
+         stop-color="#005198"
+         offset="100%"
+         id="stop4147" />
+    </linearGradient>
+    <linearGradient
+       x1="-15.2305035%"
+       y1="52.0025548%"
+       x2="74.1313317%"
+       y2="60.8087502%"
+       id="linearGradient-2">
+      <stop
+         stop-color="#2979BF"
+         offset="0%"
+         id="stop4150" />
+      <stop
+         stop-color="#2878BE"
+         offset="47.9332263%"
+         id="stop4152" />
+      <stop
+         stop-color="#005198"
+         offset="100%"
+         id="stop4154" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient-2"
+       id="linearGradient4171"
+       x1="99.701505"
+       y1="324.12267"
+       x2="588.65492"
+       y2="372.30675"
+       gradientTransform="scale(0.86094629,1.1615126)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient-2"
+       id="linearGradient4173"
+       x1="1273.9648"
+       y1="324.8609"
+       x2="1719.4957"
+       y2="368.7659"
+       gradientTransform="scale(0.87052878,1.1487271)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <g
+       id="LansingCodes-Copy"
+       transform="translate(-2.697148,-5479.1535)">
+      <g
+         id="stayinformed_bg"
+         transform="translate(-155,5253)">
+        <polygon
+           id="Path-2"
+           points="1599,582.67121 1599,229 649.99057,229 155,338.43019 167.2261,582.67121 1202.3797,582.67121 "
+           style="fill:url(#linearGradient-1)"
+           transform="matrix(0.99722992,0,0,1.0150671,2.4293853,-6.2968659)" />
+        <polygon
+           id="Triangle"
+           transform="matrix(0.5805386,-0.87625969,1.0055224,0.50590876,190.26269,1398.0697)"
+           points="1301.8736,648.06769 1175.1263,428.53487 1380.9092,75.34725 1609.1455,470.66419 "
+           style="fill:url(#linearGradient4173)" />
+        <polygon
+           id="polygon4161"
+           transform="matrix(0.50246653,0.86944284,-0.87029756,0.50197305,516.03073,-163.2088)"
+           points="421.28412,45.978249 628.66148,401.96795 467.26605,681.51304 157.58497,502.71858 "
+           style="fill:url(#linearGradient4171)" />
+      </g>
+    </g>
+  </g>
+</svg>

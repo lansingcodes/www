@@ -27,6 +27,14 @@ export default {
 </script>
 
 <style>
+a {
+  @apply .text-blue-dark;
+}
+
+a:hover {
+  @apply .text-blue-darker;
+}
+
 p {
   @apply .my-4;
 }
