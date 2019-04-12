@@ -1,0 +1,11 @@
+@variants active, hover {
+  .up {
+    transform: translateY(-1px);
+    transition: all ease-in-out .1s;
+  }
+
+  .down {
+    transform: translateY(1px);
+    transition: all ease-in-out .1s;
+  }
+}

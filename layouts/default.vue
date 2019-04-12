@@ -2,13 +2,12 @@
   <div>
     <a
       class="sr-only focus:block"
-      href="#mainContent">Skip to main content</a>
+      href="#mainContent"
+    >Skip to main content</a>
     <header>
       <navigation/>
     </header>
-    <main
-      id="mainContent"
-    >
+    <main id="mainContent">
       <nuxt/>
     </main>
     <site-footer/>
@@ -18,6 +17,7 @@
 <script>
 import Navigation from '~/components/navigation'
 import SiteFooter from '~/components/footer'
+
 export default {
   components: {
     Navigation,
@@ -26,13 +26,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 a {
   @apply .text-blue-dark;
-}
 
-a:hover {
-  @apply .text-blue-darker;
+  &:hover {
+    @apply .text-blue-darker;
+  }
 }
 
 p {

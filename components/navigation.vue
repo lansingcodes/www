@@ -1,39 +1,34 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-white p-6">
+  <nav class="flex items-center justify-between flex-wrap bg-white p-4">
 
     <!-- Logo -->
     <div class="flex items-center flex-no-shrink text-blue-dark mr-6">
       <img
-        class="h-8 w-8 mr-2"
+        class="h-12 mr-2"
         src="../assets/images/icon-tall-square-fixed-300-transparent.png"
         alt="Lansing Codes Logo"
       >
-      <span class="font-semibold text-xl tracking-tight">Lansing.Codes</span>
+      <span class="font-semibold text-xl uppercase">Lansing Codes</span>
     </div>
 
     <!-- Menu Toggle -->
     <div class="block lg:hidden">
       <button
         class="
-          flex items-center px-3 py-2 border-2 rounded
-          text-blue-darker border-blue-darker
-          hover:text-blue-darkest hover:border-blue-darkest
-          focus:text-blue-darkest focus:border-blue-darkest
-          focus:outline-none focus:bg-blue-lighter
+          inline-block px-3 py-2 rounded-full shadow
+          bg-white text-blue border border-blue font-medium
+          hover:up active:shadow-none active:down focus:outline-none
         "
         type="button"
         aria-controls="navbarSupportedContent"
         aria-label="Menu"
         @click="toggle"
       >
-        <span class="uppercase pr-3">Menu</span>
-        <svg
-          class="fill-current h-3 w-3"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-        </svg>
+        <span class="hidden uppercase text-sm sm:inline">Menu</span>
+        <font-awesome-icon
+          :icon="['fas', 'bars']"
+          class="text-sm text-blue"
+        />
       </button>
     </div>
 

@@ -2,7 +2,7 @@
   <section
     id="resources"
     class="
-      flex flex-wrap justify-center w-full bg-blue py-16
+      flex flex-wrap justify-center w-full bg-blue py-16 px-4 mb-16
       md:py-32 md:mb-32
     "
   >

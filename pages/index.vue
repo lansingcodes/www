@@ -1,11 +1,11 @@
 <template>
   <div>
-    <welcome class="mb-16"/>
-    <events class="px-4 mb-16"/>
-    <meetups class="px-4 mb-16"/>
-    <resources class="px-4 mb-16"/>
-    <sponsors class="px-4 mb-16"/>
-    <newsletter class="px-4"/>
+    <welcome/>
+    <events/>
+    <meetups/>
+    <resources/>
+    <sponsors/>
+    <newsletter/>
   </div>
 </template>
 

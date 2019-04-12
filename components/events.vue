@@ -1,7 +1,10 @@
 <template>
   <section
     id="events"
-    class="relative flex flex-wrap align-start justify-center sm:justify-start bg-blue pt-8"
+    class="
+      relative flex flex-wrap align-start justify-center
+      sm:justify-start bg-blue pt-8 px-4 mb-16
+    "
   >
     <section-heading
       white

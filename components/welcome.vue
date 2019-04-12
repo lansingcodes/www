@@ -1,6 +1,6 @@
 <template>
-  <div class="lc-background-image">
-    <div class="flex flex-wrap justify-center pt-8">
+  <div class="lc-background-image mb-16 lg:mb-0">
+    <div class="flex flex-wrap justify-center lg:pt-8">
       <section class="flex-none w-full sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-white text-center p-8 sm:mb-24">
         <section-heading
           h1
@@ -86,9 +86,11 @@ export default {
 </script>
 
 <style scoped>
-.lc-background-image {
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-image: url('../assets/images/capitol.jpg');
+@media (min-width: 992px) {
+  .lc-background-image {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/capitol.jpg');
+  }
 }
 </style>

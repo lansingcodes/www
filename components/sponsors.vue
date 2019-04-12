@@ -1,7 +1,7 @@
 <template>
   <section
     id="sponsors"
-    class="container mx-auto flex flex-wrap justify-center px-4 md:px-12"
+    class="container mx-auto flex flex-wrap justify-center px-4 mb-16 md:px-12"
   >
     <section-heading
       blue
