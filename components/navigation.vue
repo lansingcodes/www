@@ -1,6 +1,10 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-white p-4">
-
+  <nav
+    class="
+      flex items-center justify-between flex-wrap bg-white p-4
+      border-b border-grey-lighter
+    "
+  >
     <!-- Logo -->
     <div class="flex items-center flex-no-shrink text-blue-dark mr-6">
       <img
@@ -33,28 +37,33 @@
     </div>
 
     <!-- Menu Items -->
-    <div
-      id="navBarSupportedContent"
-      :class="open ? 'block': 'hidden'"
-      class="block flex-grow lg:flex lg:items-center lg:justify-end w-full lg:w-auto"
-    >
-      <div class="text-base lg:flex-grow text-right">
-        <a
-          v-for="link in links"
-          :key="link.name"
-          :href="link.href"
-          class="
-            block lg:inline-block
-            text-blue-dark no-underline uppercase
-            hover:text-blue-darker
-            focus:text-blue-darker focus:bg-blue-lighter focus:outline-none
-            mt-4 lg:mt-0 lg:mr-4
-          "
-        >
-          {{ link.name }}
-        </a>
+    <transition name="slide-fade">
+      <div
+        v-if="open"
+        id="navBarSupportedContent"
+        class="
+          block flex-grow lg:flex lg:items-center lg:justify-end w-full
+          lg:w-auto
+        "
+      >
+        <div class="text-base lg:flex-grow text-right">
+          <a
+            v-for="link in links"
+            :key="link.name"
+            :href="link.href"
+            class="
+              block lg:inline-block
+              text-blue-dark no-underline uppercase
+              hover:text-blue-darker
+              focus:text-blue-darker focus:bg-blue-lighter focus:outline-none
+              mt-4 lg:mt-0 lg:mr-4
+            "
+          >
+            {{ link.name }}
+          </a>
+        </div>
       </div>
-    </div>
+    </transition>
   </nav>
 
 </template>
@@ -103,3 +112,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateY(-100%);
+}
+</style>
