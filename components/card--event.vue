@@ -29,7 +29,6 @@
         <button
           class="katie-button text-blue font-bold hover:text-blue-darkest focus:text-blue-darkest focus:outline-none"
           type="button"
-          aria-controls="navbarSupportedContent"
           aria-label="Toggle navigation"
           @click="toggle"
         >
@@ -40,7 +39,7 @@
 
     <!-- Additional details -->
     <div
-      :class="open ? 'absolute p-4 block z-50': 'hidden'"
+      :class="open ? 'absolute p-4 block z-10': 'hidden'"
       :tabindex="open ? '0' : ''"
       class="max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full"
     >
