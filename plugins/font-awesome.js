@@ -15,8 +15,18 @@ import { library } from '@fortawesome/fontawesome-svg-core'
   Use camelCase instead of kebab-case, and list alphabetically.
 ********************************************************************/
 
+// free REGULAR icon set (far)
+// https://fontawesome.com/icons?d=gallery&s=regular&m=free
+import {
+  faCalendarAlt,
+  faHandshake,
+  faThumbsUp
+} from '@fortawesome/free-regular-svg-icons'
+
+library.add(faCalendarAlt, faHandshake, faThumbsUp)
+
 // free SOLID icon set (fas)
-// @https://fontawesome.com/icons?d=gallery&s=solid&m=free
+// https://fontawesome.com/icons?d=gallery&s=solid&m=free
 import {
   faBullseye,
   faChartLine,
@@ -26,10 +36,12 @@ import {
   faCogs,
   faEnvelope,
   faExternalLinkAlt,
+  faHandHoldingHeart,
   faHourglassHalf,
   faMinus,
   faMoon,
   faPlus,
+  faSchool,
   faServer,
   faTable,
   faTh,
@@ -47,10 +59,12 @@ library.add(
   faCogs,
   faEnvelope,
   faExternalLinkAlt,
+  faHandHoldingHeart,
   faHourglassHalf,
   faMinus,
   faMoon,
   faPlus,
+  faSchool,
   faServer,
   faTable,
   faTh,

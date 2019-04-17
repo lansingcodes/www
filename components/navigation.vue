@@ -23,11 +23,7 @@
           :key="link.name"
           :href="link.href"
           class="
-            inline-block
-            text-blue-dark no-underline uppercase
-            hover:text-blue-darker
-            focus:text-blue-darker focus:bg-blue-lighter focus:outline-none
-            mt-0 mr-4
+            inline-block text-blue-dark no-underline uppercase mt-0 mr-4
           "
         >
           {{ link.name }}
@@ -68,23 +64,32 @@
         key="menu"
         class="
           static block lg:hidden fixed pin-b pin-x z-30 p-4 pb-0
-          border-blue border-t-2 bg-white text-blue text-center
+          border-blue border-t-2 bg-white
         "
       >
-        <div class="text-base">
-          <a
-            v-for="link in links"
-            :key="link.name"
-            :href="link.href"
-            class="
-              block text-blue-dark no-underline uppercase mb-4
-              hover:text-blue-darker
-              focus:text-blue-darker focus:bg-blue-lighter focus:outline-none
-            "
-            @click="open = false"
-          >
-            {{ link.name }}
-          </a>
+        <div>
+          <ul class="bullet-none mr-24 p-0">
+            <li
+              v-for="link in links"
+              :key="link.name"
+              class="text-right"
+            >
+              <a
+                :href="link.href"
+                class="
+                  inline-block no-underline uppercase mb-4 leading-tight
+                "
+                @click="open = false"
+              >
+                {{ link.name }}
+                <font-awesome-icon
+                  :icon="link.iconSet"
+                  fixed-width
+                  class="leading-tight"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </transition>
@@ -99,31 +104,38 @@ export default {
       links: [
         {
           name: 'Slack',
-          href: 'https://slack.lansing.codes/'
+          href: 'https://slack.lansing.codes/',
+          iconSet: ['fab', 'slack']
         },
         {
           name: 'Calendar',
-          href: '/#events'
+          href: '/#events',
+          iconSet: ['far', 'calendar-alt']
         },
         {
           name: 'Meetups',
-          href: '/#meetups'
+          href: '/#meetups',
+          iconSet: ['far', 'handshake']
         },
         {
           name: 'Beginners',
-          href: '/#resources'
+          href: '/#resources',
+          iconSet: ['fas', 'school']
         },
         {
           name: 'Sponsors',
-          href: '/#sponsors'
+          href: '/#sponsors',
+          iconSet: ['fas', 'hand-holding-heart']
         },
         {
           name: 'Newsletter',
-          href: '/#newsletter'
+          href: '/#newsletter',
+          iconSet: ['fas', 'envelope']
         },
         {
           name: 'Contact',
-          href: '/#contact'
+          href: '/#contact',
+          iconSet: ['far', 'thumbs-up']
         }
       ]
     }

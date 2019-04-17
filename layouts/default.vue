@@ -33,6 +33,10 @@ a {
   &:hover {
     @apply .text-blue-darker;
   }
+
+  &:focus {
+    @apply .text-blue-darker .bg-blue-lighter .outline-none;
+  }
 }
 
 p {
