@@ -1,5 +1,8 @@
 <template>
-  <div class="lc-background-image py-16 lg:py-0">
+  <div
+    id="welcome"
+    class="lc-background-image py-16 lg:py-0"
+  >
     <div class="flex flex-wrap justify-center lg:pt-8">
       <section
         class="

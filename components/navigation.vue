@@ -69,6 +69,22 @@
       >
         <div>
           <ul class="bullet-none mr-24 p-0">
+            <li class="text-right">
+              <a
+                href="/#welcome"
+                class="
+                  inline-block no-underline uppercase mb-4 leading-tight
+                "
+                @click="open = false"
+              >
+                Back to Top
+                <font-awesome-icon
+                  :icon="['fas', 'arrow-up']"
+                  fixed-width
+                  class="leading-tight"
+                />
+              </a>
+            </li>
             <li
               v-for="link in links"
               :key="link.name"
