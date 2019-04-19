@@ -1,15 +1,14 @@
 <template>
   <article
-    :class="open ? 'relative' : ''"
     class="
       w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 mx-auto
-      max-w-xs bg-white shadow font-sans-serif
+      max-w-xs bg-white shadow-md font-sans-serif
     "
   >
     <!-- Header (always visible) -->
     <header
       class="
-        overflow-hidden h-full flex relative bg-blue-darker text-white p-4
+        overflow-hidden flex relative bg-blue-darker text-white p-4 shadow
       "
     >
       <font-awesome-icon
@@ -50,9 +49,9 @@
 
     <!-- Additional details -->
     <div
-      :class="open ? 'absolute p-4 block z-10': 'hidden'"
+      :class="open ? 'block' : 'hidden'"
       class="
-        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full
+        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full p-4
       "
     >
       <div
