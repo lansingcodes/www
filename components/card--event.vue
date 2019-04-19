@@ -1,10 +1,17 @@
 <template>
   <article
     :class="open ? 'relative' : ''"
-    class="max-w-xs bg-white shadow font-sans-serif"
+    class="
+      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 mx-auto
+      max-w-xs bg-white shadow font-sans-serif
+    "
   >
     <!-- Header (always visible) -->
-    <header class="overflow-hidden h-full flex relative bg-blue-darker text-white p-4">
+    <header
+      class="
+        overflow-hidden h-full flex relative bg-blue-darker text-white p-4
+      "
+    >
       <font-awesome-icon
         v-if="icon"
         :icon="['fas', 'code']"
@@ -15,22 +22,26 @@
       <h3 class="font-normal mb-2">
         <a
           :href="eventLink"
-          class="block text-white no-underline hover:text-blue-lighter focus:text-blue-lighter mb-2"
+          class="
+            block text-white no-underline
+            hover:text-blue-lighter focus:text-blue-lighter mb-2
+          "
         >
           {{ eventName }}
-          <!-- <sup><font-awesome-icon
-            icon="external-link-alt"
-            class="text-xs ml-1"
-          /></sup>-->
         </a>
-        <span class="text-sm block">{{ eventDate }}</span>
+        <span class="text-sm block">{{ formatTime(eventTime) }}</span>
       </h3>
-      <div class="triangle bg-white absolute">
+      <div
+        class="triangle bg-white absolute cursor-pointer"
+        @click="open = !open"
+      >
         <button
-          class="katie-button text-blue font-bold hover:text-blue-darkest focus:text-blue-darkest focus:outline-none"
+          :aria-label="open ? 'Hide details' : 'Show details'"
+          class="
+            in-triangle text-blue font-bold
+            hover:text-blue-darkest focus:text-blue-darkest focus:outline-none
+          "
           type="button"
-          aria-label="Toggle navigation"
-          @click="toggle"
         >
           <font-awesome-icon :icon="open ? 'minus' : 'plus'"/>
         </button>
@@ -40,8 +51,9 @@
     <!-- Additional details -->
     <div
       :class="open ? 'absolute p-4 block z-10': 'hidden'"
-      :tabindex="open ? '0' : ''"
-      class="max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full"
+      class="
+        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full
+      "
     >
       <div
         v-if="venue"
@@ -56,6 +68,8 @@
 </template>
 
 <script>
+import { format } from 'date-fns'
+
 export default {
   props: {
     icon: {
@@ -64,46 +78,37 @@ export default {
     },
     eventName: {
       type: String,
-      default: 'Event Name'
+      required: true
     },
     eventLink: {
       type: String,
-      default: '#'
+      required: true
     },
-    eventDate: {
-      type: String,
-      default: 'Date'
+    eventTime: {
+      type: Number,
+      required: true
     },
     eventDescription: {
       type: String,
-      default: 'Description'
+      required: true
     },
     venue: {
+      // e.g. {
+      //   name: 'Venue Name',
+      //   address: 'Venue address'
+      // }
       type: Object,
-      default: function() {
-        return {
-          name: 'Venue Name',
-          address: 'Venue address'
-        }
-      }
-    },
-    expandedEventId: {
-      type: String,
-      default: null
+      required: true
     }
   },
-  computed: {
-    open() {
-      return this.eventName === this.expandedEventId
+  data() {
+    return {
+      open: false
     }
   },
   methods: {
-    toggle() {
-      if (this.open) {
-        this.$emit('card-event-collapse', this.event.attributes.id)
-      } else {
-        this.$emit('card-event-expand', this.event.attributes.id)
-      }
+    formatTime(time) {
+      return format(time, 'dddd, MMMM D [at] h:mm aa')
     }
   }
 }
@@ -117,11 +122,10 @@ export default {
   width: 160px;
   height: 80px;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
   right: -75px;
   bottom: -25px;
 }
-.katie-button {
+.in-triangle {
   position: absolute;
   bottom: 40px;
   right: 80px;
