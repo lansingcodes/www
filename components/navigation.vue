@@ -57,7 +57,12 @@
       </button>
     </div>
 
-    <transition name="slide">
+    <transition
+      enter-active-class="transition-all"
+      enter-class="slide-up-full"
+      leave-active-class="transition-all"
+      leave-to-class="slide-up-full"
+    >
       <div
         v-if="open"
         id="navBarSupportedContent"
@@ -158,15 +163,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.4s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateY(100vh);
-}
-</style>

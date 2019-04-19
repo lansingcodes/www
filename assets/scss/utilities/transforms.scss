@@ -1,3 +1,11 @@
+.transition-all {
+  transition: all 0.4s;
+}
+
+.slide-up-full {
+  transform: translateY(100vh);
+}
+
 @variants active, hover {
   .up {
     transform: translateY(-1px);
