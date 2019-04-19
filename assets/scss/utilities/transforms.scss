@@ -7,12 +7,12 @@
 }
 
 @variants active, hover {
-  .up {
+  .slide-up-px {
     transform: translateY(-1px);
     transition: all ease-in-out .1s;
   }
 
-  .down {
+  .slide-down-px {
     transform: translateY(1px);
     transition: all ease-in-out .1s;
   }

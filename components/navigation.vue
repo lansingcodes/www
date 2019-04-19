@@ -42,7 +42,8 @@
         class="
           block p-4 rounded-full shadow-lg leading-normal
           bg-white text-blue border-blue border-2 font-medium
-          hover:up active:shadow-none active:down focus:outline-none
+          hover:slide-up-px active:shadow-none active:slide-down-px
+          focus:outline-none
         "
         type="button"
         aria-controls="navbarSupportedContent"
