@@ -8,7 +8,7 @@
     <!-- Header (always visible) -->
     <header
       class="
-        overflow-hidden flex relative bg-blue-darker text-white p-4 shadow
+        overflow-hidden relative bg-blue-darker text-white p-4 shadow
       "
     >
       <font-awesome-icon
@@ -22,8 +22,8 @@
         <a
           :href="eventLink"
           class="
-            block text-white no-underline
-            hover:text-blue-lighter focus:text-blue-lighter mb-2
+            block text-white no-underline mb-2
+            hover:text-blue-lighter focus:text-blue-lighter
           "
         >
           {{ eventName }}
