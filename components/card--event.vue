@@ -49,19 +49,24 @@
 
     <!-- Additional details -->
     <div
-      :class="open ? 'block' : 'hidden'"
+      :class="open ? 'expanded' : 'collapsed'"
       class="
-        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full p-4
+        overflow-y-scroll overflow-x-hidden bg-white shadow w-full
       "
     >
-      <div
-        v-if="venue"
-        class="mb-2"
-      >
-        <p class="font-bold mb-1">{{ venue.name }}</p>
-        <address class="text-grey-dark roman">{{ venue.address }}</address>
+      <div class="m-4">
+        <div
+          v-if="venue"
+          class="mb-2"
+        >
+          <p class="font-bold mb-1">{{ venue.name }}</p>
+          <address class="text-grey-dark roman">{{ venue.address }}</address>
+        </div>
+        <div
+          class="bg-transparent"
+          v-html="eventDescription"
+        />
       </div>
-      <div v-html="eventDescription"/>
     </div>
   </article>
 </template>
@@ -114,20 +119,29 @@ export default {
 </script>
 
 <style scoped>
-.max-h-50 {
-  max-height: 50vh;
-}
 .triangle {
-  width: 160px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   transform: rotate(-45deg);
-  right: -75px;
-  bottom: -25px;
+  right: -2.5rem;
+  bottom: -2.5rem;
 }
+
 .in-triangle {
   position: absolute;
-  bottom: 40px;
-  right: 80px;
+  bottom: 3.3rem;
+  left: 2rem;
   transform: rotate(45deg);
+}
+
+.collapsed {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+.expanded {
+  max-height: 50vh;
+  transition: max-height 0.25s ease-in;
 }
 </style>

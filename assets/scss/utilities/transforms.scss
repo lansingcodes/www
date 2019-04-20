@@ -2,18 +2,22 @@
   transition: all 0.4s;
 }
 
+.slide-down-full {
+  transform: translateY(-100vh);
+}
+
 .slide-up-full {
   transform: translateY(100vh);
 }
 
 @variants active, hover {
-  .slide-up-px {
-    transform: translateY(-1px);
+  .slide-down-px {
+    transform: translateY(1px);
     transition: all ease-in-out .1s;
   }
 
-  .slide-down-px {
-    transform: translateY(1px);
+  .slide-up-px {
+    transform: translateY(-1px);
     transition: all ease-in-out .1s;
   }
 }
