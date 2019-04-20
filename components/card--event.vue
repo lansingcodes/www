@@ -48,26 +48,33 @@
     </header>
 
     <!-- Additional details -->
-    <div
-      :class="open ? 'expanded' : 'collapsed'"
-      class="
-        overflow-y-scroll overflow-x-hidden bg-white shadow w-full
-      "
+    <transition
+      enter-active-class="transition-all"
+      enter-class="max-h-0"
+      leave-active-class="transition-all"
+      leave-to-class="max-h-0"
     >
-      <div class="m-4">
-        <div
-          v-if="venue"
-          class="mb-2"
-        >
-          <p class="font-bold mb-1">{{ venue.name }}</p>
-          <address class="text-grey-dark roman">{{ venue.address }}</address>
+      <div
+        v-if="open"
+        class="
+          max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full
+        "
+      >
+        <div class="m-4">
+          <div
+            v-if="venue"
+            class="mb-2"
+          >
+            <p class="font-bold mb-1">{{ venue.name }}</p>
+            <address class="text-grey-dark roman">{{ venue.address }}</address>
+          </div>
+          <div
+            class="bg-transparent"
+            v-html="eventDescription"
+          />
         </div>
-        <div
-          class="bg-transparent"
-          v-html="eventDescription"
-        />
       </div>
-    </div>
+    </transition>
   </article>
 </template>
 
@@ -132,16 +139,5 @@ export default {
   bottom: 3.3rem;
   left: 2rem;
   transform: rotate(45deg);
-}
-
-.collapsed {
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-}
-
-.expanded {
-  max-height: 50vh;
-  transition: max-height 0.25s ease-in;
 }
 </style>
