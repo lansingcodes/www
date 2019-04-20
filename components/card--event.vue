@@ -22,8 +22,9 @@
         <a
           :href="eventLink"
           class="
-            block text-white no-underline mb-2
-            hover:text-blue-lighter focus:text-blue-lighter
+            block text-white mb-2 no-underline
+            hover:text-white hover:underline
+            focus:text-white focus:underline focus:bg-transparent
           "
         >
           {{ eventName }}
@@ -57,7 +58,7 @@
       <div
         v-if="open"
         class="
-          max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow w-full
+          max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow
         "
       >
         <div class="m-4">
