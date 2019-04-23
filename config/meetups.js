@@ -7,7 +7,8 @@ export default [
     iconSet: 'fas',
     iconName: 'server',
     url: 'https://www.meetup.com/Lansing-DevOps-Meetup/',
-    subheading: '1st Tuesday'
+    subheading: '1st Tuesday',
+    meetupSlug: 'Lansing-DevOps-Meetup'
   },
   // 1st Thursday
   {
@@ -17,7 +18,8 @@ export default [
     iconSet: 'fab',
     iconName: 'wordpress-simple',
     url: 'https://www.meetup.com/Lansing-WordPress-Meetup/',
-    subheading: '1st Thursday'
+    subheading: '1st Thursday',
+    meetupSlug: 'Lansing-WordPress-Meetup'
   },
   // 2nd Monday
   {
@@ -26,7 +28,8 @@ export default [
     iconSet: 'fas',
     iconName: 'chart-line',
     url: 'https://www.meetup.com/Lansing-Area-R-Users-Group/',
-    subheading: '2nd Monday'
+    subheading: '2nd Monday',
+    meetupSlug: 'Lansing-Area-R-Users-Group'
   },
   // 2nd Monday
   {
@@ -36,7 +39,8 @@ export default [
     iconSet: 'fas',
     iconName: 'user-circle',
     url: 'https://www.meetup.com/Lansing-Experience-Design-Meetup/',
-    subheading: '2nd Monday'
+    subheading: '2nd Monday',
+    meetupSlug: 'Lansing-Experience-Design-Meetup'
   },
   // 2nd Tuesday
   {
@@ -46,7 +50,8 @@ export default [
     iconSet: 'fas',
     iconName: 'moon',
     url: 'https://www.meetup.com/lansing-tech-demos/',
-    subheading: '2nd Tuesday'
+    subheading: '2nd Tuesday',
+    meetupSlug: 'lansing-tech-demos'
   },
   // 2nd Tuesday
   {
@@ -56,7 +61,8 @@ export default [
     iconSet: 'fas',
     iconName: 'chart-pie',
     url: 'https://www.meetup.com/PMI-Capital-Area-Chapter-Lunch-and-Learn/',
-    subheading: '2nd Tuesday'
+    subheading: '2nd Tuesday',
+    meetupSlug: 'PMI-Capital-Area-Chapter-Lunch-and-Learn'
   },
   // 2nd Tuesday
   {
@@ -66,7 +72,8 @@ export default [
     iconSet: 'mfizz',
     iconName: 'icon-mssql',
     url: 'https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/',
-    subheading: '2nd Tuesday'
+    subheading: '2nd Tuesday',
+    meetupSlug: 'GLASS-Greater-Lansing-Area-for-SQL-Server'
   },
   // 2nd Tuesday
   {
@@ -85,7 +92,8 @@ export default [
     iconSet: 'fab',
     iconName: 'html5',
     url: 'https://www.meetup.com/lansingweb/',
-    subheading: '2nd Wednesday'
+    subheading: '2nd Wednesday',
+    meetupSlug: 'lansingweb'
   },
   // 2nd Wednesday
   {
@@ -95,7 +103,8 @@ export default [
     iconSet: 'fas',
     iconName: 'bullseye',
     url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
-    subheading: '2nd Wednesday'
+    subheading: '2nd Wednesday',
+    meetupSlug: 'Lansing-Marketing-Hackers'
   },
   // 2nd Thursday
   {
@@ -125,7 +134,8 @@ export default [
     iconSet: 'fab',
     iconName: 'js-square',
     url: 'https://www.meetup.com/Lansing-Javascript-Meetup/',
-    subheading: '3rd Tuesday'
+    subheading: '3rd Tuesday',
+    meetupSlug: 'Lansing-Javascript-Meetup'
   },
   // 3rd Tuesday
   {
@@ -135,7 +145,8 @@ export default [
     iconSet: 'fas',
     iconName: 'cogs',
     url: 'https://www.meetup.com/Lansing-Area-Maker-Meetup/',
-    subheading: '3rd Tuesday'
+    subheading: '3rd Tuesday',
+    meetupSlug: 'Lansing-Area-Maker-Meetup'
   },
   // 3rd Thursday
   {
@@ -145,7 +156,8 @@ export default [
     iconSet: 'mfizz',
     iconName: 'icon-csharp',
     url: 'https://www.meetup.com/GLUGnet/',
-    subheading: '3rd Thursday'
+    subheading: '3rd Thursday',
+    meetupSlug: 'GLUGnet'
   },
   // 3rd Saturday
   {
@@ -155,7 +167,8 @@ export default [
     iconSet: 'fas',
     iconName: 'users',
     url: 'https://www.meetup.com/Mid-Michigan-Code-Retreat/',
-    subheading: '3rd Saturday'
+    subheading: '3rd Saturday',
+    meetupSlug: 'Mid-Michigan-Code-Retreat'
   },
   // 4th Tuesday
   {
@@ -165,7 +178,8 @@ export default [
     iconSet: 'fas',
     iconName: 'table',
     url: 'https://www.meetup.com/Mid-Michigan-Agile-Group/',
-    subheading: '4th Tuesday'
+    subheading: '4th Tuesday',
+    meetupSlug: 'Mid-Michigan-Agile-Group'
   },
   // 4th Thursday
   {
@@ -174,6 +188,7 @@ export default [
     iconSet: 'mfizz',
     iconName: 'icon-script',
     url: 'https://www.meetup.com/LansingAreaSoftwareTesters/',
-    subheading: '4th Thursday'
+    subheading: '4th Thursday',
+    meetupSlug: 'LansingAreaSoftwareTesters'
   }
 ]

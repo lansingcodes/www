@@ -18,14 +18,13 @@
       :icon-set="meetup.iconSet"
       :icon-name="meetup.iconName"
       :icon-text="meetup.iconText"
-      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
     />
   </section>
 </template>
 
 <script>
 import sectionHeading from '~/components/section-heading'
-import card from '~/components/card--small'
+import card from '~/components/card--figure'
 import meetups from '~/config/meetups'
 
 export default {

@@ -1,8 +1,8 @@
 <template>
   <article
     class="
-      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 mx-auto
-      max-w-xs bg-white shadow-md font-sans-serif
+      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 mx-2
+      max-w-xs h-full bg-white shadow-md font-sans-serif
     "
   >
     <!-- Header (always visible) -->
@@ -11,26 +11,32 @@
         overflow-hidden relative bg-blue-darker text-white p-4 shadow
       "
     >
-      <font-awesome-icon
-        v-if="icon"
-        :icon="['fas', 'code']"
-        :title="eventName"
-        :aria-label="eventName"
-        class="text-lg self-center mr-4"
-      />
-      <h3 class="font-normal mb-2">
+      <h3
+        class="
+          flex flex-no-wrap items-center font-normal mb-2
+        "
+      >
+        <figure :title="group.attributes.name">
+          <logo
+            v-if="icon"
+            :icon-set="icon.iconSet"
+            :icon-name="icon.iconName"
+            :icon-text="icon.iconText"
+          />
+        </figure>
         <a
           :href="eventLink"
           class="
-            block text-white mb-2 no-underline
+            text-white m-0 ml-3 no-underline
             hover:text-white hover:underline
             focus:text-white focus:underline focus:bg-transparent
           "
         >
           {{ eventName }}
         </a>
-        <span class="text-sm block">{{ formatTime(eventTime) }}</span>
       </h3>
+      <section class="text-sm mb-1">{{ group.attributes.name }}</section>
+      <section class="text-sm">{{ formatTime(eventTime) }}</section>
       <div
         class="triangle bg-white absolute cursor-pointer"
         @click="open = !open"
@@ -67,7 +73,7 @@
             class="mb-2"
           >
             <p class="font-bold mb-1">{{ venue.name }}</p>
-            <address class="text-grey-dark roman">{{ venue.address }}</address>
+            <address class="text-grey-darker roman">{{ venue.address }}</address>
           </div>
           <div
             class="bg-transparent"
@@ -81,12 +87,20 @@
 
 <script>
 import { format } from 'date-fns'
+import logo from '~/components/logo--small'
 
 export default {
+  components: {
+    logo
+  },
   props: {
     icon: {
-      type: Boolean,
-      default: false
+      type: Object,
+      default: () => ({
+        iconSet: null,
+        iconName: null,
+        iconText: null
+      })
     },
     eventName: {
       type: String,
@@ -102,6 +116,13 @@ export default {
     },
     eventDescription: {
       type: String,
+      required: true
+    },
+    group: {
+      // e.g. {
+      //   name: 'Lansing Tech Demo Night'
+      // }
+      type: Object,
       required: true
     },
     venue: {

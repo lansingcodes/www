@@ -31,7 +31,7 @@
 
 <script>
 import sectionHeading from '~/components/section-heading'
-import card from '~/components/card--small'
+import card from '~/components/card--figure'
 import sponsors from '~/config/sponsors'
 
 export default {
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     imgSrcForSponsor(sponsor) {
-      return require('~/assets/images/sponsors/' + sponsor.logo)
+      return require(`~/assets/images/sponsors/${sponsor.logo}`)
     }
   }
 }

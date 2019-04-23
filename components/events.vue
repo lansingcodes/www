@@ -3,7 +3,7 @@
     id="events"
     class="
       relative flex flex-wrap align-start justify-center
-      sm:justify-start bg-blue pt-8 px-4 mb-16
+      bg-blue pt-8 px-4 mb-16
     "
   >
     <section-heading
@@ -20,7 +20,9 @@
       :event-link="event.links.self"
       :event-time="event.attributes.time.absolute"
       :event-description="event.attributes.description"
+      :group="event.relationships.group"
       :venue="event.relationships.venue.attributes"
+      :icon="iconForEvent(event)"
     />
   </section>
 </template>
@@ -29,6 +31,7 @@
 import sectionHeading from '~/components/section-heading'
 import eventCard from '~/components/card--event'
 import truncate from '~/utils/truncate'
+import meetups from '~/config/meetups'
 
 export default {
   components: {
@@ -38,6 +41,17 @@ export default {
   computed: {
     events() {
       return this.$store.state.events.upcoming
+    }
+  },
+  methods: {
+    iconForEvent(event) {
+      const meetup = meetups.find(meetup => {
+        return meetup.meetupSlug === event.relationships.group.attributes.slug
+      })
+      if (meetup) {
+        const { iconSet, iconName, iconText } = meetup
+        return { iconSet, iconName, iconText }
+      }
     }
   }
 }

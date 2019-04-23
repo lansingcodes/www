@@ -1,33 +1,22 @@
 <template>
-  <figure class="text-center font-serif p-4">
+  <figure
+    class="
+      w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4 text-center font-serif p-4
+    "
+  >
     <a
       :href="url"
       target="_blank"
-      class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
+      class="
+        no-underline text-blue hover:text-blue-darker focus:text-blue-darker
+      "
     >
-      <div
-        v-if="imgSrc"
-        class="flex justify-center h-24 mb-4"
-      >
-        <img
-          :src="imgSrc"
-          :alt="imgAlt"
-          class="flex-initial max-h-full px-2 self-center"
-        >
-      </div>
-      <span
-        v-else-if="iconText"
-        class="font-bold font-sans inline-block text-5xl h-24 pt-5"
-      >{{ iconText }}</span>
-      <span
-        v-else-if="iconSet === 'mfizz'"
-        :class="iconName"
-        class="text-6xl h-24 fa fa-3x pt-6"
-      />
-      <font-awesome-icon
-        v-else
-        :icon="[iconSet, iconName]"
-        class="text-5xl h-24"
+      <logo
+        :icon-set="iconSet"
+        :icon-name="iconName"
+        :icon-text="iconText"
+        :img-src="imgSrc"
+        :img-alt="imgAlt"
       />
       <h3 class="font-normal text-2xl mb-2">
         {{ heading }}
@@ -45,7 +34,12 @@
 </template>
 
 <script>
+import logo from '~/components/logo--medium'
+
 export default {
+  components: {
+    logo
+  },
   props: {
     url: {
       type: String,
@@ -61,8 +55,7 @@ export default {
     },
     description: {
       type: String,
-      default:
-        'Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!'
+      default: ''
     },
     iconSet: {
       type: String,
