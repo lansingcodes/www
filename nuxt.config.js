@@ -102,6 +102,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    // Set to true temporarily and `npm run build` to dissect bundle size
+    analyze: false,
+
     postcss: {
       plugins: [require('tailwindcss')(tailwindJS), require('autoprefixer')]
     },
