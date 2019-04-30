@@ -26,6 +26,7 @@
         </figure>
         <a
           :href="eventLink"
+          target="_blank"
           class="
             text-white m-0 ml-3 no-underline
             hover:text-white hover:underline
@@ -126,12 +127,11 @@ export default {
       required: true
     },
     venue: {
-      // e.g. {
-      //   name: 'Venue Name',
-      //   address: 'Venue address'
-      // }
       type: Object,
-      required: true
+      default: () => ({
+        name: null,
+        address: null
+      })
     }
   },
   data() {
