@@ -1,7 +1,7 @@
 <template>
   <div
     id="welcome"
-    class="lc-background-image py-32"
+    class="lc-background-image py-16 sm:py-32"
   >
     <div class="flex flex-wrap justify-center">
       <section
