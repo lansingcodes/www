@@ -83,7 +83,7 @@
                 "
                 @click="open = false"
               >
-                Back to Top
+                To Top
                 <font-awesome-icon
                   :icon="['fas', 'arrow-up']"
                   fixed-width
