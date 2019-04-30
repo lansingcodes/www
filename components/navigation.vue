@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="fixed pin-t pin-x z-50 shadow">
     <div
       class="
         hidden lg:flex items-center justify-between flex-wrap
