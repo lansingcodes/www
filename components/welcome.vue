@@ -1,13 +1,13 @@
 <template>
   <div
     id="welcome"
-    class="lc-background-image py-16 lg:py-0"
+    class="lc-background-image py-16"
   >
-    <div class="flex flex-wrap justify-center lg:pt-8">
+    <div class="flex flex-wrap justify-center">
       <section
         class="
           flex-none w-full sm:w-1/2 max-w-sm overflow-hidden sm:shadow-lg
-          bg-white text-center sm:p-8 sm:mb-24
+          bg-white text-center p-8 sm:mb-24
         "
       >
         <section-heading
