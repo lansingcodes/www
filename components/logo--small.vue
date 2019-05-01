@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <div>
     <div
       v-if="imgSrc"
       class="flex justify-center h-8 mb-4"
@@ -25,7 +25,7 @@
       fixed-width
       class="text-3xl w-5"
     />
-  </span>
+  </div>
 </template>
 
 <script>
