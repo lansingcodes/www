@@ -59,9 +59,6 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  background-image: url(../assets/images/bg/stay-informed.svg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(-135deg, #005198, #2979bf);
 }
 </style>
