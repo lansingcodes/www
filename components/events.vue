@@ -3,7 +3,7 @@
     id="events"
     class="
       flex flex-wrap align-start justify-around
-      bg-blue pt-8 px-4 mb-16
+      bg-blue py-8 px-4 mb-16
     "
   >
     <section-heading
@@ -56,3 +56,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+section {
+  background-image: url(../assets/images/bg/stay-informed.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

@@ -112,7 +112,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 section {
   background-image: url(../assets/images/bg/stay-informed.svg);
   background-position: center top;
@@ -122,9 +122,9 @@ section {
 
 .up-arrow {
   border-color: config('colors.blue-lightest') transparent;
-	border-style: solid;
-	border-width: 0px 10px 10px;
-	height: 0px;
-	width: 0px;
+  border-style: solid;
+  border-width: 0px 10px 10px;
+  height: 0px;
+  width: 0px;
 }
 </style>
