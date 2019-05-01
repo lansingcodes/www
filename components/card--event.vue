@@ -1,7 +1,7 @@
 <template>
   <article
     class="
-      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 mx-2
+      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8
       h-full max-w-xs bg-white shadow-md font-sans-serif
     "
   >
@@ -68,16 +68,16 @@
           max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow
         "
       >
-        <div class="m-4">
+        <div class="m-4 overflow-x-hidden">
           <div
             v-if="venue"
-            class="mb-2"
+            class="mb-2 overflow-x-hidden"
           >
             <p class="font-bold mb-1">{{ venue.name }}</p>
             <address class="text-grey-darker roman">{{ venue.address }}</address>
           </div>
           <div
-            class="bg-transparent"
+            class="bg-transparent overflow-x-hidden"
             v-html="eventDescription"
           />
         </div>
