@@ -2,7 +2,7 @@
   <section
     id="events"
     class="
-      relative flex flex-wrap align-start justify-center
+      flex flex-wrap align-start justify-around
       bg-blue pt-8 px-4 mb-16
     "
   >
