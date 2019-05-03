@@ -125,21 +125,35 @@ module.exports = {
   */
 
   fonts: {
-    sans: [
-      'system-ui',
-      'BlinkMacSystemFont',
+    heading: [
+      // Montserrat Bold, then Bootstrap native font stack without emojis
+      // https://getbootstrap.com/docs/4.3/content/reboot/#native-font-stack
+      'Montserrat',
       '-apple-system',
+      'BlinkMacSystemFont',
       'Segoe UI',
       'Roboto',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
       'Helvetica Neue',
+      'Arial',
       'sans-serif'
     ],
+    sans: [
+      // Bootstrap native font stack
+      // https://getbootstrap.com/docs/4.3/content/reboot/#native-font-stack
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol'
+    ],
     serif: [
+      // Georgia-based font stack
+      // https://css-tricks.com/snippets/css/font-stacks/
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -152,11 +166,20 @@ module.exports = {
       'serif'
     ],
     mono: [
-      'Menlo',
-      'Monaco',
+      // Monospace font stack
+      // https://css-tricks.com/snippets/css/font-stacks/
       'Consolas',
+      'Andale Mono WT',
+      'Andale Mono',
+      'Lucida Console',
+      'Lucida Sans Typewriter',
+      'DejaVu Sans Mono',
+      'Bitstream Vera Sans Mono',
       'Liberation Mono',
+      'Nimbus Mono L',
+      'Monaco',
       'Courier New',
+      'Courier',
       'monospace'
     ]
   },

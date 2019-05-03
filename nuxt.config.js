@@ -74,6 +74,10 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:500,700'
       }
     ]
   },

@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed pin-t pin-x z-50 shadow">
+  <nav class="fixed pin-t pin-x z-50 shadow font-heading">
     <div
       class="
         hidden lg:flex items-center justify-between flex-wrap
@@ -13,11 +13,11 @@
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
         >
-        <span class="font-semibold text-xl uppercase">Lansing Codes</span>
+        <span class="font-bold text-xl uppercase">Lansing Codes</span>
       </div>
 
       <!-- Desktop Links -->
-      <div class="block text-base flex-grow text-right">
+      <div class="block text-base flex-grow text-right font-medium">
         <a
           v-for="link in links"
           :key="link.name"
@@ -70,7 +70,7 @@
         key="menu"
         class="
           static block lg:hidden fixed pin-b pin-x z-30 p-4 pb-0
-          border-blue border-t-2 bg-white
+          border-blue border-t-2 bg-white font-medium
         "
       >
         <div>

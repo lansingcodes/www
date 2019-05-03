@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  @apply .font-sans;
+}
+
 a {
   @apply .text-blue-dark;
 
@@ -37,6 +41,15 @@ a {
   &:focus {
     @apply .text-blue-darker .bg-blue-lighter .outline-none;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply .font-heading .font-bold;
 }
 
 p {
