@@ -13,7 +13,7 @@
     >
       <h3
         class="
-          flex flex-no-wrap items-center font-normal mb-2
+          flex flex-no-wrap items-center font-normal mb-2 min-h-12
         "
       >
         <figure :title="group.attributes.name">
@@ -36,7 +36,10 @@
           {{ eventName }}
         </a>
       </h3>
-      <section class="text-sm mb-1">{{ group.attributes.name }}</section>
+      <section
+        :title="group.attributes.name"
+        class="text-sm mb-1 truncate"
+      >{{ group.attributes.name }}</section>
       <section class="text-sm">{{ formatTime(eventTime) }}</section>
       <div
         class="triangle bg-white absolute cursor-pointer"
