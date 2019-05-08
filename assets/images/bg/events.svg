@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1440px" height="1905px" viewBox="0 0 1440 1905" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
   <title>cal_bg</title>
-  <desc>Created with Sketch.</desc>
   <defs>
     <linearGradient x1="29.7563444%" y1="73.9849674%" x2="84.017696%" y2="21.8552602%" id="linearGradient-1">
       <stop stop-color="#2979BF" offset="0%"></stop>
       <stop stop-color="#005198" offset="100%"></stop>
     </linearGradient>
   </defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="LansingCodes-Copy" transform="translate(0.000000, -466.000000)" fill="url(#linearGradient-1)">
-      <polygon id="cal_bg" points="1444 465.486944 3.33066907e-15 866.499576 3.33066907e-15 2031.32284 742.869606 2370.48928 1444 2031.32284"></polygon>
-    </g>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="url(#linearGradient-1)">
+    <polygon id="cal_bg" points="1439 0 0 300 0 1565 722 1904 1439 1565"></polygon>
   </g>
 </svg>
