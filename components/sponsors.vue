@@ -52,9 +52,9 @@ export default {
 }
 </script>
 
-<style scoped>
-@media (min-width: 768px) {
-  section {
+<style lang="scss" scoped>
+section {
+  @media (min-width: 768px) {
     margin-top: -20rem;
   }
 }

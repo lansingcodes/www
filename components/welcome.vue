@@ -107,12 +107,17 @@ export default {
 }
 </script>
 
-<style scoped>
-@media (min-width: 576px) {
-  .lc-background-image {
+<style lang="scss" scoped>
+.lc-background-image {
+  @media (min-width: 576px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 55),
+        rgba(255, 255, 255, 0)
+      ),
+      url(../assets/images/capitol.jpg);
     background-position: center top;
     background-repeat: no-repeat;
-    background-image: url('../assets/images/capitol.jpg');
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <article
     class="
-      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8
+      w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 md:mx-4
       h-full max-w-xs bg-white shadow-md font-sans-serif
     "
   >
@@ -153,7 +153,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .triangle {
   width: 5rem;
   height: 5rem;

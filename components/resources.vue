@@ -51,13 +51,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 section {
-  background-image: linear-gradient(to top right, #005198, #3e79bb);
-}
+  background-image: linear-gradient(to top right, #005198, #2979bf);
 
-@media (min-width: 768px) {
-  section {
+  @media (min-width: 768px) {
     background-color: transparent;
     background-image: url(../assets/images/bg/resources.svg);
     background-position: center top;
