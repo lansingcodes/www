@@ -73,11 +73,14 @@
       >
         <div class="m-4 overflow-x-hidden">
           <div
-            v-if="venue"
+            v-if="venue && venue.name"
             class="mb-2 overflow-x-hidden"
           >
             <p class="font-bold mb-1">{{ venue.name }}</p>
-            <address class="text-grey-darker roman">{{ venue.address }}</address>
+            <address
+              v-if="venue.address"
+              class="text-grey-darker roman"
+            >{{ venue.address }}</address>
           </div>
           <div
             class="bg-transparent overflow-x-hidden"
