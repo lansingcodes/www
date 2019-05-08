@@ -7,7 +7,7 @@
       "
     >
       <!-- Logo -->
-      <div class="flex items-center flex-no-shrink text-blue-dark mr-6">
+      <div class="flex items-center flex-no-shrink text-blue-dark">
         <img
           class="h-12 mr-2"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
@@ -19,11 +19,12 @@
       <!-- Desktop Links -->
       <div class="block text-base flex-grow text-right font-medium">
         <a
-          v-for="link in links"
+          v-for="(link, index) in links"
           :key="link.name"
           :href="link.href"
+          :class="{ 'ml-4': index }"
           class="
-            inline-block text-blue-dark no-underline uppercase mt-0 mr-4
+            inline-block text-blue-dark no-underline uppercase mt-0
           "
         >
           {{ link.name }}
