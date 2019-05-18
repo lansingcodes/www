@@ -56,7 +56,7 @@
             </span>
           </p>
           <div
-            class="mb-6"
+            class="lc-event-description mb-6"
             v-html="nextEventDescription"
           />
         </div>
@@ -101,13 +101,13 @@ export default {
   },
   methods: {
     formatReadableDate(date) {
-      return format(date, 'dddd, MMMM D [at] h:mm a')
+      return format(date, 'dddd, MMMM D [at] h:mm aa')
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .lc-background-image {
   @media (min-width: 576px) {
     background-image: linear-gradient(
@@ -118,6 +118,12 @@ export default {
       url(../assets/images/capitol.jpg);
     background-position: center top;
     background-repeat: no-repeat;
+  }
+}
+
+.lc-event-description {
+  a {
+    @apply .text-white .underline;
   }
 }
 </style>
