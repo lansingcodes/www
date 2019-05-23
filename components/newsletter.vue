@@ -24,14 +24,18 @@
           v-model="email"
           name="EMAIL"
           type="text"
-          class="outline-none focus:shadow-outline border-grey-dark rounded-full p-4 w-3/4 md:max-w-sm text-sm"
+          class="
+            outline-none focus:shadow-outline border-grey-dark rounded-full
+            p-4 w-3/4 md:max-w-sm text-sm
+          "
           placeholder="Email address"
           aria-label="Email address"
         >
         <button
           class="
-            outline-none focus:outline-none focus:shadow-outline bg-white border border-blue rounded-full
+            outline-none bg-white border border-blue rounded-full
             text-blue p-4 -ml-16 uppercase font-bold text-sm
+            hover:text-blue-darker focus:outline-none focus:shadow-outline
           "
           type="submit"
         >Subscribe</button>
@@ -57,7 +61,10 @@
       class="w-3/4 md:max-w-sm mx-auto"
     >
       <div
-        class="bg-blue-lightest text-blue-dark text-center font-bold px-4 py-3 mx-auto"
+        class="
+          bg-blue-lightest text-blue-dark text-center font-bold px-4 py-3
+          mx-auto
+        "
         role="alert"
       >
         <p
