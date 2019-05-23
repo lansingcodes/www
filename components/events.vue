@@ -31,7 +31,7 @@
 import sectionHeading from '~/components/section-heading'
 import eventCard from '~/components/card--event'
 import truncate from '~/utils/truncate'
-import meetups from '~/config/meetups'
+import iconForEvent from '~/utils/icon-for-event'
 
 export default {
   components: {
@@ -44,15 +44,7 @@ export default {
     }
   },
   methods: {
-    iconForEvent(event) {
-      const meetup = meetups.find(meetup => {
-        return meetup.meetupSlug === event.relationships.group.attributes.slug
-      })
-      if (meetup) {
-        const { iconSet, iconName, iconText } = meetup
-        return { iconSet, iconName, iconText }
-      }
-    }
+    iconForEvent
   }
 }
 </script>

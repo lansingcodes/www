@@ -40,7 +40,7 @@
         :title="group.attributes.name"
         class="text-sm mb-1 truncate"
       >{{ group.attributes.name }}</section>
-      <section class="text-sm">{{ formatTime(eventTime) }}</section>
+      <section class="text-sm">{{ formatReadableDateTime(eventTime) }}</section>
       <div
         class="triangle bg-white absolute cursor-pointer"
         @click="open = !open"
@@ -93,8 +93,8 @@
 </template>
 
 <script>
-import { format } from 'date-fns'
 import logo from '~/components/logo--small'
+import formatReadableDateTime from '~/utils/format-readable-date-time'
 
 export default {
   components: {
@@ -146,9 +146,7 @@ export default {
     }
   },
   methods: {
-    formatTime(time) {
-      return format(time, 'dddd, MMMM D [at] h:mm aa')
-    }
+    formatReadableDateTime
   }
 }
 </script>

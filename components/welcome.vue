@@ -40,17 +40,16 @@
           v-if="nextEvent"
           class="text-left font-normal"
         >
-          <h3 class="font-normal mb-2">{{ nextEvent.attributes.name }}</h3>
-          <p class="flex flex-wrap justify-between text-xs mb-2 mt-0">
-            <span class="mb-2 mr-2">
-              {{ formatReadableDate(nextEvent.attributes.time.absolute) }}
+          <h3 class="font-bold mb-2">{{ nextEvent.attributes.name }}</h3>
+          <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">
+            <span class="mb-1 mr-2">
+              {{ formatReadableDateTime(nextEvent.attributes.time.absolute) }}
             </span>
             <span
               v-if="
                 nextEvent.relationships.venue &&
                   nextEvent.relationships.venue.attributes.name
               "
-              class="mb-2"
             >
               {{ nextEvent.relationships.venue.attributes.name }}
             </span>
@@ -64,7 +63,7 @@
           <a
             :href="nextEvent.links.self"
             class="
-              inline-block bg-white no-underline hover:bg-grey-lightest
+              inline-block bg-white no-underline
               text-blue font-bold uppercase text-center py-4 mt-2 px-8
               min-w-24 rounded-full
             "
@@ -81,10 +80,14 @@
 <script>
 import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
+import logo from '~/components/logo--small'
 import truncate from '~/utils/truncate'
+import iconForEvent from '~/utils/icon-for-event'
+import formatReadableDateTime from '~/utils/format-readable-date-time'
 
 export default {
   components: {
+    logo,
     sectionHeading
   },
   computed: {
@@ -100,9 +103,8 @@ export default {
     }
   },
   methods: {
-    formatReadableDate(date) {
-      return format(date, 'dddd, MMMM D [at] h:mm aa')
-    }
+    iconForEvent,
+    formatReadableDateTime
   }
 }
 </script>
