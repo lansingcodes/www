@@ -40,7 +40,24 @@
           v-if="nextEvent"
           class="text-left font-normal"
         >
-          <h3 class="font-bold mb-2">{{ nextEvent.attributes.name }}</h3>
+          <h3
+            class="
+              flex flex-no-wrap items-center mb-2 min-h-12 font-bold
+            "
+          >
+            <figure
+              :title="nextEvent.attributes.name"
+              class="mr-3"
+            >
+              <logo
+                v-if="iconForEvent(nextEvent)"
+                :icon-set="iconForEvent(nextEvent).iconSet"
+                :icon-name="iconForEvent(nextEvent).iconName"
+                :icon-text="iconForEvent(nextEvent).iconText"
+              />
+            </figure>
+            {{ nextEvent.attributes.name }}
+          </h3>
           <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">
             <span class="mb-1 mr-2">
               {{ formatReadableDateTime(nextEvent.attributes.time.absolute) }}
