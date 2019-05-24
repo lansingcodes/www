@@ -12,18 +12,18 @@
       class="w-full"
     />
 
-    <events-list/>
+    <event-list/>
   </section>
 </template>
 
 <script>
 import sectionHeading from '~/components/section-heading'
-import eventsList from '~/components/events-list'
+import eventList from '~/components/event-list'
 
 export default {
   components: {
     sectionHeading,
-    eventsList
+    eventList
   }
 }
 </script>
