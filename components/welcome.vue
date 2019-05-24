@@ -45,17 +45,13 @@
               flex flex-no-wrap items-center mb-2 min-h-12 font-bold
             "
           >
-            <figure
-              :title="nextEvent.attributes.name"
+            <logo
+              v-if="iconForEvent(nextEvent)"
+              :icon-set="iconForEvent(nextEvent).iconSet"
+              :icon-name="iconForEvent(nextEvent).iconName"
+              :icon-text="iconForEvent(nextEvent).iconText"
               class="mr-3"
-            >
-              <logo
-                v-if="iconForEvent(nextEvent)"
-                :icon-set="iconForEvent(nextEvent).iconSet"
-                :icon-name="iconForEvent(nextEvent).iconName"
-                :icon-text="iconForEvent(nextEvent).iconText"
-              />
-            </figure>
+            />
             {{ nextEvent.attributes.name }}
           </h3>
           <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">

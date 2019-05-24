@@ -16,14 +16,12 @@
           flex flex-no-wrap items-center font-normal mb-2 min-h-12
         "
       >
-        <figure :title="group.attributes.name">
-          <logo
-            v-if="icon"
-            :icon-set="icon.iconSet"
-            :icon-name="icon.iconName"
-            :icon-text="icon.iconText"
-          />
-        </figure>
+        <logo
+          v-if="icon"
+          :icon-set="icon.iconSet"
+          :icon-name="icon.iconName"
+          :icon-text="icon.iconText"
+        />
         <a
           :href="eventLink"
           target="_blank"
