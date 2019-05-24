@@ -2,8 +2,7 @@
   <section
     id="events"
     class="
-      flex flex-wrap align-start justify-around bg-blue
-      pt-8 md:pt-64 pb-8 md:pb-32 px-4 md:px-16 mb-16 md:-mt-64
+      bg-blue pt-8 md:pt-64 pb-8 md:pb-32 px-4 md:px-16 mb-16 md:-mt-64
     "
   >
     <section-heading
@@ -13,38 +12,18 @@
       class="w-full"
     />
 
-    <event-card
-      v-for="event in events"
-      :key="event.attributes.id"
-      :event-name="event.attributes.name"
-      :event-link="event.links.self"
-      :event-time="event.attributes.time.absolute"
-      :event-description="event.attributes.description"
-      :group="event.relationships.group"
-      :venue="event.relationships.venue.attributes"
-      :icon="iconForEvent(event)"
-    />
+    <events-list/>
   </section>
 </template>
 
 <script>
 import sectionHeading from '~/components/section-heading'
-import eventCard from '~/components/card--event'
-import truncate from '~/utils/truncate'
-import iconForEvent from '~/utils/icon-for-event'
+import eventsList from '~/components/events-list'
 
 export default {
   components: {
     sectionHeading,
-    eventCard
-  },
-  computed: {
-    events() {
-      return this.$store.state.events.upcoming
-    }
-  },
-  methods: {
-    iconForEvent
+    eventsList
   }
 }
 </script>
