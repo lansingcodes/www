@@ -47,6 +47,7 @@ import {
   faTable,
   faTh,
   faTimes,
+  faUnlockAlt,
   faUserCircle,
   faUsers
 } from '@fortawesome/free-solid-svg-icons'
@@ -71,6 +72,7 @@ library.add(
   faTable,
   faTh,
   faTimes,
+  faUnlockAlt,
   faUserCircle,
   faUsers
 )

@@ -86,17 +86,6 @@ export default [
   },
   // 2nd Wednesday
   {
-    heading: 'Web',
-    description:
-      "Share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
-    iconSet: 'fab',
-    iconName: 'html5',
-    url: 'https://www.meetup.com/lansingweb/',
-    subheading: '2nd Wednesday',
-    meetupSlug: 'lansingweb'
-  },
-  // 2nd Wednesday
-  {
     heading: 'Marketing Hackers',
     description:
       'A community dedicated to marketers and techies who want to become power users in marketing apps and services.',
@@ -105,6 +94,27 @@ export default [
     url: 'https://www.meetup.com/Lansing-Marketing-Hackers/',
     subheading: '2nd Wednesday',
     meetupSlug: 'Lansing-Marketing-Hackers'
+  },
+  // 2nd Wednesday
+  {
+    heading: '#misec',
+    description:
+      'Learn why security is so important, how to protect the applications you work on, and break them before a hacker can.',
+    iconSet: 'fas',
+    iconName: 'unlock-alt',
+    url: 'https://www.misec.us/events/',
+    subheading: '2nd Wednesday'
+  },
+  // 2nd Wednesday
+  {
+    heading: 'Web',
+    description:
+      "Share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
+    iconSet: 'fab',
+    iconName: 'html5',
+    url: 'https://www.meetup.com/lansingweb/',
+    subheading: '2nd Wednesday',
+    meetupSlug: 'lansingweb'
   },
   // 2nd Thursday
   {
