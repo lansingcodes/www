@@ -12,17 +12,20 @@
       class="w-full"
     />
 
-    <event-list/>
+    <event-calendar class="hidden lg:block" />
+    <event-list class="block lg:hidden" />
   </section>
 </template>
 
 <script>
 import sectionHeading from '~/components/section-heading'
+import eventCalendar from '~/components/event-calendar'
 import eventList from '~/components/event-list'
 
 export default {
   components: {
     sectionHeading,
+    eventCalendar,
     eventList
   }
 }
