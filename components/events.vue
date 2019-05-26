@@ -8,7 +8,7 @@
     <section-heading
       white
       heading="Upcoming Events"
-      subheading="Events and resources for Lansing coders"
+      subheading="events and resources for Lansing coders"
       class="w-full"
     />
 

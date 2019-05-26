@@ -1,16 +1,16 @@
 <template>
-  <div class="calendar">
-    <div class="weekday-labels">
+  <div>
+    <div class="flex">
       <div
         v-for="weekday in weekdayLabels"
         :key="weekday"
-        class="weekday-label"
+        class="w-1/7 text-center text-white"
       >{{ weekday }}</div>
     </div>
     <div
       v-for="(week, index) in calendar"
       :key="index"
-      class="week"
+      class="flex"
     >
       <div
         v-for="day in week"
@@ -19,38 +19,32 @@
           active: isDuringActivePeriod(day) && isWeekday(day),
           today: isToday(day)
         }"
-        class="day"
+        class="w-1/7 bg-white m-1 p-1"
       >
         <div v-if="isDuringActivePeriod(day)">
-          <div>{{ formatDate(day, 'DD') }}</div>
-          <ul>
+          <div class="text-center">{{ formatDayOfMonth(day) }}</div>
+          <ul class="m-0 p-0">
             <li
               v-for="event in eventsOnDay(day)"
               :key="event.attributes.id"
-              :data-content="event.name"
-              data-toggle="popover"
-              data-trigger="hover"
-              data-placement="bottom"
-              data-animation="false"
+              class="block list-none mt-2 mx-1 pt-2"
             >
               <a
-                :href="event.url"
+                :href="event.links.self"
+                class="w-full block no-underline"
                 target="_blank"
               >
-                <div>
-                  {{ event.time }}
-                  <span
+                <span v-if="iconForEvent(event)">
+                  <logo
                     v-if="iconForEvent(event)"
-                    class="pull-right"
-                  >
-                    <logo
-                      :icon-set="iconForEvent(event).iconSet"
-                      :icon-name="iconForEvent(event).iconName"
-                      :icon-text="iconForEvent(event).iconText"
-                    />
-                  </span>
-                </div>
-                {{ event.focus }}
+                    :icon-set="iconForEvent(event).iconSet"
+                    :icon-name="iconForEvent(event).iconName"
+                    :icon-text="iconForEvent(event).iconText"
+                    class="inline-block"
+                  />
+                </span>
+                {{ formatTimeOfEvent(event) }}
+                <div>{{ eventName(event) }}</div>
               </a>
             </li>
           </ul>
@@ -71,7 +65,7 @@ import {
   format as formatDate
 } from 'date-fns'
 import chunk from 'lodash/chunk'
-import logo from '~/components/logo--small'
+import logo from '~/components/logo--extra-small'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import iconForEvent from '~/utils/icon-for-event'
 
@@ -83,10 +77,6 @@ export default {
     return {
       weekdayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     }
-  },
-  ready() {
-    /* eslint-disable */
-    jquery('.calendar [data-toggle="popover"]').popover()
   },
   computed: {
     events() {
@@ -113,17 +103,37 @@ export default {
     }
   },
   methods: {
+    eventName(event) {
+      return event.attributes.name
+    },
     eventsOnDay(day) {
-      return this.events.filter(event => {
-        return isSameDay(new Date(event.attributes.time.absolute), day)
-      })
+      return this.events.filter(event =>
+        isSameDay(new Date(event.attributes.time.absolute), day)
+      )
+    },
+    formatDayOfMonth(day) {
+      const dayOfMonth = formatDate(day, 'D')
+      const isStartDate = isSameDay(day, this.startDate)
+      return dayOfMonth === '1' || isStartDate
+        ? formatDate(day, 'MMM D')
+        : dayOfMonth
+    },
+    formatTimeOfEvent(event) {
+      const startMinutes = formatDate(event.attributes.time.absolute, 'm')
+      return formatDate(
+        event.attributes.time.absolute,
+        startMinutes === '0' ? 'h a' : 'h:mm a'
+      )
     },
     isDuringActivePeriod(day) {
       const now = Date.now()
       const dateOfLastEvent = new Date(
         this.events[this.events.length - 1].attributes.time.absolute
       )
-      return !isBefore(day, now) && !isAfter(day, dateOfLastEvent)
+      return (
+        (isAfter(day, now) || isSameDay(day, now)) &&
+        (isBefore(day, dateOfLastEvent) || isSameDay(day, dateOfLastEvent))
+      )
     },
     isToday(day) {
       return isSameDay(day, Date.now())
@@ -137,70 +147,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-$calendar-border-color: white;
-$one-seventh-width: 14.285714285%;
-$text-color: white;
-
-.calendar {
-  min-width: 850px;
-  color: white;
-  a {
-    color: white;
-  }
-  > .week {
-    display: flex;
-    > .day {
-      width: $one-seventh-width;
-      border: 6px solid transparentize($calendar-border-color, 0.7);
-      border-radius: 7px;
-      padding: 10px;
-      margin: 3px;
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        list-style-type: none;
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid rgba(255,255,255,0.2);
-        &:first-of-type {
-          padding-top: 0;
-          border-top: none;
-        }
-        > a {
-          display: block;
-          &:hover {
-            $event-hover-bg: rgba(255,255,255,0.15);
-            background: $event-hover-bg;
-            box-shadow: 0 0 0 10px $event-hover-bg;
-          }
-          &:hover, &:active, &:focus {
-            text-decoration: none;
-          }
-        }
-      }
-      &.active {
-        border-color: $calendar-border-color;
-      }
-      &.today {
-        border-color: coral;
-      }
-    }
-  }
-}
-.weekday-labels {
-  display: flex;
-  .weekday-label {
-    width: $one-seventh-width;
-    text-align: center;
-  }
-}
-.icon {
-  font-size: 1.4em;
-  margin-top: 5px;
-  &.fa-graduation-cap { margin-right: -5px; }
-}
-</style>
