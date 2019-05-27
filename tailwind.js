@@ -45,6 +45,8 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   transparent: 'transparent',
 
+  attention: '#ff7f50',
+
   black: '#22292f',
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
@@ -513,6 +515,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '16': '4rem',
     full: '100%',
     screen: '100vh'
   },

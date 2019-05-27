@@ -4,7 +4,7 @@
       <div
         v-for="weekday in weekdayLabels"
         :key="weekday"
-        class="w-1/7 text-center text-white"
+        class="w-1/7 text-center text-white font-semibold"
       >{{ weekday }}</div>
     </div>
     <div
@@ -16,18 +16,29 @@
         v-for="day in week"
         :key="day.getTime()"
         :class="{
-          active: isDuringActivePeriod(day) && isWeekday(day),
-          today: isToday(day)
+          'border-4': isToday(day),
+          'opacity-75': !isWeekday(day) && !isToday(day)
         }"
-        class="w-1/7 bg-white m-1 p-1"
+        class="w-1/7 min-h-16 bg-white m-1 p-1 rounded-sm border-attention"
       >
-        <div v-if="isDuringActivePeriod(day)">
-          <div class="text-center">{{ formatDayOfMonth(day) }}</div>
-          <ul class="m-0 p-0">
+        <div>
+          <div
+            :class="{
+              'text-grey-darkest': isDuringActivePeriod(day),
+              'text-grey-dark': !isDuringActivePeriod(day)
+            }"
+            class="text-center mb-2 font-medium"
+          >
+            {{ formatDayOfMonth(day) }}
+          </div>
+          <ul
+            v-if="isDuringActivePeriod(day)"
+            class="m-0 p-0"
+          >
             <li
               v-for="event in eventsOnDay(day)"
               :key="event.attributes.id"
-              class="block list-none mt-2 mx-1 pt-2"
+              class="block list-none mx-1 py-2 border-t hover:bg-blue-lightest"
             >
               <a
                 :href="event.links.self"
@@ -44,7 +55,7 @@
                   />
                 </span>
                 {{ formatTimeOfEvent(event) }}
-                <div>{{ eventName(event) }}</div>
+                <div class="mt-1">{{ eventName(event) }}</div>
               </a>
             </li>
           </ul>
@@ -104,7 +115,7 @@ export default {
   },
   methods: {
     eventName(event) {
-      return event.attributes.name
+      return event.relationships.group.attributes.focus
     },
     eventsOnDay(day) {
       return this.events.filter(event =>
@@ -127,13 +138,7 @@ export default {
     },
     isDuringActivePeriod(day) {
       const now = Date.now()
-      const dateOfLastEvent = new Date(
-        this.events[this.events.length - 1].attributes.time.absolute
-      )
-      return (
-        (isAfter(day, now) || isSameDay(day, now)) &&
-        (isBefore(day, dateOfLastEvent) || isSameDay(day, dateOfLastEvent))
-      )
+      return isAfter(day, now) || isSameDay(day, now)
     },
     isToday(day) {
       return isSameDay(day, Date.now())
