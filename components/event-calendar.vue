@@ -17,9 +17,10 @@
         :key="day.getTime()"
         :class="{
           'border-4': isToday(day),
-          'opacity-75': !isWeekday(day) && !isToday(day)
+          'bg-white': isWeekday(day) || isToday(day),
+          'bg-blue-lighter': !isWeekday(day) && !isToday(day)
         }"
-        class="w-1/7 min-h-16 bg-white m-1 p-1 rounded-sm border-attention"
+        class="w-1/7 min-h-16 m-1 p-1 rounded-sm border-attention"
       >
         <div>
           <div
@@ -38,11 +39,14 @@
             <li
               v-for="event in eventsOnDay(day)"
               :key="event.attributes.id"
-              class="block list-none mx-1 py-2 border-t hover:bg-blue-lightest"
+              class="
+                block list-none mx-1 py-2 border-t border-blue
+                hover:bg-blue-lightest
+              "
             >
               <a
                 :href="event.links.self"
-                class="w-full block no-underline"
+                class="w-full block no-underline text-blue-darker"
                 target="_blank"
               >
                 <span v-if="iconForEvent(event)">
