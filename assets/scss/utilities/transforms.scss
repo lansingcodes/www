@@ -2,6 +2,10 @@
   transition: all 0.4s;
 }
 
+.transition-opacity {
+  transition: opacity 0.4s;
+}
+
 .max-h-50 {
   max-height: 50vh;
 }

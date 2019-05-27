@@ -59,9 +59,9 @@
     <!-- Additional details -->
     <transition
       enter-active-class="transition-all"
-      enter-class="max-h-0"
+      enter-class="opacity-0"
       leave-active-class="transition-all"
-      leave-to-class="max-h-0"
+      leave-to-class="opacity-0"
     >
       <div
         v-if="open"

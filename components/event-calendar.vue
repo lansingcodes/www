@@ -65,10 +65,10 @@
                 <div class="mt-1">{{ eventName(event) }}</div>
               </a>
               <transition
-                enter-active-class="transition-all"
-                enter-class="max-h-0"
-                leave-active-class="transition-all"
-                leave-to-class="max-h-0"
+                enter-active-class="transition-opacity"
+                enter-class="opacity-0"
+                leave-active-class="transition-opacity"
+                leave-to-class="opacity-0"
               >
                 <popover
                   :name="event.attributes.id"
