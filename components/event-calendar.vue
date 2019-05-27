@@ -38,8 +38,7 @@
           >
             <li
               v-popover="{
-                name: event.attributes.id,
-                event: 'hover'
+                name: event.attributes.id
               }"
               v-for="event in eventsOnDay(day)"
               :key="event.attributes.id"
@@ -65,12 +64,23 @@
                 {{ formatTimeOfEvent(event) }}
                 <div class="mt-1">{{ eventName(event) }}</div>
               </a>
-              <popover
-                :name="event.attributes.id"
-                event="hover"
+              <transition
+                enter-active-class="transition-all"
+                enter-class="max-h-0"
+                leave-active-class="transition-all"
+                leave-to-class="max-h-0"
               >
-                <div>{{ event.attributes.name }}</div>
-              </popover>
+                <popover
+                  :name="event.attributes.id"
+                  :width="225"
+                  event="hover"
+                  class="
+                    text-blue-darker border border-blue shadow-md -mt-2
+                  "
+                >
+                  <div>{{ event.attributes.name }}</div>
+                </popover>
+              </transition>
             </li>
           </ul>
         </div>
@@ -166,3 +176,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.pop-out-enter-active,
+.pop-out-leave-active {
+  transition: transform 1.5s, opacity 2s;
+}
+.pop-out-enter,
+.pop-out-leave-to {
+  opacity: 0;
+  transform: rotate(720deg) translate(0, 120px);
+}
+</style>
