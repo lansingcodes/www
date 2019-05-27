@@ -25,6 +25,7 @@
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "nuxt": "^2.6.2",
+    "vue-js-popover": "^1.1.8",
     "vue-jsonp": "^0.1.8"
   },
   "devDependencies": {

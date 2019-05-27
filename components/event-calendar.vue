@@ -26,7 +26,7 @@
           <div
             :class="{
               'text-grey-darkest': isDuringActivePeriod(day),
-              'text-grey-dark': !isDuringActivePeriod(day)
+              'text-grey-darker': !isDuringActivePeriod(day)
             }"
             class="text-center mb-2 font-medium"
           >
@@ -37,6 +37,10 @@
             class="m-0 p-0"
           >
             <li
+              v-popover="{
+                name: event.attributes.id,
+                event: 'hover'
+              }"
               v-for="event in eventsOnDay(day)"
               :key="event.attributes.id"
               class="
@@ -61,6 +65,12 @@
                 {{ formatTimeOfEvent(event) }}
                 <div class="mt-1">{{ eventName(event) }}</div>
               </a>
+              <popover
+                :name="event.attributes.id"
+                event="hover"
+              >
+                <div>{{ event.attributes.name }}</div>
+              </popover>
             </li>
           </ul>
         </div>

@@ -2,6 +2,7 @@ const pkg = require('./package')
 
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   mode: 'universal',
@@ -95,7 +96,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/font-awesome' }, { src: '~/plugins/jsonp' }],
+  plugins: [
+    { src: '~/plugins/font-awesome' },
+    { src: '~/plugins/jsonp' },
+    { src: '~/plugins/popover', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
