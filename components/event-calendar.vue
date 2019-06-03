@@ -23,13 +23,7 @@
         class="w-1/7 min-h-16 m-1 p-1 rounded-sm border-attention shadow-md"
       >
         <div>
-          <div
-            :class="{
-              'text-grey-darkest': isDuringActivePeriod(day),
-              'text-grey-darker': !isDuringActivePeriod(day)
-            }"
-            class="text-center mb-2 font-medium"
-          >
+          <div class="text-grey-darkest text-center mb-2 font-medium">
             {{ formatDayOfMonth(day) }}
           </div>
           <ul

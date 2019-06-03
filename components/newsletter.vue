@@ -15,10 +15,6 @@
       @submit.prevent="subscribe"
     >
       <div class="text-center mt-4">
-        <label
-          for="EMAIL"
-          class="sr-only"
-        >email</label>
         <input
           id="EMAIL"
           v-model="email"
