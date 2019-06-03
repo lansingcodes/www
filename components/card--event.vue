@@ -11,7 +11,7 @@
         overflow-hidden relative bg-blue-darker text-white p-4 shadow
       "
     >
-      <h3
+      <div
         class="
           flex flex-no-wrap items-center font-normal mb-2 min-h-12
         "
@@ -22,18 +22,20 @@
           :icon-name="icon.iconName"
           :icon-text="icon.iconText"
         />
-        <a
-          :href="eventLink"
-          target="_blank"
-          class="
-            text-white m-0 ml-3 no-underline
-            hover:text-white hover:underline
-            focus:text-white focus:underline focus:bg-transparent
-          "
-        >
-          {{ eventName }}
-        </a>
-      </h3>
+        <h3 class="text-white m-0 ml-3">
+          <a
+            :href="eventLink"
+            target="_blank"
+            class="
+              text-white no-underline
+              hover:text-white hover:underline
+              focus:text-white focus:underline focus:bg-transparent
+            "
+          >
+            {{ eventName }}
+          </a>
+        </h3>
+      </div>
       <section
         class="text-sm mb-1 truncate"
       >{{ group.attributes.name }}</section>

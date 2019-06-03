@@ -40,11 +40,7 @@
           v-if="nextEvent"
           class="text-left font-normal"
         >
-          <h3
-            class="
-              flex flex-no-wrap items-center mb-2 min-h-12 font-bold
-            "
-          >
+          <div class="flex flex-no-wrap items-center mb-2 min-h-12">
             <logo
               v-if="iconForEvent(nextEvent)"
               :icon-set="iconForEvent(nextEvent).iconSet"
@@ -52,8 +48,10 @@
               :icon-text="iconForEvent(nextEvent).iconText"
               class="mr-3"
             />
-            {{ nextEvent.attributes.name }}
-          </h3>
+            <h3 class="font-bold">
+              {{ nextEvent.attributes.name }}
+            </h3>
+          </div>
           <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">
             <span class="mb-1 mr-2">
               {{ formatReadableDateTime(nextEvent.attributes.time.absolute) }}
