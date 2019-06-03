@@ -70,7 +70,7 @@
                   :width="225"
                   event="hover"
                   class="
-                    text-blue-darker border border-blue shadow-md -mt-2
+                    text-blue-darker border border-blue shadow-md -mt-2 hidden
                   "
                 >
                   <div>{{ event.attributes.name }}</div>
