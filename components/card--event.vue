@@ -35,7 +35,6 @@
         </a>
       </h3>
       <section
-        :title="group.attributes.name"
         class="text-sm mb-1 truncate"
       >{{ group.attributes.name }}</section>
       <section class="text-sm">{{ formatReadableDateTime(eventTime) }}</section>
