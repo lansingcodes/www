@@ -40,6 +40,7 @@
       "
     >
       <button
+        :aria-label="open ? 'Close Menu' : 'Open Menu'"
         class="
           block p-4 rounded-full shadow-lg leading-normal
           bg-white text-blue border-blue border-2 font-medium
@@ -48,7 +49,6 @@
         "
         type="button"
         aria-controls="navbarSupportedContent"
-        aria-label="Open Menu"
         @click="open = !open"
       >
         <font-awesome-icon

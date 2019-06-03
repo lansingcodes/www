@@ -51,6 +51,7 @@
                 :href="event.links.self"
                 class="w-full block no-underline text-blue-darker"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 <span v-if="iconForEvent(event)">
                   <logo

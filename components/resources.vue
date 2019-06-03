@@ -23,6 +23,7 @@
         <a
           :href="resource.url"
           target="_blank"
+          rel="noreferrer noopener"
           class="no-underline text-white hover:underline hover:text-white"
         >
           {{ resource.title }}

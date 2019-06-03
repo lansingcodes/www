@@ -25,6 +25,7 @@
         <h3 class="text-white m-0 ml-3">
           <a
             :href="eventLink"
+            rel="noreferrer noopener"
             target="_blank"
             class="
               text-white no-underline

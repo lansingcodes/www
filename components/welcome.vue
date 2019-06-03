@@ -79,6 +79,7 @@
               min-w-24 rounded-full
             "
             target="_blank"
+            rel="noreferrer noopener"
           >
             Learn More
           </a>
