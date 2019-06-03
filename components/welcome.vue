@@ -81,7 +81,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            Learn More
+            Learn More and RSVP
           </a>
         </div>
       </section>
