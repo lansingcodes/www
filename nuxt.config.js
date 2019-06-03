@@ -2,7 +2,6 @@ const pkg = require('./package')
 
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
-const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   mode: 'universal',
@@ -78,7 +77,8 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat:500,700'
+        href:
+          'https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap'
       }
     ]
   },
