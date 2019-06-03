@@ -19,11 +19,6 @@ $ npm start
 $ npm run generate
 ```
 
-<<<<<<< HEAD
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
-
-=======
->>>>>>> master
 ## Deployments
 
 After a pull request is reviewed and merged to `master`, a Netlify deployment
