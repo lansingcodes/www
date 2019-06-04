@@ -132,6 +132,7 @@ export default {
       url(../assets/images/capitol.jpg);
     background-position: center top;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
