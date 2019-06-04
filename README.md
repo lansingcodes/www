@@ -1,38 +1,22 @@
-# Lansing Codes
+# www
 
-Static site with events and resources for Lansing coders
+> Lansing.Codes home page
 
 ## Build Setup
 
-### Build Pre-reqs
-
-This project requires node and npm.
-
-1. [Node.js](https://nodejs.org/en/) Javascript framework
-2. [NPM](https://www.npmjs.com/) Dependency management
-   1. During the build process, you may need additional system dependencies such as python2 or C build tools. See the [Build Issues](https://github.com/lansingcodes/www#build-issues) section if you run into an error while building `node-sass`.
-
-
-### Build Process
-
 ``` bash
 # install dependencies
-npm install
+$ npm ci
 
-# serve with hot reload at localhost:8080
-npm run dev
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-# build for production with minification
-npm run build
+# build for production and launch server
+$ npm run build
+$ npm start
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm run test
+# generate static project
+$ npm run generate
 ```
 
 ## Deployments
@@ -63,7 +47,3 @@ your changes.
 
 The primary Humanity Codes account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
-
-## Want more?
-
-For detailed explanation on how things work, check out the [guide](https://github.com/vuejs-templates/webpack#vue-webpack-boilerplate) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

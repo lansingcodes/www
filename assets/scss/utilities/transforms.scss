@@ -1,0 +1,35 @@
+.transition-all {
+  transition: all 0.4s;
+}
+
+.transition-opacity {
+  transition: opacity 0.4s;
+}
+
+.max-h-50 {
+  max-height: 50vh;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.slide-down-full {
+  transform: translateY(-100vh);
+}
+
+.slide-up-full {
+  transform: translateY(100vh);
+}
+
+@variants active, hover {
+  .slide-down-px {
+    transform: translateY(1px);
+    transition: all ease-in-out .1s;
+  }
+
+  .slide-up-px {
+    transform: translateY(-1px);
+    transition: all ease-in-out .1s;
+  }
+}

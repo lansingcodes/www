@@ -1,0 +1,67 @@
+{
+  // ===
+  // Spacing
+  // ===
+
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // ===
+  // Files
+  // ===
+
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/dist": true
+  },
+
+  // ===
+  // Event Triggers
+  // ===
+
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": false,
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": false },
+    { "language": "javascriptreact", "autoFix": false },
+    { "language": "vue", "autoFix": false },
+    { "language": "vue-html", "autoFix": false },
+    { "language": "html", "autoFix": false }
+  ],
+
+  // ===
+  // HTML
+  // ===
+
+  "html.format.enable": false,
+  "html.suggest.angular1": false,
+  "html.suggest.ionic": false,
+  "vetur.validation.template": false,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html"
+  },
+
+  // ===
+  // JS(ON)
+  // ===
+
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "vetur.validation.script": false,
+
+  // ===
+  // CSS
+  // ===
+
+  "css.validate": false,
+  "scss.validate": false,
+  "vetur.validation.style": false,
+}
