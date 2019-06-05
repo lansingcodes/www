@@ -5,15 +5,19 @@
       bg-blue pt-8 md:pt-64 pb-8 md:pb-32 px-4 md:px-16 mb-16 md:-mt-64
     "
   >
-    <section-heading
-      white
-      heading="Upcoming Events"
-      subheading="events and resources for Lansing coders"
-      class="w-full"
-    />
+    <div class="container mx-auto w-full flex flex-wrap lg:justify-end">
+      <section-heading
+        white
+        heading="Upcoming Events"
+        subheading="events and resources for Lansing coders"
+        class="mx-auto lg:mr-32"
+      />
 
-    <event-calendar class="hidden lg:block" />
-    <event-list class="block lg:hidden" />
+      <div class="w-full">
+        <event-calendar class="hidden lg:block" />
+        <event-list class="block lg:hidden" />
+      </div>
+    </div>
   </section>
 </template>
 
