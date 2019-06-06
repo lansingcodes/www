@@ -6,7 +6,7 @@
     <div class="flex flex-wrap justify-center">
       <section
         class="
-          flex-none w-full sm:w-1/2 max-w-sm overflow-hidden sm:shadow-lg
+          flex-none w-full sm:w-1/2 sm:max-w-sm overflow-hidden sm:shadow-lg
           bg-white text-center p-8 sm:mb-24
         "
       >

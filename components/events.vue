@@ -1,21 +1,25 @@
 <template>
   <section
     id="events"
-    class="
-      bg-blue pt-8 md:pt-64 pb-8 md:pb-32 px-4 md:px-16 mb-16 md:-mt-64
-    "
+    class="-mt-48"
   >
-    <div class="container mx-auto w-full flex flex-wrap lg:justify-end">
-      <section-heading
-        white
-        heading="Upcoming Events"
-        subheading="events and resources for Lansing coders"
-        class="mx-auto lg:mr-32"
-      />
+    <div class="lc-bg-right-triangle h-64"/>
+    <div
+      class="
+        lc-bg-ltr-gradient
+      "
+    >
+      <div class="container mx-auto">
+        <section-heading
+          white
+          heading="Upcoming Events"
+          subheading="events and resources for Lansing coders"
+        />
 
-      <div class="w-full">
-        <event-calendar class="hidden lg:block" />
-        <event-list class="block lg:hidden" />
+        <div class="w-full">
+          <event-calendar class="hidden lg:block" />
+          <event-list class="block lg:hidden" />
+        </div>
       </div>
     </div>
   </section>
@@ -36,15 +40,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  background: linear-gradient(to bottom left, #005198, #2979bf);
+.lc-bg-ltr-gradient {
+  background: linear-gradient(to right, #2979bf, #005198);
+}
 
-  @media (min-width: 768px) {
-    background-color: transparent;
-    background-image: url(../assets/images/bg/events.svg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.lc-bg-right-triangle {
+  background-color: transparent;
+  background-image: url(../assets/images/bg/right-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 </style>
