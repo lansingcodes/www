@@ -1,7 +1,10 @@
 <template>
   <section
     id="sponsors"
-    class="container mx-auto flex flex-wrap justify-center px-4 mb-16 md:px-12"
+    class="
+      container mx-auto flex flex-wrap justify-center px-4 my-16
+      md:px-12 md:-mt-48
+    "
   >
     <section-heading
       blue
@@ -51,11 +54,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-section {
-  @media (min-width: 768px) {
-    margin-top: -20rem;
-  }
-}
-</style>

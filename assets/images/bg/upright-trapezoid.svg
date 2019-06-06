@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="none" width="1440px" height="1905px" viewBox="0 0 1440 1905" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="-60%" y1="50%" x2="100%" y2="50%" id="lc-bg-rtl-gradient">
+      <stop stop-color="#005198" offset="0%"></stop>
+      <stop stop-color="#2979bf" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="page" stroke="none" stroke-width="1" fill="url(#lc-bg-rtl-gradient)">
+    <polygon id="trapezoid" points="576 1906 864 0 1441 0 1441 1906"></polygon>
+  </g>
+</svg>
