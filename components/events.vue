@@ -1,7 +1,7 @@
 <template>
   <section
     id="events"
-    class="-mt-48"
+    class="sm:-mt-48"
   >
     <div class="lc-bg-right-triangle h-64"/>
     <div
@@ -22,6 +22,7 @@
         </div>
       </div>
     </div>
+    <div class="lc-bg-down-triangle h-64 -mt-32"/>
   </section>
 </template>
 
@@ -47,6 +48,13 @@ export default {
 .lc-bg-right-triangle {
   background-color: transparent;
   background-image: url(../assets/images/bg/right-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.lc-bg-down-triangle {
+  background-color: #fff;
+  background-image: url(../assets/images/bg/down-triangle.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
