@@ -19,7 +19,8 @@
     <div class="lc-bg-rtl-gradient">
       <div
         class="
-          container mx-auto flex flex-wrap content-center justify-around py-16
+          container mx-auto flex flex-wrap content-center justify-around
+          pt-0 sm:pt-16 pb-16
         "
       >
         <div
