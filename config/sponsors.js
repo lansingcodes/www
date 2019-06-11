@@ -49,13 +49,6 @@ export default [
     url: 'http://www.rmcagency.com/'
   },
   {
-    name: 'SBDC Michigan',
-    desc:
-      'SBDC Michigan offers free, expert assistance to anyone looking to start or grow a business.',
-    logo: 'SBDC_MI.png',
-    url: 'https://sbdcmichigan.org/'
-  },
-  {
     name: 'TechSmith',
     desc:
       'TechSmith is the go-to company for visual communication. They help anyone capture professional-looking videos and images.',
