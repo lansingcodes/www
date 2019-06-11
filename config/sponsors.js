@@ -35,6 +35,13 @@ export default [
     url: 'https://kunzleigh.com/'
   },
   {
+    name: 'Lansing Makers Network',
+    desc:
+      'LMN is a nonprofit makerspace that shares tools and skills and melds technology, art, and culture in new and exciting ways',
+    logo: 'lmn.png',
+    url: 'https://lansingmakersnetwork.org/'
+  },
+  {
     name: 'LEAP',
     desc:
       'LEAP is a coalition of area leaders committed to building a prosperous and vibrant region where businesses can thrive.',
