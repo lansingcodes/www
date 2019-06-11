@@ -1,7 +1,9 @@
 <template>
   <section
     id="meetups"
-    class="container mx-auto flex flex-wrap justify-start px-4 md:px-12 mb-16"
+    class="
+      container mx-auto flex flex-wrap justify-start px-4 md:px-12 mb-16 sm:mb-0
+    "
   >
     <section-heading
       blue
