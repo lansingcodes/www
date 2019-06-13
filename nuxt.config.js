@@ -4,7 +4,7 @@ const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
