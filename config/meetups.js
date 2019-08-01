@@ -123,7 +123,7 @@ export default [
       'One of the most popular languages in the world with an incredibly rich ecosystem.',
     iconSet: 'fab',
     iconName: 'java',
-      url: 'https://www.meetup.com/Lansing-JVM-User-Group/',
+    url: 'https://www.meetup.com/Lansing-JVM-User-Group/',
     subheading: '2nd Thursday'
   },
   // 3rd Tuesday
