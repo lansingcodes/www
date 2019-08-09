@@ -6,21 +6,16 @@
   >
     <event-card
       v-for="event in events"
-      :key="event.attributes.id"
-      :event-name="event.attributes.name"
-      :event-link="event.links.self"
-      :event-time="event.attributes.time.absolute"
-      :event-description="event.attributes.description"
-      :group="event.relationships.group"
-      :venue="event.relationships.venue.attributes"
-      :icon="iconForEvent(event)"
+      :key="event.id"
+      :event="event"
+      :group="eventGroup(event)"
     />
   </div>
 </template>
 
 <script>
 import eventCard from '~/components/card--event'
-import iconForEvent from '~/utils/icon-for-event'
+import groupForEvent from '~/utils/group-for-event'
 
 export default {
   components: {
@@ -32,7 +27,9 @@ export default {
     }
   },
   methods: {
-    iconForEvent
+    eventGroup(event) {
+      return groupForEvent(event, this.$store.state.groups.all)
+    }
   }
 }
 </script>

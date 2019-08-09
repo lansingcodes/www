@@ -42,37 +42,34 @@
         >
           <div class="flex flex-no-wrap items-center mb-2 min-h-12">
             <logo
-              v-if="iconForEvent(nextEvent)"
-              :icon-set="iconForEvent(nextEvent).iconSet"
-              :icon-name="iconForEvent(nextEvent).iconName"
-              :icon-text="iconForEvent(nextEvent).iconText"
+              v-if="groupForNextEvent"
+              :icon-set="groupForNextEvent.iconSet"
+              :icon-name="groupForNextEvent.iconName"
+              :icon-text="groupForNextEvent.iconText"
               class="mr-3"
             />
             <h3 class="font-bold">
-              {{ nextEvent.attributes.name }}
+              {{ nextEvent.name }}
             </h3>
           </div>
           <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">
             <span class="mb-1 mr-2">
-              {{ formatReadableDateTime(nextEvent.attributes.time.absolute) }}
+              {{ formatReadableDateTime(nextEvent.startTime) }}
             </span>
             <span
-              v-if="
-                nextEvent.relationships.venue &&
-                  nextEvent.relationships.venue.attributes.name
-              "
+              v-if="nextEvent.venue"
             >
-              {{ nextEvent.relationships.venue.attributes.name }}
+              {{ nextEvent.venue }}
             </span>
           </p>
           <div
             class="lc-event-description mb-6"
-            v-html="nextEventDescription"
+            v-html="nextEvent.description"
           />
         </div>
         <div class="text-center">
           <a
-            :href="nextEvent.links.self"
+            :href="nextEvent.url"
             class="
               inline-block bg-white no-underline
               text-blue font-bold uppercase text-center py-4 mt-2 px-8
@@ -94,7 +91,7 @@ import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
 import logo from '~/components/logo--small'
 import truncate from '~/utils/truncate'
-import iconForEvent from '~/utils/icon-for-event'
+import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 
 export default {
@@ -104,18 +101,13 @@ export default {
   },
   computed: {
     nextEvent() {
-      return this.$store.state.events.upcoming.reduce((previous, current) => {
-        const previousTime = previous.attributes.time.absolute
-        const currentTime = current.attributes.time.absolute
-        return previousTime < currentTime ? previous : current
-      })
+      return this.$store.state.events.upcoming[0]
     },
-    nextEventDescription() {
-      return truncate(this.nextEvent.attributes.description, 200)
+    groupForNextEvent() {
+      return groupForEvent(this.nextEvent, this.$store.state.groups.all)
     }
   },
   methods: {
-    iconForEvent,
     formatReadableDateTime
   }
 }
