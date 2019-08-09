@@ -32,32 +32,32 @@
           >
             <li
               v-popover="{
-                name: event.attributes.id
+                name: event.id
               }"
               v-for="event in eventsOnDay(day)"
-              :key="event.attributes.id"
+              :key="event.id"
               class="
                 block list-none mx-1 py-2 border-t border-blue
                 hover:bg-blue-lightest
               "
             >
               <a
-                :href="event.links.self"
+                :href="event.url"
                 class="w-full block no-underline text-blue-darker"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span v-if="iconForEvent(event)">
+                <span v-if="eventGroup(event)">
                   <logo
-                    v-if="iconForEvent(event)"
-                    :icon-set="iconForEvent(event).iconSet"
-                    :icon-name="iconForEvent(event).iconName"
-                    :icon-text="iconForEvent(event).iconText"
+                    v-if="eventGroup(event)"
+                    :icon-set="eventGroup(event).iconSet"
+                    :icon-name="eventGroup(event).iconName"
+                    :icon-text="eventGroup(event).iconText"
                     class="inline-block"
                   />
                 </span>
                 {{ formatTimeOfEvent(event) }}
-                <div class="mt-1">{{ eventName(event) }}</div>
+                <div class="mt-1">{{ eventGroup(event).name }}</div>
               </a>
               <transition
                 enter-active-class="transition-opacity"
@@ -66,14 +66,14 @@
                 leave-to-class="opacity-0"
               >
                 <popover
-                  :name="event.attributes.id"
+                  :name="event.id"
                   :width="225"
                   event="hover"
                   class="
                     text-blue-darker border border-blue shadow-md -mt-2 hidden
                   "
                 >
-                  <div>{{ event.attributes.name }}</div>
+                  <div>{{ event.name }}</div>
                 </popover>
               </transition>
             </li>
@@ -97,7 +97,7 @@ import {
 import chunk from 'lodash/chunk'
 import logo from '~/components/logo--extra-small'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
-import iconForEvent from '~/utils/icon-for-event'
+import groupForEvent from '~/utils/group-for-event'
 
 export default {
   components: {
@@ -116,9 +116,8 @@ export default {
       return startOfWeek(Date.now())
     },
     endDate() {
-      return endOfWeek(
-        this.events[this.events.length - 1].attributes.time.absolute
-      )
+      const lastEvent = this.events[this.events.length - 1]
+      return endOfWeek(lastEvent.startTime)
     },
     calendar() {
       const dates = []
@@ -133,12 +132,12 @@ export default {
     }
   },
   methods: {
-    eventName(event) {
-      return event.relationships.group.attributes.focus
+    eventGroup(event) {
+      return groupForEvent(event, this.$store.state.groups.all)
     },
     eventsOnDay(day) {
       return this.events.filter(event =>
-        isSameDay(new Date(event.attributes.time.absolute), day)
+        isSameDay(new Date(event.startTime), day)
       )
     },
     formatDayOfMonth(day) {
@@ -149,9 +148,9 @@ export default {
         : dayOfMonth
     },
     formatTimeOfEvent(event) {
-      const startMinutes = formatDate(event.attributes.time.absolute, 'm')
+      const startMinutes = formatDate(event.startTime, 'm')
       return formatDate(
-        event.attributes.time.absolute,
+        event.startTime,
         startMinutes === '0' ? 'h a' : 'h:mm a'
       )
     },
@@ -166,8 +165,7 @@ export default {
       const dayOfWeek = formatDate(day, 'E')
       return dayOfWeek <= 5
     },
-    formatDate,
-    iconForEvent
+    formatDate
   }
 }
 </script>

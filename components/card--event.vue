@@ -17,14 +17,13 @@
         "
       >
         <logo
-          v-if="icon"
-          :icon-set="icon.iconSet"
-          :icon-name="icon.iconName"
-          :icon-text="icon.iconText"
+          :icon-set="group.iconSet"
+          :icon-name="group.iconName"
+          :icon-text="group.iconText"
         />
         <h3 class="text-white m-0 ml-3">
           <a
-            :href="eventLink"
+            :href="event.url"
             rel="noreferrer noopener"
             target="_blank"
             class="
@@ -33,14 +32,14 @@
               focus:text-white focus:underline focus:bg-transparent
             "
           >
-            {{ eventName }}
+            {{ event.name }}
           </a>
         </h3>
       </div>
       <section
         class="text-sm mb-1 truncate"
-      >{{ group.attributes.name }}</section>
-      <section class="text-sm">{{ formatReadableDateTime(eventTime) }}</section>
+      >{{ group.name }}</section>
+      <section class="text-sm">{{ formatReadableDateTime(event.startTime) }}</section>
       <div
         class="triangle bg-white absolute cursor-pointer"
         @click="open = !open"
@@ -73,18 +72,18 @@
       >
         <div class="m-4 overflow-x-hidden">
           <div
-            v-if="venue && venue.name"
+            v-if="venue"
             class="mb-2 overflow-x-hidden"
           >
-            <p class="font-bold mb-1">{{ venue.name }}</p>
+            <p class="font-bold mb-1">{{ venue }}</p>
             <address
-              v-if="venue.address"
+              v-if="address"
               class="text-grey-darker roman"
-            >{{ venue.address }}</address>
+            >{{ address }}</address>
           </div>
           <div
             class="bg-transparent overflow-x-hidden"
-            v-html="eventDescription"
+            v-html="event.description"
           />
         </div>
       </div>
@@ -101,43 +100,13 @@ export default {
     logo
   },
   props: {
-    icon: {
+    event: {
       type: Object,
-      default: () => ({
-        iconSet: null,
-        iconName: null,
-        iconText: null
-      })
-    },
-    eventName: {
-      type: String,
-      required: true
-    },
-    eventLink: {
-      type: String,
-      required: true
-    },
-    eventTime: {
-      type: Number,
-      required: true
-    },
-    eventDescription: {
-      type: String,
       required: true
     },
     group: {
-      // e.g. {
-      //   name: 'Lansing Tech Demo Night'
-      // }
       type: Object,
       required: true
-    },
-    venue: {
-      type: Object,
-      default: () => ({
-        name: null,
-        address: null
-      })
     }
   },
   data() {
