@@ -11,15 +11,15 @@
       subheading="regular meetups to help you become a better coder"
       class="w-full lg:w-1/2 self-center"/>
     <card
-      v-for="meetup in meetups"
-      :key="meetup.heading"
-      :heading="meetup.heading"
-      :url="meetup.url"
-      :subheading="meetup.subheading"
-      :description="meetup.description"
-      :icon-set="meetup.iconSet"
-      :icon-name="meetup.iconName"
-      :icon-text="meetup.iconText"
+      v-for="group in groups"
+      :key="group.id"
+      :heading="group.name"
+      :url="group.url"
+      :subheading="group.schedule"
+      :description="group.description"
+      :icon-set="group.iconSet"
+      :icon-name="group.iconName"
+      :icon-text="group.iconText"
     />
   </section>
 </template>
@@ -27,16 +27,18 @@
 <script>
 import sectionHeading from '~/components/section-heading'
 import card from '~/components/card--figure'
-import meetups from '~/config/meetups'
+import orderBy from 'lodash/orderBy'
 
 export default {
   components: {
     card,
     sectionHeading
   },
-  data() {
-    return {
-      meetups
+  computed: {
+    groups() {
+      return orderBy(this.$store.state.groups.all, [
+        group => group.name.toLowerCase().replace(/[^a-z]/g, '')
+      ])
     }
   }
 }
