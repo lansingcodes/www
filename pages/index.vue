@@ -30,6 +30,7 @@ export default {
     // Load async data needed by the page here
     return Promise.all([
       store.dispatch('sponsors/loadAll'),
+      store.dispatch('groups/loadAll'),
       store.dispatch('events/loadUpcoming')
     ])
   }
