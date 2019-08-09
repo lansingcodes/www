@@ -26,9 +26,12 @@ export default {
     sponsors,
     newsletter
   },
-  async fetch({ store, params }) {
+  async fetch({ store }) {
     // Load async data needed by the page here
-    return store.dispatch('events/loadUpcoming')
+    return Promise.all([
+      store.dispatch('sponsors/loadAll'),
+      store.dispatch('events/loadUpcoming')
+    ])
   }
 }
 </script>

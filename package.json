@@ -14,6 +14,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@firebase/app": "^0.4.14",
+    "@firebase/firestore": "^1.4.9",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
@@ -26,7 +28,8 @@
     "npm": "^6.9.0",
     "nuxt": "^2.6.2",
     "vue-js-popover": "^1.1.8",
-    "vue-jsonp": "^0.1.8"
+    "vue-jsonp": "^0.1.8",
+    "vuexfire": "^3.1.2"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
