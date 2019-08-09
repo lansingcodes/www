@@ -6,6 +6,11 @@ const tailwindJS = join(__dirname, 'tailwind.js')
 module.exports = {
   mode: 'spa',
 
+  env: {
+    // access with process.env.firebaseWebConfig
+    firebaseWebConfig: JSON.parse(process.env.FIREBASE_WEB_CONFIG)
+  },
+
   router: {
     // According to the Nuxt docs, this is the default value of scrollBehavior:
     // https://nuxtjs.org/api/configuration-router#scrollbehavior

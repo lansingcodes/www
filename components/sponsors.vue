@@ -24,8 +24,8 @@
       :key="sponsor.name"
       :heading="sponsor.name"
       :url="sponsor.url"
-      :description="sponsor.desc"
-      :img-src="imgSrcForSponsor(sponsor)"
+      :description="sponsor.description"
+      :img-src="sponsor.logoUrl"
       :img-alt="sponsor.name + ' logo'"
       class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
     />
@@ -35,21 +35,15 @@
 <script>
 import sectionHeading from '~/components/section-heading'
 import card from '~/components/card--figure'
-import sponsors from '~/config/sponsors'
 
 export default {
   components: {
     card,
     sectionHeading
   },
-  data() {
-    return {
-      sponsors
-    }
-  },
-  methods: {
-    imgSrcForSponsor(sponsor) {
-      return require(`~/assets/images/sponsors/${sponsor.logo}`)
+  computed: {
+    sponsors() {
+      return this.$store.state.sponsors.all
     }
   }
 }

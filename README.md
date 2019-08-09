@@ -2,11 +2,45 @@
 
 > Lansing.Codes home page
 
+## Environment
+
+Before building for the first time, make sure the following environment
+variables are set appropriately.
+
+### `FIREBASE_WEB_CONFIG`
+
+This environment variable contains the stringified JSON used to connect to a
+specific Firebase environment. To get the value, open the Settings page for the
+appropriate Firebase project in a web browser, then click the `</>` icon at the
+bottom of the General tab.
+
+Use the following example as a means of generating the JSON string needed for
+this environment variable:
+
+``` js
+var firebaseConfig = {
+  apiKey: "AIzaSyAs3tRhDRFG2nmgiFgF1_qSeaqlNni6s-8",
+  authDomain: "lansingcodes-dev.firebaseapp.com",
+  databaseURL: "https://lansingcodes-dev.firebaseio.com",
+  projectId: "lansingcodes-dev",
+  storageBucket: "lansingcodes-dev.appspot.com",
+  messagingSenderId: "725470632533",
+  appId: "1:725470632533:web:1ef68567612adcb3"
+}
+
+JSON.stringify(firebaseConfig)
+```
+
+Copy the output and assign it to the `FIREBASE_WEB_CONFIG` environment variable,
+leaving out the surrounding `'` characters.
+
+The parsed JSON can be accessed with `process.env.firebaseWebConfig`.
+
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm ci
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
