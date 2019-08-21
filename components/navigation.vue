@@ -120,6 +120,8 @@
 </template>
 
 <script>
+import urls from '~/config/urls.json'
+
 export default {
   data() {
     return {
@@ -127,7 +129,7 @@ export default {
       links: [
         {
           name: 'Slack',
-          href: 'https://slack.lansing.codes/',
+          href: urls.slack,
           iconSet: ['fab', 'slack']
         },
         {

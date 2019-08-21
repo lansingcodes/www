@@ -21,6 +21,7 @@
         :title="link.name"
         :aria-label="link.name"
         class="inline-block mx-2 md:mx-4"
+        target="_blank"
       >
         <font-awesome-icon
           :icon="[link.iconSet, link.icon]"
@@ -33,6 +34,8 @@
 
 <script>
 import sectionHeading from '~/components/section-heading'
+import urls from '~/config/urls.json'
+
 export default {
   components: {
     sectionHeading
@@ -42,31 +45,31 @@ export default {
       links: [
         {
           name: 'Slack',
-          href: 'https://slack.lansing.codes/',
+          href: urls.slack,
           iconSet: 'fab',
           icon: 'slack'
         },
         {
           name: 'GitHub',
-          href: 'https://github.com/lansingcodes/',
+          href: urls.github,
           iconSet: 'fab',
           icon: 'github'
         },
         {
           name: 'Email',
-          href: 'mailto:lansingcodes@gmail.com',
+          href: urls.email,
           iconSet: 'fas',
           icon: 'envelope'
         },
         {
           name: 'Facebook',
-          href: 'https://www.facebook.com/LansingCodes/',
+          href: urls.facebook,
           iconSet: 'fab',
           icon: 'facebook'
         },
         {
           name: 'Twitter',
-          href: 'https://twitter.com/lansingcodes',
+          href: urls.twitter,
           iconSet: 'fab',
           icon: 'twitter'
         }
