@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'FontLansingCodes';
+  src: url('~assets/font-lansing-codes/font-lansing-codes.eot');
+  src: url('~assets/font-lansing-codes/font-lansing-codes.eot?#iefix') format('embedded-opentype'),
+       url('~assets/font-lansing-codes/font-lansing-codes.woff') format('woff'),
+       url('~assets/font-lansing-codes/font-lansing-codes.ttf') format('truetype'),
+       url('~assets/font-lansing-codes/font-lansing-codes.svg#font-lansing-codes') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'FontLansingCodes';
+    src: url('~assets/font-lansing-codes/font-lansing-codes.svg#font-lansing-codes') format('svg');
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-code-for-lansing:before {
+  display: inline-block;
+  font-family: 'FontLansingCodes';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-code-for-lansing:before { content: 'b'; }

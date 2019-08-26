@@ -137,7 +137,10 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/scss/tailwind.scss'],
+  css: [
+    '~/assets/scss/tailwind.scss',
+    '~/assets/font-lansing-codes/font-lansing-codes.css'
+  ],
 
   /*
   ** Plugins to load before mounting the App

@@ -19,6 +19,11 @@
       :class="iconName"
       class="inline text-md px-1"
     />
+    <span
+      v-else-if="iconSet === 'lansing-codes'"
+      :class="iconName"
+      class="inline text-md px-1"
+    />
     <font-awesome-icon
       v-else
       :icon="[iconSet, iconName]"
