@@ -22,7 +22,7 @@
     <span
       v-else-if="iconSet === 'lansing-codes'"
       :class="iconName"
-      class="text-6xl h-24 fa fa-4x pt-6"
+      class="text-6xl h-24 fa fa-4x pt-3"
     />
     <font-awesome-icon
       v-else
