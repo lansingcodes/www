@@ -1,5 +1,3 @@
-const pkg = require('./package')
-
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
 
