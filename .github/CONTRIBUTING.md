@@ -8,7 +8,9 @@ through these guidelines.
 - [Issue Reporting Guidelines](#issue-reporting-guidelines)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Development Setup](#development-setup)
-- [Project Structure](#project-structure)
+- [Customizing your environment](#customizing-your-environment)
+- [Build scripts](#build-scripts)
+- [Deployments](#deployments)
 
 ## Issue Reporting Guidelines
 
