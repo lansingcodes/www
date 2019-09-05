@@ -29,10 +29,10 @@ You'll run all of the commands provided in this guide in a terminal program
 If you're comfortable with using git, a terminal, node (npm), and VS Code,
 here's a quick list of the tools you'll need to run this project:
 
-* [git](https://git-scm.com/downloads)
-* [node and npm](https://nodejs.org/), although
+- [git](https://git-scm.com/downloads)
+- [node and npm](https://nodejs.org/), although
   [nvm](https://github.com/nvm-sh/nvm) is recommended for non-Windows users
-* [Visual Studio Code](https://code.visualstudio.com/) with these extensions:
+- [Visual Studio Code](https://code.visualstudio.com/) with these extensions:
   - Better TOML by bungcip
   - Bracket Pair Colorizer by CoenraadS
   - EditorConfig for VS Code by EditorConfig
@@ -222,21 +222,37 @@ leaving out the surrounding `'` characters.
 
 The parsed JSON can be accessed with `process.env.firebaseWebConfig`.
 
-## Build Setup
+## Build setup
 
-``` bash
-# install dependencies
-$ npm install
+`npm` is the tool used to initiate all of the build setup and steps for this
+project. All `npm run` scripts are in `package.json`.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+To install dependencies, run:
 
-# build for production and launch server
-$ npm run build
-$ npm start
+``` sh
+npm install
+```
 
-# generate static project
-$ npm run generate
+To build and run (with hot reload) the site on your computer at
+http://localhost:3000, run:
+
+``` sh
+npm run dev
+```
+
+To build the project for an external web server, run the command below. The
+built files can be found in `/dist` and served with any static web server.
+
+``` sh
+npm run build
+```
+
+To verify your code passes the project's linting rules, run the command below.
+This command automatically runs before every `git commit` for the project as
+well.
+
+```
+npm run lint
 ```
 
 ## Deployments
@@ -267,3 +283,29 @@ your changes.
 
 The primary Humanity Codes account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
+
+## Questions
+
+For general support, direct your questions to the
+[Lansing Codes Slack team](http://slack.lansing.codes). The issue list for this
+project is exclusively for bug reports and feature requests.
+
+## Stay in touch
+
+- [Slack](http://slack.lansing.codes)
+- [Twitter](https://twitter.com/lansingcodes)
+- [Facebook](https://www.facebook.com/lansingcodes)
+- [Website](https://www.lansing.codes)
+- [Newsletter](http://bit.ly/lansing-codes-newsletter)
+
+## Contribution
+
+Please make sure to read the
+[Contributing Guide](https://github.com/lansingcodes/www/blob/master/.github/CONTRIBUTING.md)
+before making a pull request.
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2015-present, Humanity Codes LLC

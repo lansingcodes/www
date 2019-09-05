@@ -3,6 +3,20 @@
   "version": "1.0.0",
   "description": "Lansing.Codes home page",
   "author": "Humanity Codes LLC",
+  "contributors": [
+    "Brandon Mellus",
+    "Bret Self",
+    "Chris Fritz",
+    "Davis Crain",
+    "Eric Slenk",
+    "Erik Gillespie <erik.gillespie@gmail.com>",
+    "Joe Ryan",
+    "Jon Kitson",
+    "Katie Fritz",
+    "Kent Yunge",
+    "Patrick Hawkins",
+    "Tamas Vigh"
+  ],
   "private": true,
   "scripts": {
     "dev": "nuxt",
