@@ -10,7 +10,7 @@ export default [
   },
   {
     title: 'freeCodeCamp',
-    url: 'https://www.facebook.com/groups/free.code.camp.lansing/',
+    url: 'https://www.freecodecamp.org/',
     desc: `
       A community that works to help people learn to code and gain experience
       contributing to open source projects used by non-profits. Learn to code
