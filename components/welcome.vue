@@ -101,7 +101,10 @@ export default {
   },
   computed: {
     nextEvent() {
-      return this.$store.state.events.upcoming[0]
+      var upcoming = this.$store.state.events.upcoming.filter(
+        event => event.startTime > Date.now()
+      )
+      return upcoming[0]
     },
     groupForNextEvent() {
       return groupForEvent(this.nextEvent, this.$store.state.groups.all)
