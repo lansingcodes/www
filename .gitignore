@@ -85,3 +85,5 @@ dist
 
 # Ignore when people install with Yarn
 yarn.lock
+/.vscode
+/.vs
