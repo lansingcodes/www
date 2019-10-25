@@ -30,53 +30,12 @@
             v-if="isDuringActivePeriod(day)"
             class="m-0 p-0"
           >
-            <li
-              v-popover="{
-                name: event.id
-              }"
-              v-for="event in eventsOnDay(day)"
-              :key="event.id"
-              class="
-                block list-none mx-1 py-2 border-t border-blue
-                hover:bg-blue-lightest
-              "
-            >
-              <a
-                :href="event.url"
-                class="w-full block no-underline text-blue-darker"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span v-if="eventGroup(event)">
-                  <logo
-                    v-if="eventGroup(event)"
-                    :icon-set="eventGroup(event).iconSet"
-                    :icon-name="eventGroup(event).iconName"
-                    :icon-text="eventGroup(event).iconText"
-                    class="inline-block"
-                  />
-                </span>
-                {{ formatTimeOfEvent(event) }}
-                <div class="mt-1">{{ eventGroup(event).name }}</div>
-              </a>
-              <transition
-                enter-active-class="transition-opacity"
-                enter-class="opacity-0"
-                leave-active-class="transition-opacity"
-                leave-to-class="opacity-0"
-              >
-                <popover
-                  :name="event.id"
-                  :width="225"
-                  event="hover"
-                  class="
-                    text-blue-darker border border-blue shadow-md -mt-2 hidden
-                  "
-                >
-                  <div>{{ event.name }}</div>
-                </popover>
-              </transition>
-            </li>
+            <calendar-event
+              v-for="groupEvents in eventsOnDay(day)"
+              :key="groupEvents.id"
+              :first-event="groupsFirstEventOnDay(groupEvents)"
+              :additional-events="otherEventsForGroupOnDay(groupEvents)"
+            />
           </ul>
         </div>
       </div>
@@ -95,13 +54,13 @@ import {
   format as formatDate
 } from 'date-fns'
 import chunk from 'lodash/chunk'
-import logo from '~/components/logo--extra-small'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import groupForEvent from '~/utils/group-for-event'
+import calendarEvent from '~/components/calendar--event'
 
 export default {
   components: {
-    logo
+    calendarEvent
   },
   data() {
     return {
@@ -132,13 +91,30 @@ export default {
     }
   },
   methods: {
-    eventGroup(event) {
-      return groupForEvent(event, this.$store.state.groups.all)
-    },
     eventsOnDay(day) {
-      return this.events.filter(event =>
+      // get the events on this day
+      var events = this.events.filter(event =>
         isSameDay(new Date(event.startTime), day)
       )
+
+      var results = events.reduce(function(acc, obj) {
+        var key = obj['group']
+
+        if (!acc[key]) {
+          acc[key] = []
+        }
+
+        acc[key].push(obj)
+        return acc
+      }, {})
+
+      return results
+    },
+    groupsFirstEventOnDay(groupEvents) {
+      return groupEvents[0]
+    },
+    otherEventsForGroupOnDay(groupEvents) {
+      return groupEvents.slice(1, groupEvents.length)
     },
     formatDayOfMonth(day) {
       const dayOfMonth = formatDate(day, 'D')
@@ -146,13 +122,6 @@ export default {
       return dayOfMonth === '1' || isStartDate
         ? formatDate(day, 'MMM D')
         : dayOfMonth
-    },
-    formatTimeOfEvent(event) {
-      const startMinutes = formatDate(event.startTime, 'm')
-      return formatDate(
-        event.startTime,
-        startMinutes === '0' ? 'h a' : 'h:mm a'
-      )
     },
     isDuringActivePeriod(day) {
       const now = Date.now()
