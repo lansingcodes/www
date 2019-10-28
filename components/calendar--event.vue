@@ -28,18 +28,14 @@
       <div
         v-if="additionalEvents.length > 0"
         class="text-sm">
-        <i>also:
+        <aside class="italic">also:
           <span
             v-for="(event, index) in additionalEvents"
             :key="event.id">
-            <span v-if="index == 0">
-              {{ formatTimeOfEvent(event) }}
-            </span>
-            <span v-else>
-              , {{ formatTimeOfEvent(event) }}
-            </span>
+            <span v-if="index == 0">{{ formatTimeOfEvent(event) }}</span>
+            <span v-else>, {{ formatTimeOfEvent(event) }}</span>
           </span>
-        </i>
+        </aside>
       </div>
     </a>
     <transition
@@ -58,11 +54,13 @@
       >
         <ul class="m-0 p-0">
           <li
-            v-for="detail in allEvents(firstEvent, additionalEvents)"
+            v-for="(detail, index) in allEvents(firstEvent, additionalEvents)"
             :key="detail.id"
+            :class="{
+              'border-t': index > 0
+            }"
             class="
-              block list-none mx-1 py-2 border-t border-blue
-              hover:bg-blue-lightest
+              block list-none mx-1 py-2 border-blue hover:bg-blue-lightest
             "
           >
             <a
@@ -71,7 +69,7 @@
               target="_blank"
               rel="noreferrer noopener"
             >
-              {{ formatTimeOfEvent(detail) }} {{ detail.name }}
+              <span v-if="additionalEvents.length > 0">{{ formatTimeOfEvent(detail) }} </span>{{ detail.name }}
             </a>
           </li>
         </ul>
