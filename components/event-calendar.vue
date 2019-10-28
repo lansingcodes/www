@@ -33,8 +33,8 @@
             <calendar-event
               v-for="groupEvents in eventsOnDay(day)"
               :key="groupEvents.id"
-              :first-event="groupsFirstEventOnDay(groupEvents)"
-              :additional-events="otherEventsForGroupOnDay(groupEvents)"
+              :first-event="firstEvent(groupEvents)"
+              :additional-events="otherEvents(groupEvents)"
             />
           </ul>
         </div>
@@ -93,12 +93,12 @@ export default {
   methods: {
     eventsOnDay(day) {
       // get the events on this day
-      var events = this.events.filter(event =>
+      const events = this.events.filter(event =>
         isSameDay(new Date(event.startTime), day)
       )
 
-      var results = events.reduce(function(acc, obj) {
-        var key = obj['group']
+      const results = events.reduce(function(acc, obj) {
+        const key = obj['group']
 
         if (!acc[key]) {
           acc[key] = []
@@ -110,10 +110,10 @@ export default {
 
       return results
     },
-    groupsFirstEventOnDay(groupEvents) {
+    firstEvent(groupEvents) {
       return groupEvents[0]
     },
-    otherEventsForGroupOnDay(groupEvents) {
+    otherEvents(groupEvents) {
       return groupEvents.slice(1, groupEvents.length)
     },
     formatDayOfMonth(day) {
