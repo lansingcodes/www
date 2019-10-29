@@ -31,6 +31,6 @@ Before you get ahead of yourself, though, please read our
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT - Hippocratic](https://firstdonoharm.dev)
 
 Copyright (c) 2015-present, Humanity Codes LLC
