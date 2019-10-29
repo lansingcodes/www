@@ -19,6 +19,7 @@
     "Meg Blaha",
     "Adam Broadbent"
   ],
+  "license": "MIT - Hippocratic",
   "private": true,
   "scripts": {
     "dev": "nuxt",
