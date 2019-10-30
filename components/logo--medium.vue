@@ -14,11 +14,18 @@
       v-else-if="iconText"
       class="font-bold font-sans inline-block text-5xl h-24 pt-5"
     >{{ iconText }}</span>
-    <span
+    <!--
+    The mfizz icons are added as ::before the span that contains it. This
+    div provides a wrapper to style.
+    -->
+    <div
       v-else-if="iconSet === 'mfizz'"
-      :class="iconName"
       class="text-6xl h-24 fa fa-3x pt-6"
-    />
+    >
+      <span
+        :class="iconName"
+      />
+    </div>
     <span
       v-else-if="iconSet === 'lansing-codes'"
       :class="iconName"
