@@ -48,7 +48,7 @@
           focus:outline-none
         "
         type="button"
-        aria-controls="navbarSupportedContent"
+        aria-controls="navBarSupportedContentWrapper"
         @click="open = !open"
       >
         <font-awesome-icon
@@ -59,63 +59,67 @@
       </button>
     </div>
 
-    <transition
-      enter-active-class="transition-all"
-      enter-class="slide-up-full"
-      leave-active-class="transition-all"
-      leave-to-class="slide-up-full"
+    <div
+      id="navBarSupportedContentWrapper"
     >
-      <div
-        v-if="open"
-        id="navBarSupportedContent"
-        key="menu"
-        class="
-          static block lg:hidden fixed pin-b pin-x z-30 p-4 pb-0
-          border-blue border-t-2 bg-white font-medium
-        "
+      <transition
+        enter-active-class="transition-all"
+        enter-class="slide-up-full"
+        leave-active-class="transition-all"
+        leave-to-class="slide-up-full"
       >
-        <div>
-          <ul class="bullet-none mr-24 p-0">
-            <li class="text-right">
-              <a
-                href="/#welcome"
-                class="
-                  inline-block no-underline uppercase mb-4 leading-tight
-                "
-                @click="open = false"
+        <div
+          v-if="open"
+          id="navBarSupportedContent"
+          key="menu"
+          class="
+            static block lg:hidden fixed pin-b pin-x z-30 p-4 pb-0
+            border-blue border-t-2 bg-white font-medium
+          "
+        >
+          <div>
+            <ul class="bullet-none mr-24 p-0">
+              <li class="text-right">
+                <a
+                  href="/#welcome"
+                  class="
+                    inline-block no-underline uppercase mb-4 leading-tight
+                  "
+                  @click="open = false"
+                >
+                  To Top
+                  <font-awesome-icon
+                    :icon="['fas', 'arrow-up']"
+                    fixed-width
+                    class="leading-tight"
+                  />
+                </a>
+              </li>
+              <li
+                v-for="link in links"
+                :key="link.name"
+                class="text-right"
               >
-                To Top
-                <font-awesome-icon
-                  :icon="['fas', 'arrow-up']"
-                  fixed-width
-                  class="leading-tight"
-                />
-              </a>
-            </li>
-            <li
-              v-for="link in links"
-              :key="link.name"
-              class="text-right"
-            >
-              <a
-                :href="link.href"
-                class="
-                  inline-block no-underline uppercase mb-4 leading-tight
-                "
-                @click="open = false"
-              >
-                {{ link.name }}
-                <font-awesome-icon
-                  :icon="link.iconSet"
-                  fixed-width
-                  class="leading-tight"
-                />
-              </a>
-            </li>
-          </ul>
+                <a
+                  :href="link.href"
+                  class="
+                    inline-block no-underline uppercase mb-4 leading-tight
+                  "
+                  @click="open = false"
+                >
+                  {{ link.name }}
+                  <font-awesome-icon
+                    :icon="link.iconSet"
+                    fixed-width
+                    class="leading-tight"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </nav>
 </template>
 
