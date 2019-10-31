@@ -13,11 +13,21 @@
       class="md:mb-16 self-end w-full md:w-1/3"
     />
     <div class="hidden md:block md:mb-16 md:w-2/3">
-      <img
-        src="../assets/images/sponsors-feature.jpg"
-        alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
-        class="ml-8 mb-8 block shadow-lg"
-      >
+      <picture>
+        <source
+          srcset="../assets/images/sponsors-feature.webp"
+          type="image/webp"
+        >
+        <source
+          srcset="../assets/images/sponsors-feature.jpg"
+          type="image/jpeg"
+        >
+        <img
+          src="../assets/images/sponsors-feature.jpg"
+          alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
+          class="ml-8 mb-8 block shadow-lg"
+        >
+      </picture>
     </div>
     <card
       v-for="sponsor in sponsors"
