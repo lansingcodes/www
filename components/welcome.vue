@@ -90,7 +90,6 @@
 import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
 import logo from '~/components/logo--small'
-import truncate from '~/utils/truncate'
 import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 
