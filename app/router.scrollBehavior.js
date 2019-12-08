@@ -2,7 +2,7 @@
 // https://nuxtjs.org/api/configuration-router#scrollbehavior
 // Without this explicitly provided, though, using the back button in
 // Chrome does not work when navigating different sections of the page.
-export default function (to, from, savedPosition) {
+export default function(to, from, savedPosition) {
   // if the returned position is falsy or an empty object,
   // will retain current scroll position.
   let position = false
