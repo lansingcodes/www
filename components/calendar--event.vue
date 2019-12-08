@@ -14,9 +14,15 @@
       target="_blank"
       rel="noreferrer noopener"
     >
-      <span v-if="eventGroup(firstEvent)">
+      <span v-if="type === 'community'">
+        <img
+          class="align-text-bottom max-h-full w-5"
+          src="../assets/images/icon-tall-square-fixed-300-transparent.png"
+          alt="Lansing Codes logo"
+        >
+      </span>
+      <span v-else-if="eventGroup(firstEvent)">
         <logo
-          v-if="eventGroup(firstEvent)"
           :icon-set="eventGroup(firstEvent).iconSet"
           :icon-name="eventGroup(firstEvent).iconName"
           :icon-text="eventGroup(firstEvent).iconText"
@@ -24,17 +30,26 @@
         />
       </span>
       {{ formatTimeOfEvent(firstEvent) }}
-      <div class="mt-1">{{ eventGroup(firstEvent).name }}</div>
       <div
-        v-if="additionalEvents.length > 0"
+        v-if="type === 'community'"
+        class="mt-1"
+      >{{ firstEvent.name }}</div>
+      <div
+        v-else
+        class="mt-1"
+      >{{ eventGroup(firstEvent).name }}</div>
+      <div
+        v-if="type === 'group'"
         class="text-sm">
-        <aside class="italic">also:
-          <span
-            v-for="(event, index) in additionalEvents"
-            :key="event.id">
-            <span v-if="index == 0">{{ formatTimeOfEvent(event) }}</span>
-            <span v-else>, {{ formatTimeOfEvent(event) }}</span>
-          </span>
+        <aside class="italic">
+          also: {{ formatTimesOfAdditionalEvents() }}
+        </aside>
+      </div>
+      <div
+        v-else-if="type === 'community'"
+        class="text-sm">
+        <aside class="italic">
+          {{ events.length }} groups
         </aside>
       </div>
     </a>
@@ -54,8 +69,8 @@
       >
         <ul class="m-0 p-0">
           <li
-            v-for="(detail, index) in allEvents(firstEvent, additionalEvents)"
-            :key="detail.id"
+            v-for="(event, index) in sortedEvents"
+            :key="event.id"
             :class="{
               'border-t': index > 0
             }"
@@ -64,12 +79,26 @@
             "
           >
             <a
-              :href="detail.url"
+              :href="event.url"
               class="w-full block no-underline text-blue-darker"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <span v-if="additionalEvents.length > 0">{{ formatTimeOfEvent(detail) }} </span>{{ detail.name }}
+              <span v-if="type === 'community'">
+                <logo
+                  :icon-set="eventGroup(event).iconSet"
+                  :icon-name="eventGroup(event).iconName"
+                  :icon-text="eventGroup(event).iconText"
+                  class="inline-block"
+                />
+                {{ eventGroup(event).name }}
+              </span>
+              <span v-else-if="type === 'group'">
+                {{ formatTimeOfEvent(event) }} {{ event.name }}
+              </span>
+              <span v-else>
+                {{ event.name }}
+              </span>
             </a>
           </li>
         </ul>
@@ -82,17 +111,21 @@
 import { format as formatDate } from 'date-fns'
 import groupForEvent from '~/utils/group-for-event'
 import logo from '~/components/logo--extra-small'
+import orderBy from 'lodash/orderBy'
 
 export default {
   components: {
     logo
   },
   props: {
-    firstEvent: {
-      type: Object,
-      required: true
+    type: {
+      type: String,
+      required: true,
+      validator(value) {
+        return ['single', 'community', 'group'].includes(value)
+      }
     },
-    additionalEvents: {
+    events: {
       type: Array,
       required: true
     }
@@ -102,11 +135,27 @@ export default {
       open: false
     }
   },
-  methods: {
-    allEvents(firstEvent, additionalEvents) {
-      var firstArray = [firstEvent]
-      return firstArray.concat(additionalEvents)
+  computed: {
+    firstEvent() {
+      return this.events[0]
     },
+    additionalEvents() {
+      return this.events.slice(1)
+    },
+    sortedEvents() {
+      if (this.type === 'community') {
+        return orderBy(this.events, [
+          event =>
+            this.eventGroup(event)
+              .name.toLowerCase()
+              .replace(/[^a-z]/g, '')
+        ])
+      }
+      return this.events
+    }
+  },
+  methods: {
+    formatDate,
     eventGroup(event) {
       return groupForEvent(event, this.$store.state.groups.all)
     },
@@ -117,7 +166,11 @@ export default {
         startMinutes === '0' ? 'h a' : 'h:mm a'
       )
     },
-    formatDate
+    formatTimesOfAdditionalEvents() {
+      return this.additionalEvents
+        .map(event => this.formatTimeOfEvent(event))
+        .join(',')
+    }
   }
 }
 </script>

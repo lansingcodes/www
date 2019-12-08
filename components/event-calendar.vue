@@ -31,10 +31,10 @@
             class="m-0 p-0"
           >
             <calendar-event
-              v-for="groupEvents in eventsOnDay(day)"
-              :key="groupEvents.id"
-              :first-event="firstEvent(groupEvents)"
-              :additional-events="otherEvents(groupEvents)"
+              v-for="(entry, index) in eventsOnDay(day)"
+              :key="index"
+              :type="entry.type"
+              :events="entry.events"
             />
           </ul>
         </div>
@@ -56,6 +56,7 @@ import {
 import chunk from 'lodash/chunk'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import groupForEvent from '~/utils/group-for-event'
+import simplifiedName from '~/utils/simplified-name'
 import calendarEvent from '~/components/calendar--event'
 
 export default {
@@ -91,24 +92,58 @@ export default {
     }
   },
   methods: {
+    formatDate,
     eventsOnDay(day) {
-      // get the events on this day
-      const events = this.events.filter(event =>
-        isSameDay(new Date(event.startTime), day)
-      )
+      // Get the events on this day, then reduce into stand-alone events,
+      // community-wide events, and multiple group events on same day.
+      // Each element in the resulting arry has this structure:
+      //  {
+      //    type: 'single' || 'community' || 'group',
+      //    events: [...]
+      //  }
+      return this.events
+        .filter(event => isSameDay(new Date(event.startTime), day))
+        .reduce((events, event) => {
+          // 1. Look for community event candidates
+          //  - Must be stand-alone (single) event or already a community event
+          //  - Start time must match
+          //  - Simplified name must match
+          const communityEvent = events.find(candidate => {
+            const firstEvent = candidate.events[0]
+            return (
+              ['single', 'community'].includes(candidate.type) &&
+              firstEvent.startTime === event.startTime &&
+              simplifiedName(event.name) === simplifiedName(firstEvent.name)
+            )
+          })
+          if (communityEvent) {
+            communityEvent.type = 'community'
+            communityEvent.events.push(event)
+            return events
+          }
 
-      const results = events.reduce(function(acc, obj) {
-        const key = obj['group']
+          // 2. Look for group event candidates
+          //  - Must be stand-alone (single) event or already a group event
+          //  - Group must match
+          const groupEvent = events.find(candidate => {
+            return (
+              ['single', 'group'].includes(candidate.type) &&
+              candidate.events[0].group === event.group
+            )
+          })
+          if (groupEvent) {
+            groupEvent.type = 'group'
+            groupEvent.events.push(event)
+            return events
+          }
 
-        if (!acc[key]) {
-          acc[key] = []
-        }
-
-        acc[key].push(obj)
-        return acc
-      }, {})
-
-      return results
+          // 3. Add a stand-alone (single) event
+          events.push({
+            type: 'single',
+            events: [event]
+          })
+          return events
+        }, [])
     },
     firstEvent(groupEvents) {
       return groupEvents[0]
@@ -133,8 +168,7 @@ export default {
     isWeekday(day) {
       const dayOfWeek = formatDate(day, 'E')
       return dayOfWeek <= 5
-    },
-    formatDate
+    }
   }
 }
 </script>
