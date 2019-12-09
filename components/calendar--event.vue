@@ -49,7 +49,7 @@
         v-else-if="type === 'community'"
         class="text-sm">
         <aside class="italic">
-          {{ events.length }} groups
+          {{ events.length }} ways to join
         </aside>
       </div>
     </a>
