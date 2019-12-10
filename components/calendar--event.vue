@@ -15,11 +15,11 @@
       rel="noreferrer noopener"
     >
       <span v-if="type === 'community'">
-        <img
-          class="align-text-bottom max-h-full w-5"
-          src="../assets/images/icon-tall-square-fixed-300-transparent.png"
-          alt="Lansing Codes logo"
-        >
+        <logo
+          icon-set="lansing-codes"
+          icon-name="icon-lansing-codes-logo"
+          class="inline-block"
+        />
       </span>
       <span v-else-if="eventGroup(firstEvent)">
         <logo
