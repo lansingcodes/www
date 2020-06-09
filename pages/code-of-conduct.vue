@@ -1,14 +1,20 @@
 <template>
-  <article class="lc-code-of-conduct px-4 md:px-12 max-w-lg mx-auto">
-    <header class="my-16 sm:mt-32">
-      <h1 class="text-center uppercase text-4xl">
-        Lansing Codes
-        <span class="block">
-          Code of Conduct
-        </span>
-      </h1>
+  <article class="lc-code-of-conduct">
+    <header>
+      <div class="py-16 lg:pt-32 lc-bg-ltr-gradient bg-transparent">
+        <h1 class="uppercase text-center text-white">
+          <span class="text-5xl">
+            Lansing Codes
+          </span>
+          <hr class="border-white border-4 my-6 w-16">
+          <span class="block text-4xl">
+            Code of Conduct
+          </span>
+        </h1>
+      </div>
+      <div class="lc-bg-down-triangle bg-white h-32 -mt-16"/>
     </header>
-    <section class="my-16">
+    <section class="px-4 md:px-12 mb-16 max-w-lg mx-auto">
       <h2 id="our-pledge">Our Pledge</h2>
       <p>
         We as members, contributors, and leaders pledge to make participation in our
@@ -82,7 +88,10 @@
       <p>
         Instances of abusive, harassing, or otherwise unacceptable behavior may be
         reported to the community leaders responsible for enforcement at
-        <a href="mailto:lansingcodes@gmail.com">lansingcodes@gmail.com</a>.
+        <a
+          href="mailto:lansingcodes@gmail.com"
+          target="_blank"
+        >lansingcodes@gmail.com</a>.
         All complaints will be reviewed and investigated promptly and fairly.
       </p>
       <p>
@@ -142,27 +151,29 @@
       <h2 id="attribution">Attribution</h2>
       <p>
         This Code of Conduct is adapted from the
-        <a href="https://www.contributor-covenant.org">Contributor Covenant</a>,
-        version 2.0, available at
         <a
           href="https://www.contributor-covenant.org/version/2/0/code_of_conduct.html"
-        >https://www.contributor-covenant.org/version/2/0/code_of_conduct.html</a>.
+          target="_blank"
+        >Contributor Covenant, version 2.0</a>.
       </p>
       <p>
         Community Impact Guidelines were inspired by
-        <a href="https://github.com/mozilla/diversity">
-          Mozilla&rsquo;s code of conduct
-          enforcement ladder
-        </a>.
+        <a
+          href="https://github.com/mozilla/diversity"
+          target="_blank"
+        >Mozilla's Code of Conduct Enforcement Ladder</a>.
       </p>
       <p>
         For answers to common questions about this code of conduct, see the FAQ at
         <a
           href="https://www.contributor-covenant.org/faq"
-        >https://www.contributor-covenant.org/faq</a>. Translations are available at
+          target="_blank"
+        >contributor-covenant.org/faq</a>.
+        Translations are available at
         <a
           href="https://www.contributor-covenant.org/translations"
-        >https://www.contributor-covenant.org/translations</a>.
+          target="_blank"
+        >contributor-covenant.org/translations</a>.
       </p>
     </section>
   </article>

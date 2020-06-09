@@ -69,4 +69,26 @@ p {
   width: 1px;
   white-space: nowrap;
 }
+
+.lc-bg-ltr-gradient {
+  background: linear-gradient(to right, #2979bf, #005198);
+}
+
+.lc-bg-right-triangle {
+  background-image: url(../assets/images/bg/right-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.lc-bg-left-triangle {
+  background-image: url(../assets/images/bg/left-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.lc-bg-down-triangle {
+  background-image: url(../assets/images/bg/down-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 </style>
