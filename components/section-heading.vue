@@ -21,7 +21,8 @@
     </p>
     <hr
       :class="{ 'border-grey-darker' : grey, 'border-white': white, 'border-blue': blue }"
-      class="border-4 my-6 w-16 ">
+      class="border-4 my-6 w-16"
+    >
   </header>
 </template>
 
