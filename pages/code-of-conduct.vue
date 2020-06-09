@@ -1,9 +1,14 @@
 <template>
-  <article>
-    <header class="py-16 sm:py-32">
-      <h1>Lansing Codes Code of Conduct</h1>
+  <article class="lc-code-of-conduct px-4 md:px-12 max-w-lg mx-auto">
+    <header class="my-16 sm:mt-32">
+      <h1 class="text-center uppercase text-4xl">
+        Lansing Codes
+        <span class="block">
+          Code of Conduct
+        </span>
+      </h1>
     </header>
-    <section>
+    <section class="my-16">
       <h2 id="our-pledge">Our Pledge</h2>
       <p>
         We as members, contributors, and leaders pledge to make participation in our
@@ -77,7 +82,7 @@
       <p>
         Instances of abusive, harassing, or otherwise unacceptable behavior may be
         reported to the community leaders responsible for enforcement at
-        [INSERT CONTACT METHOD].
+        <a href="mailto:lansingcodes@gmail.com">lansingcodes@gmail.com</a>.
         All complaints will be reviewed and investigated promptly and fairly.
       </p>
       <p>
@@ -164,5 +169,28 @@
 </template>
 
 <script>
-export default {}
+import sectionHeading from '~/components/section-heading'
+import urls from '~/config/urls.json'
+
+export default {
+  components: {
+    sectionHeading
+  }
+}
 </script>
+
+<style lang="scss">
+.lc-code-of-conduct {
+  h2 {
+    @apply .mt-12 .mb-4 .text-3xl .text-blue;
+  }
+
+  p {
+    @apply .leading-tight;
+  }
+
+  li {
+    @apply .mb-2;
+  }
+}
+</style>
