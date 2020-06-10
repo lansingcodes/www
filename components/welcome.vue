@@ -4,27 +4,46 @@
     class="lc-background-image py-16 sm:py-32"
   >
     <div class="flex flex-wrap justify-center">
-      <section
+      <nav
         class="
           flex-none w-full sm:w-1/2 sm:max-w-sm overflow-hidden sm:shadow-lg
-          bg-white text-center p-8 sm:mb-24
+          bg-white text-center py-8 px-6 sm:mb-24
         "
       >
-        <section-heading
-          h1
-          blue
-          heading="Lansing Codes"
-          subheading="Events and resources for Lansing coders"
-        />
-        <p class="mt-0 mb-4">
-          For those who code or aspire to, professionally or as a hobby
-        </p>
         <img
           class="h-32 w-32"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
         >
-      </section>
+        <section-heading
+          h1
+          blue
+          heading="Lansing Codes"
+          subheading="events and resources for Lansing coders"
+        />
+        <ul class="flex flex-wrap justify-center list-reset mt-0 mb-4 font-medium">
+          <li
+            v-for="link in links"
+            :key="link.name"
+            class="w-1/2"
+          >
+            <a
+              :href="link.href"
+              class="
+                inline-block no-underline uppercase mb-4 leading-tight
+              "
+              @click="open = false"
+            >
+              <font-awesome-icon
+                :icon="link.iconSet"
+                fixed-width
+                class="leading-tight mr-1"
+              />
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
+      </nav>
 
       <section
         class="
@@ -92,11 +111,48 @@ import sectionHeading from '~/components/section-heading'
 import logo from '~/components/logo--small'
 import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
+import urls from '~/config/urls.json'
 
 export default {
   components: {
     logo,
     sectionHeading
+  },
+  data() {
+    return {
+      links: [
+        {
+          name: 'Slack',
+          href: urls.slack,
+          iconSet: ['fab', 'slack']
+        },
+        {
+          name: 'Events',
+          href: '#events',
+          iconSet: ['far', 'calendar-alt']
+        },
+        {
+          name: 'Groups',
+          href: '#meetups',
+          iconSet: ['far', 'handshake']
+        },
+        {
+          name: 'Resources',
+          href: '#resources',
+          iconSet: ['fas', 'school']
+        },
+        {
+          name: 'Sponsors',
+          href: '#sponsors',
+          iconSet: ['fas', 'hand-holding-heart']
+        },
+        {
+          name: 'Newsletter',
+          href: '#newsletter',
+          iconSet: ['fas', 'envelope']
+        }
+      ]
+    }
   },
   computed: {
     nextEvent() {
