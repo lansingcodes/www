@@ -81,7 +81,7 @@
             <ul class="bullet-none mr-24 p-0">
               <li class="text-right">
                 <a
-                  href="/#welcome"
+                  href="#mainContent"
                   class="
                     inline-block no-underline uppercase mb-4 leading-tight
                   "
@@ -132,39 +132,24 @@ export default {
       open: false,
       links: [
         {
+          name: 'Home',
+          href: '/',
+          iconSet: ['fas', 'home']
+        },
+        {
           name: 'Slack',
           href: urls.slack,
           iconSet: ['fab', 'slack']
         },
         {
-          name: 'Calendar',
-          href: '/#events',
-          iconSet: ['far', 'calendar-alt']
-        },
-        {
-          name: 'Meetups',
-          href: '/#meetups',
-          iconSet: ['far', 'handshake']
-        },
-        {
-          name: 'Beginners',
-          href: '/#resources',
-          iconSet: ['fas', 'school']
-        },
-        {
-          name: 'Sponsors',
-          href: '/#sponsors',
-          iconSet: ['fas', 'hand-holding-heart']
-        },
-        {
-          name: 'Newsletter',
-          href: '/#newsletter',
-          iconSet: ['fas', 'envelope']
-        },
-        {
           name: 'Contact',
-          href: '/#contact',
+          href: '#contact',
           iconSet: ['far', 'thumbs-up']
+        },
+        {
+          name: 'Code of Conduct',
+          href: '/code-of-conduct',
+          iconSet: ['fas', 'shield-alt']
         }
       ]
     }
