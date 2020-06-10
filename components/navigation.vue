@@ -142,14 +142,14 @@ export default {
           iconSet: ['fab', 'slack']
         },
         {
-          name: 'Contact',
-          href: '#contact',
-          iconSet: ['far', 'thumbs-up']
-        },
-        {
           name: 'Code of Conduct',
           href: '/code-of-conduct',
           iconSet: ['fas', 'shield-alt']
+        },
+        {
+          name: 'Contact',
+          href: '#contact',
+          iconSet: ['far', 'thumbs-up']
         }
       ]
     }
