@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="
-      flex flex-wrap align-start justify-around
-    "
-  >
+  <div class="flex flex-wrap align-start justify-around px-4">
     <event-card
       v-for="event in events"
       :key="event.id"
