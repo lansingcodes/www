@@ -7,19 +7,25 @@
       "
     >
       <!-- Logo -->
-      <div class="flex items-center flex-no-shrink text-blue-dark">
+      <a
+        href="/"
+        class="
+          flex items-center flex-no-shrink text-blue-dark
+          no-underline hover:text-blue-dark
+        "
+      >
         <img
           class="h-12 mr-2"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
         >
         <span class="font-bold text-xl uppercase">Lansing Codes</span>
-      </div>
+      </a>
 
       <!-- Desktop Links -->
       <div class="block text-base flex-grow text-right font-medium">
         <a
-          v-for="(link, index) in links"
+          v-for="(link, index) in topLinks"
           :key="link.name"
           :href="link.href"
           :class="{ 'ml-4': index }"
@@ -79,24 +85,8 @@
         >
           <div>
             <ul class="bullet-none mr-24 p-0">
-              <li class="text-right">
-                <a
-                  href="#mainContent"
-                  class="
-                    inline-block no-underline uppercase mb-4 leading-tight
-                  "
-                  @click="open = false"
-                >
-                  To Top
-                  <font-awesome-icon
-                    :icon="['fas', 'arrow-up']"
-                    fixed-width
-                    class="leading-tight"
-                  />
-                </a>
-              </li>
               <li
-                v-for="link in links"
+                v-for="link in bottomLinks"
                 :key="link.name"
                 class="text-right"
               >
@@ -132,26 +122,49 @@ export default {
       open: false,
       links: [
         {
+          name: 'To Top',
+          href: '#mainContent',
+          iconSet: ['fas', 'arrow-up'],
+          top: false,
+          bottom: true
+        },
+        {
           name: 'Home',
           href: '/',
-          iconSet: ['fas', 'home']
+          iconSet: ['fas', 'home'],
+          top: false,
+          bottom: true
         },
         {
           name: 'Slack',
           href: urls.slack,
-          iconSet: ['fab', 'slack']
+          iconSet: ['fab', 'slack'],
+          top: true,
+          bottom: true
         },
         {
           name: 'Code of Conduct',
           href: '/code-of-conduct',
-          iconSet: ['fas', 'shield-alt']
+          iconSet: ['fas', 'shield-alt'],
+          top: true,
+          bottom: true
         },
         {
           name: 'Contact',
           href: '#contact',
-          iconSet: ['far', 'thumbs-up']
+          iconSet: ['far', 'thumbs-up'],
+          top: true,
+          bottom: true
         }
       ]
+    }
+  },
+  computed: {
+    topLinks() {
+      return this.links.filter(link => link.top)
+    },
+    bottomLinks() {
+      return this.links.filter(link => link.bottom)
     }
   }
 }
