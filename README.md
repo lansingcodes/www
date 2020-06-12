@@ -7,6 +7,9 @@ These resources include a calendar of tech events, a list of meetup groups,
 local beginner-friendly resources, shout-outs of our gracious sponsors, and
 other ways to get involved in the Lansing tech community.
 
+## Code of Conduct
+All participants are expected to treat others with respect and follow our [Code of Conduct](https://github.com/codeforlansing/codeofconduct#code-for-lansings-code-of-conduct).
+
 ## Questions
 
 For general support, direct your questions to the
