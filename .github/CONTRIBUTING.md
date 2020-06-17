@@ -4,7 +4,7 @@ Hi! We're really excited that you are interested in contributing to our tech
 community tools. Before submitting your contribution, please make sure to read
 through these guidelines.
 
-- [Code of Conduct](https://github.com/lansingcodes/www/blob/master/.github/CODE_OF_CONDUCT.md)
+- [Code of Conduct](https://www.lansing.codes/code-of-conduct/)
 - [Issue Reporting Guidelines](#issue-reporting-guidelines)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Development Setup](#development-setup)
