@@ -8,8 +8,8 @@ local beginner-friendly resources, shout-outs of our gracious sponsors, and
 other ways to get involved in the Lansing tech community.
 
 ## Code of Conduct
-All participants are expected to treat others with respect and follow our [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
 
+All participants are expected to treat others with respect and follow our [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
 
 ## Questions
 
