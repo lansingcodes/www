@@ -26,11 +26,11 @@ through these guidelines.
 
 ## Pull Request Guidelines
 
-- The `master` branch is a snapshot of the latest in-flight release. All
+- The `main` branch is a snapshot of the latest in-flight release. All
   development should be done in dedicated branches.
 
-- Checkout a development branch from the `master` branch. Similarly submit pull
-  requests back to the `master` branch.
+- Checkout a development branch from the `main` branch. Similarly submit pull
+  requests back to the `main` branch.
 
 - Add your name (and optional email and website) to the `contributors` property
   in `package.json`. We want people to know you're helping out!
@@ -204,7 +204,7 @@ name of your feature:
 
 ``` sh
 git fetch origin
-git checkout -b new-branch origin/master
+git checkout -b new-branch origin/main
 ```
 
 After you've made and tested your changes, these commands are helpful for
@@ -301,15 +301,15 @@ npm run lint
 
 ## Deployments
 
-After a pull request is reviewed and merged to `master`, a Netlify deployment
+After a pull request is reviewed and merged to `main`, a Netlify deployment
 will automatically build and publish the staging environment at
 [lansingcodes-staging.netlify.com](https://lansingcodes-staging.netlify.com).
 
-Once the staging environment has been reviewed, the `master` branch can be
+Once the staging environment has been reviewed, the `main` branch can be
 promoted to the `production` branch with the following command:
 
 ``` sh
-git fetch origin && git push --force origin origin/master:production
+git fetch origin && git push --force origin origin/main:production
 ```
 
 This will trigger another build and deployment by Netlify. The site will be
@@ -321,7 +321,7 @@ directory.
 
 Staging is also configured to deploy _all_ branches, so creating a
 pull request should create a temporary site where the changes can be previewed
-before merging to `master`. Click on the _Details_ link next to the site check
+before merging to `main`. Click on the _Details_ link next to the site check
 labeled "netlify/lansingcodes-staging/deploy-preview" to see a live preview of
 your changes.
 
