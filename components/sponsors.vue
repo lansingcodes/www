@@ -28,7 +28,18 @@
           class="ml-8 mb-8 block shadow-lg"
         >
       </picture>
+      <h2
+        class="pl-6"
+      >
+        <a
+          href="/sponsors-signup"
+          class="no-underline"
+        >
+          Become a Sponsor
+        </a>
+      </h2>
     </div>
+
     <card
       v-for="sponsor in sponsors"
       :key="sponsor.name"
