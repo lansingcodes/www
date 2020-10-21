@@ -31,7 +31,7 @@ You are welcome and encouraged to make changes to this website by submitting
 pull requests or forking our code to make your own community website!
 
 Before you get ahead of yourself, though, please read our
-[Contributing Guide](https://github.com/lansingcodes/www/blob/master/.github/CONTRIBUTING.md).
+[Contributing Guide](https://github.com/lansingcodes/www/blob/main/.github/CONTRIBUTING.md).
 
 ## License
 
