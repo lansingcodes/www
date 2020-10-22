@@ -44,7 +44,7 @@
       </div>
     </div>
     <div
-      class="p-8 bg-blue block shadow-lg w-full">
+      class="p-8 bg-blue block shadow-lg w-full rounded">
       <form
         action="https://formspree.io/f/maylnvvl"
         method="POST"
@@ -58,8 +58,9 @@
           </label>
           <input
             id="organization-name"
+            name="organization-name"
             type="text"
-            class="rounded-full"
+            class="rounded px-10"
           >
           <label
             for="organization-website"
@@ -69,8 +70,9 @@
           </label>
           <input
             id="organization-website"
+            name="organization-website"
             type="website"
-            class="rounded-full"
+            class="rounded px-10"
           >
         </div>
         <div class="form-row m-2">
@@ -83,7 +85,7 @@
           <input
             id="contact-name"
             type="text"
-            class="rounded-full"
+            class="rounded px-10"
           >
           <label
             for="contact-email"
@@ -94,7 +96,7 @@
           <input
             id="contact-email"
             type="email"
-            class="rounded-full"
+            class="rounded px-10"
           >
         </div>
         <div class="form-row m-2">
@@ -105,6 +107,7 @@
             <div class="m-1">
               <input
                 id="monthly-lansing-codes"
+                v-model="showDescription"
                 value="monthly-lansing-codes"
                 type="radio"
                 name="contribute-options"
@@ -115,10 +118,14 @@
               >
                 Monthly Contribution to Lansing Codes
               </label>
+              <input
+                v-if="showDescription === 'monthly-lansing-codes'"
+                type="hidden">
             </div>
             <div class="m-1">
               <input
                 id="one-time-lansing-codes"
+                v-model="showDescription"
                 value="one-time-lansing-codes"
                 type="radio"
                 name="contribute-options"
@@ -129,10 +136,14 @@
               >
                 One-time contribution to Lansing Codes
               </label>
+              <input
+                v-if="showDescription === 'one-time-lansing-codes'"
+                type="hidden">
             </div>
             <div class="m-1">
               <input
                 id="monthly-specific-group"
+                v-model="showDescription"
                 value="monthly-specific-group"
                 type="radio"
                 name="contribute-options"
@@ -144,13 +155,17 @@
                 Monthly contribution to a particular group (specify event)
               </label>
               <input
+                v-if="showDescription === 'monthly-specific-group'"
                 id="monthly-specific-group-group"
+                name="monthly-specific-group-group"
                 type="text"
-                class="rounded-full">
+                class="rounded px-10"
+                maxlength="30">
             </div>
             <div class="m-1">
               <input
                 id="one-time-specific-group"
+                v-model="showDescription"
                 value="one-time-specific-group"
                 type="radio"
                 name="contribute-options"
@@ -162,13 +177,16 @@
                 One-time contribution to a particular group (specify event)
               </label>
               <input
+                v-if="showDescription === 'one-time-specific-group'"
                 id="one-time-specific-group-group"
+                name="one-time-specific-group-group"
                 type="text"
-                class="rounded-full">
+                class="rounded px-10">
             </div>
             <div class="m-1">
               <input
                 id="host-event"
+                v-model="showDescription"
                 value="host-event"
                 type="radio"
                 name="contribute-options"
@@ -180,13 +198,16 @@
                 Host an event (offer space, A/V equipment, and drinks) (specify event)
               </label>
               <input
+                v-if="showDescription === 'host-event'"
                 id="host-event-event"
+                name="host-event-event"
                 type="text"
-                class="rounded-full">
+                class="rounded px-10">
             </div>
             <div class="m-1">
               <input
                 id="provide-event"
+                v-model="showDescription"
                 value="provide-event"
                 type="radio"
                 name="contribute-options"
@@ -198,13 +219,16 @@
                 Provide food and drink for an event (specify event)
               </label>
               <input
+                v-if="showDescription === 'provide-event'"
                 id="provide-event-event"
+                name="provide-event-event"
                 type="text"
-                class="rounded-full">
+                class="rounded px-10">
             </div>
             <div class="m-1">
               <input
                 id="contribute-other"
+                v-model="showDescription"
                 value="contribute-other"
                 type="radio"
                 name="contribute-options"
@@ -216,9 +240,11 @@
                 Other (please specify)
               </label>
               <input
+                v-if="showDescription === 'contribute-other'"
                 id="contribute-other-description"
+                name="contribute-other-description"
                 type="text"
-                class="rounded-full">
+                class="rounded px-10">
             </div>
           </div>
         </div>
@@ -230,7 +256,8 @@
             <div class="m-1">
               <input
                 id="invoice-yes"
-                value="yes"
+                v-model="showContact"
+                value="invoice-yes"
                 type="radio"
                 name="invoice-options"
               >
@@ -240,42 +267,52 @@
               >
                 Yes
               </label>
-              <div>
-                <label
-                  for="invoice-contact-name"
-                  class="m-1 p-3 text-white"
-                >
-                  Contact Name
-                </label>
-                <input
-                  type="text"
-                  class="rounded-full"
-                >
-                <label
-                  for="invoice-contact-email"
-                  class="m-1 p-3 text-white"
-                >
-                  Contact email
-                </label>
-                <input
-                  type="email"
-                  class="rounded-full"
-                >
-              </div>
+              <label
+                v-if="showContact === 'invoice-yes'"
+                for="invoice-contact-name"
+                class="m-1 p-3 text-white"
+              >
+                Contact Name
+              </label>
+              <input
+                v-if="showContact === 'invoice-yes'"
+                id="invoice-contact-name"
+                name="invoice-contact-name"
+                type="text"
+                class="rounded px-10"
+              >
+              <label
+                v-if="showContact === 'invoice-yes'"
+                for="invoice-contact-email"
+                class="m-1 p-3 text-white"
+              >
+                Contact email
+              </label>
+              <input
+                v-if="showContact === 'invoice-yes'"
+                id="invoice-contact-email"
+                name="contact-email"
+                type="email"
+                class="rounded px-10"
+              >
             </div>
             <div class="m-1">
               <input
-                id="contribute-other"
-                value="contribute-other"
+                id="invoice-no"
+                v-model="showContact"
+                value="invoice-no"
                 type="radio"
                 name="invoice-options"
               >
               <label
-                for="contribute-other"
+                for="invoice-no"
                 class="text-white"
               >
                 No
               </label>
+              <input
+                v-if="showContact === 'invoice-no'"
+                type="hidden">
               <div class="m-1 pl-3 text-white">
                 Send contributions via
                 <a
@@ -293,7 +330,7 @@
         <div>
           <button
             class="
-              outline-none bg-white border border-blue rounded-full
+              outline-none bg-white border border-blue rounded
               text-blue p-4 mt-3 uppercase font-bold text-sm
               hover:text-blue-darker focus:outline-none focus:shadow-outline
             "
@@ -317,6 +354,17 @@ export default {
     card,
     sectionHeading
   },
-  computed: {}
+  data() {
+    return {
+      showDescription: 'hidden-1',
+      showContact: 'invoice-no'
+    }
+  },
+  methods: {
+    toggleMonthlySpecGroup: e => {
+      this.$refs.monthlySpecGroup.toggleAttribute('hidden')
+      console.log(this.$refs)
+    }
+  }
 }
 </script>
