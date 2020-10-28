@@ -17,9 +17,10 @@
     "Patrick Hawkins",
     "Tamas Vigh",
     "Meg Blaha",
-    "Adam Broadbent"
+    "Adam Broadbent",
+    "Vincent Maule"
   ],
-  "license": "MIT - Hippocratic",
+  "license": "Hippocratic-2.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",

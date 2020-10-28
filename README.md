@@ -35,6 +35,6 @@ Before you get ahead of yourself, though, please read our
 
 ## License
 
-[MIT - Hippocratic](https://firstdonoharm.dev)
+[Hippocratic 2.1](https://firstdonoharm.dev)
 
-Copyright (c) 2015-present, Humanity Codes LLC
+Copyright (c) 2015-Present, Humanity Codes LLC
