@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <div class="py-16 lg:pt-32 lc-bg-ltr-gradient bg-transparent">
       <h1 class="uppercase text-center text-white">
         <span class="text-5xl">
@@ -12,7 +12,7 @@
       </h1>
     </div>
     <div class="lc-bg-down-triangle bg-white h-32 -mt-16"/>
-  </div>
+  </header>
 </template>
 
 <script>
