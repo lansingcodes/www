@@ -1,19 +1,8 @@
 <template>
   <article class="lc-code-of-conduct">
-    <header>
-      <div class="py-16 lg:pt-32 lc-bg-ltr-gradient bg-transparent">
-        <h1 class="uppercase text-center text-white">
-          <span class="text-5xl">
-            Lansing Codes
-          </span>
-          <hr class="border-white border-4 my-6 w-16">
-          <span class="block text-4xl">
-            Code of Conduct
-          </span>
-        </h1>
-      </div>
-      <div class="lc-bg-down-triangle bg-white h-32 -mt-16"/>
-    </header>
+    <page-heading
+      heading="Lansing Codes"
+      subheading="Code of Conduct"/>
     <section class="px-4 md:px-12 mb-16 max-w-lg mx-auto">
       <h2 id="our-pledge">Our Pledge</h2>
       <p>
@@ -180,12 +169,12 @@
 </template>
 
 <script>
-import sectionHeading from '~/components/section-heading'
+import pageHeading from '~/components/page-heading'
 import urls from '~/config/urls.json'
 
 export default {
   components: {
-    sectionHeading
+    pageHeading
   }
 }
 </script>
