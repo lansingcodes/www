@@ -11,6 +11,7 @@
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"
       class="md:mb-16 self-end w-full md:w-1/3"
+      subpage="Become a Sponsor"
     />
     <div class="hidden md:block md:mb-16 md:w-2/3">
       <picture>
@@ -28,16 +29,6 @@
           class="ml-8 mb-8 block shadow-lg"
         >
       </picture>
-      <h2
-        class="pl-6"
-      >
-        <a
-          href="/sponsors-signup"
-          class="no-underline"
-        >
-          Become a Sponsor
-        </a>
-      </h2>
     </div>
 
     <card
