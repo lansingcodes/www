@@ -23,6 +23,16 @@
       :class="{ 'border-grey-darker' : grey, 'border-white': white, 'border-blue': blue }"
       class="border-4 my-6 w-16"
     >
+    <h2
+      v-if="subpage"
+      :class="{ 'border-grey-darker' : grey, 'border-white': white, 'border-blue': blue}">
+      <!-- Needs a router -->
+      <a
+        href="/sponsors-signup"
+        class="no-underline">
+        {{ subpage }}
+      </a>
+    </h2>
   </header>
 </template>
 
@@ -50,6 +60,14 @@ export default {
       default: 'Section title'
     },
     subheading: {
+      type: String,
+      default: ''
+    },
+    subpage: {
+      type: Boolean,
+      default: false
+    },
+    subpageLink: {
       type: String,
       default: ''
     }
