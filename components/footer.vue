@@ -22,6 +22,7 @@
         :aria-label="link.name"
         class="inline-block mx-2 md:mx-4"
         target="_blank"
+        rel="noreferrer"
       >
         <font-awesome-icon
           :icon="[link.iconSet, link.icon]"
