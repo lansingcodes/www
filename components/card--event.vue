@@ -40,54 +40,31 @@
         class="text-sm mb-1 truncate"
       >{{ group.name }}</section>
       <section class="text-sm">{{ formatReadableDateTime(event.startTime) }}</section>
-      <div
-        class="triangle bg-white absolute cursor-pointer"
-        @click="open = !open"
-      >
-        <button
-          :aria-label="open ? 'Hide details' : 'Show details'"
-          class="
-            in-triangle text-blue font-bold
-            hover:text-blue-darkest focus:text-blue-darkest focus:outline-none
-          "
-          type="button"
-        >
-          <font-awesome-icon :icon="open ? 'minus' : 'plus'"/>
-        </button>
-      </div>
     </header>
 
     <!-- Additional details -->
-    <transition
-      enter-active-class="transition-all"
-      enter-class="opacity-0"
-      leave-active-class="transition-all"
-      leave-to-class="opacity-0"
+    <div
+      class="
+        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow
+      "
     >
-      <div
-        v-if="open"
-        class="
-          max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow
-        "
-      >
-        <div class="m-4 overflow-x-hidden">
-          <div
-            v-if="venue"
-            class="mb-2 overflow-x-hidden"
-          >
-            <p class="font-bold mb-1">{{ venue }}</p>
-            <address
-              v-if="address"
-              class="text-grey-darker roman"
-            >{{ address }}</address>
-          </div>
-          <div
-            class="bg-transparent overflow-x-hidden"
-            v-html="event.description"
-          />
+      <div class="m-4 overflow-x-hidden">
+        <div
+          v-if="venue"
+          class="mb-2 overflow-x-hidden"
+        >
+          <p class="font-bold mb-1">{{ venue }}</p>
+          <address
+            v-if="address"
+            class="text-grey-darker roman"
+          >{{ address }}</address>
         </div>
+        <div
+          class="bg-transparent overflow-x-hidden overflow-y-hidden"
+          v-html="event.description"
+        />
       </div>
-    </transition>
+    </div>
   </article>
 </template>
 
