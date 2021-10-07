@@ -7,12 +7,14 @@
        url("./font-lansing-codes.svg#font-lansing-codes") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "FontLansingCodes";
     src: url("./font-lansing-codes.svg#font-lansing-codes") format("svg");
+    font-display: swap;
   }
 }
 
