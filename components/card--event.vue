@@ -45,10 +45,10 @@
     <!-- Additional details -->
     <div
       class="
-        max-h-50 overflow-y-scroll overflow-x-hidden bg-white shadow
+        max-h-50 overflow-y-hidden overflow-x-hidden bg-white shadow
       "
     >
-      <div class="m-4 overflow-x-hidden">
+      <div class="m-4 overflow-x-hidden overflow-y-hidden">
         <div
           v-if="venue"
           class="mb-2 overflow-x-hidden"
@@ -84,11 +84,6 @@ export default {
     group: {
       type: Object,
       required: true
-    }
-  },
-  data() {
-    return {
-      open: false
     }
   },
   methods: {
