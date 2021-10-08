@@ -83,7 +83,7 @@
           </p>
           <div
             class="lc-event-description mb-6"
-            v-html="nextEvent.description"
+            v-html="cleanEventDescription(nextEvent.description)"
           />
         </div>
         <div class="text-center">
@@ -111,6 +111,7 @@ import sectionHeading from '~/components/section-heading'
 import logo from '~/components/logo--small'
 import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
+import cleanEventDescription from '~/utils/clean-event-description'
 import urls from '~/config/urls.json'
 
 export default {
@@ -166,7 +167,8 @@ export default {
     }
   },
   methods: {
-    formatReadableDateTime
+    formatReadableDateTime,
+    cleanEventDescription
   }
 }
 </script>
