@@ -84,9 +84,26 @@ module.exports = {
       { rel: 'image_src', type: 'image/png', href: '/favicon.ico?v=1' },
       { rel: 'icon', type: 'image/png', href: '/favicon.ico?v=1' },
       {
+        rel: 'preload',
+        as: 'style',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'
+      },
+      {
         rel: 'stylesheet',
         href:
           'https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true
+      },
+      {
+        rel: 'preload',
+        as: 'style',
+        href:
+          'https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap'
       },
       {
         rel: 'stylesheet',
