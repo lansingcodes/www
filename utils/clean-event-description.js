@@ -1,9 +1,9 @@
 export default description => {
   // Trim whitespace
-  description.trim()
+  let nDescription = description.trim()
   // Remove elipsis at end of description
-  let nDescription =
-    description
+  nDescription =
+    nDescription
       .split('')
       .reverse()
       .splice(0, 3)
@@ -21,11 +21,16 @@ export default description => {
     ''
   )
   // If the description contains any '.', remove all text after the last '.'
+  const lastPeriodIndex = nDescription
+    .split('')
+    .reverse()
+    .join('')
+    .indexOf('.')
   nDescription =
-    nDescription.indexOf('.') !== -1
+    lastPeriodIndex !== -1
       ? nDescription
           .split('')
-          .splice(0, nDescription.indexOf('.') + 1)
+          .splice(0, nDescription.length - lastPeriodIndex)
           .join('')
       : nDescription
   // If the description contains ---, remove the --- and all subsequent text, then trim the text again
@@ -37,7 +42,7 @@ export default description => {
           .join('')
       : nDescription
   // Trim whitespace
-  description.trim()
+  nDescription = nDescription.trim()
   // Re-add the trailing ... characters
   nDescription =
     nDescription[nDescription.length - 1] !== '.'
