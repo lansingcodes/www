@@ -61,7 +61,7 @@
         </div>
         <div
           class="bg-transparent overflow-x-hidden overflow-y-hidden"
-          v-html="event.description"
+          v-html="cleanEventDescription(event.description)"
         />
       </div>
     </div>
@@ -71,6 +71,7 @@
 <script>
 import logo from '~/components/logo--small'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
+import cleanEventDescription from '~/utils/clean-event-description'
 
 export default {
   components: {
@@ -87,7 +88,8 @@ export default {
     }
   },
   methods: {
-    formatReadableDateTime
+    formatReadableDateTime,
+    cleanEventDescription
   }
 }
 </script>
