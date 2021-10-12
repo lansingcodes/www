@@ -75,24 +75,24 @@ here's a quick list of the tools you'll need to run this project:
 - [node and npm](https://nodejs.org/), although
   [nvm](https://github.com/nvm-sh/nvm) is recommended for non-Windows users
 - [Visual Studio Code](https://code.visualstudio.com/) with these extensions:
-  - Better TOML by bungcip
-  - Bracket Pair Colorizer by CoenraadS
-  - EditorConfig for VS Code by EditorConfig
-  - ESLint by Dirk Baeumer
-  - Node.js Extension Pack by Wade Anderson
-  - npm by egamma
-  - npm Intellisense by Christian Kohler
-  - Path Autocomplete by Mihai Vilcu
-  - Path Intellisense by Christian Kohler
+  - [Better TOML by bungcip](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+  - [Bracket Pair Colorizer by CoenraadS](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+  - [EditorConfig for VS Code by EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  - [ESLint by Dirk Baeumer](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [Node.js Extension Pack by Wade Anderson](https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack)
+  - [npm by egamma](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+  - [npm Intellisense by Christian Kohler](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+  - [Path Autocomplete by Mihai Vilcu](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete)
+  - [Path Intellisense by Christian Kohler](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
   - [Prettier by Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - SCSS IntelliSense by mrmlnc
-  - Tailwind CSS IntelliSense by Brad Cornes
-  - Vetur by Pine Wu
-  - VSCode Essentials Snippets by Roberto Achar
+  - [SCSS IntelliSense by mrmlnc](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
+  - [Tailwind CSS IntelliSense by Brad Cornes](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+  - [Vetur by Pine Wu](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+  - [VSCode Essentials Snippets by Roberto Achar](https://marketplace.visualstudio.com/items?itemName=robertoachar.vscode-essentials-snippets)
   - [Vue 3 Snippets by hollowtree](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
-  - Vue Peek by Dario Fuzinato
-  - Vue.js Extension Pack by Muhammad Ubaid Raza
-  - VueHelper by oysun
+  - [Vue Peek by Dario Fuzinato](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
+  - [Vue.js Extension Pack by Muhammad Ubaid Raza](https://marketplace.visualstudio.com/items?itemName=mubaidr.vuejs-extension-pack)
+  - [VueHelper by oysun](https://marketplace.visualstudio.com/items?itemName=oysun.vuehelper)
 
 ### Getting the source code
 
