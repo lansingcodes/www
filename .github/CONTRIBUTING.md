@@ -84,12 +84,12 @@ here's a quick list of the tools you'll need to run this project:
   - npm Intellisense by Christian Kohler
   - Path Autocomplete by Mihai Vilcu
   - Path Intellisense by Christian Kohler
-  - Prettier by Esben Petersen
+  - [Prettier by Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - SCSS IntelliSense by mrmlnc
   - Tailwind CSS IntelliSense by Brad Cornes
   - Vetur by Pine Wu
   - VSCode Essentials Snippets by Roberto Achar
-  - Vue 2 Snippets by hollowtree
+  - [Vue 3 Snippets by hollowtree](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
   - Vue Peek by Dario Fuzinato
   - Vue.js Extension Pack by Muhammad Ubaid Raza
   - VueHelper by oysun
