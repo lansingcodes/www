@@ -165,29 +165,9 @@ After VS Code is installed, run it and click _Extensions_ from the gear icon
 menu in the lower left of the editor. This will bring up a panel with a search
 box.
 
-Use the search box to find and install all of these extensions. They make the
-experience of looking at and editing this project _super nice_.
-
-- Better TOML by bungcip
-- Bracket Pair Colorizer by CoenraadS
-- EditorConfig for VS Code by EditorConfig
-- ESLint by Dirk Baeumer
-- Node.js Extension Pack by Wade Anderson
-- npm by egamma
-- npm Intellisense by Christian Kohler
-- Path Autocomplete by Mihai Vilcu
-- Path Intellisense by Christian Kohler
-- Prettier by Esben Petersen
-- SCSS IntelliSense by mrmlnc
-- Tailwind CSS IntelliSense by Brad Cornes
-- Vetur by Pine Wu
-- VSCode Essentials Snippets by Roberto Achar
-- Vue 2 Snippets by hollowtree
-- Vue Peek by Dario Fuzinato
-- Vue.js Extension Pack by Muhammad Ubaid Raza
-- VueHelper by oysun
-
-You should probably restart VS Code after installing all of these extensions.
+Use the search box to find and install all of the extensions listed under the 
+required software heading. They make the experience of looking at and editing
+this project _super nice_.
 
 ### Running and coding
 
