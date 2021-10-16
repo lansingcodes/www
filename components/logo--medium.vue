@@ -8,6 +8,8 @@
         :src="imgSrc"
         :alt="imgAlt"
         class="flex-initial max-h-full px-2 self-center"
+        width="244"
+        height="96"
       >
     </div>
     <span

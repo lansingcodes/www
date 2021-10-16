@@ -27,6 +27,8 @@
           src="../assets/images/sponsors-feature.jpg"
           alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
           class="ml-8 mb-8 block shadow-lg"
+          width="736"
+          height="394"
         >
       </picture>
     </div>

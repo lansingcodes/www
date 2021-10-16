@@ -14,6 +14,8 @@
           class="h-32 w-32"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
+          width="128"
+          height="128"
         >
         <section-heading
           h1
