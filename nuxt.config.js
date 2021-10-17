@@ -83,6 +83,19 @@ module.exports = {
       { rel: 'apple-touch-icon', type: 'image/png', href: '/favicon.ico?v=1' },
       { rel: 'image_src', type: 'image/png', href: '/favicon.ico?v=1' },
       { rel: 'icon', type: 'image/png', href: '/favicon.ico?v=1' },
+      /* Lansing Codes Web Font */
+      {
+        rel: 'preload',
+        as: 'style',
+        href:
+          'https://cdn.jsdelivr.net/npm/@lansingcodes/webfont@latest/font-lansing-codes.css'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@lansingcodes/webfont@latest/font-lansing-codes.css'
+      },
+      /* Font MFizz */
       {
         rel: 'preload',
         as: 'style',
@@ -94,6 +107,7 @@ module.exports = {
         href:
           'https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'
       },
+      /* Google Fonts */
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
@@ -121,10 +135,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    '~/assets/scss/tailwind.scss',
-    '~/assets/font-lansing-codes/font-lansing-codes.css'
-  ],
+  css: ['~/assets/scss/tailwind.scss'],
 
   /*
   ** Plugins to load before mounting the App
