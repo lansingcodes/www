@@ -18,6 +18,8 @@
           class="h-12 mr-2"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
+          width="48"
+          height="48"
         >
         <span class="font-bold text-xl uppercase">Lansing Codes</span>
       </a>
