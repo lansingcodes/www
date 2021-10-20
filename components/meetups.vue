@@ -20,6 +20,7 @@
       :icon-set="group.iconSet"
       :icon-name="group.iconName"
       :icon-text="group.iconText"
+      :youtube="group.youtube"
     />
   </section>
 </template>

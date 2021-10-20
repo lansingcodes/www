@@ -92,7 +92,8 @@ import {
   faJsSquare,
   faSlack,
   faTwitter,
-  faWordpressSimple
+  faWordpressSimple,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -104,7 +105,8 @@ library.add(
   faJsSquare,
   faSlack,
   faTwitter,
-  faWordpressSimple
+  faWordpressSimple,
+  faYoutube
 )
 
 /**************************************************************************
