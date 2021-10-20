@@ -41,6 +41,7 @@
       :description="sponsor.description"
       :img-src="sponsor.logoUrl"
       :img-alt="sponsor.name + ' logo'"
+      :youtube="sponsor.youtube"
       class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4"
     />
   </section>

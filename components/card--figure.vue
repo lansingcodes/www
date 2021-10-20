@@ -25,12 +25,23 @@
     </a>
     <p
       v-if="subheading.length"
-      class="text-lg text-grey-darker mb-3"
+      class="text-lg text-grey-darker"
     >{{ subheading }}</p>
     <figcaption
-      class="text-grey-darker text-base"
+      class="text-grey-darker text-base my-3"
       v-html="description"
     />
+    
+    <a 
+      v-if="youtube && youtube.length" 
+      :href="youtube"
+      class="block text-blue fill-current hover:text-blue-lighter no-underline"
+      rel="noreferrer noopener"
+    > 
+      <font-awesome-icon 
+        :icon="['fab', 'youtube']" />
+      YouTube
+    </a>
   </figure>
 </template>
 
@@ -75,6 +86,10 @@ export default {
       default: null
     },
     imgAlt: {
+      type: String,
+      default: null
+    },
+    youtube: {
       type: String,
       default: null
     }
