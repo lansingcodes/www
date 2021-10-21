@@ -35,11 +35,10 @@
     <a 
       v-if="youtube && youtube.length" 
       :href="youtube"
-      class="block text-blue fill-current hover:text-blue-lighter no-underline"
+      class="block text-blue fill-current no-underline"
       rel="noreferrer noopener"
     > 
-      <font-awesome-icon 
-        :icon="['fab', 'youtube']" />
+      <font-awesome-icon :icon="['fab', 'youtube']" />
       YouTube
     </a>
   </figure>
