@@ -345,7 +345,6 @@ export default {
   methods: {
     toggleMonthlySpecGroup: e => {
       this.$refs.monthlySpecGroup.toggleAttribute('hidden')
-      console.log(this.$refs)
     }
   }
 }
