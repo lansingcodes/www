@@ -64,8 +64,8 @@ export default {
       default: ''
     },
     subpage: {
-      type: Boolean,
-      default: false
+      type: String,
+      default: undefined
     },
     subpageLink: {
       type: String,

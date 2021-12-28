@@ -1,8 +1,7 @@
 import { firestoreAction } from 'vuexfire'
 import firestore from '~/utils/firestore'
 import { startOfDay, addWeeks, endOfDay, endOfWeek } from 'date-fns'
-
-const weeksAvailable = 4
+import weeksAvailable from '~/config/max-calendar-weeks'
 
 export const state = () => ({
   upcoming: []

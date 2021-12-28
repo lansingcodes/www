@@ -19,11 +19,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // https://fontawesome.com/icons?d=gallery&s=regular&m=free
 import {
   faCalendarAlt,
-  faHandshake,
+  faGrinBeamSweat,
   faThumbsUp
 } from '@fortawesome/free-regular-svg-icons'
 
-library.add(faCalendarAlt, faHandshake, faThumbsUp)
+library.add(faCalendarAlt, faGrinBeamSweat, faThumbsUp)
 
 // free SOLID icon set (fas)
 // https://fontawesome.com/icons?d=gallery&s=solid&m=free
@@ -51,6 +51,7 @@ import {
   faTimes,
   faUnlockAlt,
   faUserCircle,
+  faUserFriends,
   faUsers
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -78,6 +79,7 @@ library.add(
   faTimes,
   faUnlockAlt,
   faUserCircle,
+  faUserFriends,
   faUsers
 )
 

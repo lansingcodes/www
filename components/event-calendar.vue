@@ -50,14 +50,14 @@ import {
   isBefore,
   isAfter,
   addDays,
+  addWeeks,
   isSameDay,
   format as formatDate
 } from 'date-fns'
 import chunk from 'lodash/chunk'
-import formatReadableDateTime from '~/utils/format-readable-date-time'
-import groupForEvent from '~/utils/group-for-event'
 import simplifiedName from '~/utils/simplified-name'
 import calendarEvent from '~/components/calendar--event'
+import maxCalendarWeeks from '~/config/max-calendar-weeks'
 
 export default {
   components: {
@@ -77,7 +77,11 @@ export default {
     },
     endDate() {
       const lastEvent = this.events[this.events.length - 1]
-      return endOfWeek(lastEvent.startTime)
+      return endOfWeek(
+        lastEvent
+          ? lastEvent.startTime
+          : endOfWeek(addWeeks(this.startDate, maxCalendarWeeks - 1))
+      )
     },
     calendar() {
       const dates = []
