@@ -87,20 +87,49 @@
             class="lc-event-description mb-6"
             v-html="cleanEventDescription(nextEvent.description)"
           />
+          <div class="text-center">
+            <a
+              :href="nextEvent.url"
+              class="
+                inline-block bg-white no-underline
+                text-blue font-bold uppercase text-center py-4 mt-2 px-8
+                min-w-24 rounded-full
+              "
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Learn More and RSVP
+            </a>
+          </div>
         </div>
-        <div class="text-center">
-          <a
-            :href="nextEvent.url"
-            class="
-              inline-block bg-white no-underline
-              text-blue font-bold uppercase text-center py-4 mt-2 px-8
-              min-w-24 rounded-full
-            "
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Learn More and RSVP
-          </a>
+        <div
+          v-else
+          class="text-left font-normal"
+        >
+          <div class="flex flex-no-wrap items-center mb-2 min-h-12">
+            <logo
+              icon-set="far"
+              icon-name="grin-beam-sweat"
+              class="mr-3"
+            />
+            <h3 class="font-bold">
+              Well, this is awkward!
+            </h3>
+          </div>
+          <div class="lc-event-description my-6 leading-tight">
+            <p>
+              There don't appear to be any upcoming events on the calendar for
+              the next few weeks. It may be a slow time of the year or it could
+              be a mistake.
+            </p>
+            <p>
+              Check back in a few days or ask about it in Slack
+              and we'll get this cleared up for you soon.
+            </p>
+            <p>
+              Sorry we couldn't help you find what you're looking for!
+            </p>
+          </div>
         </div>
       </section>
     </div>
@@ -108,7 +137,6 @@
 </template>
 
 <script>
-import { format } from 'date-fns'
 import sectionHeading from '~/components/section-heading'
 import logo from '~/components/logo--small'
 import groupForEvent from '~/utils/group-for-event'
@@ -137,7 +165,7 @@ export default {
         {
           name: 'Groups',
           href: '#meetups',
-          iconSet: ['far', 'handshake']
+          iconSet: ['fas', 'user-friends']
         },
         {
           name: 'Resources',
@@ -160,7 +188,7 @@ export default {
   computed: {
     nextEvent() {
       var upcoming = this.$store.state.events.upcoming.filter(
-        event => event.startTime > Date.now()
+        event => event && event.startTime > Date.now()
       )
       return upcoming[0]
     },
