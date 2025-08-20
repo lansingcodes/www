@@ -1,14 +1,8 @@
 <template>
-  <div
-    id="welcome"
-    class="lc-background-image py-16 sm:py-32"
-  >
+  <div id="welcome" class="lc-background-image py-16 sm:py-32">
     <div class="flex flex-wrap justify-center">
       <nav
-        class="
-          flex-none w-full sm:w-1/2 sm:max-w-sm overflow-hidden sm:shadow-lg
-          bg-white text-center py-8 px-6 sm:mb-24
-        "
+        class="flex-none w-full sm:w-1/2 sm:max-w-sm overflow-hidden sm:shadow-lg bg-white text-center py-8 px-6 sm:mb-24"
       >
         <img
           class="h-32 w-32"
@@ -16,24 +10,20 @@
           alt="Lansing Codes Logo"
           width="128"
           height="128"
-        >
+        />
         <section-heading
           h1
           blue
           heading="Lansing Codes"
           subheading="events and resources for Lansing coders"
         />
-        <ul class="flex flex-wrap justify-center list-reset mt-0 mb-4 font-medium">
-          <li
-            v-for="link in links"
-            :key="link.name"
-            class="w-1/2"
-          >
+        <ul
+          class="flex flex-wrap justify-center list-reset mt-0 mb-4 font-medium"
+        >
+          <li v-for="link in links" :key="link.name" class="w-1/2">
             <a
               :href="link.href"
-              class="
-                inline-block no-underline uppercase mb-4 leading-tight
-              "
+              class="inline-block no-underline uppercase mb-4 leading-tight"
               @click="open = false"
             >
               <font-awesome-icon
@@ -48,19 +38,10 @@
       </nav>
 
       <section
-        class="
-          hidden sm:block sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark
-          text-white p-8 sm:mt-24 sm:-ml-4
-        "
+        class="hidden sm:block sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4"
       >
-        <section-heading
-          white
-          heading="Next Event"
-        />
-        <div
-          v-if="nextEvent"
-          class="text-left font-normal"
-        >
+        <section-heading white heading="Next Event" />
+        <div v-if="nextEvent" class="text-left font-normal">
           <div class="flex flex-no-wrap items-center mb-2 min-h-12">
             <logo
               v-if="groupForNextEvent"
@@ -77,9 +58,7 @@
             <span class="mb-1 mr-2">
               {{ formatReadableDateTime(nextEvent.startTime) }}
             </span>
-            <span
-              v-if="nextEvent.venue"
-            >
+            <span v-if="nextEvent.venue">
               {{ nextEvent.venue }}
             </span>
           </p>
@@ -90,11 +69,7 @@
           <div class="text-center">
             <a
               :href="nextEvent.url"
-              class="
-                inline-block bg-white no-underline
-                text-blue font-bold uppercase text-center py-4 mt-2 px-8
-                min-w-24 rounded-full
-              "
+              class="inline-block bg-white no-underline text-blue font-bold uppercase text-center py-4 mt-2 px-8 min-w-24 rounded-full"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -102,19 +77,10 @@
             </a>
           </div>
         </div>
-        <div
-          v-else
-          class="text-left font-normal"
-        >
+        <div v-else class="text-left font-normal">
           <div class="flex flex-no-wrap items-center mb-2 min-h-12">
-            <logo
-              icon-set="far"
-              icon-name="grin-beam-sweat"
-              class="mr-3"
-            />
-            <h3 class="font-bold">
-              Well, this is awkward!
-            </h3>
+            <logo icon-set="far" icon-name="grin-beam-sweat" class="mr-3" />
+            <h3 class="font-bold">Well, this is awkward!</h3>
           </div>
           <div class="lc-event-description my-6 leading-tight">
             <p>
@@ -123,12 +89,10 @@
               be a mistake.
             </p>
             <p>
-              Check back in a few days or ask about it in Slack
-              and we'll get this cleared up for you soon.
+              Check back in a few days or ask about it in Slack and we'll get
+              this cleared up for you soon.
             </p>
-            <p>
-              Sorry we couldn't help you find what you're looking for!
-            </p>
+            <p>Sorry we couldn't help you find what you're looking for!</p>
           </div>
         </div>
       </section>
@@ -147,7 +111,7 @@ import urls from '~/config/urls.json'
 export default {
   components: {
     logo,
-    sectionHeading
+    sectionHeading,
   },
   data() {
     return {
@@ -155,51 +119,51 @@ export default {
         {
           name: 'Slack',
           href: urls.slack,
-          iconSet: ['fab', 'slack']
+          iconSet: ['fab', 'slack'],
         },
         {
           name: 'Events',
           href: '#events',
-          iconSet: ['far', 'calendar-alt']
+          iconSet: ['far', 'calendar-alt'],
         },
         {
           name: 'Groups',
           href: '#meetups',
-          iconSet: ['fas', 'user-friends']
+          iconSet: ['fas', 'user-friends'],
         },
         {
           name: 'Resources',
           href: '#resources',
-          iconSet: ['fas', 'school']
+          iconSet: ['fas', 'school'],
         },
         {
           name: 'Sponsors',
           href: '#sponsors',
-          iconSet: ['fas', 'hand-holding-heart']
+          iconSet: ['fas', 'hand-holding-heart'],
         },
         {
           name: 'Newsletter',
           href: '#newsletter',
-          iconSet: ['fas', 'envelope']
-        }
-      ]
+          iconSet: ['fas', 'envelope'],
+        },
+      ],
     }
   },
   computed: {
     nextEvent() {
       var upcoming = this.$store.state.events.upcoming.filter(
-        event => event && event.startTime > Date.now()
+        (event) => event && event.startTime > Date.now()
       )
       return upcoming[0]
     },
     groupForNextEvent() {
       return groupForEvent(this.nextEvent, this.$store.state.groups.all)
-    }
+    },
   },
   methods: {
     formatReadableDateTime,
-    cleanEventDescription
-  }
+    cleanEventDescription,
+  },
 }
 </script>
 

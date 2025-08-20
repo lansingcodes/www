@@ -5,20 +5,18 @@
         v-for="weekday in weekdayLabels"
         :key="weekday"
         class="w-1/7 text-center text-white font-semibold"
-      >{{ weekday }}</div>
+      >
+        {{ weekday }}
+      </div>
     </div>
-    <div
-      v-for="(week, index) in calendar"
-      :key="index"
-      class="flex"
-    >
+    <div v-for="(week, index) in calendar" :key="index" class="flex">
       <div
         v-for="day in week"
         :key="day.getTime()"
         :class="{
           'border-4': isToday(day),
           'bg-white': isWeekday(day) || isToday(day),
-          'bg-blue-lighter': !isWeekday(day) && !isToday(day)
+          'bg-blue-lighter': !isWeekday(day) && !isToday(day),
         }"
         class="w-1/7 min-h-16 m-1 p-1 rounded-sm border-attention shadow-md"
       >
@@ -26,10 +24,7 @@
           <div class="text-grey-darkest text-center mb-2 font-medium">
             {{ formatDayOfMonth(day) }}
           </div>
-          <ul
-            v-if="isDuringActivePeriod(day)"
-            class="m-0 p-0"
-          >
+          <ul v-if="isDuringActivePeriod(day)" class="m-0 p-0">
             <calendar-event
               v-for="(entry, index) in eventsOnDay(day)"
               :key="index"
@@ -52,7 +47,7 @@ import {
   addDays,
   addWeeks,
   isSameDay,
-  format as formatDate
+  format as formatDate,
 } from 'date-fns'
 import chunk from 'lodash/chunk'
 import simplifiedName from '~/utils/simplified-name'
@@ -61,11 +56,11 @@ import maxCalendarWeeks from '~/config/max-calendar-weeks'
 
 export default {
   components: {
-    calendarEvent
+    calendarEvent,
   },
   data() {
     return {
-      weekdayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+      weekdayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     }
   },
   computed: {
@@ -93,7 +88,7 @@ export default {
         dates.push(currentDate)
       }
       return chunk(dates, 7)
-    }
+    },
   },
   methods: {
     formatDate,
@@ -106,13 +101,13 @@ export default {
       //    events: [...]
       //  }
       return this.events
-        .filter(event => isSameDay(new Date(event.startTime), day))
+        .filter((event) => isSameDay(new Date(event.startTime), day))
         .reduce((events, event) => {
           // 1. Look for community event candidates
           //  - Must be stand-alone (single) event or already a community event
           //  - Start time must match
           //  - Simplified name must match
-          const communityEvent = events.find(candidate => {
+          const communityEvent = events.find((candidate) => {
             const firstEvent = candidate.events[0]
             return (
               ['single', 'community'].includes(candidate.type) &&
@@ -129,7 +124,7 @@ export default {
           // 2. Look for group event candidates
           //  - Must be stand-alone (single) event or already a group event
           //  - Group must match
-          const groupEvent = events.find(candidate => {
+          const groupEvent = events.find((candidate) => {
             return (
               ['single', 'group'].includes(candidate.type) &&
               candidate.events[0].group === event.group
@@ -144,7 +139,7 @@ export default {
           // 3. Add a stand-alone (single) event
           events.push({
             type: 'single',
-            events: [event]
+            events: [event],
           })
           return events
         }, [])
@@ -172,8 +167,8 @@ export default {
     isWeekday(day) {
       const dayOfWeek = formatDate(day, 'E')
       return dayOfWeek <= 5
-    }
-  }
+    },
+  },
 }
 </script>
 
