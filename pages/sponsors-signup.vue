@@ -266,7 +266,6 @@ import orderBy from 'lodash/orderBy'
 
 export default {
   components: {
-    card,
     pageHeading,
   },
   data() {
