@@ -305,7 +305,7 @@
                     target="_blank"
                     class="text-grey-light no-underline"
                   >PayPal</a>
-                  to Humanity Codes
+                  to Michigan Technology Network
                 </div>
               </div>
             </div>

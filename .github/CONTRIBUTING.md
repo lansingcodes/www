@@ -165,7 +165,7 @@ After VS Code is installed, run it and click _Extensions_ from the gear icon
 menu in the lower left of the editor. This will bring up a panel with a search
 box.
 
-Use the search box to find and install all of the extensions listed under the 
+Use the search box to find and install all of the extensions listed under the
 required software heading. They make the experience of looking at and editing
 this project _super nice_.
 
@@ -305,5 +305,5 @@ before merging to `main`. Click on the _Details_ link next to the site check
 labeled "netlify/lansingcodes-staging/deploy-preview" to see a live preview of
 your changes.
 
-The primary Humanity Codes account has administrator access to both Netlify
+The primary Michigan Technology Network account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
