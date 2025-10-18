@@ -1,3 +1,5 @@
+import boldMarkupToHTML from './bold-markup-to-html'
+
 export default description => {
   // Trim whitespace
   let newDescription = description.trim()
@@ -17,6 +19,7 @@ export default description => {
   newDescription = newDescription.trim()
   // Re-add the trailing ... characters
   newDescription = newDescription.concat('...')
-
+  // Replace bold markdown with proper Tailwind style, e.g '**text**' becomes '<span class="font-bold">text</span>'
+  newDescription = boldMarkupToHTML(newDescription)
   return newDescription
 }
