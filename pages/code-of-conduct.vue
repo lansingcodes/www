@@ -203,7 +203,7 @@ export default {
   li {
     @apply .mb-4;
   }
-  // match up these selectors with current snapshot & directions in the repo to ensure i didn't remove or miss anything
+
   #enforcement-guidelines ~ h3 ~ p {
     @apply .pl-10;
   }
