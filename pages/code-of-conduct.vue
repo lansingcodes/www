@@ -88,60 +88,69 @@
         All community leaders are obligated to respect the privacy and security
         of the reporter of any incident.
       </p>
-      <h2 id="enforcement-guidelines">Enforcement Guidelines</h2>
-      <p>
-        Community leaders will follow these Community Impact Guidelines in
-        determining the consequences for any action they deem in violation of
-        this Code of Conduct:
-      </p>
-      <h3 id="1-correction">1. Correction</h3>
-      <p>
-        <strong>Community Impact</strong>: Use of inappropriate language or
-        other behavior deemed unprofessional or unwelcome in the community.
-      </p>
-      <p>
-        <strong>Consequence</strong>: A private, written warning from community
-        leaders, providing clarity around the nature of the violation and an
-        explanation of why the behavior was inappropriate. A public apology may
-        be requested.
-      </p>
-      <h3 id="2-warning">2. Warning</h3>
-      <p>
-        <strong>Community Impact</strong>: A violation through a single incident
-        or series of actions.
-      </p>
-      <p>
-        <strong>Consequence</strong>: A warning with consequences for continued
-        behavior. No interaction with the people involved, including unsolicited
-        interaction with those enforcing the Code of Conduct, for a specified
-        period of time. This includes avoiding interactions in community spaces
-        as well as external channels like social media. Violating these terms
-        may lead to a temporary or permanent ban.
-      </p>
-      <h3 id="3-temporary-ban">3. Temporary Ban</h3>
-      <p>
-        <strong>Community Impact</strong>: A serious violation of community
-        standards, including sustained inappropriate behavior.
-      </p>
-      <p>
-        <strong>Consequence</strong>: A temporary ban from any sort of
-        interaction or public communication with the community for a specified
-        period of time. No public or private interaction with the people
-        involved, including unsolicited interaction with those enforcing the
-        Code of Conduct, is allowed during this period. Violating these terms
-        may lead to a permanent ban.
-      </p>
-      <h3 id="4-permanent-ban">4. Permanent Ban</h3>
-      <p>
-        <strong>Community Impact</strong>: Demonstrating a pattern of violation
-        of community standards, including sustained inappropriate behavior,
-        harassment of an individual, or aggression toward or disparagement of
-        classes of individuals.
-      </p>
-      <p>
-        <strong>Consequence</strong>: A permanent ban from any sort of public
-        interaction within the community.
-      </p>
+      <!--
+        Wrapper <div> permits CSS selector to target subsequent paragraphs of <h3>,
+        but only for those <h3> that are nested under #enforcement-guideline in the document outline.
+        https://html5doctor.com/outlines/
+
+        The best practice is to add classes to the HTML, but this becomes unwieldy when we update to newer content versions.
+      -->
+      <div>
+        <h2 id="enforcement-guidelines">Enforcement Guidelines</h2>
+        <p>
+          Community leaders will follow these Community Impact Guidelines in
+          determining the consequences for any action they deem in violation of
+          this Code of Conduct:
+        </p>
+        <h3 id="1-correction">1. Correction</h3>
+        <p>
+          <strong>Community Impact</strong>: Use of inappropriate language or
+          other behavior deemed unprofessional or unwelcome in the community.
+        </p>
+        <p>
+          <strong>Consequence</strong>: A private, written warning from
+          community leaders, providing clarity around the nature of the
+          violation and an explanation of why the behavior was inappropriate. A
+          public apology may be requested.
+        </p>
+        <h3 id="2-warning">2. Warning</h3>
+        <p>
+          <strong>Community Impact</strong>: A violation through a single
+          incident or series of actions.
+        </p>
+        <p>
+          <strong>Consequence</strong>: A warning with consequences for
+          continued behavior. No interaction with the people involved, including
+          unsolicited interaction with those enforcing the Code of Conduct, for
+          a specified period of time. This includes avoiding interactions in
+          community spaces as well as external channels like social media.
+          Violating these terms may lead to a temporary or permanent ban.
+        </p>
+        <h3 id="3-temporary-ban">3. Temporary Ban</h3>
+        <p>
+          <strong>Community Impact</strong>: A serious violation of community
+          standards, including sustained inappropriate behavior.
+        </p>
+        <p>
+          <strong>Consequence</strong>: A temporary ban from any sort of
+          interaction or public communication with the community for a specified
+          period of time. No public or private interaction with the people
+          involved, including unsolicited interaction with those enforcing the
+          Code of Conduct, is allowed during this period. Violating these terms
+          may lead to a permanent ban.
+        </p>
+        <h3 id="4-permanent-ban">4. Permanent Ban</h3>
+        <p>
+          <strong>Community Impact</strong>: Demonstrating a pattern of
+          violation of community standards, including sustained inappropriate
+          behavior, harassment of an individual, or aggression toward or
+          disparagement of classes of individuals.
+        </p>
+        <p>
+          <strong>Consequence</strong>: A permanent ban from any sort of public
+          interaction within the community.
+        </p>
+      </div>
       <h2 id="attribution">Attribution</h2>
       <p>
         This Code of Conduct is adapted from the
@@ -191,11 +200,17 @@ export default {
   }
 
   p {
-    @apply .leading-tight;
+    @apply .text-xl;
+    @apply .leading-normal;
+    @apply .text-black;
   }
 
   li {
-    @apply .mb-2;
+    @apply .mb-4;
+  }
+
+  #enforcement-guidelines ~ h3 ~ p {
+    @apply .pl-10;
   }
 }
 </style>
