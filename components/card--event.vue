@@ -38,9 +38,10 @@
             {{ address }}
           </address>
         </div>
+        <!-- v-html is safe here because cleanEventDescription sanitizes the HTML -->
         <div
           class="bg-transparent overflow-x-hidden overflow-y-hidden"
-          v-html="cleanEventDescription(event.description)"
+          v-html="safeDescription"
         />
       </div>
     </div>
@@ -64,6 +65,17 @@ export default {
     group: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    venue() {
+      return this.event && this.event.venue
+    },
+    address() {
+      return this.event && this.event.address
+    },
+    safeDescription() {
+      return this.cleanEventDescription(this.event.description)
     },
   },
   methods: {
