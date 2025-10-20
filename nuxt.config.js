@@ -159,6 +159,17 @@ module.exports = {
         plugins: [require('tailwindcss')(tailwindJS), require('autoprefixer')],
       },
     },
+    
+    loaders: {
+      scss: {
+        sassOptions: {
+          includePaths: [
+            __dirname,
+            'assets/scss'
+          ]
+        }
+      }
+    },
 
     /*
      ** You can extend webpack config here
