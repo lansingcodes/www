@@ -1,12 +1,9 @@
 <template>
   <li
     v-popover="{
-      name: firstEvent.id
+      name: firstEvent.id,
     }"
-    class="
-      block list-none mx-1 py-2 border-t border-blue
-      hover:bg-blue-lightest
-    "
+    class="block list-none mx-1 py-2 border-t border-blue hover:bg-blue-lightest"
   >
     <a
       :href="firstEvent.url"
@@ -30,27 +27,15 @@
         />
       </span>
       {{ formatTimeOfEvent(firstEvent) }}
-      <div
-        v-if="type === 'community'"
-        class="mt-1"
-      >{{ firstEvent.name }}</div>
-      <div
-        v-else
-        class="mt-1"
-      >{{ eventGroup(firstEvent).name }}</div>
-      <div
-        v-if="type === 'group'"
-        class="text-sm">
+      <div v-if="type === 'community'" class="mt-1">{{ firstEvent.name }}</div>
+      <div v-else class="mt-1">{{ eventGroup(firstEvent).name }}</div>
+      <div v-if="type === 'group'" class="text-sm">
         <aside class="italic">
           also: {{ formatTimesOfAdditionalEvents() }}
         </aside>
       </div>
-      <div
-        v-else-if="type === 'community'"
-        class="text-sm">
-        <aside class="italic">
-          {{ events.length }} ways to join
-        </aside>
+      <div v-else-if="type === 'community'" class="text-sm">
+        <aside class="italic">{{ events.length }} ways to join</aside>
       </div>
     </a>
     <transition
@@ -63,20 +48,16 @@
         :name="firstEvent.id"
         :width="225"
         event="hover"
-        class="
-          text-blue-darker border border-blue shadow-md -mt-2 hidden
-        "
+        class="text-blue-darker border border-blue shadow-md -mt-2 hidden"
       >
         <ul class="m-0 p-0">
           <li
             v-for="(event, index) in sortedEvents"
             :key="event.id"
             :class="{
-              'border-t': index > 0
+              'border-t': index > 0,
             }"
-            class="
-              block list-none mx-1 py-2 border-blue hover:bg-blue-lightest
-            "
+            class="block list-none mx-1 py-2 border-blue hover:bg-blue-lightest"
           >
             <a
               :href="event.url"
@@ -115,7 +96,7 @@ import orderBy from 'lodash/orderBy'
 
 export default {
   components: {
-    logo
+    logo,
   },
   props: {
     type: {
@@ -123,16 +104,16 @@ export default {
       required: true,
       validator(value) {
         return ['single', 'community', 'group'].includes(value)
-      }
+      },
     },
     events: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      open: false
+      open: false,
     }
   },
   computed: {
@@ -145,14 +126,14 @@ export default {
     sortedEvents() {
       if (this.type === 'community') {
         return orderBy(this.events, [
-          event =>
+          (event) =>
             this.eventGroup(event)
               .name.toLowerCase()
-              .replace(/[^a-z]/g, '')
+              .replace(/[^a-z]/g, ''),
         ])
       }
       return this.events
-    }
+    },
   },
   methods: {
     formatDate,
@@ -168,9 +149,9 @@ export default {
     },
     formatTimesOfAdditionalEvents() {
       return this.additionalEvents
-        .map(event => this.formatTimeOfEvent(event))
+        .map((event) => this.formatTimeOfEvent(event))
         .join(',')
-    }
-  }
+    },
+  },
 }
 </script>
