@@ -38,11 +38,9 @@
             {{ address }}
           </address>
         </div>
-        <!-- v-html is safe here because cleanEventDescription sanitizes the HTML -->
-        <div
-          class="bg-transparent overflow-x-hidden overflow-y-hidden"
-          v-html="safeDescription"
-        />
+        <div class="bg-transparent overflow-x-hidden overflow-y-hidden">
+          {{ safeDescription }}
+        </div>
       </div>
     </div>
   </article>

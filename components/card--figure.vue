@@ -22,7 +22,9 @@
     <p v-if="subheading.length" class="text-lg text-grey-darker">
       {{ subheading }}
     </p>
-    <figcaption class="text-grey-darker text-base my-3" v-html="description" />
+    <figcaption class="text-grey-darker text-base my-3">
+      {{ description }}
+    </figcaption>
 
     <a
       v-if="youtube && youtube.length"

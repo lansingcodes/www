@@ -62,10 +62,9 @@
               {{ nextEvent.venue }}
             </span>
           </p>
-          <div
-            class="lc-event-description mb-6"
-            v-html="cleanEventDescription(nextEvent.description)"
-          />
+          <div class="lc-event-description mb-6">
+            {{ cleanEventDescription(nextEvent.description) }}
+          </div>
           <div class="text-center">
             <a
               :href="nextEvent.url"
