@@ -201,8 +201,13 @@ git push origin new-branch
 ```
 
 The output from this command will give you a link to GitHub that will start a
-pull request. Complete the form and submit your changes. Someone will get to it
-as soon as we can.
+pull request. Complete the form and submit your changes. Once you have make the request, you will need to assign a maintainer to review the code before we will accept it. To assign a maintainer to your pull request, you will need to be given the _Contributor_ role in the lansingcodes GitHub organization. This role will provide the proper permissions to assign a maintainer to a pull-request, also to assign yourself to an issue if you want to ensure that only you are working on it.
+
+To be granted the _Contributor_ role, send a message in the Slack channel and we will add you. To accept a _Contributor_ role from an organization, do the steps that follow:
+
+1. On GitHub, click your profile icon in the top right
+2. Click on _Organizations_ in the drop-down that appears
+3. Accept the lansingcodes _Contributor_ role
 
 If you want to use a different Firebase database on your computer or want to
 do more advanced things with your project, you may find the sections that follow to be
