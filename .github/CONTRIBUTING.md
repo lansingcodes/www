@@ -97,7 +97,7 @@ here's a quick list of the tools you'll need to run this project:
 
 ### Getting the source code
 
-If you want to start your own community website, click the _Fork_ button in the
+If you want to begin making changes, click the _Fork_ button in the
 top right of the [`lansingcodes/www`](https://github.com/lansingcodes/www) page
 on GitHub. This will create your own copy of the code, allow you to get updates
 from us, and make it easier to send us helpful improvements that you've made.
@@ -106,14 +106,7 @@ To get the code from GitHub, you will need to install
 [`git`](https://git-scm.com/downloads) on your computer and then run `git clone`
 to download the code from your computer.
 
-If you are making changes to `lansingcodes/www`, the full command will look like
-this:
-
-``` sh
-git clone https://github.com/lansingcodes/www.git
-```
-
-If you forked this repository, the command will be different. Go to the page
+Go to the page
 where your copy of the code exists on GitHub and then click the _Clone or
 download_ button to get the URL of the repository. Then run the following
 command, substituting `<forked_repository_url_here>` with the URL shown when you clicked the
