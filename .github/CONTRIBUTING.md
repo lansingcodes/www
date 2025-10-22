@@ -1,8 +1,9 @@
 # Lansing Codes Contributing Guide
 
 Hi! We're really excited that you are interested in contributing to our tech
-community tools. Before submitting your contribution, please make sure to read
-through these guidelines.
+community tools.
+
+Before submitting your contribution, please make sure to read through our [Code of Conduct](https://www.lansing.codes/code-of-conduct/) along with the following sections of this contributing guide:
 
 - [Code of Conduct](https://www.lansing.codes/code-of-conduct/)
 - [Issue Reporting Guidelines](#issue-reporting-guidelines)
@@ -27,27 +28,27 @@ through these guidelines.
 ## Pull Request Guidelines
 
 - The `main` branch is a snapshot of the latest in-flight release. All
-  development should be done in dedicated branches.
+  development should be done in separate, dedicated branches.
 
 - Checkout a development branch from the `main` branch. Similarly submit pull
   requests back to the `main` branch.
 
-- Add your name (and optional email and website) to the `contributors` property
+- Add your name (and optionally your email and website) to the `contributors` property
   in `package.json`. We want people to know you're helping out!
 
 - If adding a new feature, first create an issue with the `enhancement` label.
   Provide convincing reason to add this feature, provide mockups, and ask for
   discussion about the feature from other contributors. Wait until at least one
-  administrator has greenlighted the feature before working on it.
+  administrator greenlights the feature before working on it.
 
-- If fixing a bug:
+- If you've fixed a bug:
   - Add `(fixes #xxxx)` (where #xxxx is the issue id) to your PR title. For
     example, `adjust margins on ultrawide screens (fixes #12)`.
   - Provide a detailed description of the bug in the pull request.
 
-- If your change depends on or is a dependency of changes in another project,
-  such as [lansingcodes/api](https://github.com/lansingcodes/api)), please
-  make a note of this dependency and reference the pull request id in the
+- If your change depends on or is a dependency of a change in another project,
+  such as [lansingcodes/api](https://github.com/lansingcodes/api), please
+  make a note of this dependency and reference the pull request ID in the
   corresponding project(s).
 
 - Assign one or more reviewers to the pull request. At least one reviewer must
@@ -60,7 +61,7 @@ initial setup is recommended.
 
 This section starts with the basics like git and even the recommended editor.
 There may be useful information here even if you're already familiar with
-using git, VS Code, and Node. If you want to jump ahead, though, please read how
+using git, VS Code, and Node. If you want to jump ahead though, please read how
 to [customize your environment](#customizing-your-environment).
 
 You'll run all of the commands provided in this guide in a terminal program
@@ -115,22 +116,21 @@ git clone https://github.com/lansingcodes/www.git
 If you forked this repository, the command will be different. Go to the page
 where your copy of the code exists on GitHub and then click the _Clone or
 download_ button to get the URL of the repository. Then run the following
-command, substituting `REPOSITORY_URL` with the URL shown when you clicked the
+command, substituting `<forked_repository_url_here>` with the URL shown when you clicked the
 _Clone or download_ button on your repository:
 
 ``` sh
-git clone REPOSITORY_URL
+git clone <forked_repository_url_here>
 ```
 
 ### Installing NodeJS
 
-This website is built and runs with [NodeJS](https://nodejs.org/). If you are a
-Windows user, download and install Node by following the link and select the
+This website was built with and runs via NodeJS. If you are a
+Windows user, download and install Node on [their website](https://nodejs.org/) and select the
 _LTS_ download.
 
 If you use macOS or Linux, we recommend using
-[`nvm`](https://github.com/nvm-sh/nvm) to install Node. Once `nvm` is installed,
-you can installed, you can run the following command to install the correct Node
+[`nvm`](https://github.com/nvm-sh/nvm) to install Node. Once `nvm` is installed, you can run the following command to install the correct Node
 version:
 
 ``` sh
@@ -145,11 +145,11 @@ nvm use lts/dubnium
 
 ### Installing dependencies
 
-Now that NodeJS is installed, we can use it's companion, `npm`, to install all
+Now that NodeJS is installed, we can use its package manager `npm`, to install all
 of the required packages to run this project.
 
-In a terminal, change to this projects directory and run the following command
-to install the dependencies:
+In a terminal, open this project's directory and run the following command
+to install the project's dependencies:
 
 ``` sh
 npm install
@@ -158,44 +158,42 @@ npm install
 ### Editing the code
 
 If you want to look at the code and make changes to it, we highly recommend
-using [Visual Studio Code](https://code.visualstudio.com/) (VS Code for short).
-Follow the link to download and install the code editor.
+using Visual Studio Code (VSCode for short).
+Visit [their website](https://code.visualstudio.com/) to download and install the code editor.
 
-After VS Code is installed, run it and click _Extensions_ from the gear icon
-menu in the lower left of the editor. This will bring up a panel with a search
-box.
+After VSCode is installed, run it. Click the gear icon menu in the lower left of the editor, then select the _Extensions_ window. This will bring up a panel with a search
+box to look for editor extensions.
 
-Use the search box to find and install all of the extensions listed under the 
-required software heading. They make the experience of looking at and editing
-this project _super nice_.
+Use the search box to find and install all of the extensions listed under the
+[required software heading](#required-software). These make the experience of looking at and editing
+this project _super_ nice.
 
 ### Running and coding
 
 That's it for required software! You should now be able to run `npm run dev` in
-a terminal to build and run a server to see the website running from your
+a terminal to run a server that hosts the website locally on your
 computer.
 
 If you're making changes to the code and want to send a pull request to the
 `lansingcodes` organization on GitHub, the easiest way is to make all of your
 changes in a feature branch.
 
-To create a feature branch, use these commands, replacing `new-branch` with the
+To create a feature branch, use these commands, replacing `<new-branch-name>` with the
 name of your feature:
 
 ``` sh
 git fetch origin
-git checkout -b new-branch origin/main
+git checkout -b <new-branch-name> origin/main
 ```
 
-After you've made and tested your changes, these commands are helpful for
-committing your changes to your branch. Again, substitute `new-branch` with the
-name of your branch and `describe your changes` with an actual description of
+After you've made and tested your changes, the following commands will allow you to
+commit your changes to your branch. Substitute `<description-of-your-changes>` with an actual description of
 your changes. If you send us commits with messages that aren't descriptive then
 we won't accept them.
 
 ``` sh
 git add -A
-git commit -m 'describe your changes'
+git commit -m '<description-of-your-changes>'
 git push origin new-branch
 ```
 
@@ -204,7 +202,7 @@ pull request. Complete the form and submit your changes. Someone will get to it
 as soon as we can.
 
 If you want to use a different Firebase database on your computer or want to
-do more advanced things with your project, you may find the following sections
+do more advanced things with your project, you may find the sections that follow to be
 helpful.
 
 We hope you enjoy working with our code!
@@ -212,7 +210,7 @@ We hope you enjoy working with our code!
 ## Customizing your environment
 
 This project relies on other services. By default, the development environment
-is pointed at read-only production data.
+points to read-only production data.
 
 If your work requires more control over the services being used, you can adjust
 the following environment variables to do so.
@@ -220,9 +218,9 @@ the following environment variables to do so.
 ### `FIREBASE_WEB_CONFIG`
 
 This environment variable contains the stringified JSON used to connect to a
-specific Firebase environment. To get the value, open the Settings page for the
+specific Firebase environment. To get the value, open the _Settings_ page for the
 appropriate Firebase project in a web browser, then click the `</>` icon at the
-bottom of the General tab.
+bottom of the _General_ tab.
 
 Use the following example as a means of generating the JSON string needed for
 this environment variable:
@@ -265,7 +263,7 @@ npm run dev
 ```
 
 To build the project for an external web server, run the command below. The
-built files can be found in `/dist` and served with any static web server.
+built files can be found in `/dist/` and may be served via any static web server.
 
 ``` sh
 npm run build
@@ -282,7 +280,7 @@ npm run lint
 ## Deployments
 
 After a pull request is reviewed and merged to `main`, a Netlify deployment
-will automatically build and publish the staging environment at
+will automatically build and publish the staging environment to
 [lansingcodes-staging.netlify.com](https://lansingcodes-staging.netlify.com).
 
 Once the staging environment has been reviewed, the `main` branch can be
@@ -296,7 +294,7 @@ This will trigger another build and deployment by Netlify. The site will be
 published to [www.lansing.codes](https://www.lansing.codes).
 
 For both the staging and production sites, Netlify runs the command
-`npm run build` to build the site and deploys the contents of the `/dist`
+`npm run build` to build the site and deploys the contents of the `/dist/`
 directory.
 
 Staging is also configured to deploy _all_ branches, so creating a
