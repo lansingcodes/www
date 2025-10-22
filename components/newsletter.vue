@@ -30,7 +30,7 @@
           class="bg-blue-lightest text-blue-dark font-bold px-4 py-3 mx-auto"
           role="alert"
         >
-          <p class="text-sm" v-html="message" />
+          <p class="text-sm">{{ message }}</p>
         </div>
       </div>
     </form>
@@ -39,7 +39,7 @@
         class="bg-blue-lightest text-blue-dark text-center font-bold px-4 py-3 mx-auto"
         role="alert"
       >
-        <p class="text-sm" v-html="message" />
+        <p class="text-sm">{{ message }}</p>
       </div>
     </div>
   </section>
