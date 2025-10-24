@@ -69,7 +69,7 @@
           <div class="text-center">
             <a
               :href="nextEvent.url"
-              class="inline-block bg-white no-underline text-blue font-bold uppercase text-center py-4 mt-2 px-8 min-w-24 rounded-full"
+              class="inline-block bg-white no-underline text-blue font-bold uppercase text-center py-4 mt-2 px-8 min-w-24 rounded-full hover:bg-blue-lighter"
               target="_blank"
               rel="noreferrer noopener"
             >

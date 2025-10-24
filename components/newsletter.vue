@@ -18,7 +18,7 @@
           aria-label="Email address"
         />
         <button
-          class="outline-none bg-white border border-blue rounded-full text-blue p-4 -ml-16 uppercase font-bold text-sm hover:text-blue-darker focus:outline-none focus:shadow-outline"
+          class="outline-none bg-white border border-blue rounded-full text-blue p-4 -ml-16 uppercase font-bold text-sm"
           type="submit"
         >
           Subscribe
@@ -27,7 +27,7 @@
       <div v-if="message" class="w-3/4 md:max-w-sm mx-auto">
         <div class="up-arrow mt-1 ml-4" />
         <div
-          class="bg-blue-lightest text-blue-dark font-bold px-4 py-3 mx-auto"
+          class="bg-blue-lightest text-blue-darker font-bold px-4 py-3 mx-auto"
           role="alert"
         >
           <p class="text-sm" v-html="message" />
@@ -36,7 +36,7 @@
     </form>
     <div v-if="subscribed" class="w-3/4 md:max-w-sm mx-auto">
       <div
-        class="bg-blue-lightest text-blue-dark text-center font-bold px-4 py-3 mx-auto"
+        class="bg-blue-lightest text-blue-darker text-center font-bold px-4 py-3 mx-auto"
         role="alert"
       >
         <p class="text-sm" v-html="message" />

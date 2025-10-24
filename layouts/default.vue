@@ -29,14 +29,14 @@ body {
 }
 
 a {
-  @apply .text-blue-dark;
+  @apply .text-blue;
 
   &:hover {
-    @apply .text-blue-darker;
+    @apply .text-blue-darker .underline;
   }
 
   &:focus {
-    @apply .text-blue-darker .bg-blue-lighter .outline-none;
+    @apply .text-blue-darker .underline .bg-blue-lighter .outline-none;
   }
 }
 
@@ -51,6 +51,16 @@ h6 {
 
 p {
   @apply .my-4;
+}
+
+button {
+  &:hover {
+    @apply .bg-blue-darker .text-white .shadow-outline;
+  }
+
+  &:focus {
+    @apply .bg-blue-darker .text-white .shadow-outline;
+  }
 }
 
 .sr-only {

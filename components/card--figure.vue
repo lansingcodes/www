@@ -6,7 +6,7 @@
       :href="url"
       rel="noreferrer noopener"
       target="_blank"
-      class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
+      class="no-underline text-blue"
     >
       <logo
         :icon-set="iconSet"
