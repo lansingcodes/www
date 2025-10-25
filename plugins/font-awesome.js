@@ -20,7 +20,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCalendarAlt,
   faGrinBeamSweat,
-  faThumbsUp
+  faThumbsUp,
 } from '@fortawesome/free-regular-svg-icons'
 
 library.add(faCalendarAlt, faGrinBeamSweat, faThumbsUp)
@@ -54,7 +54,7 @@ import {
   faUnlockAlt,
   faUserCircle,
   faUserFriends,
-  faUsers
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -99,7 +99,7 @@ import {
   faSlack,
   faTwitter,
   faWordpressSimple,
-  faYoutube
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -129,4 +129,4 @@ library.add(
 
 // Import and globally register a component called font-awesome-icon
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('FontAwesomeIcon', FontAwesomeIcon)

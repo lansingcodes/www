@@ -15,17 +15,17 @@ import groupForEvent from '~/utils/group-for-event'
 
 export default {
   components: {
-    eventCard
+    eventCard,
   },
   computed: {
     events() {
       return this.$store.state.events.upcoming
-    }
+    },
   },
   methods: {
     eventGroup(event) {
       return groupForEvent(event, this.$store.state.groups.all)
-    }
-  }
+    },
+  },
 }
 </script>

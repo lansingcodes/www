@@ -2,11 +2,11 @@ import { firestoreAction } from 'vuexfire'
 import firestore from '~/utils/firestore'
 
 export const state = () => ({
-  all: []
+  all: [],
 })
 
 export const actions = {
-  loadAll: firestoreAction(context =>
+  loadAll: firestoreAction((context) =>
     context.bindFirestoreRef('all', firestore.collection('groups'))
-  )
+  ),
 }

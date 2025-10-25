@@ -1,9 +1,6 @@
 <template>
-  <section
-    id="events"
-    class="sm:-mt-48"
-  >
-    <div class="lc-bg-right-triangle bg-transparent h-64"/>
+  <section id="events" class="sm:-mt-48">
+    <div class="lc-bg-right-triangle bg-transparent h-64" />
     <div class="lc-bg-ltr-gradient">
       <div class="container mx-auto">
         <section-heading
@@ -18,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div class="lc-bg-down-triangle bg-white h-64 -mt-32"/>
+    <div class="lc-bg-down-triangle bg-white h-64 -mt-32" />
   </section>
 </template>
 
@@ -31,7 +28,7 @@ export default {
   components: {
     sectionHeading,
     eventCalendar,
-    eventList
-  }
+    eventList,
+  },
 }
 </script>

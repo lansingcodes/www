@@ -1,16 +1,12 @@
 <template>
   <figure
-    class="
-      w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4 text-center font-serif p-4
-    "
+    class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-2 md:mb-4 text-center font-serif p-4"
   >
     <a
       :href="url"
       rel="noreferrer noopener"
       target="_blank"
-      class="
-        no-underline text-blue hover:text-blue-darker focus:text-blue-darker
-      "
+      class="no-underline text-blue hover:text-blue-darker focus:text-blue-darker"
     >
       <logo
         :icon-set="iconSet"
@@ -23,21 +19,17 @@
         {{ heading }}
       </h3>
     </a>
-    <p
-      v-if="subheading.length"
-      class="text-lg text-grey-darker"
-    >{{ subheading }}</p>
-    <figcaption
-      class="text-grey-darker text-base my-3"
-      v-html="description"
-    />
-    
-    <a 
-      v-if="youtube && youtube.length" 
+    <p v-if="subheading.length" class="text-lg text-grey-darker">
+      {{ subheading }}
+    </p>
+    <figcaption class="text-grey-darker text-base my-3" v-html="description" />
+
+    <a
+      v-if="youtube && youtube.length"
       :href="youtube"
       class="block text-blue fill-current no-underline"
       rel="noreferrer noopener"
-    > 
+    >
       <font-awesome-icon :icon="['fab', 'youtube']" />
       YouTube
     </a>
@@ -49,49 +41,49 @@ import logo from '~/components/logo--medium'
 
 export default {
   components: {
-    logo
+    logo,
   },
   props: {
     url: {
       type: String,
-      default: 'javascript:void(0)'
+      default: 'javascript:void(0)',
     },
     heading: {
       type: String,
-      default: 'Tech Demo Night'
+      default: 'Tech Demo Night',
     },
     subheading: {
       type: String,
-      default: ''
+      default: '',
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     iconSet: {
       type: String,
-      default: 'fas'
+      default: 'fas',
     },
     iconName: {
       type: String,
-      default: 'code'
+      default: 'code',
     },
     iconText: {
       type: String,
-      default: null
+      default: null,
     },
     imgSrc: {
       type: String,
-      default: null
+      default: null,
     },
     imgAlt: {
       type: String,
-      default: null
+      default: null,
     },
     youtube: {
       type: String,
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 }
 </script>

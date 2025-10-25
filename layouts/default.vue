@@ -1,16 +1,13 @@
 <template>
   <div>
-    <a
-      class="sr-only focus:block"
-      href="#mainContent"
-    >Skip to main content</a>
+    <a class="sr-only focus:block" href="#mainContent">Skip to main content</a>
     <header>
-      <navigation/>
+      <navigation />
     </header>
     <main id="mainContent">
-      <nuxt/>
+      <nuxt />
     </main>
-    <site-footer/>
+    <site-footer />
   </div>
 </template>
 
@@ -21,8 +18,8 @@ import SiteFooter from '~/components/footer'
 export default {
   components: {
     Navigation,
-    SiteFooter
-  }
+    SiteFooter,
+  },
 }
 </script>
 

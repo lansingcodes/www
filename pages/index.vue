@@ -1,11 +1,11 @@
 <template>
   <div>
-    <welcome/>
-    <events/>
-    <meetups/>
-    <resources/>
-    <sponsors/>
-    <newsletter/>
+    <welcome />
+    <events />
+    <meetups />
+    <resources />
+    <sponsors />
+    <newsletter />
   </div>
 </template>
 
@@ -24,15 +24,15 @@ export default {
     meetups,
     resources,
     sponsors,
-    newsletter
+    newsletter,
   },
   async fetch({ store }) {
     // Load async data needed by the page here
     return Promise.all([
       store.dispatch('sponsors/loadAll'),
       store.dispatch('groups/loadAll'),
-      store.dispatch('events/loadUpcoming')
+      store.dispatch('events/loadUpcoming'),
     ])
-  }
+  },
 }
 </script>
