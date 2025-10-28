@@ -3,11 +3,11 @@
  * .. to give text a bold style.
  * E.g '**text** **welcome' becomes:
  * .. '<span class="font-bold">text</span> <span class="font-bold">welcome</span>'
- * 
+ *
  * @param {string} markdown - input markdown string
  * @returns {string}
  */
-export default markdown => {
+export default (markdown) => {
   const HTMLOpeningSpan = '<span class="font-bold">'
   const HTMLEndingSpan = '</span>'
   const markdownMatches = [...markdown.matchAll(/\*\*/g)]
