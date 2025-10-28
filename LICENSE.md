@@ -1,4 +1,4 @@
-@lansingcodes/www Copyright 2015-Present Humanity Codes, LLC(“Licensor”)
+@lansingcodes/www Copyright 2015-Present Michigan Technology Network(“Licensor”)
 
 Hippocratic License Version Number: 2.1.
 
