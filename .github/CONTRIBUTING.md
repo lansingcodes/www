@@ -124,12 +124,35 @@ git clone REPOSITORY_URL
 
 ### Installing NodeJS
 
-This website is built and runs with [NodeJS](https://nodejs.org/). If you are a
-Windows user, download and install Node by following the link and select the
-_LTS_ download.
+This website is built and runs with [NodeJS](https://nodejs.org/) version
+**16.20.2** (yes, it's old).
+
+If you are a Windows user, download and install Node by following the link and
+select the _LTS_ download for version 16.20.2. (You can use the commandline or
+download an install file (scroll down!))
+![Node.js website screenshot](../assets/images/windows-installer-nodejs.png)
 
 If you use macOS or Linux, we recommend using
-[`nvm`](https://github.com/nvm-sh/nvm) to install Node. Once `nvm` is installed,
+[`nvm`](https://github.com/nvm-sh/nvm) to install Node.
+
+``` sh
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 16
+
+# Verify the Node.js version:
+node -v # Should print "v16.20.2".
+
+# Verify npm version:
+npm -v # Should print "8.19.4".
+```
+
+Once `nvm` is installed,
 you can installed, you can run the following command to install the correct Node
 version:
 
@@ -258,7 +281,7 @@ npm install
 ```
 
 To build and run (with hot reload) the site on your computer at
-http://localhost:3000, run:
+`http://localhost:3000`, run:
 
 ``` sh
 npm run dev
@@ -275,7 +298,7 @@ To verify your code passes the project's linting rules, run the command below.
 This command automatically runs before every `git commit` for the project as
 well.
 
-```
+``` sh
 npm run lint
 ```
 
