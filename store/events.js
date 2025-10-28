@@ -4,11 +4,11 @@ import { startOfDay, addWeeks, endOfDay, endOfWeek } from 'date-fns'
 import weeksAvailable from '~/config/max-calendar-weeks'
 
 export const state = () => ({
-  upcoming: []
+  upcoming: [],
 })
 
 export const actions = {
-  loadUpcoming: firestoreAction(context => {
+  loadUpcoming: firestoreAction((context) => {
     const startDate = startOfDay(Date.now())
     const endDate = endOfDay(endOfWeek(addWeeks(startDate, weeksAvailable - 1)))
     const eventsRef = firestore
@@ -17,5 +17,5 @@ export const actions = {
       .where('startTime', '<=', endDate.getTime())
       .orderBy('startTime', 'asc')
     return context.bindFirestoreRef('upcoming', eventsRef)
-  })
+  }),
 }

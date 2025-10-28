@@ -1,10 +1,7 @@
 <template>
   <section
     id="sponsors"
-    class="
-      container mx-auto flex flex-wrap justify-center px-4 my-16
-      md:px-12 md:-mt-48
-    "
+    class="container mx-auto flex flex-wrap justify-center px-4 my-16 md:px-12 md:-mt-48"
   >
     <section-heading
       blue
@@ -18,18 +15,18 @@
         <source
           srcset="../assets/images/sponsors-feature.webp"
           type="image/webp"
-        >
+        />
         <source
           srcset="../assets/images/sponsors-feature.jpg"
           type="image/jpeg"
-        >
+        />
         <img
           src="../assets/images/sponsors-feature.jpg"
           alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
           class="ml-8 mb-8 block shadow-lg"
           width="736"
           height="394"
-        >
+        />
       </picture>
     </div>
 
@@ -55,12 +52,12 @@ import orderBy from 'lodash/orderBy'
 export default {
   components: {
     card,
-    sectionHeading
+    sectionHeading,
   },
   computed: {
     sponsors() {
       return orderBy(this.$store.state.sponsors.all, ['name'])
-    }
-  }
+    },
+  },
 }
 </script>
