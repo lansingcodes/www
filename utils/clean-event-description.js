@@ -1,4 +1,4 @@
-export default description => {
+export default (description) => {
   // Trim whitespace
   let newDescription = description.trim()
   // Remove elipsis at end of description

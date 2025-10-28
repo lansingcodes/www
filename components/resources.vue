@@ -1,10 +1,6 @@
 <template>
   <section id="resources">
-    <div
-      class="
-        lc-bg-rtl-gradient sm:lc-bg-upright-trapezoid bg-white h-40
-      "
-    >
+    <div class="lc-bg-rtl-gradient sm:lc-bg-upright-trapezoid bg-white h-40">
       <div
         class="container mx-auto flex sm:justify-end flex-no-wrap content-center"
       >
@@ -18,10 +14,7 @@
     </div>
     <div class="lc-bg-rtl-gradient">
       <div
-        class="
-          container mx-auto flex flex-wrap content-center justify-around
-          pt-0 sm:pt-16 pb-16
-        "
+        class="container mx-auto flex flex-wrap content-center justify-around pt-0 sm:pt-16 pb-16"
       >
         <div
           v-for="resource in resources"
@@ -44,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div class="hidden sm:block lc-bg-downright-trapezoid bg-white h-32"/>
+    <div class="hidden sm:block lc-bg-downright-trapezoid bg-white h-32" />
   </section>
 </template>
 
@@ -54,13 +47,13 @@ import resources from '~/config/resources'
 
 export default {
   components: {
-    sectionHeading
+    sectionHeading,
   },
   data() {
     return {
-      resources
+      resources,
     }
-  }
+  },
 }
 </script>
 

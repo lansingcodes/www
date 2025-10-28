@@ -118,19 +118,37 @@ git clone <forked_repository_url_here>
 
 ### Installing NodeJS
 
-This website was built with and runs via an older version of NodeJS.
+This website is built and runs with [NodeJS](https://nodejs.org/) version
+**16.20.2** (yes, it's old).
 
-We recommend using `nvm` to install a compatible Node version for this project. To install `nvm`, follow their [installation guide](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating).
+If you are a Windows user, download and install Node by following the link and
+select the _LTS_ download for version 16.20.2. (You can use the commandline or
+download an install file (scroll down!))
+![Node.js website screenshot](../assets/images/windows-installer-nodejs.png)
 
-`Nvm` is a linux-only utility, so some extra steps are required to setup its environment for non MacOS or Linux users.
+If you use macOS or Linux, we recommend using
+[`nvm`](https://github.com/nvm-sh/nvm) to install Node.
 
-If you are on Windows, you can install `nvm` via the Windows Subsystem for Linux (abbreviated WSL). Visit the Windows Store application that is built into Windows. Search for and download the Ubuntu subsystem. Any Linux distribution (Debian, Fedora, etc.) works, but we recommend Ubuntu. Once downloaded, run `wsl --install` in the command prompt. After the installation has completed, restart your system.
+``` sh
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-After you install `nvm`, some additional setup is required if you want to run the project on Windows with VSCode.
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
 
-The web server we use hot-reloads, meaning any time you change a file the server will reload in the browser to see your changes live. This is great since you don't have to manually reload. The problem is that Windows sends OS-specific signals any time a file is changed. These signals do not carry back and forth between WSL and Windows, since they are two different operating systems. We will need to connect VSCode to our project as if it was running in WSL. To do this, open VSCode and press `ctrl + shift + p` at the same time to open the command pallet. Search for `WSL: Connect to WSL in a new Window`. Next, open the repo from your WSL filesystem. Files from Windows can be found under `/mnt/c/`. It might be easier for you to just clone the repo again to your Linux home directory. Once you open up the directory in your WSL-connected VSCode window, you may proceed!
+# Download and install Node.js:
+nvm install 16
 
-You can run the following command to install the correct version of NodeJS via `nvm`:
+# Verify the Node.js version:
+node -v # Should print "v16.20.2".
+
+# Verify npm version:
+npm -v # Should print "8.19.4".
+```
+
+Once `nvm` is installed,
+you can installed, you can run the following command to install the correct Node
+version:
 
 ``` sh
 nvm install lts/dubnium
@@ -264,7 +282,7 @@ npm install
 ```
 
 To build and run (with hot reload) the site on your computer at
-http://localhost:3000, run:
+`http://localhost:3000`, run:
 
 ``` sh
 npm run dev
@@ -281,7 +299,7 @@ To verify your code passes the project's linting rules, run the command below.
 This command automatically runs before every `git commit` for the project as
 well.
 
-```
+``` sh
 npm run lint
 ```
 
