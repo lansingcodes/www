@@ -15,7 +15,8 @@
         >
         <section-heading
           h1
-          blue
+          :blue="true"
+          :grey="false"
           heading="Lansing Codes"
           subheading="events and resources for Lansing coders"
         />
