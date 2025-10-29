@@ -1,4 +1,6 @@
-// TODO: Replace with Vue 3 compatible popover solution
+// Legacy popover plugin - no longer used
+// Popover functionality is now handled by vue3-popper directly in components
+// See components/calendar--event.vue for implementation
 export default defineNuxtPlugin(() => {
-  // Popover functionality temporarily disabled during Nuxt 3 migration
+  // Empty plugin - kept for backward compatibility during migration
 })
