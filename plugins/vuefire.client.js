@@ -1,5 +1,5 @@
+import { VueFire, VueFireAuth } from 'vuefire'
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCMw8mZ1D1GAYpeotAqVCaYAMtn3URVOok',
@@ -11,7 +11,11 @@ const firebaseConfig = {
   appId: '1:647280182517:web:779f72d0b90c0dd4',
 }
 
-const firebaseApp = initializeApp(firebaseConfig)
-export const db = getFirestore(firebaseApp)
+export default defineNuxtPlugin((nuxtApp) => {
+  const firebaseApp = initializeApp(firebaseConfig)
 
-export default db
+  nuxtApp.vueApp.use(VueFire, {
+    firebaseApp,
+    modules: []
+  })
+})

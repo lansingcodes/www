@@ -1,42 +1,37 @@
 <template>
   <div>
-    <a class="sr-only focus:block" href="#mainContent">Skip to main content</a>
+    <a
+      class="sr-only focus:block"
+      href="#mainContent">Skip to main content</a>
     <header>
-      <navigation />
+      <Navigation />
     </header>
     <main id="mainContent">
-      <nuxt />
+      <slot />
     </main>
-    <site-footer />
+    <SiteFooter />
   </div>
 </template>
 
-<script>
-import Navigation from '~/components/navigation'
-import SiteFooter from '~/components/footer'
-
-export default {
-  components: {
-    Navigation,
-    SiteFooter,
-  },
-}
+<script setup>
+import Navigation from '~/components/navigation.vue'
+import SiteFooter from '~/components/footer.vue'
 </script>
 
 <style lang="scss">
 body {
-  @apply .font-sans;
+  @apply font-sans;
 }
 
 a {
-  @apply .text-blue-dark;
+  @apply text-blue-700;
 
   &:hover {
-    @apply .text-blue-darker;
+    @apply text-blue-800;
   }
 
   &:focus {
-    @apply .text-blue-darker .bg-blue-lighter .outline-none;
+    @apply text-blue-800 bg-blue-100 outline-none;
   }
 }
 
@@ -46,11 +41,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply .font-heading .font-bold;
+  @apply font-bold;
 }
 
 p {
-  @apply .my-4;
+  @apply my-4;
 }
 
 .sr-only {

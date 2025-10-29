@@ -1,5 +1,7 @@
 <template>
-  <section id="events" class="sm:-mt-48">
+  <section 
+    id="events" 
+    class="sm:-mt-48">
     <div class="lc-bg-right-triangle bg-transparent h-64" />
     <div class="lc-bg-ltr-gradient">
       <div class="container mx-auto">
@@ -19,16 +21,8 @@
   </section>
 </template>
 
-<script>
-import sectionHeading from '~/components/section-heading'
-import eventCalendar from '~/components/event-calendar'
-import eventList from '~/components/event-list'
-
-export default {
-  components: {
-    sectionHeading,
-    eventCalendar,
-    eventList,
-  },
-}
+<script setup>
+import sectionHeading from '~/components/section-heading.vue'
+import eventCalendar from '~/components/event-calendar.vue'
+import eventList from '~/components/event-list.vue'
 </script>

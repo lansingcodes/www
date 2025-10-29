@@ -41,20 +41,9 @@
   </section>
 </template>
 
-<script>
-import sectionHeading from '~/components/section-heading'
+<script setup>
+import sectionHeading from '~/components/section-heading.vue'
 import resources from '~/config/resources'
-
-export default {
-  components: {
-    sectionHeading,
-  },
-  data() {
-    return {
-      resources,
-    }
-  },
-}
 </script>
 
 <style lang="scss" scoped>

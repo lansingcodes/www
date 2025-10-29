@@ -1,12 +1,12 @@
 <template>
-  <nav class="fixed pin-t pin-x z-50 shadow font-heading">
+  <nav class="fixed top-0 left-0 right-0 z-50 shadow font-heading w-full">
     <div
-      class="hidden lg:flex items-center justify-between flex-wrap bg-white p-4 border-b border-blue-light"
+      class="hidden lg:flex items-center justify-between flex-wrap bg-white p-4 border-b border-blue-light w-full"
     >
       <!-- Logo -->
       <a
         href="/"
-        class="flex items-center flex-no-shrink text-blue-dark no-underline hover:text-blue-dark"
+        class="flex items-center shrink-0 text-blue-dark no-underline hover:text-blue-dark"
       >
         <img
           class="h-12 mr-2"
@@ -14,7 +14,7 @@
           alt="Lansing Codes Logo"
           width="48"
           height="48"
-        />
+        >
         <span class="font-bold text-xl uppercase">Lansing Codes</span>
       </a>
 
@@ -35,7 +35,7 @@
     <!-- Menu Toggle -->
     <div
       key="menu-button"
-      class="static block lg:hidden fixed pin-b pin-r z-50 p-4"
+      class="static block lg:hidden fixed bottom-0 right-0 z-50 p-4"
     >
       <button
         :aria-label="open ? 'Close Menu' : 'Open Menu'"
@@ -63,10 +63,10 @@
           v-if="open"
           id="navBarSupportedContent"
           key="menu"
-          class="static block lg:hidden fixed pin-b pin-x z-30 p-4 pb-0 border-blue border-t-2 bg-white font-medium"
+          class="static block lg:hidden fixed bottom-0 left-0 right-0 z-30 p-4 pb-0 border-blue border-t-2 bg-white font-medium"
         >
           <div>
-            <ul class="bullet-none mr-24 p-0">
+            <ul class="list-none mr-24 p-0">
               <li
                 v-for="link in bottomLinks"
                 :key="link.name"
@@ -106,46 +106,46 @@ export default {
           href: '#mainContent',
           iconSet: ['fas', 'arrow-up'],
           top: false,
-          bottom: true,
+          bottom: true
         },
         {
           name: 'Home',
           href: '/',
           iconSet: ['fas', 'home'],
           top: false,
-          bottom: true,
+          bottom: true
         },
         {
           name: 'Slack',
           href: urls.slack,
           iconSet: ['fab', 'slack'],
           top: true,
-          bottom: true,
+          bottom: true
         },
         {
           name: 'Code of Conduct',
           href: '/code-of-conduct',
           iconSet: ['fas', 'shield-alt'],
           top: true,
-          bottom: true,
+          bottom: true
         },
         {
           name: 'Contact',
           href: '#contact',
           iconSet: ['far', 'thumbs-up'],
           top: true,
-          bottom: true,
-        },
-      ],
+          bottom: true
+        }
+      ]
     }
   },
   computed: {
     topLinks() {
-      return this.links.filter((link) => link.top)
+      return this.links.filter(link => link.top)
     },
     bottomLinks() {
-      return this.links.filter((link) => link.bottom)
-    },
-  },
+      return this.links.filter(link => link.bottom)
+    }
+  }
 }
 </script>

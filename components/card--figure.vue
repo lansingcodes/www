@@ -19,10 +19,14 @@
         {{ heading }}
       </h3>
     </a>
-    <p v-if="subheading.length" class="text-lg text-grey-darker">
+    <p 
+      v-if="subheading.length" 
+      class="text-lg text-grey-darker">
       {{ subheading }}
     </p>
-    <figcaption class="text-grey-darker text-base my-3" v-html="description" />
+    <figcaption 
+      class="text-grey-darker text-base my-3" 
+      v-html="description" />
 
     <a
       v-if="youtube && youtube.length"
@@ -36,54 +40,49 @@
   </figure>
 </template>
 
-<script>
-import logo from '~/components/logo--medium'
+<script setup>
+import logo from '~/components/logo--medium.vue'
 
-export default {
-  components: {
-    logo,
-  },
-  props: {
+defineProps({
     url: {
       type: String,
-      default: 'javascript:void(0)',
+      default: 'javascript:void(0)'
     },
     heading: {
       type: String,
-      default: 'Tech Demo Night',
+      default: 'Tech Demo Night'
     },
     subheading: {
       type: String,
-      default: '',
+      default: ''
     },
     description: {
       type: String,
-      default: '',
+      default: ''
     },
     iconSet: {
       type: String,
-      default: 'fas',
+      default: 'fas'
     },
     iconName: {
       type: String,
-      default: 'code',
+      default: 'code'
     },
     iconText: {
       type: String,
-      default: null,
+      default: null
     },
     imgSrc: {
       type: String,
-      default: null,
+      default: null
     },
     imgAlt: {
       type: String,
-      default: null,
+      default: null
     },
     youtube: {
       type: String,
-      default: null,
-    },
-  },
-}
+      default: null
+    }
+})
 </script>

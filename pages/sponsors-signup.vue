@@ -18,9 +18,13 @@
         </div>
       </div>
       <div class="p-8 bg-blue block shadow-lg w-full rounded">
-        <form action="https://formspree.io/f/xayagvjo" method="POST">
+        <form 
+          action="https://formspree.io/f/xayagvjo" 
+          method="POST">
           <div class="form-row m-2">
-            <label for="organization-name" class="text-white">
+            <label 
+              for="organization-name" 
+              class="text-white">
               Organization Name
             </label>
             <input
@@ -28,8 +32,10 @@
               name="organization-name"
               type="text"
               class="rounded px-10"
-            />
-            <label for="organization-website" class="text-white ml-3">
+            >
+            <label 
+              for="organization-website" 
+              class="text-white ml-3">
               Organization Website
             </label>
             <input
@@ -37,15 +43,25 @@
               name="organization-website"
               type="website"
               class="rounded px-10"
-            />
+            >
           </div>
           <div class="form-row m-2">
-            <label for="contact-name" class="text-white"> Contact Name </label>
-            <input id="contact-name" type="text" class="rounded px-10" />
-            <label for="contact-email" class="text-white ml-3">
+            <label 
+              for="contact-name" 
+              class="text-white"> Contact Name </label>
+            <input 
+              id="contact-name" 
+              type="text" 
+              class="rounded px-10" >
+            <label 
+              for="contact-email" 
+              class="text-white ml-3">
               Contact Email
             </label>
-            <input id="contact-email" type="email" class="rounded px-10" />
+            <input 
+              id="contact-email" 
+              type="email" 
+              class="rounded px-10" >
           </div>
           <div class="form-row m-2">
             <div class="text-white">How would you like to contribute?</div>
@@ -57,14 +73,16 @@
                   value="monthly-lansing-codes"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="monthly-lansing-codes" class="text-white">
+                >
+                <label 
+                  for="monthly-lansing-codes" 
+                  class="text-white">
                   Monthly Contribution to Lansing Codes
                 </label>
                 <input
                   v-if="showDescription === 'monthly-lansing-codes'"
                   type="hidden"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -73,14 +91,16 @@
                   value="one-time-lansing-codes"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="one-time-lansing-codes" class="text-white">
+                >
+                <label 
+                  for="one-time-lansing-codes" 
+                  class="text-white">
                   One-time contribution to Lansing Codes
                 </label>
                 <input
                   v-if="showDescription === 'one-time-lansing-codes'"
                   type="hidden"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -89,8 +109,10 @@
                   value="monthly-specific-group"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="monthly-specific-group" class="text-white">
+                >
+                <label 
+                  for="monthly-specific-group" 
+                  class="text-white">
                   Monthly contribution to a particular group (specify event)
                 </label>
                 <input
@@ -100,7 +122,7 @@
                   type="text"
                   class="rounded px-10"
                   maxlength="30"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -109,8 +131,10 @@
                   value="one-time-specific-group"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="one-time-specific-group" class="text-white">
+                >
+                <label 
+                  for="one-time-specific-group" 
+                  class="text-white">
                   One-time contribution to a particular group (specify event)
                 </label>
                 <input
@@ -119,7 +143,7 @@
                   name="one-time-specific-group-group"
                   type="text"
                   class="rounded px-10"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -128,8 +152,10 @@
                   value="host-event"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="host-event" class="text-white">
+                >
+                <label 
+                  for="host-event" 
+                  class="text-white">
                   Host an event (offer space, A/V equipment, and drinks)
                   (specify event)
                 </label>
@@ -139,7 +165,7 @@
                   name="host-event-event"
                   type="text"
                   class="rounded px-10"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -148,8 +174,10 @@
                   value="provide-event"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="provide-event" class="text-white">
+                >
+                <label 
+                  for="provide-event" 
+                  class="text-white">
                   Provide food and drink for an event (specify event)
                 </label>
                 <input
@@ -158,7 +186,7 @@
                   name="provide-event-event"
                   type="text"
                   class="rounded px-10"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -167,8 +195,10 @@
                   value="contribute-other"
                   type="radio"
                   name="contribute-options"
-                />
-                <label for="contribute-other" class="text-white">
+                >
+                <label 
+                  for="contribute-other" 
+                  class="text-white">
                   Other (please specify)
                 </label>
                 <input
@@ -177,7 +207,7 @@
                   name="contribute-other-description"
                   type="text"
                   class="rounded px-10"
-                />
+                >
               </div>
             </div>
           </div>
@@ -191,8 +221,10 @@
                   value="invoice-yes"
                   type="radio"
                   name="invoice-options"
-                />
-                <label for="invoice-yes" class="text-white"> Yes </label>
+                >
+                <label 
+                  for="invoice-yes" 
+                  class="text-white"> Yes </label>
                 <label
                   v-if="showContact === 'invoice-yes'"
                   for="invoice-contact-name"
@@ -206,7 +238,7 @@
                   name="invoice-contact-name"
                   type="text"
                   class="rounded px-10"
-                />
+                >
                 <label
                   v-if="showContact === 'invoice-yes'"
                   for="invoice-contact-email"
@@ -220,7 +252,7 @@
                   name="contact-email"
                   type="email"
                   class="rounded px-10"
-                />
+                >
               </div>
               <div class="m-1">
                 <input
@@ -229,16 +261,20 @@
                   value="invoice-no"
                   type="radio"
                   name="invoice-options"
-                />
-                <label for="invoice-no" class="text-white"> No </label>
-                <input v-if="showContact === 'invoice-no'" type="hidden" />
+                >
+                <label 
+                  for="invoice-no" 
+                  class="text-white"> No </label>
+                <input 
+                  v-if="showContact === 'invoice-no'" 
+                  type="hidden" >
                 <div class="m-1 pl-3 text-white">
                   Send contributions via
                   <a
                     href="https://www.paypal.com/paypalme/lansingcodes"
                     target="_blank"
                     class="text-grey-light no-underline"
-                    >PayPal</a
+                  >PayPal</a
                   >
                   to Humanity Codes
                 </div>
@@ -259,25 +295,19 @@
   </article>
 </template>
 
-<script>
-import pageHeading from '~/components/page-heading'
-import card from '~/components/card--figure'
+<script setup>
+import { ref } from 'vue'
+import pageHeading from '~/components/page-heading.vue'
+import card from '~/components/card--figure.vue'
 import orderBy from 'lodash/orderBy'
 
-export default {
-  components: {
-    pageHeading,
-  },
-  data() {
-    return {
-      showDescription: 'hidden-1',
-      showContact: 'invoice-no',
-    }
-  },
-  methods: {
-    toggleMonthlySpecGroup: (e) => {
-      this.$refs.monthlySpecGroup.toggleAttribute('hidden')
-    },
-  },
+const showDescription = ref('hidden-1')
+const showContact = ref('invoice-no')
+const monthlySpecGroup = ref(null)
+
+const toggleMonthlySpecGroup = (e) => {
+  if (monthlySpecGroup.value) {
+    monthlySpecGroup.value.toggleAttribute('hidden')
+  }
 }
 </script>

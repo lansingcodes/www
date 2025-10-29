@@ -22,13 +22,25 @@
   transform: translateY(100vh);
 }
 
-@variants active, hover {
+@layer utilities {
   .slide-down-px {
     transform: translateY(1px);
     transition: all ease-in-out .1s;
   }
 
+  .active\:slide-down-px:active,
+  .hover\:slide-down-px:hover {
+    transform: translateY(1px);
+    transition: all ease-in-out .1s;
+  }
+
   .slide-up-px {
+    transform: translateY(-1px);
+    transition: all ease-in-out .1s;
+  }
+
+  .active\:slide-up-px:active,
+  .hover\:slide-up-px:hover {
     transform: translateY(-1px);
     transition: all ease-in-out .1s;
   }

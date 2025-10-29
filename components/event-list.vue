@@ -9,23 +9,19 @@
   </div>
 </template>
 
-<script>
-import eventCard from '~/components/card--event'
+<script setup>
+import { computed } from 'vue'
+import eventCard from '~/components/card--event.vue'
 import groupForEvent from '~/utils/group-for-event'
+import { useEvents } from '~/composables/useEvents'
+import { useGroups } from '~/composables/useGroups'
 
-export default {
-  components: {
-    eventCard,
-  },
-  computed: {
-    events() {
-      return this.$store.state.events.upcoming
-    },
-  },
-  methods: {
-    eventGroup(event) {
-      return groupForEvent(event, this.$store.state.groups.all)
-    },
-  },
+const { upcoming } = useEvents()
+const { all: groups } = useGroups()
+
+const events = computed(() => upcoming.value || [])
+
+const eventGroup = (event) => {
+  return groupForEvent(event, groups.value || [])
 }
 </script>
