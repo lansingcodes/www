@@ -8,6 +8,7 @@
     >
       <div class="flex flex-no-wrap items-center font-normal mb-2 min-h-12">
         <logo
+          v-if="group"
           :icon-set="group.iconSet"
           :icon-name="group.iconName"
           :icon-text="group.iconText"
@@ -23,7 +24,7 @@
           </a>
         </h3>
       </div>
-      <section class="text-sm mb-1 truncate">{{ group.name }}</section>
+      <section v-if="group" class="text-sm mb-1 truncate">{{ group.name }}</section>
       <section class="text-sm">
         {{ formatReadableDateTime(event.startTime) }}
       </section>
@@ -32,9 +33,13 @@
     <!-- Additional details -->
     <div class="max-h-50 overflow-y-hidden overflow-x-hidden bg-white shadow">
       <div class="m-4 overflow-x-hidden overflow-y-hidden">
-        <div v-if="venue" class="mb-2 overflow-x-hidden">
+        <div 
+          v-if="venue" 
+          class="mb-2 overflow-x-hidden">
           <p class="font-bold mb-1">{{ venue }}</p>
-          <address v-if="address" class="text-grey-darker roman">
+          <address 
+            v-if="address" 
+            class="text-grey-darker roman">
             {{ address }}
           </address>
         </div>
@@ -47,30 +52,30 @@
   </article>
 </template>
 
-<script>
-import logo from '~/components/logo--small'
+<script setup>
+import logo from '~/components/logo--small.vue'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import cleanEventDescription from '~/utils/clean-event-description'
+import { computed } from 'vue'
 
-export default {
-  components: {
-    logo,
+const props = defineProps({
+  event: {
+    type: Object,
+    required: true
   },
-  props: {
-    event: {
-      type: Object,
-      required: true,
-    },
-    group: {
-      type: Object,
-      required: true,
-    },
-  },
-  methods: {
-    formatReadableDateTime,
-    cleanEventDescription,
-  },
-}
+  group: {
+    type: Object,
+    required: false,
+    default: null
+  }
+})
+
+const venue = computed(() => props.event.venue?.name || null)
+const address = computed(() => {
+  const addr = props.event.venue
+  if (!addr) return null
+  return [addr.address_1, addr.city, addr.state, addr.zip].filter(Boolean).join(', ')
+})
 </script>
 
 <style lang="scss" scoped>

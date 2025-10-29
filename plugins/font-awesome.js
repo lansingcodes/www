@@ -1,12 +1,11 @@
 /************************************************************************
-  Font Awesome 5 SVG Icons
+  Font Awesome 6 SVG Icons
   Based on https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs
 *************************************************************************/
 
-// need this for the plugin to work
-import Vue from 'vue'
 // import core SVG icons
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /*******************************************************************
   👉  Import the icons you want to use from the appropriate set,
@@ -20,7 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCalendarAlt,
   faGrinBeamSweat,
-  faThumbsUp,
+  faThumbsUp
 } from '@fortawesome/free-regular-svg-icons'
 
 library.add(faCalendarAlt, faGrinBeamSweat, faThumbsUp)
@@ -54,7 +53,7 @@ import {
   faUnlockAlt,
   faUserCircle,
   faUserFriends,
-  faUsers,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -99,7 +98,7 @@ import {
   faSlack,
   faTwitter,
   faWordpressSimple,
-  faYoutube,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -127,6 +126,6 @@ library.add(
   See https://github.com/FortAwesome/vue-fontawesome for more tips.
 ***************************************************************************/
 
-// Import and globally register a component called font-awesome-icon
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-Vue.component('FontAwesomeIcon', FontAwesomeIcon)
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon)
+})

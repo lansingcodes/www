@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div v-if="imgSrc" class="flex justify-center h-8 mb-4">
+    <div 
+      v-if="imgSrc" 
+      class="flex justify-center h-8 mb-4">
       <img
         :src="imgSrc"
         :alt="imgAlt"
         class="flex-initial max-h-full px-2 self-center"
-      />
+      >
     </div>
     <span
       v-else-if="iconText"
       class="font-bold font-sans inline-block text-md w-5"
-      >{{ iconText }}</span
+    >{{ iconText }}</span
     >
     <span
       v-else-if="iconSet === 'mfizz'"
@@ -36,28 +38,28 @@ export default {
   props: {
     title: {
       type: String,
-      default: null,
+      default: null
     },
     iconSet: {
       type: String,
-      default: 'fas',
+      default: 'fas'
     },
     iconName: {
       type: String,
-      default: 'code',
+      default: 'code'
     },
     iconText: {
       type: String,
-      default: null,
+      default: null
     },
     imgSrc: {
       type: String,
-      default: null,
+      default: null
     },
     imgAlt: {
       type: String,
-      default: null,
-    },
-  },
+      default: null
+    }
+  }
 }
 </script>

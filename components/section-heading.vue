@@ -22,7 +22,10 @@
     >
       {{ heading }}
     </h2>
-    <p v-if="subheading" :class="{ 'text-white': white }" class="mt-0">
+    <p 
+      v-if="subheading" 
+      :class="{ 'text-white': white }" 
+      class="mt-0">
       {{ subheading }}
     </p>
     <hr
@@ -31,8 +34,8 @@
         'border-white': white,
         'border-blue': blue,
       }"
-      class="border-4 my-6 w-16"
-    />
+      class="border-4 my-6 w-16 mx-auto"
+    >
     <h2
       v-if="subpage"
       :class="{
@@ -40,9 +43,12 @@
         'border-white': white,
         'border-blue': blue,
       }"
+      class="text-2xl"
     >
       <!-- Needs a router -->
-      <a href="/sponsors-signup" class="no-underline">
+      <a
+        href="/sponsors-signup"
+        class="no-underline">
         {{ subpage }}
       </a>
     </h2>
@@ -54,36 +60,36 @@ export default {
   props: {
     h1: {
       type: Boolean,
-      default: false,
+      default: false
     },
     grey: {
       type: Boolean,
-      default: true,
+      default: true
     },
     white: {
       type: Boolean,
-      default: false,
+      default: false
     },
     blue: {
       type: Boolean,
-      default: false,
+      default: false
     },
     heading: {
       type: String,
-      default: 'Section title',
+      default: 'Section title'
     },
     subheading: {
       type: String,
-      default: '',
+      default: ''
     },
     subpage: {
       type: String,
-      default: undefined,
+      default: undefined
     },
     subpageLink: {
       type: String,
-      default: '',
-    },
-  },
+      default: ''
+    }
+  }
 }
 </script>

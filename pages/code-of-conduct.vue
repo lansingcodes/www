@@ -1,6 +1,8 @@
 <template>
   <article class="lc-code-of-conduct">
-    <page-heading heading="Lansing Codes" subheading="Code of Conduct" />
+    <page-heading 
+      heading="Lansing Codes" 
+      subheading="Code of Conduct" />
     <section class="px-4 md:px-12 mb-16 max-w-lg mx-auto">
       <h2 id="our-pledge">Our Pledge</h2>
       <p>
@@ -80,8 +82,10 @@
       <p>
         Instances of abusive, harassing, or otherwise unacceptable behavior may
         be reported to the community leaders responsible for enforcement at
-        <a href="mailto:lansingcodes@gmail.com" target="_blank"
-          >lansingcodes@gmail.com</a
+        <a 
+          href="mailto:lansingcodes@gmail.com" 
+          target="_blank"
+        >lansingcodes@gmail.com</a
         >. All complaints will be reviewed and investigated promptly and fairly.
       </p>
       <p>
@@ -148,54 +152,52 @@
         <a
           href="https://www.contributor-covenant.org/version/2/0/code_of_conduct.html"
           target="_blank"
-          >Contributor Covenant, version 2.0</a
+        >Contributor Covenant, version 2.0</a
         >.
       </p>
       <p>
         Community Impact Guidelines were inspired by
-        <a href="https://github.com/mozilla/diversity" target="_blank"
-          >Mozilla's Code of Conduct Enforcement Ladder</a
+        <a 
+          href="https://github.com/mozilla/diversity" 
+          target="_blank"
+        >Mozilla's Code of Conduct Enforcement Ladder</a
         >.
       </p>
       <p>
         For answers to common questions about this code of conduct, see the FAQ
         at
-        <a href="https://www.contributor-covenant.org/faq" target="_blank"
-          >contributor-covenant.org/faq</a
+        <a 
+          href="https://www.contributor-covenant.org/faq" 
+          target="_blank"
+        >contributor-covenant.org/faq</a
         >. Translations are available at
         <a
           href="https://www.contributor-covenant.org/translations"
           target="_blank"
-          >contributor-covenant.org/translations</a
+        >contributor-covenant.org/translations</a
         >.
       </p>
     </section>
   </article>
 </template>
 
-<script>
-import pageHeading from '~/components/page-heading'
+<script setup>
+import pageHeading from '~/components/page-heading.vue'
 import urls from '~/config/urls.json'
-
-export default {
-  components: {
-    pageHeading,
-  },
-}
 </script>
 
 <style lang="scss">
 .lc-code-of-conduct {
   h2 {
-    @apply .mt-12 .mb-4 .text-3xl .text-blue;
+    @apply mt-12 mb-4 text-3xl text-blue-600;
   }
 
   p {
-    @apply .leading-tight;
+    @apply leading-tight;
   }
 
   li {
-    @apply .mb-2;
+    @apply mb-2;
   }
 }
 </style>

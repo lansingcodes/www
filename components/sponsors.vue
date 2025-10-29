@@ -4,7 +4,8 @@
     class="container mx-auto flex flex-wrap justify-center px-4 my-16 md:px-12 md:-mt-48"
   >
     <section-heading
-      blue
+      :blue="true"
+      :grey="false"
       heading="Our Sponsors"
       subheading="the companies that make all this possible!"
       class="md:mb-16 self-end w-full md:w-1/3"
@@ -15,18 +16,18 @@
         <source
           srcset="../assets/images/sponsors-feature.webp"
           type="image/webp"
-        />
+        >
         <source
           srcset="../assets/images/sponsors-feature.jpg"
           type="image/jpeg"
-        />
+        >
         <img
           src="../assets/images/sponsors-feature.jpg"
           alt="Sponsors provide us with space, sustenance, and other resources that help us collaborate"
           class="ml-8 mb-8 block shadow-lg"
           width="736"
           height="394"
-        />
+        >
       </picture>
     </div>
 
@@ -44,20 +45,17 @@
   </section>
 </template>
 
-<script>
-import sectionHeading from '~/components/section-heading'
-import card from '~/components/card--figure'
+<script setup>
+import { computed } from 'vue'
+import sectionHeading from '~/components/section-heading.vue'
+import card from '~/components/card--figure.vue'
 import orderBy from 'lodash/orderBy'
+import { useSponsors } from '~/composables/useSponsors'
 
-export default {
-  components: {
-    card,
-    sectionHeading,
-  },
-  computed: {
-    sponsors() {
-      return orderBy(this.$store.state.sponsors.all, ['name'])
-    },
-  },
-}
+const { all } = useSponsors()
+
+const sponsors = computed(() => {
+  if (!all.value) return []
+  return orderBy(all.value, ['name'])
+})
 </script>

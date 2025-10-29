@@ -1,0 +1,26 @@
+{
+  "name": "www-prod",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@babel/parser": "7.28.4",
+    "@vue/compiler-core": "3.5.22",
+    "@vue/compiler-dom": "3.5.22",
+    "@vue/compiler-ssr": "3.5.22",
+    "@vue/reactivity": "3.5.22",
+    "@vue/runtime-core": "3.5.22",
+    "@vue/runtime-dom": "3.5.22",
+    "@vue/server-renderer": "3.5.22",
+    "@vue/shared": "3.5.22",
+    "devalue": "5.3.2",
+    "entities": "4.5.0",
+    "estree-walker": "2.0.2",
+    "hookable": "5.5.3",
+    "source-map-js": "1.2.1",
+    "ufo": "1.6.1",
+    "unhead": "2.0.19",
+    "vue": "3.5.22",
+    "vue-bundle-renderer": "2.2.0"
+  }
+}

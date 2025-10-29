@@ -1,5 +1,7 @@
 <template>
-  <footer id="contact" class="bg-black py-12 flex flex-wrap justify-center">
+  <footer 
+    id="contact" 
+    class="bg-black py-12 flex flex-wrap justify-center">
     <section-heading
       id="contactUs"
       white
@@ -7,7 +9,9 @@
       subheading="know an event or resource we're missing? let us know or follow us"
       class="w-full"
     />
-    <nav class="flex justify-center my-8" aria-labelledby="contactUs">
+    <nav 
+      class="flex justify-center my-8" 
+      aria-labelledby="contactUs">
       <a
         v-for="link in links"
         :key="link.name"
@@ -27,49 +31,40 @@
   </footer>
 </template>
 
-<script>
-import sectionHeading from '~/components/section-heading'
+<script setup>
+import sectionHeading from '~/components/section-heading.vue'
 import urls from '~/config/urls.json'
 
-export default {
-  components: {
-    sectionHeading,
+const links = [
+  {
+    name: 'Slack',
+    href: urls.slack,
+    iconSet: 'fab',
+    icon: 'slack'
   },
-  data() {
-    return {
-      links: [
-        {
-          name: 'Slack',
-          href: urls.slack,
-          iconSet: 'fab',
-          icon: 'slack',
-        },
-        {
-          name: 'GitHub',
-          href: urls.github,
-          iconSet: 'fab',
-          icon: 'github',
-        },
-        {
-          name: 'Email',
-          href: urls.email,
-          iconSet: 'fas',
-          icon: 'envelope',
-        },
-        {
-          name: 'Facebook',
-          href: urls.facebook,
-          iconSet: 'fab',
-          icon: 'facebook',
-        },
-        {
-          name: 'Twitter',
-          href: urls.twitter,
-          iconSet: 'fab',
-          icon: 'twitter',
-        },
-      ],
-    }
+  {
+    name: 'GitHub',
+    href: urls.github,
+    iconSet: 'fab',
+    icon: 'github'
   },
-}
+  {
+    name: 'Email',
+    href: urls.email,
+    iconSet: 'fas',
+    icon: 'envelope'
+  },
+  {
+    name: 'Facebook',
+    href: urls.facebook,
+    iconSet: 'fab',
+    icon: 'facebook'
+  },
+  {
+    name: 'Twitter',
+    href: urls.twitter,
+    iconSet: 'fab',
+    icon: 'twitter'
+  }
+]
 </script>

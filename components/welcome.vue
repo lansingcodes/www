@@ -1,16 +1,18 @@
 <template>
-  <div id="welcome" class="lc-background-image py-16 sm:py-32">
+  <div
+    id="welcome"
+    class="lc-background-image py-16 sm:py-24">
     <div class="flex flex-wrap justify-center">
       <nav
-        class="flex-none w-full sm:w-1/2 sm:max-w-sm overflow-hidden sm:shadow-lg bg-white text-center py-8 px-6 sm:mb-24"
+        class="flex-none w-full sm:w-1/2 sm:max-w-md overflow-hidden sm:shadow-lg bg-white text-center py-8 px-6 sm:mb-24"
       >
         <img
-          class="h-32 w-32"
+          class="h-32 w-32 mx-auto"
           src="../assets/images/icon-tall-square-fixed-300-transparent.png"
           alt="Lansing Codes Logo"
           width="128"
           height="128"
-        />
+        >
         <section-heading
           h1
           blue
@@ -18,9 +20,12 @@
           subheading="events and resources for Lansing coders"
         />
         <ul
-          class="flex flex-wrap justify-center list-reset mt-0 mb-4 font-medium"
+          class="flex flex-wrap justify-center list-none mt-0 mb-4 font-medium"
         >
-          <li v-for="link in links" :key="link.name" class="w-1/2">
+          <li 
+            v-for="link in links" 
+            :key="link.name" 
+            class="w-1/2">
             <a
               :href="link.href"
               class="inline-block no-underline uppercase mb-4 leading-tight"
@@ -38,11 +43,15 @@
       </nav>
 
       <section
-        class="hidden sm:block sm:w-1/2 max-w-sm overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4"
+        class="hidden sm:block sm:w-1/2 max-w-md overflow-hidden shadow-lg bg-blue-dark text-white p-8 sm:mt-24 sm:-ml-4"
       >
-        <section-heading white heading="Next Event" />
-        <div v-if="nextEvent" class="text-left font-normal">
-          <div class="flex flex-no-wrap items-center mb-2 min-h-12">
+        <section-heading 
+          white 
+          heading="Next Event" />
+        <div
+          v-if="nextEvent"
+          class="text-left font-normal">
+          <div class="flex flex-nowrap items-center mb-2 min-h-12">
             <logo
               v-if="groupForNextEvent"
               :icon-set="groupForNextEvent.iconSet"
@@ -77,9 +86,14 @@
             </a>
           </div>
         </div>
-        <div v-else class="text-left font-normal">
-          <div class="flex flex-no-wrap items-center mb-2 min-h-12">
-            <logo icon-set="far" icon-name="grin-beam-sweat" class="mr-3" />
+        <div 
+          v-else 
+          class="text-left font-normal">
+          <div class="flex flex-nowrap items-center mb-2 min-h-12">
+            <logo
+              icon-set="far"
+              icon-name="grin-beam-sweat"
+              class="mr-3" />
             <h3 class="font-bold">Well, this is awkward!</h3>
           </div>
           <div class="lc-event-description my-6 leading-tight">
@@ -100,71 +114,65 @@
   </div>
 </template>
 
-<script>
-import sectionHeading from '~/components/section-heading'
-import logo from '~/components/logo--small'
+<script setup>
+import { computed } from 'vue'
+import sectionHeading from '~/components/section-heading.vue'
+import logo from '~/components/logo--small.vue'
 import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import cleanEventDescription from '~/utils/clean-event-description'
 import urls from '~/config/urls.json'
+import { useEvents } from '~/composables/useEvents'
+import { useGroups } from '~/composables/useGroups'
 
-export default {
-  components: {
-    logo,
-    sectionHeading,
+const { upcoming } = useEvents()
+const { all: groups } = useGroups()
+
+const links = [
+  {
+    name: 'Slack',
+    href: urls.slack,
+    iconSet: ['fab', 'slack']
   },
-  data() {
-    return {
-      links: [
-        {
-          name: 'Slack',
-          href: urls.slack,
-          iconSet: ['fab', 'slack'],
-        },
-        {
-          name: 'Events',
-          href: '#events',
-          iconSet: ['far', 'calendar-alt'],
-        },
-        {
-          name: 'Groups',
-          href: '#meetups',
-          iconSet: ['fas', 'user-friends'],
-        },
-        {
-          name: 'Resources',
-          href: '#resources',
-          iconSet: ['fas', 'school'],
-        },
-        {
-          name: 'Sponsors',
-          href: '#sponsors',
-          iconSet: ['fas', 'hand-holding-heart'],
-        },
-        {
-          name: 'Newsletter',
-          href: '#newsletter',
-          iconSet: ['fas', 'envelope'],
-        },
-      ],
-    }
+  {
+    name: 'Events',
+    href: '#events',
+    iconSet: ['far', 'calendar-alt']
   },
-  computed: {
-    nextEvent() {
-      var upcoming = this.$store.state.events.upcoming.filter(
-        (event) => event && event.startTime > Date.now()
-      )
-      return upcoming[0]
-    },
-    groupForNextEvent() {
-      return groupForEvent(this.nextEvent, this.$store.state.groups.all)
-    },
+  {
+    name: 'Groups',
+    href: '#meetups',
+    iconSet: ['fas', 'user-friends']
   },
-  methods: {
-    formatReadableDateTime,
-    cleanEventDescription,
+  {
+    name: 'Resources',
+    href: '#resources',
+    iconSet: ['fas', 'school']
   },
-}
+  {
+    name: 'Sponsors',
+    href: '#sponsors',
+    iconSet: ['fas', 'hand-holding-heart']
+  },
+  {
+    name: 'Newsletter',
+    href: '#newsletter',
+    iconSet: ['fas', 'envelope']
+  }
+]
+
+const nextEvent = computed(() => {
+  if (!upcoming.value) return null
+  const upcomingEvents = upcoming.value.filter(
+    event => event && event.startTime > Date.now()
+  )
+  return upcomingEvents[0]
+})
+
+const groupForNextEvent = computed(() => {
+  if (!nextEvent.value || !groups.value) return null
+  return groupForEvent(nextEvent.value, groups.value)
+})
 </script>
 
 <style lang="scss">
@@ -176,7 +184,7 @@ export default {
         rgba(255, 255, 255, 0)
       ),
       url(../assets/images/capitol.jpg);
-    background-position: center top;
+    background-position: center 20%;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -184,7 +192,7 @@ export default {
 
 .lc-event-description {
   a {
-    @apply .text-white .underline;
+    @apply text-white underline;
   }
 }
 </style>
