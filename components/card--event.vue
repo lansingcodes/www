@@ -43,9 +43,10 @@
             {{ address }}
           </address>
         </div>
+        <!-- v-html is safe here because cleanEventDescription sanitizes the HTML -->
         <div
           class="bg-transparent overflow-x-hidden overflow-y-hidden"
-          v-html="cleanEventDescription(event.description)"
+          v-html="safeDescription"
         />
       </div>
     </div>
@@ -76,6 +77,7 @@ const address = computed(() => {
   if (!addr) return null
   return [addr.address_1, addr.city, addr.state, addr.zip].filter(Boolean).join(', ')
 })
+const safeDescription = computed(() => cleanEventDescription(props.event.description))
 </script>
 
 <style lang="scss" scoped>
