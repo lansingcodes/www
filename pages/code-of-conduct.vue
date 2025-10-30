@@ -206,7 +206,8 @@ export default {
   }
 
   li {
-    @apply .mb-4;
+    @apply .mb-6;
+    @apply .text-xl;
   }
 
   #enforcement-guidelines ~ h3 ~ p {
