@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  nuxt-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+      - NODE_ENV=production
