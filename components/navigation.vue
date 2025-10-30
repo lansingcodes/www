@@ -6,7 +6,7 @@
       <!-- Logo -->
       <a
         href="/"
-        class="flex items-center flex-no-shrink text-blue-dark no-underline hover:text-blue-dark"
+        class="flex items-center flex-no-shrink text-blue no-underline"
       >
         <img
           class="h-12 mr-2"
