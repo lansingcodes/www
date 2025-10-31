@@ -17,8 +17,6 @@ export default (description) => {
   newDescription = newDescription.replace(/(---)(.*)/g, '')
   // Trim whitespace
   newDescription = newDescription.trim()
-  // Replace bold markdown with proper Tailwind markup
-  newDescription = boldMarkdownToHTML(newDescription)
   // Re-add the trailing ... characters
   newDescription = newDescription.concat('...')
   return newDescription

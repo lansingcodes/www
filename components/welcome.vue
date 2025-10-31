@@ -56,15 +56,19 @@
           </div>
           <p class="flex flex-wrap justify-between text-sm mb-4 mt-0">
             <span class="mb-1 mr-2">
-              {{ formatReadableDateTime(nextEvent.startTime) }}
+              {{ timeForNextEvent }}
             </span>
             <span v-if="nextEvent.venue">
               {{ nextEvent.venue }}
             </span>
           </p>
-          <div class="lc-event-description mb-6">
-            {{ cleanEventDescription(nextEvent.description) }}
-          </div>
+          <!-- ok to disable the v-html check below because we've sanitized the input already -->
+          <!-- // eslint-disable-next-line vue/no-v-html -->
+          <div
+            class="lc-event-description mb-6"
+            v-html="boldMarkdownToHtml(safeDescriptionForNextEvent)"
+          />
+          <!-- also can't get rid of the v-html warning above because prettier -->
           <div class="text-center">
             <a
               :href="nextEvent.url"
@@ -105,6 +109,7 @@ import logo from '~/components/logo--small'
 import groupForEvent from '~/utils/group-for-event'
 import formatReadableDateTime from '~/utils/format-readable-date-time'
 import cleanEventDescription from '~/utils/clean-event-description'
+import boldMarkdownToHtml from '../utils/bold-markdown-to-html'
 import urls from '~/config/urls.json'
 
 export default {
@@ -158,10 +163,15 @@ export default {
     groupForNextEvent() {
       return groupForEvent(this.nextEvent, this.$store.state.groups.all)
     },
+    safeDescriptionForNextEvent() {
+      return cleanEventDescription(this.nextEvent.description)
+    },
+    timeForNextEvent() {
+      return formatReadableDateTime(this.nextEvent.startTime)
+    },
   },
   methods: {
-    formatReadableDateTime,
-    cleanEventDescription,
+    boldMarkdownToHtml,
   },
 }
 </script>
