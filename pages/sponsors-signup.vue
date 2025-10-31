@@ -235,12 +235,11 @@
                 <div class="m-1 pl-3 text-white">
                   Send contributions via
                   <a
-                    href="https://www.paypal.com/paypalme/lansingcodes"
+                    href="https://www.paypal.com/ncp/payment/V7UNAG9J544R2"
                     target="_blank"
                     class="text-grey-light no-underline"
-                    >PayPal</a
-                  >
-                  to Humanity Codes
+                  >PayPal</a>
+                  to Michigan Technology Network
                 </div>
               </div>
             </div>

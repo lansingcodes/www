@@ -328,7 +328,7 @@ before merging to `main`. Click on the _Details_ link next to the site check
 labeled "netlify/lansingcodes-staging/deploy-preview" to see a live preview of
 your changes.
 
-The primary Humanity Codes account has administrator access to both Netlify
+The primary Michigan Technology Network account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
 
 ## 🚀 Running the Project with Docker
