@@ -16,7 +16,7 @@
         :class="{
           'border-4': isToday(day),
           'bg-white': isWeekday(day) || isToday(day),
-          'bg-blue-lighter': !isWeekday(day) && !isToday(day),
+          'bg-grey-light': !isWeekday(day) && !isToday(day),
         }"
         class="w-1/7 min-h-16 m-1 p-1 rounded-sm border-attention shadow-md"
       >
