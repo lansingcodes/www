@@ -238,7 +238,8 @@
                     href="https://www.paypal.com/ncp/payment/V7UNAG9J544R2"
                     target="_blank"
                     class="text-grey-light no-underline"
-                  >PayPal</a>
+                    >PayPal</a
+                  >
                   to Michigan Technology Network
                 </div>
               </div>

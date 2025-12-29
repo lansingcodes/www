@@ -159,16 +159,13 @@ module.exports = {
         plugins: [require('tailwindcss')(tailwindJS), require('autoprefixer')],
       },
     },
-    
+
     loaders: {
       scss: {
         sassOptions: {
-          includePaths: [
-            __dirname,
-            'assets/scss'
-          ]
-        }
-      }
+          includePaths: [__dirname, 'assets/scss'],
+        },
+      },
     },
 
     /*

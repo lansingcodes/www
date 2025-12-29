@@ -72,11 +72,12 @@ export default {
     },
     endDate() {
       const lastEvent = this.events[this.events.length - 1]
-      return endOfWeek(
-        lastEvent
-          ? lastEvent.startTime
-          : endOfWeek(addWeeks(this.startDate, maxCalendarWeeks - 1))
+      const defaultEnd = endOfWeek(
+        addWeeks(this.startDate, maxCalendarWeeks - 1)
       )
+      if (!lastEvent) return defaultEnd
+      const lastEventEnd = endOfWeek(lastEvent.startTime)
+      return isAfter(lastEventEnd, defaultEnd) ? lastEventEnd : defaultEnd
     },
     calendar() {
       const dates = []
