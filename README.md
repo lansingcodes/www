@@ -1,4 +1,5 @@
-# Lansing Codes website
+# ARCHIVED --- Lansing Codes website ---- ARCHIVED 
+## see https://github.com/lansingcodes/website for current website code
 
 [Lansing Codes](https://www.lansing.codes) is a website of resources for coders
 and other tech enthusiasts in and around Lansing, Michigan.
